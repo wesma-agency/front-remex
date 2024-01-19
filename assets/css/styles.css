@@ -4665,7 +4665,9 @@ a:hover,
   margin-bottom: 30px;
   position: relative;
   padding-top: 71.65%;
+  display: block;
   width: 100%;
+  overflow: hidden;
 }
 
 .category__img img {
@@ -4675,10 +4677,16 @@ a:hover,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.category__img:hover img {
+  transform: scale(1.1);
 }
 
 .category__title {
   margin-bottom: 30px;
+  display: inline-block;
 }
 
 .category__item:not(:first-child) {
@@ -5234,6 +5242,9 @@ a:hover,
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.product-card__img img {
   object-fit: cover;
 }
 
