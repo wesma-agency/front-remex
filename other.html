@@ -16,8 +16,8 @@
       integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/normalize.css?v=7" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=7" />
+    <link rel="stylesheet" href="assets/css/normalize.css?v=8" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=8" />
   </head>
 
   <body>
@@ -150,10 +150,10 @@
                     </svg>
                   </span>
                 </button>
-                <button type="button">
-                  <div class="serviceMenu__count">99</div>
-                  <!-- /.serviceMenu__count -->
-                  <span>
+                <div class="cart-menu header__cart-menu">
+                  <a class="cart-menu__btn" href="cart.html">
+                    <div class="serviceMenu__count">99</div>
+                    <!-- /.serviceMenu__count -->
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0_3446_2324)">
                         <path
@@ -166,8 +166,39 @@
                         </clipPath>
                       </defs>
                     </svg>
-                  </span>
-                </button>
+                  </a>
+                  <div class="cart-menu__content">
+                    <div class="cart-menu__main">
+                      <div class="cart-menu__list">
+                        <div class="cart-menu__item">
+                          <div class="text text--semibold cart-menu__item-title">Склад на электрозаводской</div>
+                          <div class="cart-menu__item-price">
+                            <span>Сумма заказа</span>
+                            <span class="cart-menu__item-price-value">2 500 ₽</span>
+                          </div>
+                        </div>
+                        <div class="cart-menu__item">
+                          <div class="text text--semibold cart-menu__item-title">Склад в Реутове</div>
+                          <div class="cart-menu__item-price">
+                            <span>Сумма заказа</span>
+                            <span class="cart-menu__item-price-value">2 500 ₽</span>
+                          </div>
+                        </div>
+                        <div class="cart-menu__item">
+                          <div class="text text--semibold cart-menu__item-title">Склад в Санкт-Петербурге</div>
+                          <div class="cart-menu__item-price">
+                            <span>Сумма заказа</span>
+                            <span class="cart-menu__item-price-value">2 500 ₽</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-menu__total">
+                        <span>Итого</span>
+                        <span class="title3 cart-menu__total-value">7 500 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <button type="button">
                   <span>
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

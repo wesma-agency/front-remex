@@ -359,6 +359,15 @@ window.addEventListener("click", (e) => {
   $activeSort.classList.remove("sort--active");
 });
 
+/* Copy btn */
+const $copyBtns = document.querySelectorAll(".js-btn-copy");
+$copyBtns.forEach(($btn) => {
+  $btn.addEventListener("click", () => {
+    const value = $btn.dataset.copyValue || '';
+    navigator.clipboard.writeText(value);
+  });
+});
+
 /* Catalog products sizes */
 const $catalogProducts = document.querySelectorAll(".catalog__products-item");
 const $productsSizesBtns = document.querySelectorAll(".catalog__products-size");
@@ -527,6 +536,44 @@ function createColorInfo({ num = "", type = "", label = "", value = "", backgrou
 
   return $colorInfo;
 }
+
+/* Cart */
+const $cartLists = document.querySelectorAll(".cart-list");
+$cartLists.forEach(($cartList) => {
+  const $checkboxChooseAll = $cartList.querySelector(".cart-list__choose-all");
+  const $itemsCheckboxes = $cartList.querySelectorAll(".cart-list__item .cart-item__checkbox .checkbox__input");
+  $checkboxChooseAll?.addEventListener("change", function () {
+    if (this.checked) {
+      $itemsCheckboxes.forEach(($checkbox) => ($checkbox.checked = true));
+    } else {
+      $itemsCheckboxes.forEach(($checkbox) => ($checkbox.checked = false));
+    }
+  });
+
+  $itemsCheckboxes.forEach(($checkbox) => {
+    $checkbox.addEventListener("change", function () {
+      if (!this.checked) {
+        $checkboxChooseAll.checked = false;
+      }
+    });
+  });
+});
+
+/* Cart loader */
+const $cartTotalBtn = document.querySelector('.cart-total__btn');
+const $cartTotalLoader = document.querySelector('.cart-total__loader');
+$cartTotalBtn?.addEventListener('click', () => {
+  $cartTotalLoader.classList.add('cart-total__loader--active');
+}, { once: true });
+
+/* Swap buttons */
+const $swapBtnsItems = document.querySelectorAll('.swap-btns');
+$swapBtnsItems.forEach($swapBtns => {
+  const $fromBtn = $swapBtns.querySelector('.swap-btns__btn--from');
+  $fromBtn.addEventListener('click', () => {
+    $swapBtns.classList.add('swap-btns--active');
+  }), { once: true };
+});
 
 const catalogBtn = document.querySelector(".catalog-btn");
 const cattest = document.querySelector(".cattest");
