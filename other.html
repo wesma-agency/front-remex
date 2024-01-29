@@ -16,8 +16,8 @@
       integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/normalize.css?v=9" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=9" />
+    <link rel="stylesheet" href="assets/css/normalize.css?v=10" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=10" />
   </head>
 
   <body>
@@ -119,6 +119,59 @@
                   <img src="assets/img/icons/search-gray.svg" alt="" />
                 </button>
                 <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
+                <button class="search__close" type="button">
+                  <img src="assets/img/icons/exit.svg" alt="">
+                </button>
+                <div class="search-modal search__modal">
+                  <div class="search-modal__categories">
+                    <a class="search-modal__category" href="search.html">Пленка RexJet</a>
+                    <a class="search-modal__category" href="search.html">Красные пленки</a>
+                    <a class="search-modal__category" href="search.html">Прозрачные пленки</a>
+                  </div>
+                  <div class="search-modal__list">
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Профиль LNT белый</span>
+                        <span class="text text--light search-modal__item-count">90 вариантов</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">от 10 000 ₽</div>
+                    </a>
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                        <span class="text text--light search-modal__item-count">20 вариантов</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                    </a>
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Веер цветов плёнки ORACAL-641</span>
+                        <span class="text text--light search-modal__item-count">44 варианта</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">7 000 ₽</div>
+                    </a>
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
+                          anticold мат</span>
+                        <span class="text text--light search-modal__item-count">44 варианта</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                    </a>
+                  </div>
+                  <div class="search-modal__articles">
+                    <div class="search-modal__articles-header">
+                      <div class="title3">Статьи</div>
+                      <a class="link link--light link--line link--line-light link--hover-light" href="search.html">Найдено 32 статьи</a>
+                    </div>
+                    <div class="search-modal__articles-list">
+                      <a class="search-modal__article" href="search.html">
+                        <span class="label search-modal__article-label">Статья</span>
+                        <span class="search-modal__article-name">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </form>
               <!-- /.search -->
               <form action="" method="post" class="language">

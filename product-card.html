@@ -15,8 +15,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
     integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/css/normalize.css?v=9" />
-  <link rel="stylesheet" href="assets/css/styles.css?v=9" />
+  <link rel="stylesheet" href="assets/css/normalize.css?v=10" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
   <!-- pgs css -->
   <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css">
   <link rel="stylesheet" href="assets/libs/pgs-panel/css/jquery.mCustomScrollbar.css">
@@ -119,6 +119,59 @@
                 <img src="assets/img/icons/search-gray.svg" alt="" />
               </button>
               <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
+              <button class="search__close" type="button">
+                <img src="assets/img/icons/exit.svg" alt="">
+              </button>
+              <div class="search-modal search__modal">
+                <div class="search-modal__categories">
+                  <a class="search-modal__category" href="search.html">Пленка RexJet</a>
+                  <a class="search-modal__category" href="search.html">Красные пленки</a>
+                  <a class="search-modal__category" href="search.html">Прозрачные пленки</a>
+                </div>
+                <div class="search-modal__list">
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Профиль LNT белый</span>
+                      <span class="text text--light search-modal__item-count">90 вариантов</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">от 10 000 ₽</div>
+                  </a>
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                      <span class="text text--light search-modal__item-count">20 вариантов</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                  </a>
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Веер цветов плёнки ORACAL-641</span>
+                      <span class="text text--light search-modal__item-count">44 варианта</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">7 000 ₽</div>
+                  </a>
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
+                        anticold мат</span>
+                      <span class="text text--light search-modal__item-count">44 варианта</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                  </a>
+                </div>
+                <div class="search-modal__articles">
+                  <div class="search-modal__articles-header">
+                    <div class="title3">Статьи</div>
+                    <a class="link link--light link--line link--line-light link--hover-light" href="search.html">Найдено 32 статьи</a>
+                  </div>
+                  <div class="search-modal__articles-list">
+                    <a class="search-modal__article" href="search.html">
+                      <span class="label search-modal__article-label">Статья</span>
+                      <span class="search-modal__article-name">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </form>
             <form action="" method="post" class="language">
               <label for="" class="language__result">
@@ -396,6 +449,59 @@
                 <img src="assets/img/icons/search-gray.svg" alt="" />
               </button>
               <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
+              <button class="search__close" type="button">
+                <img src="assets/img/icons/exit.svg" alt="">
+              </button>
+              <div class="search-modal search__modal">
+                <div class="search-modal__categories">
+                  <a class="search-modal__category" href="search.html">Пленка RexJet</a>
+                  <a class="search-modal__category" href="search.html">Красные пленки</a>
+                  <a class="search-modal__category" href="search.html">Прозрачные пленки</a>
+                </div>
+                <div class="search-modal__list">
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Профиль LNT белый</span>
+                      <span class="text text--light search-modal__item-count">90 вариантов</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">от 10 000 ₽</div>
+                  </a>
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                      <span class="text text--light search-modal__item-count">20 вариантов</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                  </a>
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Веер цветов плёнки ORACAL-641</span>
+                      <span class="text text--light search-modal__item-count">44 варианта</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">7 000 ₽</div>
+                  </a>
+                  <a class="search-modal__item" href="search.html">
+                    <div class="text search-modal__item-name">
+                      <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
+                        anticold мат</span>
+                      <span class="text text--light search-modal__item-count">44 варианта</span>
+                    </div>
+                    <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                  </a>
+                </div>
+                <div class="search-modal__articles">
+                  <div class="search-modal__articles-header">
+                    <div class="title3">Статьи</div>
+                    <a class="link link--light link--line link--line-light link--hover-light" href="search.html">Найдено 32 статьи</a>
+                  </div>
+                  <div class="search-modal__articles-list">
+                    <a class="search-modal__article" href="search.html">
+                      <span class="label search-modal__article-label">Статья</span>
+                      <span class="search-modal__article-name">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </form>
             <!-- /.search -->
             <nav class="serviceMenu">
@@ -1503,8 +1609,8 @@
           <li><a href="about.html">О компании</a></li>
           <li><a href="cart.html">Корзина</a></li>
           <li><a href="template.html">Шаблон (Статьи)</a></li>
-          <!-- <li><a href="#">Результаты поиска</a></li>
-          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="search.html">Результаты поиска</a></li>
+        <!-- <li><a href="#">Личный кабинет</a></li>
           <li><a href="#">Профиль пользователя</a></li>
           <li><a href="#">Оформление заказа</a></li>
           <li><a href="#">Заказы пользователя</a></li>
@@ -4844,7 +4950,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
-  <script src="assets/js/index.js?v=9"></script>
+  <script src="assets/js/index.js?v=10"></script>
   <!-- pgs js -->
   <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
   <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>

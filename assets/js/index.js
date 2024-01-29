@@ -575,6 +575,42 @@ $swapBtnsItems.forEach($swapBtns => {
   }), { once: true };
 });
 
+/* Search */
+const $searchForms = document.querySelectorAll('.search');
+$searchForms.forEach($searchForm => {
+  const $closeBtn = $searchForm.querySelector('.search__close');
+  const $input = $searchForm.querySelector('.search__input');
+
+  $searchForm.addEventListener('click', () => {
+    if ($input.value !== '') {
+      $searchForm.classList.add('search--active', 'search--fill');
+    }
+  });
+
+  $closeBtn?.addEventListener('click', () => {
+    $input.value = '';
+    $searchForm.classList.remove('search--fill');
+  });
+
+  $input.addEventListener('input', () => {
+    if ($input.value === '') {
+      $searchForm?.classList.remove('search--fill', 'search--active');
+    } else {
+      $searchForm?.classList.add('search--fill', 'search--active');
+    }
+  });
+});
+
+window.addEventListener("click", (e) => {
+  const $activeSearch = document.querySelector(".search--active");
+  const isInner = e.target.closest(".search") && !e.target.classList.contains("dropdown");
+  if (!$activeSearch || isInner) {
+    return;
+  }
+
+  $activeSearch.classList.remove('search--active');
+});
+
 const catalogBtn = document.querySelector(".catalog-btn");
 const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
