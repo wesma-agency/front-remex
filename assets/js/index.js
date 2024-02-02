@@ -310,6 +310,12 @@ $editForms.forEach(($editForm) => {
         }
       }
     });
+
+    const $btn = $input.querySelector('.edit-input__btn');
+    $btn.addEventListener('click', () => {
+      $field.focus();
+      $field.selectionStart = $field.selectionEnd = $field.value.length;
+    });
   });
 
   $editForm.addEventListener('submit', (e) => {
