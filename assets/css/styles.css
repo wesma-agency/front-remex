@@ -7390,11 +7390,16 @@ a:hover,
 
 .navigation__btn:hover {
   color: var(--color-gray);
+  background-color:var(--color-gray-light);
 }
 
 .navigation__btn.tabs-btns__btn--active {
   color: var(--color-primary);
   cursor: default;
+}
+
+.navigation__btn.tabs-btns__btn--active:hover {
+  background-color: transparent;
 }
 
 .navigation__btn.tabs-btns__btn--active:before {
