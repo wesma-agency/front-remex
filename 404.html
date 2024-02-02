@@ -10,7 +10,7 @@
   <title>Страница 404</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swapdisplay=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.css"
     integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
@@ -44,9 +44,9 @@
         <li><a href="template.html">Шаблон (Статьи)</a></li>
         <li><a href="search.html">Результаты поиска</a></li>
         <li><a href="search-404.html">Результаты поиска (404)</a></li>
-        <!-- <li><a href="#">Личный кабинет</a></li>
-          <li><a href="#">Профиль пользователя</a></li>
-          <li><a href="#">Оформление заказа</a></li>
+        <li><a href="profile.html">Профиль пользователя</a></li>
+          <!-- <li><a href="#">Оформление заказа</a></li>
+          <li><a href="#">Личный кабинет</a></li>
           <li><a href="#">Заказы пользователя</a></li>
           <li><a href="#">Заказы пользователя детальная</a></li> -->
         <li><a href="faq.html">Частые вопросы</a></li>
@@ -2712,7 +2712,7 @@
             <!-- /.foot__col -->
             <div class="foot__col">
               <div class="foot__wr">
-                <button type="button" class="link feed openModalBtn1">
+                <button type="button" class="link feed js-open-modal" data-modal-name="callback">
                   <i>
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -2722,7 +2722,7 @@
                   </i>
                   <span class="link__text link__text--line link__text--line-light">Заказать звонок</span>
                 </button>
-                <button type="button" class="link feed openModalBtn2">
+                <button type="button" class="link feed js-open-modal" data-modal-name="ask">
                   <i>
                     <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -2958,133 +2958,7 @@
       </div>
       <!-- /.foot__bottom -->
     </footer>
-    <div class="modal" id="myModal1">
-      <div class="modal-content">
-        <div class="popup">
-          <button class="popup__close" type="button">
-            <span>
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.1665 4.16666L20.8332 20.8333" stroke="#444444" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M4.1665 20.8333L20.8332 4.16666" stroke="#444444" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
-          </button>
-          <!-- /.popup__close -->
-          <div class="popup__title">Заказать звонок</div>
-          <!-- /.popup__title -->
-          <div class="popup__text">Мы обязательно свяжемся с Вами в ближайшее время</div>
-          <!-- /.popup__text -->
-          <div class="popup__item">
-            <div class="popup__group">
-              <label class="popup__item-label" for="">
-                Имя
-                <span>*</span>
-              </label>
-            </div>
-            <!-- /.popup__group -->
-            <div class="popup__group popup__group--mt0">
-              <input type="text" class="popup__input fill popup__item-input" placeholder="Имя *" />
-              <em>
-                <svg width="15" height="13" viewBox="0 0 15 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1 5L6.5 12.5H7.5L14.5 0.5" stroke="#444444" />
-                </svg>
-              </em>
-            </div>
-          </div>
-          <!-- /.popup__group -->
-          <div class="popup__group">
-            <input type="text" class="popup__input" placeholder="+7 ( _ _ _ ) - _ _ - _ _ *" />
-          </div>
-          <!-- /.popup__group -->
-          <div class="popup__group">
-            <button class="submit" type="button">
-              <span>Отправить заявку</span>
-            </button>
-            <!-- /.submit -->
-          </div>
-          <!-- /.popup__group -->
-          <div class="popup__podtext">
-            Поля, отмеченные
-            <span>*</span>
-            , обязательны для заполнения
-            <br />
-            Нажимая на кнопку - вы автоматически
-            <a href="#">соглашаетесь</a>
-            <br />
-            на отправку ваших персональных данных.
-          </div>
-          <!-- /.popup__podtext -->
-        </div>
-      </div>
-    </div>
-    <div class="modal" id="myModal2">
-      <div class="modal-content">
-        <div class="popup">
-          <button class="popup__close" type="button">
-            <span>
-              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4.1665 4.16666L20.8332 20.8333" stroke="#444444" stroke-linecap="round"
-                  stroke-linejoin="round" />
-                <path d="M4.1665 20.8333L20.8332 4.16666" stroke="#444444" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
-            </span>
-          </button>
-          <!-- /.popup__close -->
-          <div class="popup__title">Задать вопрос</div>
-          <!-- /.popup__title -->
-          <div class="popup__text">Мы обязательно свяжемся с Вами в ближайшее время</div>
-          <!-- /.popup__text -->
-          <div class="popup__wrap">
-            <div class="popup__group1 popup__item">
-              <label class="popup__item-label" for="">
-                Имя
-                <span>*</span>
-              </label>
-              <input type="text" class="popup__input1 popup__item-input" placeholder="Имя *" />
-            </div>
-            <!-- /.popup__group1 -->
-            <div class="popup__group1 popup__item">
-              <label class="popup__item-label" for="">
-                E-mail
-                <span>*</span>
-              </label>
-              <input type="text" class="popup__input1 popup__item-input" placeholder="E-mail *" />
-            </div>
-            <!-- /.popup__group1 -->
-            <div class="popup__group1 popup__item">
-              <label class="popup__item-label" for="">
-                Вопрос
-                <span>*</span>
-              </label>
-              <input type="text" class="popup__input1 popup__item-input" placeholder="Вопрос *" />
-            </div>
-            <!-- /.popup__group1 -->
-          </div>
-          <!-- /.popup__wrap -->
-          <div class="popup__group popup__group--mt46">
-            <button class="submit" type="button">
-              <span>Отправить заявку</span>
-            </button>
-            <!-- /.submit -->
-          </div>
-          <!-- /.popup__group -->
-          <div class="popup__podtext">
-            Поля, отмеченные
-            <span>*</span>
-            , обязательны для заполнения
-            <br />
-            Нажимая на кнопку - вы автоматически
-            <a href="#">соглашаетесь</a>
-            <br />
-            на отправку ваших персональных данных.
-          </div>
-          <!-- /.popup__podtext -->
-        </div>
-      </div>
-    </div>
+
     <div class="modal" id="myModal">
       <div class="modal-content">
         <div class="popup">
@@ -3139,62 +3013,33 @@
     <div class="modal-background" id="modalBackground"></div>
   </div>
 
-  <div class="modal-new" data-name="discuss-price">
+  <div class="modal-new" data-name="callback">
     <div class="modal-new__body">
       <div class="modal-new__dialog">
         <div class="modal-new__content">
-          <div class="discuss-price modal-new__discuss-price">
-            <div class="title3 discuss-price__title">Обсудить цену</div>
-            <div class="discuss-price__list">
-              <div class="small-item discuss-price__item">
-                <div class="small-item__img">
-                  <img src="assets/img/products/5.jpg" alt="" />
+          <form class="form modal-new__form js-form" autocomplete="off">
+            <div class="title3 form__title">Заказать звонок</div>
+            <p class="text text--gray form__text">Мы обязательно свяжемся с Вами в ближайшее время</p>
+            <div class="form__main">
+              <div class="input form__input js-form-input">
+                <div class="input__main">
+                  <input class="input__field" type="text" data-validate="empty" />
+                  <span class="input__placeholder input__placeholder--required">Имя</span>
                 </div>
-                <div class="text text--sm text--gray-dark small-item__title">
-                  <a href="#">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</a>
-                </div>
-                <div class="text text--semibold text--lg small-item__price">100 250 ₽</div>
+                <div class="input__error">Поле обязательно для заполнения</div>
               </div>
+              <div class="input form__input js-form-input">
+                <div class="input__main">
+                  <input class="input__field js-imask" type="text" data-validate="phone" data-mask="+{7} (000) 000-00-00"/>
+                  <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
+                </div>
+                <div class="input__error">Поле обязательно для заполнения</div>
+              </div>
+              <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить заявку</button>
+              <p class="text text--sm text--gray-white form__ps">Поля, отмеченные <span class="text text--danger">*</span>, обязательны для заполнения <br> Нажимая на кнопку - вы автоматически <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a> на отправку ваших персональных данных.</p>
             </div>
-            <form class="discuss-price__form js-form" autocomplete="off">
-              <div class="input discuss-price__form-input js-form-input">
-                <div class="input__main">
-                  <input class="input__field" type="text" data-validate="empty" />
-                  <span class="input__placeholder input__placeholder--required">Предложите цену, ₽</span>
-                </div>
-                <div class="input__error">Поле обязательно для заполнения</div>
-              </div>
-              <div class="input discuss-price__form-input js-form-input">
-                <div class="input__main">
-                  <input class="input__field" type="text" data-validate="empty" />
-                  <span class="input__placeholder input__placeholder--required">Причина изменения цены</span>
-                </div>
-                <div class="input__error">Поле обязательно для заполнения</div>
-                <div class="text text--sm text--gray-white input__text">Ссылка на цену конкурента, фотография чека или
-                  счета</div>
-              </div>
-              <div class="discuss-price__form-btns">
-                <button class="but but--full discuss-price__form-btn" type="button">
-                  <svg class="but__icon but__icon--fill" width="14" height="14" viewBox="0 0 14 14" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
-                  </svg>
-                  <span>Загрузить файл</span>
-                </button>
-                <button class="but but--full but--primary discuss-price__form-btn" type="submit">Отправить на
-                  рассмотрение</button>
-              </div>
-              <div class="text text--sm text--gray-white discuss-price__form-confirm">
-                Поля, отмеченные
-                <span class="text text--danger">*</span>
-                , обязательны для заполнения Нажимая на кнопку - вы автоматически
-                <a class="link link--line link--line-light" href="#">соглашаетесь</a>
-                на отправку ваших персональных данных.
-              </div>
-            </form>
-          </div>
-          <button class="modal-new__close">
+          </form>
+          <button class="modal-new__close js-close-modal">
             <img src="assets/img/icons/exit.svg" alt="" />
           </button>
         </div>
@@ -3202,118 +3047,40 @@
     </div>
   </div>
 
-  <div class="modal-new" data-name="store-list">
+  <div class="modal-new" data-name="ask">
     <div class="modal-new__body">
       <div class="modal-new__dialog">
         <div class="modal-new__content">
-          <div class="store-list modal-new__store-list">
-            <div class="title3 store-list__title">Перечень складов</div>
-            <div class="text text--gray store-list__text">Светодиодный модуль c линзой LBY 3д 2835 0,72W 70lm 7000К IP65
-              ZE03QA1</div>
-            <div class="store-list__items">
-              <div class="store-item store-list__item">
-                <div class="text text--semibold store-item__title">Склад на электрозаводской</div>
-                <div class="stock-item stock-item--gray store-item__stock">
-                  <span class="stock-item__circles">
-                    <i class="stock-item__circle"></i>
-                    <i class="stock-item__circle"></i>
-                    <i class="stock-item__circle"></i>
-                  </span>
-                  <strong class="stock-item__text">Нет в наличии</strong>
+          <form class="form modal-new__form js-form" autocomplete="off">
+            <div class="title3 form__title">Обращение</div>
+            <p class="text text--gray form__text">Мы обязательно свяжемся с Вами в ближайшее время</p>
+            <div class="form__main">
+              <div class="input form__input js-form-input">
+                <div class="input__main">
+                  <input class="input__field" type="text" data-validate="empty" />
+                  <span class="input__placeholder input__placeholder--required">Имя</span>
                 </div>
-                <div class="store-item__add">
-                  <div class="counter store-item__add-counter">
-                    <button class="counter__btn counter__btn--minus">
-                      <img src="assets/img/icons/minus-gray.svg" alt="" />
-                    </button>
-                    <input type="number" class="counter__input" value="1" min="1" />
-                    <button class="counter__btn counter__btn--plus">
-                      <img src="assets/img/icons/plus-gray.svg" alt="" />
-                    </button>
-                  </div>
-                  <button type="button" class="but but--sm store-item__add-btn">
-                    <span>Отправить заявку</span>
-                  </button>
-                </div>
+                <div class="input__error">Поле обязательно для заполнения</div>
               </div>
-              <div class="store-item store-list__item">
-                <div class="text text--semibold store-item__title">Склад на Некрасовке</div>
-                <div class="stock-item stock-item--warning store-item__stock">
-                  <span class="stock-item__circles">
-                    <i class="stock-item__circle stock-item__circle--active"></i>
-                    <i class="stock-item__circle stock-item__circle--active"></i>
-                    <i class="stock-item__circle"></i>
-                  </span>
-                  <strong class="stock-item__text">Достаточно</strong>
+              <div class="input form__input js-form-input">
+                <div class="input__main">
+                  <input class="input__field" type="text" data-validate="empty" />
+                  <span class="input__placeholder input__placeholder--required">E-mail</span>
                 </div>
-                <div class="store-item__add">
-                  <div class="counter store-item__add-counter">
-                    <button class="counter__btn counter__btn--minus">
-                      <img src="assets/img/icons/minus-gray.svg" alt="" />
-                    </button>
-                    <input type="number" class="counter__input" value="1" min="1" />
-                    <button class="counter__btn counter__btn--plus">
-                      <img src="assets/img/icons/plus-gray.svg" alt="" />
-                    </button>
-                  </div>
-                  <button type="button" class="but but--primary but--sm store-item__add-btn">
-                    <span>Купить</span>
-                  </button>
-                </div>
+                <div class="input__error">Поле обязательно для заполнения</div>
               </div>
-              <div class="store-item store-list__item">
-                <div class="text text--semibold store-item__title">Склад в Реутове</div>
-                <div class="stock-item store-item__stock">
-                  <span class="stock-item__circles">
-                    <i class="stock-item__circle stock-item__circle--active"></i>
-                    <i class="stock-item__circle stock-item__circle--active"></i>
-                    <i class="stock-item__circle stock-item__circle--active"></i>
-                  </span>
-                  <strong class="stock-item__text">Много</strong>
+              <div class="input form__input js-form-input">
+                <div class="input__main">
+                  <input class="input__field" type="text" data-validate="empty" />
+                  <span class="input__placeholder input__placeholder--required">Вопрос</span>
                 </div>
-                <div class="store-item__add">
-                  <div class="counter store-item__add-counter">
-                    <button class="counter__btn counter__btn--minus">
-                      <img src="assets/img/icons/minus-gray.svg" alt="" />
-                    </button>
-                    <input type="number" class="counter__input" value="1" min="1" />
-                    <button class="counter__btn counter__btn--plus">
-                      <img src="assets/img/icons/plus-gray.svg" alt="" />
-                    </button>
-                  </div>
-                  <button type="button" class="but but--primary but--sm store-item__add-btn">
-                    <span>Купить</span>
-                  </button>
-                </div>
+                <div class="input__error">Поле обязательно для заполнения</div>
               </div>
-              <div class="store-item store-list__item">
-                <div class="text text--semibold store-item__title">Склад в Санкт-Петербурге</div>
-                <div class="stock-item stock-item--gray store-item__stock">
-                  <span class="stock-item__circles">
-                    <i class="stock-item__circle"></i>
-                    <i class="stock-item__circle"></i>
-                    <i class="stock-item__circle"></i>
-                  </span>
-                  <strong class="stock-item__text">Нет в наличии</strong>
-                </div>
-                <div class="store-item__add">
-                  <div class="counter store-item__add-counter">
-                    <button class="counter__btn counter__btn--minus">
-                      <img src="assets/img/icons/minus-gray.svg" alt="" />
-                    </button>
-                    <input type="number" class="counter__input" value="1" min="1" />
-                    <button class="counter__btn counter__btn--plus">
-                      <img src="assets/img/icons/plus-gray.svg" alt="" />
-                    </button>
-                  </div>
-                  <button type="button" class="but but--sm store-item__add-btn">
-                    <span>Отправить заявку</span>
-                  </button>
-                </div>
-              </div>
+              <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить заявку</button>
+              <p class="text text--sm text--gray-white form__ps">Поля, отмеченные <span class="text text--danger">*</span>, обязательны для заполнения <br> Нажимая на кнопку - вы автоматически <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a> на отправку ваших персональных данных.</p>
             </div>
-          </div>
-          <button class="modal-new__close">
+          </form>
+          <button class="modal-new__close js-close-modal">
             <img src="assets/img/icons/exit.svg" alt="" />
           </button>
         </div>
@@ -3324,6 +3091,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
+  <script src="https://unpkg.com/imask@7.3.0/dist/imask.min.js"></script>
   <script src="assets/js/index.js?v=10"></script>
   <!-- pgs js -->
   <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>

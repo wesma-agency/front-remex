@@ -138,8 +138,7 @@ $openBtns.forEach(($btn) => {
       return;
     }
 
-    $modal.classList.add("modal-new--active");
-    lockBody(absoluteSelectors);
+    openModal($modal);
   });
 });
 
@@ -147,19 +146,49 @@ const $modals = document.querySelectorAll(".modal-new");
 $modals.forEach(($modal) => {
   $modal.classList.add("modal-new--show");
 
-  const $closeBtn = $modal.querySelector(".modal-new__close");
-  $closeBtn.addEventListener("click", () => {
-    $modal.classList.remove("modal-new--active");
-    $modal.addEventListener("transitionend", () => unlockBody(absoluteSelectors), { once: true });
-  });
-
   $modal.addEventListener("click", (e) => {
     if ($modal === e.target || e.target.classList.contains("modal-new__dialog")) {
       $modal.classList.remove("modal-new--active");
+
+      const $otherActiveModal = document.querySelector('.modal-new--active');
+      if (!$otherActiveModal) {
+        $modal.addEventListener("transitionend", () => unlockBody(absoluteSelectors), { once: true });
+      }
+    }
+  });
+});
+
+const $closeBtns = document.querySelectorAll(".js-close-modal");
+$closeBtns.forEach(($btn) => {
+  $btn.addEventListener("click", () => {
+    const name = $btn.dataset.modalClose;
+    let $modal;
+    if (name) {
+      $modal = document.querySelector(`.modal-new[data-name="${name}"`);
+    } else {
+      $modal = $btn.closest(".modal-new");
+    }
+
+    $modal.classList.remove("modal-new--active");
+
+    const $otherActiveModal = document.querySelector('.modal-new--active');
+    if (!$otherActiveModal) {
       $modal.addEventListener("transitionend", () => unlockBody(absoluteSelectors), { once: true });
     }
   });
 });
+
+function openModal($modal) {
+  const $otherActiveModal = document.querySelector('.modal-new--active');
+  if (!$otherActiveModal) {
+    lockBody(absoluteSelectors);
+  } else {
+    const modalBodyScrollWidth = getScrollbarWidth($otherActiveModal.querySelector('.modal-new__body'));
+    $modal.querySelector('.modal-new__dialog').style.paddingRight = `${modalBodyScrollWidth}px`;
+  }
+  
+  $modal.classList.add("modal-new--active");
+}
 
 /* Input */
 const $inputs = document.querySelectorAll(".input");
@@ -179,6 +208,124 @@ $inputs.forEach(($input) => {
   });
 });
 
+/* IMask.js */
+const $maskInputs = document.querySelectorAll('.js-imask');
+$maskInputs.forEach(($input) => {
+  const mask = $input.dataset.mask;
+  const data = {
+    mask
+  }
+
+  IMask($input, data);
+});
+
+/* Code inputs */
+const $codeInputsItems = document.querySelectorAll('.code-inputs');
+$codeInputsItems.forEach(($codeInputs) => {
+  const $inputs = $codeInputs.querySelectorAll('.code-inputs__input');
+  const inpustMasks = [];
+  $inputs.forEach(($input, index) => {
+    const maskData = {
+      mask: Number,
+      min: 0,
+      max: 9,
+      autofix: true,
+    }
+    inpustMasks[index] = IMask($input, maskData);
+
+    $input.addEventListener('click', () => {
+      $input.select();
+    });
+
+    $input.addEventListener('input', (e) => {
+      if ($input.value !== '' && index < $inputs.length - 1) {
+        $inputs[index + 1].focus();
+        $inputs[index + 1].select();
+      }
+    });
+
+    $input.addEventListener('keydown', (e) => {
+      if (e.keyCode === 8 || e.keyCode === 46) {
+        if (index <= 0 || $input.value !== '') {
+          return;
+        }
+
+        $inputs[index - 1].focus();
+      }
+    });
+
+    $input.addEventListener('paste', (e) => {
+      e.preventDefault();
+      const data = e.clipboardData.getData('text/plain');
+      let symbolNumber = 0;
+      for(let i = index; i < $inputs.length; i++) {
+        if (!data[symbolNumber] || !isNumeric(data[symbolNumber])) {
+          return;
+        }
+
+        inpustMasks[i].unmaskedValue = data[symbolNumber++];
+        $inputs[i].focus();
+      }
+    });
+  });
+});
+
+/* Edit form */
+const $editForms = document.querySelectorAll('.edit-form');
+$editForms.forEach(($editForm) => {
+  const $inputs = $editForm.querySelectorAll('.edit-form__input');
+  $inputs.forEach(($input) => {
+    const validateType = $input.dataset.validate;
+    const $field = $input.querySelector('.edit-input__field');
+    const $errorText = $input.querySelector('.edit-input__error-text');
+    const initialValue = $field.value;
+
+    $input.addEventListener('input', () => {
+      if (validateType === 'email') {
+        if (!validateEmail($field)) {
+          $input.classList.add('edit-input--error');
+          $errorText.innerText = 'Пожалуйста, введите корректный адрес e-mail';
+        } else {
+          $input.classList.remove('edit-input--error');
+        }
+      } else if (validateType === 'phone') {
+        if (!validatePhone($field)) {
+          $input.classList.add('edit-input--error');
+          $errorText.innerText = 'Пожалуйста, введите корректный номер телефона';
+        } else if ($field.value !== initialValue) {
+          $editForm.classList.add('edit-form--no-confirm');
+          $input.classList.remove('edit-input--error');
+          $input.classList.add('edit-input--no-confirm');
+          $errorText.innerText = 'Пожалуйста, подтвердите номер телефона';
+        } else {
+          $input.classList.remove('edit-input--error', 'edit-input--no-confirm');
+          $editForm.classList.remove('edit-form--no-confirm');
+        }
+      } else {
+        if (!validateEmpty($field)) {
+          $input.classList.add('edit-input--error');
+          $errorText.innerText = 'Поле обязательно для заполнения';
+        } else {
+          $input.classList.remove('edit-input--error');
+        }
+      }
+    });
+  });
+
+  $editForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const $errorField = $editForm.querySelector('.edit-input--error');
+    const submitModal = $editForm.dataset.submitModal;
+    if ($errorField || !submitModal) {
+      return;
+    }
+
+    const $modal = document.querySelector(`.modal-new[data-name="${submitModal}"`);
+    openModal($modal);
+  });
+});
+
 /* Form validate */
 const $forms = document.querySelectorAll(".js-form");
 $forms.forEach(($form) => {
@@ -191,12 +338,24 @@ $forms.forEach(($form) => {
       const $input = $item.querySelector(".input__field");
       const validateType = $input.dataset.validate;
 
-      if (validateType && !validateEmpty($input)) {
+      if (validateType === 'phone' && !validatePhone($input)) {
+        $item.classList.add("input--error");
+        isError = true;
+        return;
+      } else if (validateType && !validateEmpty($input)) {
         $item.classList.add("input--error");
         isError = true;
         return;
       }
     });
+
+    const submitModal = $form.dataset.submitModal;
+    if (isError || !submitModal) {
+      return;
+    }
+
+    const $modal = document.querySelector(`.modal-new[data-name="${submitModal}"`);
+    openModal($modal);
   });
 
   const $formItems = $form.querySelectorAll(".js-form-input");
@@ -215,6 +374,22 @@ function validateEmpty($input) {
 
   return true;
 }
+
+function validatePhone($input) {
+  if ($input.value.length < 18) {
+    return false;
+  }
+
+  return true;
+}
+
+function validateEmail ($input) {
+  return String($input.value)
+    .toLowerCase()
+    .match(
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
 
 /* Categories */
 const $categoriesToggleAllBtns = document.querySelectorAll(".categories__toggle-all");
@@ -730,44 +905,6 @@ var slider3 = new Swiper(".slider4 .swiper", {
   },
 });
 
-const openModalBtn = document.querySelectorAll(".openModalBtn");
-const openModalBtn1 = document.querySelector(".openModalBtn1");
-const openModalBtn2 = document.querySelector(".openModalBtn2");
-const modal = document.getElementById("myModal");
-const modal1 = document.getElementById("myModal1");
-const modal2 = document.getElementById("myModal2");
-const modalBackground = document.getElementById("modalBackground");
-const close = document.querySelectorAll(".popup__close");
-openModalBtn.forEach((item) => {
-  item.addEventListener("click", () => {
-    modal.style.display = "block";
-    modalBackground.style.display = "block";
-  });
-});
-
-openModalBtn1.addEventListener("click", () => {
-  modal1.style.display = "block";
-  modalBackground.style.display = "block";
-});
-openModalBtn2.addEventListener("click", () => {
-  modal2.style.display = "block";
-  modalBackground.style.display = "block";
-});
-
-modalBackground.addEventListener("click", () => {
-  modal.style.display = "none";
-  modal1.style.display = "none";
-  modal2.style.display = "none";
-  modalBackground.style.display = "none";
-});
-close.forEach((item) => {
-  item.addEventListener("click", () => {
-    modal.style.display = "none";
-    modal1.style.display = "none";
-    modal2.style.display = "none";
-    modalBackground.style.display = "none";
-  });
-});
 const popupItem = document.querySelectorAll(".popup__item");
 
 popupItem.forEach((item) => {
@@ -806,6 +943,86 @@ popupForm.forEach((item) => {
   }
 });
 
+/* About */
+var slider1 = new Swiper('.aslider1 .swiper', {
+  direction: 'horizontal',
+  spaceBetween: 0,
+  slidesPerView: 1,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+})
+var slider2 = new Swiper('.aslider2 .swiper', {
+  direction: 'horizontal',
+  spaceBetween: 30,
+  slidesPerView: 3,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+var slider3 = new Swiper('.slider3 .swiper', {
+  direction: 'horizontal',
+  spaceBetween: 30,
+  slidesPerView: 6,
+  // loop: true,
+  // Navigation arrows
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+})
+
+// Находим все элементы галереи
+const galleryItems = document.querySelectorAll('.as8Item img');
+const galleryContainer = document.querySelector('.gallery-container');
+const expandedImg = document.querySelector('.expanded-img');
+const closeBtn = document.querySelector('.close-btn');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+
+// Показываем увеличенное изображение
+function showImage(index) {
+  expandedImg.src = galleryItems[index].src;
+}
+
+// При клике на изображение в галерее
+galleryItems.forEach((item, index) => {
+  item.addEventListener('click', function () {
+    currentIndex = index;
+    showImage(currentIndex);
+    galleryContainer.style.display = 'block';
+  });
+});
+
+// Листание вперед по изображениям
+nextBtn?.addEventListener('click', function () {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  showImage(currentIndex);
+});
+
+// Листание назад по изображениям
+prevBtn?.addEventListener('click', function () {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  showImage(currentIndex);
+});
+galleryContainer?.addEventListener('click', function (event) {
+  if (event.target === this) {
+    galleryContainer.style.display = 'none';
+  }
+});
+
 /* Helpers */
 function lockBody(absoluteSelectors) {
   const scrollbarWidthPX = `${getScrollbarWidth()}px`;
@@ -825,7 +1042,17 @@ function unlockBody(absoluteSelectors) {
   $absoluteElems.forEach(($elem) => ($elem.style.paddingRight = ""));
 }
 
-function getScrollbarWidth() {
+function getScrollbarWidth($elem) {
+  if ($elem) {
+    return Math.abs($elem.offsetWidth - $elem.clientWidth);
+  }
+
   const documentWidth = document.documentElement.clientWidth;
   return Math.abs(window.innerWidth - documentWidth);
+}
+
+function isNumeric(str) {
+  if (typeof str != "string") return false;
+  return !isNaN(str) &&
+         !isNaN(parseFloat(str))
 }

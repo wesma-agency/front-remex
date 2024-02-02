@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="shortcut icon" href="assets/img/design/favicon.ico" />
-    <title>Доставка и оплата</title>
+    <title>Профиль пользователя</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swapdisplay=swap" rel="stylesheet" />
@@ -44,16 +44,16 @@
           <li><a href="cart.html">Корзина</a></li>
           <li><a href="template.html">Шаблон (Статьи)</a></li>
           <li><a href="search.html">Результаты поиска</a></li>
-      <li><a href="search-404.html">Результаты поиска (404)</a></li>
-      <li><a href="profile.html">Профиль пользователя</a></li>
-        <!-- <li><a href="#">Оформление заказа</a></li>
-        <li><a href="#">Личный кабинет</a></li>
-        <li><a href="#">Заказы пользователя</a></li>
-        <li><a href="#">Заказы пользователя детальная</a></li> -->
+          <li><a href="search-404.html">Результаты поиска (404)</a></li>
+          <li><a href="profile.html">Профиль пользователя</a></li>
+          <!-- <li><a href="#">Оформление заказа</a></li>
+          <li><a href="#">Личный кабинет</a></li>
+          <li><a href="#">Заказы пользователя</a></li>
+          <li><a href="#">Заказы пользователя детальная</a></li> -->
           <li><a href="faq.html">Частые вопросы</a></li>
           <li><a href="delivery.html">Доставка</a></li>
           <!-- <li><a href="#">Новости</a></li>
-        <li><a href="#">Новости детальная</a></li> -->
+          <li><a href="#">Новости детальная</a></li> -->
           <li><a href="404.html">Страница 404</a></li>
         </ul>
       </div>
@@ -73,7 +73,6 @@
     </div>
 
     <!-- end pgs html -->
-
     <div id="page" class="page">
       <header class="header">
         <div class="header__top">
@@ -172,7 +171,7 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
                 <button class="search__close" type="button">
-                  <img src="assets/img/icons/exit.svg" alt="">
+                  <img src="assets/img/icons/exit.svg" alt="" />
                 </button>
                 <div class="search-modal search__modal">
                   <div class="search-modal__categories">
@@ -204,8 +203,7 @@
                     </a>
                     <a class="search-modal__item" href="search.html">
                       <div class="text search-modal__item-name">
-                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
-                          anticold мат</span>
+                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</span>
                         <span class="text text--light search-modal__item-count">44 варианта</span>
                       </div>
                       <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
@@ -508,7 +506,7 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
                 <button class="search__close" type="button">
-                  <img src="assets/img/icons/exit.svg" alt="">
+                  <img src="assets/img/icons/exit.svg" alt="" />
                 </button>
                 <div class="search-modal search__modal">
                   <div class="search-modal__categories">
@@ -540,8 +538,7 @@
                     </a>
                     <a class="search-modal__item" href="search.html">
                       <div class="text search-modal__item-name">
-                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
-                          anticold мат</span>
+                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</span>
                         <span class="text text--light search-modal__item-count">44 варианта</span>
                       </div>
                       <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
@@ -1645,376 +1642,353 @@
       </header>
 
       <main class="main">
-        <section class="delivery">
-          <div class="delivery__header">
-            <div class="wrapper">
+        <div class="profile">
+          <div class="wrapper">
+            <div class="profile__content">
               <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
                 <li>
                   <a class="link link--hover-line link--line-light link--hover-light" href="index.html">Главная</a>
                 </li>
                 <li class="breadcrumbs__separate">/</li>
-                <li>Доставка и оплата</li>
+                <li>
+                  <a class="link link--hover-line link--line-light link--hover-light" href="#">Личный кабинет</a>
+                </li>
+                <li class="breadcrumbs__separate">/</li>
+                <li>Профиль пользователя</li>
               </div>
-              <div class="title1 delivery__title">Доставка и оплата</div>
-              <div class="tabs-btns nav-btns delivery__tabs-btns" data-tabs-name="delivery">
-                <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Доставка по Москве и МО</button>
-                <button class="nav-btns__btn tabs-btns__btn">Доставка по Санкт-Петербургу</button>
-                <button class="nav-btns__btn tabs-btns__btn">Доставка в регионы РФ</button>
-              </div>
-            </div>
-          </div>
-          <div class="delivery__main">
-            <div class="tabs-list" data-tabs-name="delivery">
-              <div class="delivery__tabs-item tabs-list__item tabs-list__item--active">
-                <div class="info info--no-line">
-                  <div class="wrapper">
-                    <div class="info__content">
-                      <div class="info__left">
-                        <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--middle">
-                          Доставка по Москве и&nbsp;Московской области
-                        </div>
-                      </div>
-                      <div class="info__right">
-                        <div class="info__list">
-                          <div class="info__item info__item--border-top">
-                            <div class="title3 title3--gray-dark title3--lh-3">1 200 ₽ &nbsp;— в пределах МКАД</div>
-                          </div>
-                          <div class="info__item info__item--border-bottom">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              <strong>бесплатно</strong>
-                              — при заказе от 20 000 ₽
+              <div class="title1 profile__title">Профиль пользователя</div>
+              <div class="profile__body">
+                <aside class="profile__sidebar">
+                  <ul class="navigation tabs-btns" data-tabs-name="faq">
+                    <li class="navigation__item">
+                      <span class="navigation__btn tabs-btns__btn tabs-btns__btn--active">Профиль</span>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="#">Заказы</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="#">Счета</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="cart.html">
+                        Корзина
+                        <span class="navigation__btn-value">2</span>
+                      </a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="#">
+                        Избранные товары
+                        <span class="navigation__btn-value">6</span>
+                      </a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="#">Лист ожидания</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="#">Оценка качества товара</a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="#">
+                        Уведомления
+                        <span class="navigation__btn-value">2</span>
+                      </a>
+                    </li>
+                    <li class="navigation__item">
+                      <a class="navigation__btn tabs-btns__btn" href="faq.html">FAQ</a>
+                    </li>
+                  </ul>
+                  <button class="but but--full profile__sidebar-btn">
+                    <svg
+                      class="but__icon but__icon--stroke"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_3908_8205" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
+                        <path d="M18 0H0V18H18V0Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_3908_8205)">
+                        <path
+                          d="M11.7262 0.449219H0.449219V17.5492H11.7262V0.449219Z"
+                          stroke-miterlimit="6.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path d="M17.5439 9H4.71094" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4.71094 9L8.48993 12.7" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4.71094 8.99884L8.48993 5.29883" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                    </svg>
+                    <span>Выйти</span>
+                  </button>
+                </aside>
+                <div class="profile__main">
+                  <div class="profile__cards">
+                    <div class="profile__cards-row">
+                      <div class="profile-card profile__card">
+                        <div class="title3 profile-card__title">Личные данные</div>
+                        <form class="edit-form profile-card__form" autocomplete="off" data-submit-modal="phone-confirm">
+                          <div class="edit-input edit-form__input" data-validate="name">
+                            <div class="edit-input__main">
+                              <label for="data-fullname" class="edit-input__label">ФИО</label>
+                              <input type="text" class="edit-input__field" id="data-fullname" value="Иванов Иван Иванович" />
+                              <button class="edit-input__btn" type="button">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
+                              <svg class="edit-input__error-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
+                                  fill="#E8505B" />
+                                <path
+                                  d="M13 14.5V7M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
+                                  stroke="white"
+                                  stroke-width="1.2"
+                                  stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M13.0015 19.3C13.4985 19.3 13.9016 18.8999 13.9016 18.3999C13.9016 17.8999 13.4985 17.5 13.0015 17.5C12.5045 17.5 12.1016 17.8999 12.1016 18.3999C12.1016 18.8999 12.5045 19.3 13.0015 19.3Z"
+                                  fill="white" />
+                              </svg>
                             </div>
+                            <span class="edit-input__error-text"></span>
+                          </div>
+                          <div class="edit-input edit-form__input" data-validate="email">
+                            <div class="edit-input__main">
+                              <label for="data-email" class="edit-input__label">E-mail</label>
+                              <input type="text" class="edit-input__field" id="data-email" value="ivan@ivanov.ru" />
+                              <button class="edit-input__btn" type="button">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
+                              <svg class="edit-input__error-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
+                                  fill="#E8505B" />
+                                <path
+                                  d="M13 14.5V7M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
+                                  stroke="white"
+                                  stroke-width="1.2"
+                                  stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M13.0015 19.3C13.4985 19.3 13.9016 18.8999 13.9016 18.3999C13.9016 17.8999 13.4985 17.5 13.0015 17.5C12.5045 17.5 12.1016 17.8999 12.1016 18.3999C12.1016 18.8999 12.5045 19.3 13.0015 19.3Z"
+                                  fill="white" />
+                              </svg>
+                            </div>
+                            <span class="edit-input__error-text"></span>
+                          </div>
+                          <div class="edit-input edit-form__input" data-validate="phone">
+                            <div class="edit-input__main">
+                              <label for="data-phone" class="edit-input__label">Телефон</label>
+                              <input type="text" class="edit-input__field js-imask" id="data-phone" value="+7 999 888 77 66" data-mask="+{7} (000) 000-00-00" />
+                              <span class="edit-input__status">Номер подтвержден</span>
+                              <button class="edit-input__btn" type="button">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
+                              <svg class="edit-input__error-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
+                                  fill="#E8505B" />
+                                <path
+                                  d="M13 14.5V7M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
+                                  stroke="white"
+                                  stroke-width="1.2"
+                                  stroke-linecap="square"
+                                  stroke-linejoin="round" />
+                                <path
+                                  d="M13.0015 19.3C13.4985 19.3 13.9016 18.8999 13.9016 18.3999C13.9016 17.8999 13.4985 17.5 13.0015 17.5C12.5045 17.5 12.1016 17.8999 12.1016 18.3999C12.1016 18.8999 12.5045 19.3 13.0015 19.3Z"
+                                  fill="white" />
+                              </svg>
+                            </div>
+                            <span class="edit-input__error-text"></span>
+                          </div>
+                          <button class="but but--full edit-form__btn edit-form__btn--confirm">Подтвердить телефон</button>
+                        </form>
+                        <button
+                          class="link link--gray-dark link--line link--line-dark profile-card__btn js-open-modal"
+                          data-modal-name="edit-password">
+                          Изменить пароль
+                        </button>
+                      </div>
+                      <div class="profile-card profile__card">
+                        <div class="title3 profile-card__title">Мои ТК</div>
+                        <p class="text text--gray profile-card__text">Выбор приоритетной транспортной компании</p>
+                        <div class="profile-card__items">
+                          <div class="profile-card__item">
+                            <label class="checkbox filter__checkbox">
+                              <input class="checkbox__input" type="radio" name="company" checked />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                              <span class="checkbox__text">ООО Быстрые</span>
+                            </label>
+                            <button class="profile-card__item-edit">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  opacity="0.25"
+                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                  stroke="#444444"
+                                  stroke-linecap="square" />
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="profile-card__item">
+                            <label class="checkbox filter__checkbox">
+                              <input class="checkbox__input" type="radio" name="company" />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                              <span class="checkbox__text">АО Линии</span>
+                            </label>
+                            <button class="profile-card__item-edit">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  opacity="0.25"
+                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                  stroke="#444444"
+                                  stroke-linecap="square" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
-                        <div class="text text--gray">
-                          Стоимость доставки крупногабаритного материала (длина более 4 метров) и доставки за МКАД и по Московской области
-                          согласовывается при заказе.
+                        <button class="but but--full profile-card__btn">Добавить ТК</button>
+                      </div>
+                      <div class="profile-card profile__card">
+                        <div class="title3 profile-card__title">Программа лояльности</div>
+                        <div class="bonus-points profile-card__points">
+                          <span class="bonus-points__value">2 500</span>
+                          <span class="text text--lg bonus-points__text">бонусных баллов</span>
+                        </div>
+                        <div class="profile-card__links">
+                          <a
+                            href="#"
+                            class="link link--gray-dark link--hover-gray-dark link--line link--line-dark profile-card__links-item">
+                            Как их использовать?
+                          </a>
+                          <a
+                            href="#"
+                            class="link link--gray-dark link--hover-gray-dark link--line link--line-dark profile-card__links-item">
+                            Программа лояльности
+                          </a>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <div class="goods-receipt main__section">
-                  <div class="wrapper">
-                    <div class="goods-receipt__content">
-                      <div class="goods-receipt__main">
-                        <div class="title2 title2--spacing-2 goods-receipt__title">Получение товара</div>
-                        <div class="goods-receipt__info-list">
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Доставка</div>
-                            <div class="goods-receipt__list">
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Доставка осуществляется до адреса клиента, все погрузо-разгрузочные работы ведутся силами клиента.
-                                  </p>
+                    <div class="profile__cards-row">
+                      <div class="profile-card profile__card">
+                        <div class="title3 profile-card__title">Адреса доставок</div>
+                        <p class="text text--gray profile-card__text">Выбор приоритетного склада</p>
+                        <div class="profile-card__items">
+                          <div class="profile-card__item">
+                            <label class="checkbox filter__checkbox">
+                              <input class="checkbox__input" type="radio" name="address" checked />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                              <span class="checkbox__text">г. Москва, пр-кт Вернадского, д.3А</span>
+                            </label>
+                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-address">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  opacity="0.25"
+                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                  stroke="#444444"
+                                  stroke-linecap="square" />
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="profile-card__item">
+                            <label class="checkbox filter__checkbox">
+                              <input class="checkbox__input" type="radio" name="address" />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                              <span class="checkbox__text">г. Москва, ул. Ленина, д.15, кв.5</span>
+                            </label>
+                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-address">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  opacity="0.25"
+                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                  stroke="#444444"
+                                  stroke-linecap="square" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-address">Новый адрес</button>
+                      </div>
+                      <div class="profile-card profile__card">
+                        <div class="title3 profile-card__title">Мои юр. лица</div>
+                        <p class="text text--gray profile-card__text">Выбор приоритетного юр. лица</p>
+                        <div class="profile-card__items">
+                          <div class="profile-card__item">
+                            <label class="checkbox filter__checkbox">
+                              <input class="checkbox__input" type="radio" name="legal-entity" checked />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                              <div class="checkbox__text">
+                                ООО Филькина грамота
+                                <div class="address-labels checkbox__address-labels">
+                                  <div class="address-labels__list">
+                                    <span class="address-label address-labels__item">Электрозаводская</span>
+                                    <span class="address-label address-label--pink address-labels__item">Некрасовская</span>
+                                  </div>
                                 </div>
                               </div>
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Если вы не можете принять товар в согласованное время, повторная доставка возможна при оплате
-                                    пропущенной доставки
-                                  </p>
+                            </label>
+                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-legal-entity">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  opacity="0.25"
+                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                  stroke="#444444"
+                                  stroke-linecap="square" />
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="profile-card__item">
+                            <label class="checkbox filter__checkbox">
+                              <input class="checkbox__input" type="radio" name="legal-entity" />
+                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                              <div class="checkbox__text">
+                                ИП Орлов А.К.
+                                <div class="address-labels checkbox__address-labels">
+                                  <div class="address-labels__list">
+                                    <span class="address-label address-labels__item">Электрозаводская</span>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Документы</div>
-                            <div class="goods-receipt__list">
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Юридическому лицу для получения товара, необходимо иметь при себе доверенность и паспорт.
-                                  </p>
-                                  <p class="text text--light goods-receipt__item-text">
-                                    Или печать компании-плательщика, если получатель обладает правом подписи (подтверждается приказом о
-                                    праве подписи).
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Физическому лицу для получения товара документы не требуются.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
+                            </label>
+                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-legal-entity">
+                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  opacity="0.25"
+                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
+                                  stroke="#444444"
+                                  stroke-linecap="square" />
+                              </svg>
+                            </button>
                           </div>
                         </div>
+                        <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-legal-entity">
+                          Добавить юр. лицо
+                        </button>
                       </div>
-                      <div class="important-card goods-receipt__card">
-                        <img class="important-card__img" src="assets/img/warning.svg" alt="" />
-                        <div class="title3 title3--spacing-2 title3--primary important-card__title">Важно!</div>
-                        <div class="text text--gray important-card__text">
-                          <p>Внимательно проверяйте целостность и&nbsp;количество товара согласно накладной.</p>
-                          <p>После проставления подписи претензии на целостность и количество товара не принимаются.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="delivery__tabs-item tabs-list__item">
-                <div class="info info--no-line">
-                  <div class="wrapper">
-                    <div class="info__content">
-                      <div class="info__left">
-                        <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--middle">
-                          Доставка по Санкт-Петербургу
-                        </div>
-                      </div>
-                      <div class="info__right">
-                        <div class="info__list">
-                          <div class="info__item info__item--border-top">
-                            <div class="title3 title3--gray-dark title3--lh-3">900 ₽ &nbsp;— в пределах КАД</div>
-                            <div class="text text--gray info__text">
-                              Кроме Кудрово, Кронштадт, Лисий Нос, Горская, Стрельна, Петергоф, Ломоносов.
-                            </div>
-                          </div>
-                          <div class="info__item info__item--border-bottom">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              <strong>бесплатно</strong>
-                              — при заказе от 15 000 ₽
-                            </div>
-                          </div>
-                        </div>
-                        <div class="text text--gray">
-                          Стоимость доставки крупногабаритного материала (длина более 4 метров) и доставка в&nbsp;другие районы, за КАД и по
-                          Ленинградской области согласовывается при заказе.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="goods-receipt main__section">
-                  <div class="wrapper">
-                    <div class="goods-receipt__content">
-                      <div class="goods-receipt__main">
-                        <div class="title2 title2--spacing-2 goods-receipt__title">Получение товара</div>
-                        <div class="goods-receipt__info-list">
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Доставка</div>
-                            <div class="goods-receipt__list">
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Доставка осуществляется до адреса клиента, все погрузо-разгрузочные работы ведутся силами клиента.
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Если вы не можете принять товар в согласованное время, повторная доставка возможна при оплате
-                                    пропущенной доставки
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Документы</div>
-                            <div class="goods-receipt__list">
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Юридическому лицу для получения товара, необходимо иметь при себе доверенность и паспорт.
-                                  </p>
-                                  <p class="text text--light goods-receipt__item-text">
-                                    Или печать компании-плательщика, если получатель обладает правом подписи (подтверждается приказом о
-                                    праве подписи).
-                                  </p>
-                                </div>
-                              </div>
-                              <div class="goods-receipt__item">
-                                <div class="goods-receipt__item-main">
-                                  <p class="text text--gray goods-receipt__item-text">
-                                    Физическому лицу для получения товара документы не требуются.
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="important-card goods-receipt__card">
-                        <img class="important-card__img" src="assets/img/warning.svg" alt="" />
-                        <div class="title3 title3--spacing-2 title3--primary important-card__title">Важно!</div>
-                        <div class="text text--gray important-card__text">
-                          <p>Внимательно проверяйте целостность и&nbsp;количество товара согласно накладной.</p>
-                          <p>После проставления подписи претензии на целостность и количество товара не принимаются.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="delivery__tabs-item tabs-list__item">
-                <div class="info info--no-line">
-                  <div class="wrapper">
-                    <div class="info__content">
-                      <div class="info__left">
-                        <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--middle">
-                          Доставка в регионы РФ
-                        </div>
-                      </div>
-                      <div class="info__right">
-                        <div class="text text--gray info__text">
-                          Доставка осуществляется через любую транспортную компанию, выбранную покупателем. До транспортной компании:
-                        </div>
-                        <div class="info__list">
-                          <div class="info__item info__item--border-top">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              1 200 ₽ &nbsp;— в Москве
-                              <br />
-                              <strong>бесплатно</strong>
-                              — при заказе от 20 000 ₽
-                            </div>
-                          </div>
-                          <div class="info__item info__item--border-bottom">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              900 ₽ &nbsp;— в Санкт-Петербурге
-                              <br />
-                              <strong>бесплатно</strong>
-                              — при заказе от 15 000 ₽
-                            </div>
-                          </div>
-                        </div>
-                        <div class="text text--gray">
-                          Стоимость доставки крупногабаритного материала (длина более 4 метров) и доставка за МКАД, по Московской области и
-                          регионам согласовывается при заказе.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="info info--no-line main__section main__section--mt-sm">
-          <div class="wrapper">
-            <div class="info__content">
-              <div class="info__left">
-                <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--short">
-                  Условия оплаты для&nbsp;физических лиц
-                </div>
-              </div>
-              <div class="info__right info__right--pt-0">
-                <div class="info__list">
-                  <div class="info__item">
-                    <div class="title3 title3--gray-dark title3--lh-3">В офисах компании</div>
-                    <div class="text text--gray info__text">
-                      Можно оплатить товары и услуги наличными и картами: Мир, VISA, Mastercard, JCB
-                    </div>
-                  </div>
-                  <div class="info__item">
-                    <div class="title3 title3--gray-dark title3--lh-3">При заказе на сайте или по телефону</div>
-                    <div class="text text--gray info__text">Картами: Мир, VISA, Mastercard, JCB</div>
-                  </div>
-                  <div class="info__item">
-                    <div class="text text--gray info__text">
-                      При выборе оплаты товара с помощью банковской карты необходимо связаться с&nbsp;менеджером для получения ссылки на
-                      оплату.
-                    </div>
-                  </div>
-                </div>
-                <div class="faq-item info__faq-item">
-                  <div class="accordion faq__item">
-                    <button class="title3 accordion__btn faq-item__btn">
-                      Оплата происходит через ПАО СБЕРБАНК
-                      <span class="faq-item__btn-arrow"></span>
-                    </button>
-                    <div class="accordion__content">
-                      <div class="accordion__main faq-item__main">
-                        <div class="text faq-item__text">
-                          <p>
-                            Для оплаты (ввода реквизитов карты) вы будете перенаправлены на платёжный шлюз ПАО СБЕРБАНК. Соединение с
-                            платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования
-                            SSL. В случае если банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa,
-                            MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального
-                            пароля. Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации
-                            обеспечивается ПАО СБЕРБАНК. Введённая информация не будет предоставлена третьим лицам за исключением случаев,
-                            предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом
-                            соответствии с требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.
-                          </p>
-                        </div>
-                        <div class="text text--gray text--spacing-2 faq-item__text">
-                          <p>
-                            <b>
-                              <strong>Важно!</strong>
-                              Компания Ремэкс не принимает оплату заказов онлайн-переводом с карты на карту. Будьте внимательны и
-                              остерегайтесь мошенников.
-                            </b>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="info info--no-line main__section main__section--mt-sm">
-          <div class="wrapper">
-            <div class="info__content">
-              <div class="info__left">
-                <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--short">
-                  Условия обмена и&nbsp;возврата товара
-                </div>
-              </div>
-              <div class="info__right info__right--pt-0">
-                <div class="info__list">
-                  <div class="info__item info__item--offset-lg">
-                    <div class="title3 title3--gray-dark title3--lh-3">Обмен товара</div>
-                    <div class="text text--gray info__text">
-                      <p>
-                        Клиент вправе обменять товар надлежащего качества на аналогичный товар, если указанный товар не подошел по форме,
-                        габаритам, фасону, расцветке, размеру или комплектации, в течение 14 дней, не считая дня его покупки.
-                      </p>
-                      <p>
-                        Обмен товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный
-                        вид, потребительские свойства, а также имеется товарный или кассовый чек.
-                      </p>
-                      <p>
-                        Отсутствие у потребителя товарного чека или кассового чека не лишает его возможности ссылаться на свидетельские
-                        показания.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="info__item info__item--offset-lg">
-                    <div class="title3 title3--gray-dark title3--lh-3">Возврат товара</div>
-                    <div class="text text--gray info__text">
-                      <p>
-                        В случае, если аналогичный товар отсутствует в продаже на день обращения клиента, компания возвращает уплаченную за
-                        указанный товар денежную сумму. Возврат уплаченной за указанный товар денежной суммы осуществляется в течение трех
-                        дней со дня возврата указанного товара.
-                      </p>
-                      <p>
-                        По соглашению обеих сторон обмен товара может быть предусмотрен при поступлении аналогичного товара в продажу, о чем
-                        компания проинформирует клиента дополнительно.
-                      </p>
-                      <p>
-                        <b>
-                          <strong>Важно!</strong>
-                          Обмен или возврат пленки в нарезку возможен, если длина купленной пленки не менее 5 метров.
-                        </b>
-                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
 
       <footer class="foot">
@@ -2350,13 +2324,21 @@
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field js-imask" type="text" data-validate="phone" data-mask="+{7} (000) 000-00-00"/>
+                    <input class="input__field js-imask" type="text" data-validate="phone" data-mask="+{7} (000) 000-00-00" />
                     <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить заявку</button>
-                <p class="text text--sm text--gray-white form__ps">Поля, отмеченные <span class="text text--danger">*</span>, обязательны для заполнения <br> Нажимая на кнопку - вы автоматически <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a> на отправку ваших персональных данных.</p>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
               </div>
             </form>
             <button class="modal-new__close js-close-modal">
@@ -2366,7 +2348,7 @@
         </div>
       </div>
     </div>
-  
+
     <div class="modal-new" data-name="ask">
       <div class="modal-new__body">
         <div class="modal-new__dialog">
@@ -2397,7 +2379,553 @@
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить заявку</button>
-                <p class="text text--sm text--gray-white form__ps">Поля, отмеченные <span class="text text--danger">*</span>, обязательны для заполнения <br> Нажимая на кнопку - вы автоматически <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a> на отправку ваших персональных данных.</p>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="phone-confirm">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" data-submit-modal="phone-confirm-code" autocomplete="off">
+              <div class="title3 form__title">Подтверждение телефона</div>
+              <p class="text text--gray form__text">
+                Проверьте правильность введенного номера,
+                <br />
+                мы пришлем на него смс подтверждения
+              </p>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field js-imask" type="text" data-validate="phone" data-mask="+{7} (000) 000-00-00" />
+                    <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--primary but--full form__btn">Запросить код</button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--backdrop-sm" data-name="phone-confirm-code">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Подтверждение телефона</div>
+              <p class="text text--gray form__text">Введите код подтверждения</p>
+              <div class="form__main">
+                <div class="code-inputs">
+                  <div class="code-inputs__group">
+                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
+                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
+                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
+                  </div>
+                  <div class="code-inputs__group">
+                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
+                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
+                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
+                  </div>
+                </div>
+                <button class="but but--primary but--full form__btn">Подтвердить</button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="edit-password">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Изменить пароль</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="password" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Старый пароль</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="password" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Новый пароль</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="password" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Повторите новый пароль</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--primary but--full form__btn">Изменить пароль</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="new-address">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новый адрес</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder">Город</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder">Улица</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="form__group">
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder">Дом</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <input class="input__field" type="text" />
+                      <span class="input__placeholder">Кв/Офис</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" />
+                    <span class="input__placeholder">Что важно знать водителю?</span>
+                  </div>
+                </div>
+                <button class="but but--primary but--full form__btn">Добавить адрес</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="edit-address">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Изменить адрес</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder">Город</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder">Улица</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="form__group">
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder">Дом</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <input class="input__field" type="text" />
+                      <span class="input__placeholder">Кв/Офис</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" />
+                    <span class="input__placeholder">Что важно знать водителю?</span>
+                  </div>
+                </div>
+                <button class="but but--primary but--full form__btn">Изменить адрес</button>
+                <div class="form__action-links">
+                  <button
+                    class="link link--black link--line link--line-light link--hover-black form__action-link js-open-modal"
+                    data-modal-name="delete-address-confirm"
+                    type="button">
+                    Удалить адрес
+                  </button>
+                </div>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="new-legal-entity">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новое юр. лицо</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Название юрлица</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">ИНН</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">КПП</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <textarea class="input__field input__field--area"></textarea>
+                    <span class="input__placeholder input__placeholder--xs">Напишите реквизиты в этом поле или загрузите файлом ниже</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--full form__btn" type="button">
+                  <svg
+                    class="but__icon but__icon--fill"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
+                  </svg>
+                  <span>Загрузить файл с реквизитами</span>
+                </button>
+                <p class="text text--sm text--gray-white form__message">
+                  Поддерживаются форматы (doc, docx, rtf, pdf, xls, xlsx, txt).
+                  <br />
+                  Ограничение по весу - 5 Mb
+                </p>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Добавить</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="edit-legal-entity">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Редактирование Юр. лица</div>
+              <div class="form__main form__main--mt-xs">
+                <div class="company-data">
+                  <div class="text text--gray text--semibold company-data__title">Текущие данные</div>
+                  <div class="company-data__list">
+                    <div class="company-data__item">
+                      <span>Наименование организации:</span>
+                      <span class="company-data__item-value">ООО “Филькина-грамота”</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Юридический адрес:</span>
+                      <span class="company-data__item-value">
+                        121087, г.Москва вн.тер. г.муниципальный округ Филевский парк, ул.Барклая д.6 стр.3 помещ.7Н/4
+                      </span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Фактический адрес:</span>
+                      <span class="company-data__item-value">111675, г.Москва, ул.Пехорская, д.1"В", стр.1</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>ИНН:</span>
+                      <span class="company-data__item-value">7705611516</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>КПП:</span>
+                      <span class="company-data__item-value">772045001</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>ОГРН:</span>
+                      <span class="company-data__item-value">1047796568160</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Наименование банка:</span>
+                      <span class="company-data__item-value">ПАО СБЕРБАНК г.Москва</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Расчетный счет:</span>
+                      <span class="company-data__item-value">40702810138290107844</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>БИК:</span>
+                      <span class="company-data__item-value">044525225</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Корреспондентский счет:</span>
+                      <span class="company-data__item-value">30101810400000000225</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Генеральный директор:</span>
+                      <span class="company-data__item-value">Кузнецова С.Ю.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text text--gray text--semibold text--lh-3 form__label form__label--sm">
+                  Для изменения данных отправьте файл с реквизитами:
+                </div>
+                <button class="but but--full form__btn form__btn--mt-xs" type="button">
+                  <svg
+                    class="but__icon but__icon--fill"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
+                  </svg>
+                  <span>Загрузить файл с реквизитами</span>
+                </button>
+                <p class="text text--sm text--gray-white form__message">
+                  Поддерживаются форматы (doc, docx, rtf, pdf, xls, xlsx, txt).
+                  <br />
+                  Ограничение по весу - 5 Mb
+                </p>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить</button>
+                <button
+                  class="link link--black link--line link--line-light link--hover-black form__action-link js-open-modal"
+                  data-modal-name="delete-legal-entity"
+                  type="button">
+                  Удалить юр. лицо
+                </button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="legal-entity-info">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">ООО Филькина грамота</div>
+              <div class="form__main form__main--mt-xs">
+                <div class="company-data">
+                  <div class="text text--gray text--semibold company-data__title">Текущие данные</div>
+                  <div class="company-data__list">
+                    <div class="company-data__item">
+                      <span>Наименование организации:</span>
+                      <span class="company-data__item-value">ООО “Филькина-грамота”</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Юридический адрес:</span>
+                      <span class="company-data__item-value">
+                        121087, г.Москва вн.тер. г.муниципальный округ Филевский парк, ул.Барклая д.6 стр.3 помещ.7Н/4
+                      </span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Фактический адрес:</span>
+                      <span class="company-data__item-value">111675, г.Москва, ул.Пехорская, д.1"В", стр.1</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>ИНН:</span>
+                      <span class="company-data__item-value">7705611516</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>КПП:</span>
+                      <span class="company-data__item-value">772045001</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>ОГРН:</span>
+                      <span class="company-data__item-value">1047796568160</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Наименование банка:</span>
+                      <span class="company-data__item-value">ПАО СБЕРБАНК г.Москва</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Расчетный счет:</span>
+                      <span class="company-data__item-value">40702810138290107844</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>БИК:</span>
+                      <span class="company-data__item-value">044525225</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Корреспондентский счет:</span>
+                      <span class="company-data__item-value">30101810400000000225</span>
+                    </div>
+                    <div class="company-data__item">
+                      <span>Генеральный директор:</span>
+                      <span class="company-data__item-value">Кузнецова С.Ю.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--backdrop-sm" data-name="delete-address-confirm">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Удаление адреса</div>
+              <p class="text text--gray form__text">Вы действительно хотите удалить этот адрес?</p>
+              <div class="form__btns">
+                <button class="but but--full form__btns-item js-close-modal">Не удалять</button>
+                <button class="but but--full but--primary form__btns-item">Удалить</button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--backdrop-sm" data-name="delete-legal-entity">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Удаление юр. лица</div>
+              <p class="text text--gray form__text form__text--sm">Вы действительно хотите удалить это юридическое лицо?</p>
+              <div class="form__btns">
+                <button class="but but--full form__btns-item js-close-modal">Не удалять</button>
+                <button class="but but--full but--primary form__btns-item">Удалить</button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--backdrop-sm" data-name="delete-legal-entity">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Удаление профиля</div>
+              <p class="text text--gray form__text">Вы действительно хотите удалить этот профиль?</p>
+              <div class="form__btns">
+                <button class="but but--full form__btns-item js-close-modal">Не удалять</button>
+                <button class="but but--full but--primary form__btns-item">Удалить</button>
               </div>
             </form>
             <button class="modal-new__close js-close-modal">
