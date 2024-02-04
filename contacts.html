@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="shortcut icon" href="assets/img/design/favicon.ico" />
-    <title>Профиль пользователя</title>
+    <title>Контакты</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swapdisplay=swap" rel="stylesheet" />
@@ -1642,334 +1642,516 @@
         <!-- /.podmenu -->
       </header>
 
-      <main class="main">
-        <div class="profile">
-          <div class="wrapper">
-            <div class="profile__content">
-              <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
-                <li>
-                  <a class="link link--hover-line link--line-light link--hover-light" href="index.html">Главная</a>
-                </li>
-                <li class="breadcrumbs__separate">/</li>
-                <li>
-                  <a class="link link--hover-line link--line-light link--hover-light" href="#">Личный кабинет</a>
-                </li>
-                <li class="breadcrumbs__separate">/</li>
-                <li>Профиль пользователя</li>
-              </div>
-              <div class="title1 profile__title">Профиль пользователя</div>
-              <div class="profile__body">
-                <aside class="profile__sidebar">
-                  <div class="navigation">
-                    <span class="navigation__btn navigation__btn--active">Профиль</span>
-                    <a class="navigation__btn" href="#">Заказы</a>
-                    <a class="navigation__btn" href="#">Счета</a>
-                    <a class="navigation__btn" href="cart.html">
-                      Корзина
-                      <span class="navigation__btn-value">2</span>
-                    </a>
-                    <a class="navigation__btn" href="#">
-                      Избранные товары
-                      <span class="navigation__btn-value">6</span>
-                    </a>
-                    <a class="navigation__btn" href="#">Лист ожидания</a>
-                    <a class="navigation__btn" href="#">Оценка качества товара</a>
-                    <a class="navigation__btn" href="#">
-                      Уведомления
-                      <span class="navigation__btn-value">2</span>
-                    </a>
-                    <a class="navigation__btn" href="faq.html">FAQ</a>
-                  </div>
-                  <button class="but but--full profile__sidebar-btn">
-                    <svg
-                      class="but__icon but__icon--stroke"
-                      width="18"
-                      height="18"
-                      viewBox="0 0 18 18"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <mask id="mask0_3908_8205" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
-                        <path d="M18 0H0V18H18V0Z" fill="white" />
-                      </mask>
-                      <g mask="url(#mask0_3908_8205)">
-                        <path
-                          d="M11.7262 0.449219H0.449219V17.5492H11.7262V0.449219Z"
-                          stroke-miterlimit="6.2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round" />
-                        <path d="M17.5439 9H4.71094" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4.71094 9L8.48993 12.7" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M4.71094 8.99884L8.48993 5.29883" stroke-linecap="round" stroke-linejoin="round" />
-                      </g>
-                    </svg>
-                    <span>Выйти</span>
-                  </button>
-                </aside>
-                <div class="profile__main">
-                  <div class="profile__cards">
-                    <div class="profile__cards-row">
-                      <div class="profile-card profile__card">
-                        <div class="title3 profile-card__title">Личные данные</div>
-                        <form class="edit-form profile-card__form" autocomplete="off" data-submit-modal="phone-confirm">
-                          <div class="edit-input edit-form__input" data-validate="name">
-                            <div class="edit-input__main">
-                              <label for="data-fullname" class="edit-input__label">ФИО</label>
-                              <input type="text" class="edit-input__field" id="data-fullname" value="Иванов Иван Иванович" />
-                              <button class="edit-input__btn" type="button">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                    stroke-linecap="square" />
-                                </svg>
-                              </button>
-                              <svg class="edit-input__error-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  fill-rule="evenodd"
-                                  clip-rule="evenodd"
-                                  d="M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
-                                  fill="#E8505B" />
-                                <path
-                                  d="M13 14.5V7M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
-                                  stroke="white"
-                                  stroke-width="1.2"
-                                  stroke-linecap="square"
-                                  stroke-linejoin="round" />
-                                <path
-                                  d="M13.0015 19.3C13.4985 19.3 13.9016 18.8999 13.9016 18.3999C13.9016 17.8999 13.4985 17.5 13.0015 17.5C12.5045 17.5 12.1016 17.8999 12.1016 18.3999C12.1016 18.8999 12.5045 19.3 13.0015 19.3Z"
-                                  fill="white" />
-                              </svg>
-                            </div>
-                            <span class="edit-input__error-text"></span>
-                          </div>
-                          <div class="edit-input edit-form__input" data-validate="email">
-                            <div class="edit-input__main">
-                              <label for="data-email" class="edit-input__label">E-mail</label>
-                              <input type="text" class="edit-input__field" id="data-email" value="ivan@ivanov.ru" />
-                              <button class="edit-input__btn" type="button">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                    stroke-linecap="square" />
-                                </svg>
-                              </button>
-                              <svg class="edit-input__error-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  fill-rule="evenodd"
-                                  clip-rule="evenodd"
-                                  d="M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
-                                  fill="#E8505B" />
-                                <path
-                                  d="M13 14.5V7M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
-                                  stroke="white"
-                                  stroke-width="1.2"
-                                  stroke-linecap="square"
-                                  stroke-linejoin="round" />
-                                <path
-                                  d="M13.0015 19.3C13.4985 19.3 13.9016 18.8999 13.9016 18.3999C13.9016 17.8999 13.4985 17.5 13.0015 17.5C12.5045 17.5 12.1016 17.8999 12.1016 18.3999C12.1016 18.8999 12.5045 19.3 13.0015 19.3Z"
-                                  fill="white" />
-                              </svg>
-                            </div>
-                            <span class="edit-input__error-text"></span>
-                          </div>
-                          <div class="edit-input edit-form__input" data-validate="phone">
-                            <div class="edit-input__main">
-                              <label for="data-phone" class="edit-input__label">Телефон</label>
-                              <input type="text" class="edit-input__field js-imask" id="data-phone" value="+7 999 888 77 66" data-mask="+{7} (000) 000-00-00" />
-                              <span class="edit-input__status">Номер подтвержден</span>
-                              <button class="edit-input__btn" type="button">
-                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                    stroke-linecap="square" />
-                                </svg>
-                              </button>
-                              <svg class="edit-input__error-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  fill-rule="evenodd"
-                                  clip-rule="evenodd"
-                                  d="M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
-                                  fill="#E8505B" />
-                                <path
-                                  d="M13 14.5V7M17.526 1L25 8.5V17.5L17.526 25H8.5L1 17.5V8.5L8.5 1H17.526Z"
-                                  stroke="white"
-                                  stroke-width="1.2"
-                                  stroke-linecap="square"
-                                  stroke-linejoin="round" />
-                                <path
-                                  d="M13.0015 19.3C13.4985 19.3 13.9016 18.8999 13.9016 18.3999C13.9016 17.8999 13.4985 17.5 13.0015 17.5C12.5045 17.5 12.1016 17.8999 12.1016 18.3999C12.1016 18.8999 12.5045 19.3 13.0015 19.3Z"
-                                  fill="white" />
-                              </svg>
-                            </div>
-                            <span class="edit-input__error-text"></span>
-                          </div>
-                          <button class="but but--full edit-form__btn edit-form__btn--confirm">Подтвердить телефон</button>
-                        </form>
-                        <button
-                          class="link link--gray-dark link--line link--line-dark profile-card__btn js-open-modal"
-                          data-modal-name="edit-password">
-                          Изменить пароль
-                        </button>
-                      </div>
-                      <div class="profile-card profile__card">
-                        <div class="title3 profile-card__title">Мои ТК</div>
-                        <p class="text text--gray profile-card__text">Выбор приоритетной транспортной компании</p>
-                        <div class="profile-card__items">
-                          <div class="profile-card__item">
-                            <label class="checkbox filter__checkbox">
-                              <input class="checkbox__input" type="radio" name="company" checked />
-                              <span class="checkbox__switch checkbox__switch--circle"></span>
-                              <span class="checkbox__text">ООО Быстрые</span>
-                            </label>
-                            <button class="profile-card__item-edit">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  opacity="0.25"
-                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                  stroke="#444444"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
-                          </div>
-                          <div class="profile-card__item">
-                            <label class="checkbox filter__checkbox">
-                              <input class="checkbox__input" type="radio" name="company" />
-                              <span class="checkbox__switch checkbox__switch--circle"></span>
-                              <span class="checkbox__text">АО Линии</span>
-                            </label>
-                            <button class="profile-card__item-edit">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  opacity="0.25"
-                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                  stroke="#444444"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
-                          </div>
-                        </div>
-                        <button class="but but--full profile-card__btn">Добавить ТК</button>
-                      </div>
-                      <div class="profile-card profile__card">
-                        <div class="title3 profile-card__title">Программа лояльности</div>
-                        <div class="bonus-points profile-card__points">
-                          <span class="bonus-points__value">2 500</span>
-                          <span class="text text--lg bonus-points__text">бонусных баллов</span>
-                        </div>
-                        <div class="profile-card__links">
-                          <a
-                            href="#"
-                            class="link link--gray-dark link--hover-gray-dark link--line link--line-dark profile-card__links-item">
-                            Как их использовать?
-                          </a>
-                          <a
-                            href="#"
-                            class="link link--gray-dark link--hover-gray-dark link--line link--line-dark profile-card__links-item">
-                            Программа лояльности
-                          </a>
-                        </div>
+      <main class="main main--p-end-0 main--flex">
+        <div class="contacts main__contacts">
+          <div class="contacts__main">
+            <div class="wrapper">
+              <div class="contacts__main-content">
+                <div class="breadcrumbs breadcrumbs--gray contacts__breadcrumbs">
+                  <li>
+                    <a class="link link--hover-line link--line-light link--hover-light" href="index.html">Главная</a>
+                  </li>
+                  <li class="breadcrumbs__separate">/</li>
+                  <li>Контакты</li>
+                </div>
+                <div class="title1 contacts__title">Контакты</div>
+                <div class="tabs-btns nav-btns delivery__tabs-btns" data-tabs-name="contacts">
+                  <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Москва и МО</button>
+                  <button class="nav-btns__btn tabs-btns__btn">Санкт-Петербург</button>
+                </div>
+                <div class="contacts__tabs tabs-list" data-tabs-name="contacts">
+                  <div class="tabs-list__item tabs-list__item--active">
+                    <div class="textboxes contacts__textboxes">
+                      <div class="textboxes__list tabs-btns" data-tabs-name="street-msk">
+                        <label class="textbox textboxes__item tabs-btns__btn tabs-btns__btn--active">
+                          <input class="textbox__input" type="radio" name="msk-street" checked />
+                          <span class="textbox__switch textbox__switch--border">
+                            <span class="address-label textbox__address-label">Электрозаводская</span>
+                          </span>
+                        </label>
+                        <label class="textbox textboxes__item tabs-btns__btn">
+                          <input class="textbox__input" type="radio" name="msk-street" />
+                          <span class="textbox__switch textbox__switch--border">
+                            <span class="address-label address-label--yellow textbox__address-label">Новокосино</span>
+                          </span>
+                        </label>
+                        <label class="textbox textboxes__item tabs-btns__btn">
+                          <input class="textbox__input" type="radio" name="msk-street" />
+                          <span class="textbox__switch textbox__switch--border">
+                            <span class="address-label address-label--pink textbox__address-label">Некрасовка</span>
+                          </span>
+                        </label>
                       </div>
                     </div>
-                    <div class="profile__cards-row">
-                      <div class="profile-card profile__card">
-                        <div class="title3 profile-card__title">Адреса доставок</div>
-                        <p class="text text--gray profile-card__text">Выбор приоритетного склада</p>
-                        <div class="profile-card__items">
-                          <div class="profile-card__item">
-                            <label class="checkbox filter__checkbox">
-                              <input class="checkbox__input" type="radio" name="address" checked />
-                              <span class="checkbox__switch checkbox__switch--circle"></span>
-                              <span class="checkbox__text">г. Москва, пр-кт Вернадского, д.3А</span>
-                            </label>
-                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-address">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  opacity="0.25"
-                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                  stroke="#444444"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
+                    <div class="tabs-list" data-tabs-name="street-msk">
+                      <div class="contacts__street-tab tabs-list__item tabs-list__item--active">
+                        <div class="title3 title3--lh-3">Офис и склад на Электрозаводской</div>
+                        <div class="contacts__list">
+                          <div class="contacts__item">
+                            <svg class="contacts__item-img" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.49899 23.2836L7.94699 22.6226C7.62499 22.2326 0 13.0227 0 8.51666C0 4.01066 3.81399 0.015625 8.49899 0.015625C13.184 0.015625 17 3.82866 17 8.51666C17 13.2037 9.37499 22.2326 9.04999 22.6226L8.49899 23.2836ZM8.49899 1.44763C4.60199 1.44763 1.43301 4.61966 1.43301 8.51666C1.43301 11.5727 6.11099 18.0466 8.49899 21.0316C10.887 18.0466 15.567 11.5727 15.567 8.51666C15.567 4.61966 12.396 1.44763 8.49899 1.44763Z" fill="#444444"/>
+                              <path d="M8.49951 11.916C6.62751 11.916 5.10352 10.393 5.10352 8.521C5.10352 6.649 6.62751 5.125 8.49951 5.125C10.3715 5.125 11.8955 6.649 11.8955 8.521C11.8955 10.393 10.3715 11.916 8.49951 11.916ZM8.49951 6.56C7.41751 6.56 6.53653 7.44101 6.53653 8.52301C6.53653 9.60501 7.41751 10.486 8.49951 10.486C9.58151 10.486 10.4625 9.60501 10.4625 8.52301C10.4625 7.44101 9.58151 6.56 8.49951 6.56Z" fill="#004ADA"/>
+                            </svg>
+                            <span>Электрозаводская улица, 21с27</span>
                           </div>
-                          <div class="profile-card__item">
-                            <label class="checkbox filter__checkbox">
-                              <input class="checkbox__input" type="radio" name="address" />
-                              <span class="checkbox__switch checkbox__switch--circle"></span>
-                              <span class="checkbox__text">г. Москва, ул. Ленина, д.15, кв.5</span>
-                            </label>
-                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-address">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  opacity="0.25"
-                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                  stroke="#444444"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
+                          <a class="contacts__item" href="tel:+74959954949">
+                            <svg class="contacts__item-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8217" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0091H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8217)">
+                              <path d="M4.2753 2.36682C4.6193 2.36682 5.01329 2.49382 5.31729 2.94482C6.13429 4.16282 6.92329 5.31183 7.36029 6.09583C7.50729 6.36083 7.65032 7.11281 7.17032 7.65381C6.75332 8.12281 6.3833 8.23881 6.1643 8.58081C6.0123 8.81581 5.83829 9.34379 6.12329 9.94879C6.46529 10.6738 6.88231 11.2668 7.79931 12.1978C8.73031 13.1128 9.32431 13.5298 10.0493 13.8748C10.2843 13.9848 10.5113 14.0288 10.7103 14.0288C11.0233 14.0288 11.2743 13.9268 11.4173 13.8358C11.7593 13.6138 11.8743 13.2468 12.3433 12.8298C12.6273 12.5788 12.9643 12.4968 13.2613 12.4968C13.5353 12.4968 13.7753 12.5668 13.9043 12.6398C14.6863 13.0768 15.8343 13.8648 17.0533 14.6828C17.9093 15.2558 17.5973 16.1528 17.4763 16.4338C17.3563 16.7168 16.7363 17.6478 15.4043 18.3458C15.0373 18.5388 14.5543 18.6518 13.9683 18.6518C12.1213 18.6518 9.26331 17.5218 5.87231 14.1298C1.40231 9.65882 0.861308 6.11583 1.65631 4.59583C2.35431 3.26383 3.2853 2.64582 3.5683 2.52582C3.6993 2.46882 3.9693 2.36884 4.2753 2.36884V2.36682ZM4.2753 1.00781C3.7563 1.00781 3.3103 1.15279 3.0263 1.27679C2.4713 1.51279 1.29629 2.35082 0.451291 3.96582C-0.604709 5.98482 -0.0697017 10.1068 4.9093 15.0888C9.1883 19.3678 12.4203 20.0088 13.9653 20.0088C14.7543 20.0088 15.4473 19.8548 16.0313 19.5488C17.6443 18.7038 18.4823 17.5308 18.7223 16.9688C19.2893 15.6458 18.9293 14.3068 17.8073 13.5548C17.6173 13.4278 17.4313 13.3038 17.2483 13.1788C16.2333 12.4948 15.2723 11.8518 14.5633 11.4548C14.2083 11.2558 13.7323 11.1398 13.2593 11.1398C12.5653 11.1398 11.9363 11.3738 11.4403 11.8148C11.1113 12.1078 10.9093 12.3748 10.7603 12.5718C10.7373 12.6008 10.7103 12.6398 10.6853 12.6688C10.6653 12.6648 10.6443 12.6558 10.6293 12.6488C10.0963 12.3978 9.61831 12.0848 8.76031 11.2418C7.91531 10.3808 7.6043 9.9058 7.3533 9.3728C7.3423 9.3508 7.33531 9.32983 7.33331 9.31683C7.36431 9.29183 7.40129 9.26482 7.43029 9.24182C7.62729 9.09282 7.89431 8.89083 8.18731 8.56183C9.02731 7.61783 9.00031 6.24684 8.54931 5.43884C8.15331 4.72684 7.5093 3.77079 6.8273 2.75879C6.7033 2.57279 6.57429 2.38281 6.44729 2.19281C5.93729 1.43081 5.1653 1.01184 4.2753 1.01184V1.00781Z" fill="#444444"/>
+                              <path d="M19.9994 8.64203H18.6404C18.6404 4.62603 15.3734 1.35901 11.3574 1.35901V0C16.1234 0 19.9994 3.87803 19.9994 8.64203Z" fill="#004ADA"/>
+                              <path d="M16.3974 8.6416H15.0384C15.0384 7.6586 14.6554 6.73357 13.9604 6.03857C13.2644 5.34357 12.3404 4.96057 11.3574 4.96057V3.60156C12.7054 3.60156 13.9694 4.12455 14.9234 5.07855C15.8744 6.02955 16.4004 7.29555 16.3974 8.64355V8.6416Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>+ 7 495 995 49 49</span>
+                          </a>
+                          <a class="contacts__item" href="mailto:mailbox@remex.ru">
+                            <svg class="contacts__item-img" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8227" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0111H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8227)">
+                              <path d="M10.0054 20.0423C8.1864 20.0423 6.36139 19.5413 4.72739 18.5263C2.45639 17.1203 0.869401 14.9113 0.259401 12.3123C-0.349599 9.71233 0.0903767 7.02929 1.49738 4.75929C4.40238 0.0732889 10.5794 -1.37569 15.2644 1.52931C19.9504 4.43431 21.3994 10.6093 18.4944 15.2973L18.2984 15.6133H15.9484V14.2773H17.5464C19.8104 10.2593 18.5174 5.11732 14.5614 2.66432C10.5014 0.147318 5.15039 1.40229 2.63239 5.46229C1.41239 7.43029 1.03238 9.75434 1.56238 12.0073C2.09138 14.2593 3.46538 16.1713 5.43338 17.3913C8.49338 19.2903 12.3314 19.1163 15.2094 16.9533L16.0124 18.0193C14.2274 19.3613 12.1214 20.0403 10.0074 20.0403L10.0054 20.0423Z" fill="#444444"/>
+                              <path d="M13.0551 14.0326V15.6246H14.3901V5.82556H13.0551V7.14758C12.1181 6.12158 10.7711 5.47656 9.27512 5.47656C6.45512 5.47656 4.16211 7.7706 4.16211 10.5896C4.16211 13.4076 6.45712 15.7016 9.27512 15.7016C10.7711 15.7016 12.1181 15.0566 13.0551 14.0306V14.0326ZM9.27713 14.3686C7.19413 14.3686 5.50012 12.6746 5.50012 10.5916C5.50012 8.50755 7.19413 6.8136 9.27713 6.8136C11.3611 6.8136 13.0571 8.50755 13.0571 10.5916C13.0571 12.6746 11.3611 14.3686 9.27713 14.3686Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>mailbox@remex.ru</span>
+                          </a>
+                        </div>
+                        <div class="timetable contacts__timetable">
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">По будням:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 9:00 до 18:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Суббота:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 10:00 до 15:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Воскресенье:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">выходной</div>
                           </div>
                         </div>
-                        <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-address">Новый адрес</button>
+                        <div class="contacts__steps">
+                          <div class="text text--lg text--semibold text--gray-dark text--lh-3 contacts__label">Для проезда необходимо:</div>
+                          <ol class="num-list contacts__steps-list">
+                            <li class="num-list__item">выйти на станции Электрозаводская;</li>
+                            <li class="num-list__item">пройти 100 метров правее от главного входа в метро;</li>
+                            <li class="num-list__item">затем 300 метров до лестницы и перейти на обратную строну.</li>
+                          </ol>
+                        </div>
+                        <div class="small-slider contacts__slider">
+                          <div class="small-slider__swiper swiper">
+                            <div class="swiper-wrapper">
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="small-slider__navigation">
+                            <button class="btn-left small-slider__btn-prev"></button>
+                            <button class="btn-right small-slider__btn-next"></button>
+                          </div>
+                        </div>
+                        <button class="but but--full contacts__btn">Наши реквизиты</button>
                       </div>
-                      <div class="profile-card profile__card">
-                        <div class="title3 profile-card__title">Мои юр. лица</div>
-                        <p class="text text--gray profile-card__text">Выбор приоритетного юр. лица</p>
-                        <div class="profile-card__items">
-                          <div class="profile-card__item">
-                            <label class="checkbox filter__checkbox">
-                              <input class="checkbox__input" type="radio" name="legal-entity" checked />
-                              <span class="checkbox__switch checkbox__switch--circle"></span>
-                              <div class="checkbox__text">
-                                ООО Филькина грамота
-                                <div class="address-labels checkbox__address-labels">
-                                  <div class="address-labels__list">
-                                    <span class="address-label address-labels__item">Электрозаводская</span>
-                                    <span class="address-label address-label--pink address-labels__item">Некрасовская</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </label>
-                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-legal-entity">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  opacity="0.25"
-                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                  stroke="#444444"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
+                      <div class="contacts__street-tab tabs-list__item">
+                        <div class="title3 title3--lh-3">Офис и склад на Новокосино</div>
+                        <div class="contacts__list">
+                          <div class="contacts__item">
+                            <svg class="contacts__item-img" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.49899 23.2836L7.94699 22.6226C7.62499 22.2326 0 13.0227 0 8.51666C0 4.01066 3.81399 0.015625 8.49899 0.015625C13.184 0.015625 17 3.82866 17 8.51666C17 13.2037 9.37499 22.2326 9.04999 22.6226L8.49899 23.2836ZM8.49899 1.44763C4.60199 1.44763 1.43301 4.61966 1.43301 8.51666C1.43301 11.5727 6.11099 18.0466 8.49899 21.0316C10.887 18.0466 15.567 11.5727 15.567 8.51666C15.567 4.61966 12.396 1.44763 8.49899 1.44763Z" fill="#444444"/>
+                              <path d="M8.49951 11.916C6.62751 11.916 5.10352 10.393 5.10352 8.521C5.10352 6.649 6.62751 5.125 8.49951 5.125C10.3715 5.125 11.8955 6.649 11.8955 8.521C11.8955 10.393 10.3715 11.916 8.49951 11.916ZM8.49951 6.56C7.41751 6.56 6.53653 7.44101 6.53653 8.52301C6.53653 9.60501 7.41751 10.486 8.49951 10.486C9.58151 10.486 10.4625 9.60501 10.4625 8.52301C10.4625 7.44101 9.58151 6.56 8.49951 6.56Z" fill="#004ADA"/>
+                            </svg>
+                            <span>Новокосино</span>
                           </div>
-                          <div class="profile-card__item">
-                            <label class="checkbox filter__checkbox">
-                              <input class="checkbox__input" type="radio" name="legal-entity" />
-                              <span class="checkbox__switch checkbox__switch--circle"></span>
-                              <div class="checkbox__text">
-                                ИП Орлов А.К.
-                                <div class="address-labels checkbox__address-labels">
-                                  <div class="address-labels__list">
-                                    <span class="address-label address-labels__item">Электрозаводская</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </label>
-                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-legal-entity">
-                              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  opacity="0.25"
-                                  d="M13.367 3.68997L18.314 8.62991M18.827 1.72L20.276 3.16995C21.241 4.13995 21.241 5.70995 20.276 6.66995L5.94702 21H1V16.0501L15.329 1.72C16.295 0.76 17.861 0.76 18.827 1.72Z"
-                                  stroke="#444444"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
+                          <a class="contacts__item" href="tel:+74959954949">
+                            <svg class="contacts__item-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8217" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0091H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8217)">
+                              <path d="M4.2753 2.36682C4.6193 2.36682 5.01329 2.49382 5.31729 2.94482C6.13429 4.16282 6.92329 5.31183 7.36029 6.09583C7.50729 6.36083 7.65032 7.11281 7.17032 7.65381C6.75332 8.12281 6.3833 8.23881 6.1643 8.58081C6.0123 8.81581 5.83829 9.34379 6.12329 9.94879C6.46529 10.6738 6.88231 11.2668 7.79931 12.1978C8.73031 13.1128 9.32431 13.5298 10.0493 13.8748C10.2843 13.9848 10.5113 14.0288 10.7103 14.0288C11.0233 14.0288 11.2743 13.9268 11.4173 13.8358C11.7593 13.6138 11.8743 13.2468 12.3433 12.8298C12.6273 12.5788 12.9643 12.4968 13.2613 12.4968C13.5353 12.4968 13.7753 12.5668 13.9043 12.6398C14.6863 13.0768 15.8343 13.8648 17.0533 14.6828C17.9093 15.2558 17.5973 16.1528 17.4763 16.4338C17.3563 16.7168 16.7363 17.6478 15.4043 18.3458C15.0373 18.5388 14.5543 18.6518 13.9683 18.6518C12.1213 18.6518 9.26331 17.5218 5.87231 14.1298C1.40231 9.65882 0.861308 6.11583 1.65631 4.59583C2.35431 3.26383 3.2853 2.64582 3.5683 2.52582C3.6993 2.46882 3.9693 2.36884 4.2753 2.36884V2.36682ZM4.2753 1.00781C3.7563 1.00781 3.3103 1.15279 3.0263 1.27679C2.4713 1.51279 1.29629 2.35082 0.451291 3.96582C-0.604709 5.98482 -0.0697017 10.1068 4.9093 15.0888C9.1883 19.3678 12.4203 20.0088 13.9653 20.0088C14.7543 20.0088 15.4473 19.8548 16.0313 19.5488C17.6443 18.7038 18.4823 17.5308 18.7223 16.9688C19.2893 15.6458 18.9293 14.3068 17.8073 13.5548C17.6173 13.4278 17.4313 13.3038 17.2483 13.1788C16.2333 12.4948 15.2723 11.8518 14.5633 11.4548C14.2083 11.2558 13.7323 11.1398 13.2593 11.1398C12.5653 11.1398 11.9363 11.3738 11.4403 11.8148C11.1113 12.1078 10.9093 12.3748 10.7603 12.5718C10.7373 12.6008 10.7103 12.6398 10.6853 12.6688C10.6653 12.6648 10.6443 12.6558 10.6293 12.6488C10.0963 12.3978 9.61831 12.0848 8.76031 11.2418C7.91531 10.3808 7.6043 9.9058 7.3533 9.3728C7.3423 9.3508 7.33531 9.32983 7.33331 9.31683C7.36431 9.29183 7.40129 9.26482 7.43029 9.24182C7.62729 9.09282 7.89431 8.89083 8.18731 8.56183C9.02731 7.61783 9.00031 6.24684 8.54931 5.43884C8.15331 4.72684 7.5093 3.77079 6.8273 2.75879C6.7033 2.57279 6.57429 2.38281 6.44729 2.19281C5.93729 1.43081 5.1653 1.01184 4.2753 1.01184V1.00781Z" fill="#444444"/>
+                              <path d="M19.9994 8.64203H18.6404C18.6404 4.62603 15.3734 1.35901 11.3574 1.35901V0C16.1234 0 19.9994 3.87803 19.9994 8.64203Z" fill="#004ADA"/>
+                              <path d="M16.3974 8.6416H15.0384C15.0384 7.6586 14.6554 6.73357 13.9604 6.03857C13.2644 5.34357 12.3404 4.96057 11.3574 4.96057V3.60156C12.7054 3.60156 13.9694 4.12455 14.9234 5.07855C15.8744 6.02955 16.4004 7.29555 16.3974 8.64355V8.6416Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>+ 7 495 995 49 49</span>
+                          </a>
+                          <a class="contacts__item" href="mailto:mailbox@remex.ru">
+                            <svg class="contacts__item-img" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8227" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0111H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8227)">
+                              <path d="M10.0054 20.0423C8.1864 20.0423 6.36139 19.5413 4.72739 18.5263C2.45639 17.1203 0.869401 14.9113 0.259401 12.3123C-0.349599 9.71233 0.0903767 7.02929 1.49738 4.75929C4.40238 0.0732889 10.5794 -1.37569 15.2644 1.52931C19.9504 4.43431 21.3994 10.6093 18.4944 15.2973L18.2984 15.6133H15.9484V14.2773H17.5464C19.8104 10.2593 18.5174 5.11732 14.5614 2.66432C10.5014 0.147318 5.15039 1.40229 2.63239 5.46229C1.41239 7.43029 1.03238 9.75434 1.56238 12.0073C2.09138 14.2593 3.46538 16.1713 5.43338 17.3913C8.49338 19.2903 12.3314 19.1163 15.2094 16.9533L16.0124 18.0193C14.2274 19.3613 12.1214 20.0403 10.0074 20.0403L10.0054 20.0423Z" fill="#444444"/>
+                              <path d="M13.0551 14.0326V15.6246H14.3901V5.82556H13.0551V7.14758C12.1181 6.12158 10.7711 5.47656 9.27512 5.47656C6.45512 5.47656 4.16211 7.7706 4.16211 10.5896C4.16211 13.4076 6.45712 15.7016 9.27512 15.7016C10.7711 15.7016 12.1181 15.0566 13.0551 14.0306V14.0326ZM9.27713 14.3686C7.19413 14.3686 5.50012 12.6746 5.50012 10.5916C5.50012 8.50755 7.19413 6.8136 9.27713 6.8136C11.3611 6.8136 13.0571 8.50755 13.0571 10.5916C13.0571 12.6746 11.3611 14.3686 9.27713 14.3686Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>mailbox@remex.ru</span>
+                          </a>
+                        </div>
+                        <div class="timetable contacts__timetable">
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">По будням:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 9:00 до 18:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Суббота:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 10:00 до 15:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Воскресенье:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">выходной</div>
                           </div>
                         </div>
-                        <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-legal-entity">
-                          Добавить юр. лицо
-                        </button>
+                        <div class="contacts__steps">
+                          <div class="text text--lg text--semibold text--gray-dark text--lh-3 contacts__label">Для проезда необходимо:</div>
+                          <ol class="num-list contacts__steps-list">
+                            <li class="num-list__item">выйти на станции Электрозаводская;</li>
+                            <li class="num-list__item">пройти 100 метров правее от главного входа в метро;</li>
+                            <li class="num-list__item">затем 300 метров до лестницы и перейти на обратную строну.</li>
+                          </ol>
+                        </div>
+                        <div class="small-slider contacts__slider">
+                          <div class="small-slider__swiper swiper">
+                            <div class="swiper-wrapper">
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="small-slider__navigation">
+                            <button class="btn-left small-slider__btn-prev"></button>
+                            <button class="btn-right small-slider__btn-next"></button>
+                          </div>
+                        </div>
+                        <button class="but but--full contacts__btn">Наши реквизиты</button>
+                      </div>
+                      <div class="contacts__street-tab tabs-list__item">
+                        <div class="title3 title3--lh-3">Офис и склад на Некрасовке</div>
+                        <div class="contacts__list">
+                          <div class="contacts__item">
+                            <svg class="contacts__item-img" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.49899 23.2836L7.94699 22.6226C7.62499 22.2326 0 13.0227 0 8.51666C0 4.01066 3.81399 0.015625 8.49899 0.015625C13.184 0.015625 17 3.82866 17 8.51666C17 13.2037 9.37499 22.2326 9.04999 22.6226L8.49899 23.2836ZM8.49899 1.44763C4.60199 1.44763 1.43301 4.61966 1.43301 8.51666C1.43301 11.5727 6.11099 18.0466 8.49899 21.0316C10.887 18.0466 15.567 11.5727 15.567 8.51666C15.567 4.61966 12.396 1.44763 8.49899 1.44763Z" fill="#444444"/>
+                              <path d="M8.49951 11.916C6.62751 11.916 5.10352 10.393 5.10352 8.521C5.10352 6.649 6.62751 5.125 8.49951 5.125C10.3715 5.125 11.8955 6.649 11.8955 8.521C11.8955 10.393 10.3715 11.916 8.49951 11.916ZM8.49951 6.56C7.41751 6.56 6.53653 7.44101 6.53653 8.52301C6.53653 9.60501 7.41751 10.486 8.49951 10.486C9.58151 10.486 10.4625 9.60501 10.4625 8.52301C10.4625 7.44101 9.58151 6.56 8.49951 6.56Z" fill="#004ADA"/>
+                            </svg>
+                            <span>Некрасовка</span>
+                          </div>
+                          <a class="contacts__item" href="tel:+74959954949">
+                            <svg class="contacts__item-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8217" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0091H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8217)">
+                              <path d="M4.2753 2.36682C4.6193 2.36682 5.01329 2.49382 5.31729 2.94482C6.13429 4.16282 6.92329 5.31183 7.36029 6.09583C7.50729 6.36083 7.65032 7.11281 7.17032 7.65381C6.75332 8.12281 6.3833 8.23881 6.1643 8.58081C6.0123 8.81581 5.83829 9.34379 6.12329 9.94879C6.46529 10.6738 6.88231 11.2668 7.79931 12.1978C8.73031 13.1128 9.32431 13.5298 10.0493 13.8748C10.2843 13.9848 10.5113 14.0288 10.7103 14.0288C11.0233 14.0288 11.2743 13.9268 11.4173 13.8358C11.7593 13.6138 11.8743 13.2468 12.3433 12.8298C12.6273 12.5788 12.9643 12.4968 13.2613 12.4968C13.5353 12.4968 13.7753 12.5668 13.9043 12.6398C14.6863 13.0768 15.8343 13.8648 17.0533 14.6828C17.9093 15.2558 17.5973 16.1528 17.4763 16.4338C17.3563 16.7168 16.7363 17.6478 15.4043 18.3458C15.0373 18.5388 14.5543 18.6518 13.9683 18.6518C12.1213 18.6518 9.26331 17.5218 5.87231 14.1298C1.40231 9.65882 0.861308 6.11583 1.65631 4.59583C2.35431 3.26383 3.2853 2.64582 3.5683 2.52582C3.6993 2.46882 3.9693 2.36884 4.2753 2.36884V2.36682ZM4.2753 1.00781C3.7563 1.00781 3.3103 1.15279 3.0263 1.27679C2.4713 1.51279 1.29629 2.35082 0.451291 3.96582C-0.604709 5.98482 -0.0697017 10.1068 4.9093 15.0888C9.1883 19.3678 12.4203 20.0088 13.9653 20.0088C14.7543 20.0088 15.4473 19.8548 16.0313 19.5488C17.6443 18.7038 18.4823 17.5308 18.7223 16.9688C19.2893 15.6458 18.9293 14.3068 17.8073 13.5548C17.6173 13.4278 17.4313 13.3038 17.2483 13.1788C16.2333 12.4948 15.2723 11.8518 14.5633 11.4548C14.2083 11.2558 13.7323 11.1398 13.2593 11.1398C12.5653 11.1398 11.9363 11.3738 11.4403 11.8148C11.1113 12.1078 10.9093 12.3748 10.7603 12.5718C10.7373 12.6008 10.7103 12.6398 10.6853 12.6688C10.6653 12.6648 10.6443 12.6558 10.6293 12.6488C10.0963 12.3978 9.61831 12.0848 8.76031 11.2418C7.91531 10.3808 7.6043 9.9058 7.3533 9.3728C7.3423 9.3508 7.33531 9.32983 7.33331 9.31683C7.36431 9.29183 7.40129 9.26482 7.43029 9.24182C7.62729 9.09282 7.89431 8.89083 8.18731 8.56183C9.02731 7.61783 9.00031 6.24684 8.54931 5.43884C8.15331 4.72684 7.5093 3.77079 6.8273 2.75879C6.7033 2.57279 6.57429 2.38281 6.44729 2.19281C5.93729 1.43081 5.1653 1.01184 4.2753 1.01184V1.00781Z" fill="#444444"/>
+                              <path d="M19.9994 8.64203H18.6404C18.6404 4.62603 15.3734 1.35901 11.3574 1.35901V0C16.1234 0 19.9994 3.87803 19.9994 8.64203Z" fill="#004ADA"/>
+                              <path d="M16.3974 8.6416H15.0384C15.0384 7.6586 14.6554 6.73357 13.9604 6.03857C13.2644 5.34357 12.3404 4.96057 11.3574 4.96057V3.60156C12.7054 3.60156 13.9694 4.12455 14.9234 5.07855C15.8744 6.02955 16.4004 7.29555 16.3974 8.64355V8.6416Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>+ 7 495 995 49 49</span>
+                          </a>
+                          <a class="contacts__item" href="mailto:mailbox@remex.ru">
+                            <svg class="contacts__item-img" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8227" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0111H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8227)">
+                              <path d="M10.0054 20.0423C8.1864 20.0423 6.36139 19.5413 4.72739 18.5263C2.45639 17.1203 0.869401 14.9113 0.259401 12.3123C-0.349599 9.71233 0.0903767 7.02929 1.49738 4.75929C4.40238 0.0732889 10.5794 -1.37569 15.2644 1.52931C19.9504 4.43431 21.3994 10.6093 18.4944 15.2973L18.2984 15.6133H15.9484V14.2773H17.5464C19.8104 10.2593 18.5174 5.11732 14.5614 2.66432C10.5014 0.147318 5.15039 1.40229 2.63239 5.46229C1.41239 7.43029 1.03238 9.75434 1.56238 12.0073C2.09138 14.2593 3.46538 16.1713 5.43338 17.3913C8.49338 19.2903 12.3314 19.1163 15.2094 16.9533L16.0124 18.0193C14.2274 19.3613 12.1214 20.0403 10.0074 20.0403L10.0054 20.0423Z" fill="#444444"/>
+                              <path d="M13.0551 14.0326V15.6246H14.3901V5.82556H13.0551V7.14758C12.1181 6.12158 10.7711 5.47656 9.27512 5.47656C6.45512 5.47656 4.16211 7.7706 4.16211 10.5896C4.16211 13.4076 6.45712 15.7016 9.27512 15.7016C10.7711 15.7016 12.1181 15.0566 13.0551 14.0306V14.0326ZM9.27713 14.3686C7.19413 14.3686 5.50012 12.6746 5.50012 10.5916C5.50012 8.50755 7.19413 6.8136 9.27713 6.8136C11.3611 6.8136 13.0571 8.50755 13.0571 10.5916C13.0571 12.6746 11.3611 14.3686 9.27713 14.3686Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>mailbox@remex.ru</span>
+                          </a>
+                        </div>
+                        <div class="timetable contacts__timetable">
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">По будням:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 9:00 до 18:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Суббота:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 10:00 до 15:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Воскресенье:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">выходной</div>
+                          </div>
+                        </div>
+                        <div class="contacts__steps">
+                          <div class="text text--lg text--semibold text--gray-dark text--lh-3 contacts__label">Для проезда необходимо:</div>
+                          <ol class="num-list contacts__steps-list">
+                            <li class="num-list__item">выйти на станции Электрозаводская;</li>
+                            <li class="num-list__item">пройти 100 метров правее от главного входа в метро;</li>
+                            <li class="num-list__item">затем 300 метров до лестницы и перейти на обратную строну.</li>
+                          </ol>
+                        </div>
+                        <div class="small-slider contacts__slider">
+                          <div class="small-slider__swiper swiper">
+                            <div class="swiper-wrapper">
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="small-slider__navigation">
+                            <button class="btn-left small-slider__btn-prev"></button>
+                            <button class="btn-right small-slider__btn-next"></button>
+                          </div>
+                        </div>
+                        <button class="but but--full contacts__btn">Наши реквизиты</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs-list__item">
+                    <div class="textboxes contacts__textboxes">
+                      <div class="textboxes__list tabs-btns" data-tabs-name="street-spb">
+                        <label class="textbox textboxes__item tabs-btns__btn tabs-btns__btn--active">
+                          <input class="textbox__input" type="radio" name="spb-street" checked />
+                          <span class="textbox__switch textbox__switch--border">
+                            <span class="address-label address-label--yellow textbox__address-label">Новокосино</span>
+                          </span>
+                        </label>
+                        <label class="textbox textboxes__item tabs-btns__btn">
+                          <input class="textbox__input" type="radio" name="spb-street" />
+                          <span class="textbox__switch textbox__switch--border">
+                            <span class="address-label address-label--pink textbox__address-label">Некрасовка</span>
+                          </span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="tabs-list" data-tabs-name="street-spb">
+                      <div class="contacts__street-tab tabs-list__item tabs-list__item--active">
+                        <div class="title3 title3--lh-3">Офис и склад на Новокосино</div>
+                        <div class="contacts__list">
+                          <div class="contacts__item">
+                            <svg class="contacts__item-img" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.49899 23.2836L7.94699 22.6226C7.62499 22.2326 0 13.0227 0 8.51666C0 4.01066 3.81399 0.015625 8.49899 0.015625C13.184 0.015625 17 3.82866 17 8.51666C17 13.2037 9.37499 22.2326 9.04999 22.6226L8.49899 23.2836ZM8.49899 1.44763C4.60199 1.44763 1.43301 4.61966 1.43301 8.51666C1.43301 11.5727 6.11099 18.0466 8.49899 21.0316C10.887 18.0466 15.567 11.5727 15.567 8.51666C15.567 4.61966 12.396 1.44763 8.49899 1.44763Z" fill="#444444"/>
+                              <path d="M8.49951 11.916C6.62751 11.916 5.10352 10.393 5.10352 8.521C5.10352 6.649 6.62751 5.125 8.49951 5.125C10.3715 5.125 11.8955 6.649 11.8955 8.521C11.8955 10.393 10.3715 11.916 8.49951 11.916ZM8.49951 6.56C7.41751 6.56 6.53653 7.44101 6.53653 8.52301C6.53653 9.60501 7.41751 10.486 8.49951 10.486C9.58151 10.486 10.4625 9.60501 10.4625 8.52301C10.4625 7.44101 9.58151 6.56 8.49951 6.56Z" fill="#004ADA"/>
+                            </svg>
+                            <span>Новокосино</span>
+                          </div>
+                          <a class="contacts__item" href="tel:+74959954949">
+                            <svg class="contacts__item-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8217" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0091H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8217)">
+                              <path d="M4.2753 2.36682C4.6193 2.36682 5.01329 2.49382 5.31729 2.94482C6.13429 4.16282 6.92329 5.31183 7.36029 6.09583C7.50729 6.36083 7.65032 7.11281 7.17032 7.65381C6.75332 8.12281 6.3833 8.23881 6.1643 8.58081C6.0123 8.81581 5.83829 9.34379 6.12329 9.94879C6.46529 10.6738 6.88231 11.2668 7.79931 12.1978C8.73031 13.1128 9.32431 13.5298 10.0493 13.8748C10.2843 13.9848 10.5113 14.0288 10.7103 14.0288C11.0233 14.0288 11.2743 13.9268 11.4173 13.8358C11.7593 13.6138 11.8743 13.2468 12.3433 12.8298C12.6273 12.5788 12.9643 12.4968 13.2613 12.4968C13.5353 12.4968 13.7753 12.5668 13.9043 12.6398C14.6863 13.0768 15.8343 13.8648 17.0533 14.6828C17.9093 15.2558 17.5973 16.1528 17.4763 16.4338C17.3563 16.7168 16.7363 17.6478 15.4043 18.3458C15.0373 18.5388 14.5543 18.6518 13.9683 18.6518C12.1213 18.6518 9.26331 17.5218 5.87231 14.1298C1.40231 9.65882 0.861308 6.11583 1.65631 4.59583C2.35431 3.26383 3.2853 2.64582 3.5683 2.52582C3.6993 2.46882 3.9693 2.36884 4.2753 2.36884V2.36682ZM4.2753 1.00781C3.7563 1.00781 3.3103 1.15279 3.0263 1.27679C2.4713 1.51279 1.29629 2.35082 0.451291 3.96582C-0.604709 5.98482 -0.0697017 10.1068 4.9093 15.0888C9.1883 19.3678 12.4203 20.0088 13.9653 20.0088C14.7543 20.0088 15.4473 19.8548 16.0313 19.5488C17.6443 18.7038 18.4823 17.5308 18.7223 16.9688C19.2893 15.6458 18.9293 14.3068 17.8073 13.5548C17.6173 13.4278 17.4313 13.3038 17.2483 13.1788C16.2333 12.4948 15.2723 11.8518 14.5633 11.4548C14.2083 11.2558 13.7323 11.1398 13.2593 11.1398C12.5653 11.1398 11.9363 11.3738 11.4403 11.8148C11.1113 12.1078 10.9093 12.3748 10.7603 12.5718C10.7373 12.6008 10.7103 12.6398 10.6853 12.6688C10.6653 12.6648 10.6443 12.6558 10.6293 12.6488C10.0963 12.3978 9.61831 12.0848 8.76031 11.2418C7.91531 10.3808 7.6043 9.9058 7.3533 9.3728C7.3423 9.3508 7.33531 9.32983 7.33331 9.31683C7.36431 9.29183 7.40129 9.26482 7.43029 9.24182C7.62729 9.09282 7.89431 8.89083 8.18731 8.56183C9.02731 7.61783 9.00031 6.24684 8.54931 5.43884C8.15331 4.72684 7.5093 3.77079 6.8273 2.75879C6.7033 2.57279 6.57429 2.38281 6.44729 2.19281C5.93729 1.43081 5.1653 1.01184 4.2753 1.01184V1.00781Z" fill="#444444"/>
+                              <path d="M19.9994 8.64203H18.6404C18.6404 4.62603 15.3734 1.35901 11.3574 1.35901V0C16.1234 0 19.9994 3.87803 19.9994 8.64203Z" fill="#004ADA"/>
+                              <path d="M16.3974 8.6416H15.0384C15.0384 7.6586 14.6554 6.73357 13.9604 6.03857C13.2644 5.34357 12.3404 4.96057 11.3574 4.96057V3.60156C12.7054 3.60156 13.9694 4.12455 14.9234 5.07855C15.8744 6.02955 16.4004 7.29555 16.3974 8.64355V8.6416Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>+ 7 495 995 49 49</span>
+                          </a>
+                          <a class="contacts__item" href="mailto:mailbox@remex.ru">
+                            <svg class="contacts__item-img" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8227" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0111H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8227)">
+                              <path d="M10.0054 20.0423C8.1864 20.0423 6.36139 19.5413 4.72739 18.5263C2.45639 17.1203 0.869401 14.9113 0.259401 12.3123C-0.349599 9.71233 0.0903767 7.02929 1.49738 4.75929C4.40238 0.0732889 10.5794 -1.37569 15.2644 1.52931C19.9504 4.43431 21.3994 10.6093 18.4944 15.2973L18.2984 15.6133H15.9484V14.2773H17.5464C19.8104 10.2593 18.5174 5.11732 14.5614 2.66432C10.5014 0.147318 5.15039 1.40229 2.63239 5.46229C1.41239 7.43029 1.03238 9.75434 1.56238 12.0073C2.09138 14.2593 3.46538 16.1713 5.43338 17.3913C8.49338 19.2903 12.3314 19.1163 15.2094 16.9533L16.0124 18.0193C14.2274 19.3613 12.1214 20.0403 10.0074 20.0403L10.0054 20.0423Z" fill="#444444"/>
+                              <path d="M13.0551 14.0326V15.6246H14.3901V5.82556H13.0551V7.14758C12.1181 6.12158 10.7711 5.47656 9.27512 5.47656C6.45512 5.47656 4.16211 7.7706 4.16211 10.5896C4.16211 13.4076 6.45712 15.7016 9.27512 15.7016C10.7711 15.7016 12.1181 15.0566 13.0551 14.0306V14.0326ZM9.27713 14.3686C7.19413 14.3686 5.50012 12.6746 5.50012 10.5916C5.50012 8.50755 7.19413 6.8136 9.27713 6.8136C11.3611 6.8136 13.0571 8.50755 13.0571 10.5916C13.0571 12.6746 11.3611 14.3686 9.27713 14.3686Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>mailbox@remex.ru</span>
+                          </a>
+                        </div>
+                        <div class="timetable contacts__timetable">
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">По будням:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 9:00 до 18:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Суббота:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 10:00 до 15:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Воскресенье:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">выходной</div>
+                          </div>
+                        </div>
+                        <div class="contacts__steps">
+                          <div class="text text--lg text--semibold text--gray-dark text--lh-3 contacts__label">Для проезда необходимо:</div>
+                          <ol class="num-list contacts__steps-list">
+                            <li class="num-list__item">выйти на станции Электрозаводская;</li>
+                            <li class="num-list__item">пройти 100 метров правее от главного входа в метро;</li>
+                            <li class="num-list__item">затем 300 метров до лестницы и перейти на обратную строну.</li>
+                          </ol>
+                        </div>
+                        <div class="small-slider contacts__slider">
+                          <div class="small-slider__swiper swiper">
+                            <div class="swiper-wrapper">
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="small-slider__navigation">
+                            <button class="btn-left small-slider__btn-prev"></button>
+                            <button class="btn-right small-slider__btn-next"></button>
+                          </div>
+                        </div>
+                        <button class="but but--full contacts__btn">Наши реквизиты</button>
+                      </div>
+                      <div class="contacts__street-tab tabs-list__item">
+                        <div class="title3 title3--lh-3">Офис и склад на Некрасовке</div>
+                        <div class="contacts__list">
+                          <div class="contacts__item">
+                            <svg class="contacts__item-img" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M8.49899 23.2836L7.94699 22.6226C7.62499 22.2326 0 13.0227 0 8.51666C0 4.01066 3.81399 0.015625 8.49899 0.015625C13.184 0.015625 17 3.82866 17 8.51666C17 13.2037 9.37499 22.2326 9.04999 22.6226L8.49899 23.2836ZM8.49899 1.44763C4.60199 1.44763 1.43301 4.61966 1.43301 8.51666C1.43301 11.5727 6.11099 18.0466 8.49899 21.0316C10.887 18.0466 15.567 11.5727 15.567 8.51666C15.567 4.61966 12.396 1.44763 8.49899 1.44763Z" fill="#444444"/>
+                              <path d="M8.49951 11.916C6.62751 11.916 5.10352 10.393 5.10352 8.521C5.10352 6.649 6.62751 5.125 8.49951 5.125C10.3715 5.125 11.8955 6.649 11.8955 8.521C11.8955 10.393 10.3715 11.916 8.49951 11.916ZM8.49951 6.56C7.41751 6.56 6.53653 7.44101 6.53653 8.52301C6.53653 9.60501 7.41751 10.486 8.49951 10.486C9.58151 10.486 10.4625 9.60501 10.4625 8.52301C10.4625 7.44101 9.58151 6.56 8.49951 6.56Z" fill="#004ADA"/>
+                            </svg>
+                            <span>Некрасовка</span>
+                          </div>
+                          <a class="contacts__item" href="tel:+74959954949">
+                            <svg class="contacts__item-img" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8217" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0091H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8217)">
+                              <path d="M4.2753 2.36682C4.6193 2.36682 5.01329 2.49382 5.31729 2.94482C6.13429 4.16282 6.92329 5.31183 7.36029 6.09583C7.50729 6.36083 7.65032 7.11281 7.17032 7.65381C6.75332 8.12281 6.3833 8.23881 6.1643 8.58081C6.0123 8.81581 5.83829 9.34379 6.12329 9.94879C6.46529 10.6738 6.88231 11.2668 7.79931 12.1978C8.73031 13.1128 9.32431 13.5298 10.0493 13.8748C10.2843 13.9848 10.5113 14.0288 10.7103 14.0288C11.0233 14.0288 11.2743 13.9268 11.4173 13.8358C11.7593 13.6138 11.8743 13.2468 12.3433 12.8298C12.6273 12.5788 12.9643 12.4968 13.2613 12.4968C13.5353 12.4968 13.7753 12.5668 13.9043 12.6398C14.6863 13.0768 15.8343 13.8648 17.0533 14.6828C17.9093 15.2558 17.5973 16.1528 17.4763 16.4338C17.3563 16.7168 16.7363 17.6478 15.4043 18.3458C15.0373 18.5388 14.5543 18.6518 13.9683 18.6518C12.1213 18.6518 9.26331 17.5218 5.87231 14.1298C1.40231 9.65882 0.861308 6.11583 1.65631 4.59583C2.35431 3.26383 3.2853 2.64582 3.5683 2.52582C3.6993 2.46882 3.9693 2.36884 4.2753 2.36884V2.36682ZM4.2753 1.00781C3.7563 1.00781 3.3103 1.15279 3.0263 1.27679C2.4713 1.51279 1.29629 2.35082 0.451291 3.96582C-0.604709 5.98482 -0.0697017 10.1068 4.9093 15.0888C9.1883 19.3678 12.4203 20.0088 13.9653 20.0088C14.7543 20.0088 15.4473 19.8548 16.0313 19.5488C17.6443 18.7038 18.4823 17.5308 18.7223 16.9688C19.2893 15.6458 18.9293 14.3068 17.8073 13.5548C17.6173 13.4278 17.4313 13.3038 17.2483 13.1788C16.2333 12.4948 15.2723 11.8518 14.5633 11.4548C14.2083 11.2558 13.7323 11.1398 13.2593 11.1398C12.5653 11.1398 11.9363 11.3738 11.4403 11.8148C11.1113 12.1078 10.9093 12.3748 10.7603 12.5718C10.7373 12.6008 10.7103 12.6398 10.6853 12.6688C10.6653 12.6648 10.6443 12.6558 10.6293 12.6488C10.0963 12.3978 9.61831 12.0848 8.76031 11.2418C7.91531 10.3808 7.6043 9.9058 7.3533 9.3728C7.3423 9.3508 7.33531 9.32983 7.33331 9.31683C7.36431 9.29183 7.40129 9.26482 7.43029 9.24182C7.62729 9.09282 7.89431 8.89083 8.18731 8.56183C9.02731 7.61783 9.00031 6.24684 8.54931 5.43884C8.15331 4.72684 7.5093 3.77079 6.8273 2.75879C6.7033 2.57279 6.57429 2.38281 6.44729 2.19281C5.93729 1.43081 5.1653 1.01184 4.2753 1.01184V1.00781Z" fill="#444444"/>
+                              <path d="M19.9994 8.64203H18.6404C18.6404 4.62603 15.3734 1.35901 11.3574 1.35901V0C16.1234 0 19.9994 3.87803 19.9994 8.64203Z" fill="#004ADA"/>
+                              <path d="M16.3974 8.6416H15.0384C15.0384 7.6586 14.6554 6.73357 13.9604 6.03857C13.2644 5.34357 12.3404 4.96057 11.3574 4.96057V3.60156C12.7054 3.60156 13.9694 4.12455 14.9234 5.07855C15.8744 6.02955 16.4004 7.29555 16.3974 8.64355V8.6416Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>+ 7 495 995 49 49</span>
+                          </a>
+                          <a class="contacts__item" href="mailto:mailbox@remex.ru">
+                            <svg class="contacts__item-img" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <mask id="mask0_3966_8227" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="21">
+                              <path d="M20 0H0V20.0111H20V0Z" fill="white"/>
+                              </mask>
+                              <g mask="url(#mask0_3966_8227)">
+                              <path d="M10.0054 20.0423C8.1864 20.0423 6.36139 19.5413 4.72739 18.5263C2.45639 17.1203 0.869401 14.9113 0.259401 12.3123C-0.349599 9.71233 0.0903767 7.02929 1.49738 4.75929C4.40238 0.0732889 10.5794 -1.37569 15.2644 1.52931C19.9504 4.43431 21.3994 10.6093 18.4944 15.2973L18.2984 15.6133H15.9484V14.2773H17.5464C19.8104 10.2593 18.5174 5.11732 14.5614 2.66432C10.5014 0.147318 5.15039 1.40229 2.63239 5.46229C1.41239 7.43029 1.03238 9.75434 1.56238 12.0073C2.09138 14.2593 3.46538 16.1713 5.43338 17.3913C8.49338 19.2903 12.3314 19.1163 15.2094 16.9533L16.0124 18.0193C14.2274 19.3613 12.1214 20.0403 10.0074 20.0403L10.0054 20.0423Z" fill="#444444"/>
+                              <path d="M13.0551 14.0326V15.6246H14.3901V5.82556H13.0551V7.14758C12.1181 6.12158 10.7711 5.47656 9.27512 5.47656C6.45512 5.47656 4.16211 7.7706 4.16211 10.5896C4.16211 13.4076 6.45712 15.7016 9.27512 15.7016C10.7711 15.7016 12.1181 15.0566 13.0551 14.0306V14.0326ZM9.27713 14.3686C7.19413 14.3686 5.50012 12.6746 5.50012 10.5916C5.50012 8.50755 7.19413 6.8136 9.27713 6.8136C11.3611 6.8136 13.0571 8.50755 13.0571 10.5916C13.0571 12.6746 11.3611 14.3686 9.27713 14.3686Z" fill="#004ADA"/>
+                              </g>
+                            </svg>
+                            <span>mailbox@remex.ru</span>
+                          </a>
+                        </div>
+                        <div class="timetable contacts__timetable">
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">По будням:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 9:00 до 18:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Суббота:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">с 10:00 до 15:00</div>
+                          </div>
+                          <div class="timetable__item">
+                            <div class="text text--semibold text--gray text--lh-5">Воскресенье:</div>
+                            <div class="text text--gray text--lh-5 timetable__item-value">выходной</div>
+                          </div>
+                        </div>
+                        <div class="contacts__steps">
+                          <div class="text text--lg text--semibold text--gray-dark text--lh-3 contacts__label">Для проезда необходимо:</div>
+                          <ol class="num-list contacts__steps-list">
+                            <li class="num-list__item">выйти на станции Электрозаводская;</li>
+                            <li class="num-list__item">пройти 100 метров правее от главного входа в метро;</li>
+                            <li class="num-list__item">затем 300 метров до лестницы и перейти на обратную строну.</li>
+                          </ol>
+                        </div>
+                        <div class="small-slider contacts__slider">
+                          <div class="small-slider__swiper swiper">
+                            <div class="swiper-wrapper">
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/1.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/2.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                              <div class="small-slider__slide swiper-slide">
+                                <img src="assets/img/contacts/3.jpg" alt="" class="small-slider__slide-img">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="small-slider__navigation">
+                            <button class="btn-left small-slider__btn-prev"></button>
+                            <button class="btn-right small-slider__btn-next"></button>
+                          </div>
+                        </div>
+                        <button class="but but--full contacts__btn">Наши реквизиты</button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="contacts__map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A606c26862604c5e91fc795ba6a12792e1955d48f2585f330ac830c04d4033169&amp;source=constructor&scroll=false" width="500" height="400" frameborder="0"></iframe>
           </div>
         </div>
       </main>
@@ -2371,544 +2553,6 @@
                   <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
                   на отправку ваших персональных данных.
                 </p>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="phone-confirm">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" data-submit-modal="phone-confirm-code" autocomplete="off">
-              <div class="title3 form__title">Подтверждение телефона</div>
-              <p class="text text--gray form__text">
-                Проверьте правильность введенного номера,
-                <br />
-                мы пришлем на него смс подтверждения
-              </p>
-              <div class="form__main">
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field js-imask" type="text" data-validate="phone" data-mask="+{7} (000) 000-00-00" />
-                    <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <button class="but but--primary but--full form__btn">Запросить код</button>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new modal-new--backdrop-sm" data-name="phone-confirm-code">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Подтверждение телефона</div>
-              <p class="text text--gray form__text">Введите код подтверждения</p>
-              <div class="form__main">
-                <div class="code-inputs">
-                  <div class="code-inputs__group">
-                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
-                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
-                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
-                  </div>
-                  <div class="code-inputs__group">
-                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
-                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
-                    <input type="text" class="code-inputs__input" data-mask="NumberCode" />
-                  </div>
-                </div>
-                <button class="but but--primary but--full form__btn">Подтвердить</button>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="edit-password">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Изменить пароль</div>
-              <div class="form__main">
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="password" data-validate="empty" />
-                    <span class="input__placeholder input__placeholder--required">Старый пароль</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="password" data-validate="empty" />
-                    <span class="input__placeholder input__placeholder--required">Новый пароль</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="password" data-validate="empty" />
-                    <span class="input__placeholder input__placeholder--required">Повторите новый пароль</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <button class="but but--primary but--full form__btn">Изменить пароль</button>
-                <p class="text text--sm text--gray-white form__ps">
-                  Поля, отмеченные
-                  <span class="text text--danger">*</span>
-                  , обязательны для заполнения
-                  <br />
-                  Нажимая на кнопку - вы автоматически
-                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
-                  на отправку ваших персональных данных.
-                </p>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="new-address">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Новый адрес</div>
-              <div class="form__main">
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder">Город</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder">Улица</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="form__group">
-                  <div class="input form__group-input js-form-input">
-                    <div class="input__main">
-                      <input class="input__field" type="text" data-validate="empty" />
-                      <span class="input__placeholder">Дом</span>
-                    </div>
-                    <div class="input__error">Поле обязательно для заполнения</div>
-                  </div>
-                  <div class="input form__group-input js-form-input">
-                    <div class="input__main">
-                      <input class="input__field" type="text" />
-                      <span class="input__placeholder">Кв/Офис</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" />
-                    <span class="input__placeholder">Что важно знать водителю?</span>
-                  </div>
-                </div>
-                <button class="but but--primary but--full form__btn">Добавить адрес</button>
-                <p class="text text--sm text--gray-white form__ps">
-                  Поля, отмеченные
-                  <span class="text text--danger">*</span>
-                  , обязательны для заполнения
-                  <br />
-                  Нажимая на кнопку - вы автоматически
-                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
-                  на отправку ваших персональных данных.
-                </p>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="edit-address">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Изменить адрес</div>
-              <div class="form__main">
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder">Город</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder">Улица</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="form__group">
-                  <div class="input form__group-input js-form-input">
-                    <div class="input__main">
-                      <input class="input__field" type="text" data-validate="empty" />
-                      <span class="input__placeholder">Дом</span>
-                    </div>
-                    <div class="input__error">Поле обязательно для заполнения</div>
-                  </div>
-                  <div class="input form__group-input js-form-input">
-                    <div class="input__main">
-                      <input class="input__field" type="text" />
-                      <span class="input__placeholder">Кв/Офис</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" />
-                    <span class="input__placeholder">Что важно знать водителю?</span>
-                  </div>
-                </div>
-                <button class="but but--primary but--full form__btn">Изменить адрес</button>
-                <div class="form__action-links">
-                  <button
-                    class="link link--black link--line link--line-light link--hover-black form__action-link js-open-modal"
-                    data-modal-name="delete-address-confirm"
-                    type="button">
-                    Удалить адрес
-                  </button>
-                </div>
-                <p class="text text--sm text--gray-white form__ps">
-                  Поля, отмеченные
-                  <span class="text text--danger">*</span>
-                  , обязательны для заполнения
-                  <br />
-                  Нажимая на кнопку - вы автоматически
-                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
-                  на отправку ваших персональных данных.
-                </p>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="new-legal-entity">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Новое юр. лицо</div>
-              <div class="form__main">
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder input__placeholder--required">Название юрлица</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder input__placeholder--required">ИНН</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
-                    <span class="input__placeholder input__placeholder--required">КПП</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <div class="input form__input js-form-input">
-                  <div class="input__main">
-                    <textarea class="input__field input__field--area"></textarea>
-                    <span class="input__placeholder input__placeholder--xs">Напишите реквизиты в этом поле или загрузите файлом ниже</span>
-                  </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
-                </div>
-                <button class="but but--full form__btn" type="button">
-                  <svg
-                    class="but__icon but__icon--fill"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
-                  </svg>
-                  <span>Загрузить файл с реквизитами</span>
-                </button>
-                <p class="text text--sm text--gray-white form__message">
-                  Поддерживаются форматы (doc, docx, rtf, pdf, xls, xlsx, txt).
-                  <br />
-                  Ограничение по весу - 5 Mb
-                </p>
-                <button class="but but--primary but--full form__btn form__btn--mt-sm">Добавить</button>
-                <p class="text text--sm text--gray-white form__ps">
-                  Поля, отмеченные
-                  <span class="text text--danger">*</span>
-                  , обязательны для заполнения
-                  <br />
-                  Нажимая на кнопку - вы автоматически
-                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
-                  на отправку ваших персональных данных.
-                </p>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="edit-legal-entity">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Редактирование Юр. лица</div>
-              <div class="form__main form__main--mt-xs">
-                <div class="company-data">
-                  <div class="text text--gray text--semibold company-data__title">Текущие данные</div>
-                  <div class="company-data__list">
-                    <div class="company-data__item">
-                      <span>Наименование организации:</span>
-                      <span class="company-data__item-value">ООО “Филькина-грамота”</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Юридический адрес:</span>
-                      <span class="company-data__item-value">
-                        121087, г.Москва вн.тер. г.муниципальный округ Филевский парк, ул.Барклая д.6 стр.3 помещ.7Н/4
-                      </span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Фактический адрес:</span>
-                      <span class="company-data__item-value">111675, г.Москва, ул.Пехорская, д.1"В", стр.1</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>ИНН:</span>
-                      <span class="company-data__item-value">7705611516</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>КПП:</span>
-                      <span class="company-data__item-value">772045001</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>ОГРН:</span>
-                      <span class="company-data__item-value">1047796568160</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Наименование банка:</span>
-                      <span class="company-data__item-value">ПАО СБЕРБАНК г.Москва</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Расчетный счет:</span>
-                      <span class="company-data__item-value">40702810138290107844</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>БИК:</span>
-                      <span class="company-data__item-value">044525225</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Корреспондентский счет:</span>
-                      <span class="company-data__item-value">30101810400000000225</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Генеральный директор:</span>
-                      <span class="company-data__item-value">Кузнецова С.Ю.</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="text text--gray text--semibold text--lh-3 form__label form__label--sm">
-                  Для изменения данных отправьте файл с реквизитами:
-                </div>
-                <button class="but but--full form__btn form__btn--mt-xs" type="button">
-                  <svg
-                    class="but__icon but__icon--fill"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
-                  </svg>
-                  <span>Загрузить файл с реквизитами</span>
-                </button>
-                <p class="text text--sm text--gray-white form__message">
-                  Поддерживаются форматы (doc, docx, rtf, pdf, xls, xlsx, txt).
-                  <br />
-                  Ограничение по весу - 5 Mb
-                </p>
-                <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить</button>
-                <button
-                  class="link link--black link--line link--line-light link--hover-black form__action-link js-open-modal"
-                  data-modal-name="delete-legal-entity"
-                  type="button">
-                  Удалить юр. лицо
-                </button>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new" data-name="legal-entity-info">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">ООО Филькина грамота</div>
-              <div class="form__main form__main--mt-xs">
-                <div class="company-data">
-                  <div class="text text--gray text--semibold company-data__title">Текущие данные</div>
-                  <div class="company-data__list">
-                    <div class="company-data__item">
-                      <span>Наименование организации:</span>
-                      <span class="company-data__item-value">ООО “Филькина-грамота”</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Юридический адрес:</span>
-                      <span class="company-data__item-value">
-                        121087, г.Москва вн.тер. г.муниципальный округ Филевский парк, ул.Барклая д.6 стр.3 помещ.7Н/4
-                      </span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Фактический адрес:</span>
-                      <span class="company-data__item-value">111675, г.Москва, ул.Пехорская, д.1"В", стр.1</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>ИНН:</span>
-                      <span class="company-data__item-value">7705611516</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>КПП:</span>
-                      <span class="company-data__item-value">772045001</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>ОГРН:</span>
-                      <span class="company-data__item-value">1047796568160</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Наименование банка:</span>
-                      <span class="company-data__item-value">ПАО СБЕРБАНК г.Москва</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Расчетный счет:</span>
-                      <span class="company-data__item-value">40702810138290107844</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>БИК:</span>
-                      <span class="company-data__item-value">044525225</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Корреспондентский счет:</span>
-                      <span class="company-data__item-value">30101810400000000225</span>
-                    </div>
-                    <div class="company-data__item">
-                      <span>Генеральный директор:</span>
-                      <span class="company-data__item-value">Кузнецова С.Ю.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new modal-new--backdrop-sm" data-name="delete-address-confirm">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Удаление адреса</div>
-              <p class="text text--gray form__text">Вы действительно хотите удалить этот адрес?</p>
-              <div class="form__btns">
-                <button class="but but--full form__btns-item js-close-modal">Не удалять</button>
-                <button class="but but--full but--primary form__btns-item">Удалить</button>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new modal-new--backdrop-sm" data-name="delete-legal-entity">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Удаление юр. лица</div>
-              <p class="text text--gray form__text form__text--sm">Вы действительно хотите удалить это юридическое лицо?</p>
-              <div class="form__btns">
-                <button class="but but--full form__btns-item js-close-modal">Не удалять</button>
-                <button class="but but--full but--primary form__btns-item">Удалить</button>
-              </div>
-            </form>
-            <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal-new modal-new--backdrop-sm" data-name="delete-profile">
-      <div class="modal-new__body">
-        <div class="modal-new__dialog">
-          <div class="modal-new__content">
-            <form class="form modal-new__form js-form" autocomplete="off">
-              <div class="title3 form__title">Удаление профиля</div>
-              <p class="text text--gray form__text">Вы действительно хотите удалить этот профиль?</p>
-              <div class="form__btns">
-                <button class="but but--full form__btns-item js-close-modal">Не удалять</button>
-                <button class="but but--full but--primary form__btns-item">Удалить</button>
               </div>
             </form>
             <button class="modal-new__close js-close-modal">

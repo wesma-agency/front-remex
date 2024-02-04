@@ -55,12 +55,11 @@ $tabsBtnsBoxes.forEach(($tabsBtnsBox) => {
   $btns.forEach(($btn, index) => {
     $btn.addEventListener("click", () => {
       const tabsName = $tabsBtnsBox.dataset.tabsName;
-      const $list = document.querySelector(`.tabs-list[data-tabs-name="${tabsName}"]`);
 
-      const $oldActiveBtn = $tabsBtnsBox.querySelector(".tabs-btns__btn--active");
-      const $oldActiveTab = $list.querySelector(".tabs-list__item--active");
-      const $newActiveBtn = $tabsBtnsBox.querySelectorAll(".tabs-btns__btn")[index];
-      const $newActiveTab = $list.querySelectorAll(".tabs-list__item")[index];
+      const $oldActiveBtn = document.querySelector(`.tabs-btns[data-tabs-name="${tabsName}"] > .tabs-btns__btn--active`);
+      const $oldActiveTab = document.querySelector(`.tabs-list[data-tabs-name="${tabsName}"] > .tabs-list__item--active`);
+      const $newActiveBtn = document.querySelectorAll(`.tabs-btns[data-tabs-name="${tabsName}"] > .tabs-btns__btn`)[index];
+      const $newActiveTab = document.querySelectorAll(`.tabs-list[data-tabs-name="${tabsName}"] > .tabs-list__item`)[index];
 
       $oldActiveTab.classList.remove("tabs-list__item--active");
       $oldActiveBtn.classList.remove("tabs-btns__btn--active");
@@ -790,6 +789,23 @@ window.addEventListener("click", (e) => {
   }
 
   $activeSearch.classList.remove('search--active');
+});
+
+/* Small slider */
+const $smallSliders = document.querySelectorAll('.small-slider');
+$smallSliders.forEach($smallSlider => {
+  const $swiper = $smallSlider.querySelector('.small-slider__swiper');
+  const $btnPrev = $smallSlider.querySelector('.small-slider__btn-prev');
+  const $btnNext = $smallSlider.querySelector('.small-slider__btn-next');
+  
+  new Swiper($swiper, {
+    spaceBetween: 30,
+    slidesPerView: 3,
+    navigation: {
+      prevEl: $btnPrev,
+      nextEl: $btnNext,
+    },
+  });
 });
 
 const catalogBtn = document.querySelector(".catalog-btn");

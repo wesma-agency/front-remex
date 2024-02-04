@@ -143,8 +143,51 @@ body.over {
   margin-top: 100px;
 }
 
+.main__contacts {
+  flex: 1 1 auto;
+}
+
 .main--p-end-0 {
   padding-bottom: 0;
+}
+
+.main--flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.address-label {
+  display: inline-flex;
+  color: var(--color-gray);
+}
+
+.address-label:before {
+  content: '';
+  margin-top: 4px;
+  margin-right: 6px;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background-color: #1E78BD;
+  border-radius: 50%;
+}
+
+.address-label--pink:before {
+  background-color: #E46ABF;
+}
+
+.address-label--yellow:before {
+  background-color: #fcc630;
+}
+
+.address-labels__list {
+  margin: -6px -6px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.address-labels__item {
+  margin: 6px 6px 0;
 }
 
 .title1 {
@@ -343,6 +386,10 @@ body.over {
 
 .text--semibold {
   font-weight: 600;
+}
+
+.text--lh-5 {
+  line-height: 1.5;
 }
 
 .text--lh-3 {
@@ -878,6 +925,7 @@ body.over {
   background-color: var(--color-gray-light);
   border: 1px solid var(--color-white);
   border-radius: 2px;
+  display: inline-block;
   cursor: pointer;
   transition: border 0.3s;
 }
@@ -900,6 +948,15 @@ body.over {
 .textbox__input:checked ~ .textbox__switch--border {
   border-color: var(--color-primary);
   box-shadow: none;
+}
+
+.textbox__address-label:before {
+  margin-right: 10px;
+  margin-top: 7px;
+}
+
+.textbox__input:checked ~ .textbox__switch .textbox__address-label {
+  color: var(--color-primary);
 }
 
 .switcher {
@@ -1523,36 +1580,6 @@ div.scrollbar-track .scrollbar-thumb {
   text-transform: uppercase;
 }
 
-.address-label {
-  display: flex;
-  color: var(--color-gray);
-}
-
-.address-label:before {
-  content: '';
-  margin-top: 4px;
-  margin-right: 6px;
-  width: 8px;
-  height: 8px;
-  display: inline-block;
-  background-color: #1E78BD;
-  border-radius: 50%;
-}
-
-.address-label--pink:before {
-  background-color: #E46ABF;
-}
-
-.address-labels__list {
-  margin: -6px -6px 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.address-labels__item {
-  margin: 6px 6px 0;
-}
-
 .bonus-points__value {
   display: inline-flex;
   align-items: center;
@@ -1631,6 +1658,57 @@ div.scrollbar-track .scrollbar-thumb {
 
 .company-data__item-value:not(:first-child) {
   margin-top: 1px;
+}
+
+.textboxes__list {
+  margin: -10px -5px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.textboxes__item {
+  margin: 10px 5px 0;
+}
+
+.timetable {
+  display: flex;
+  justify-content: space-between;
+}
+
+.timetable__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.num-list {
+  counter-reset: num;
+}
+
+.num-list__item {
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+  color: var(--color-gray);
+}
+
+.num-list__item:before {
+  counter-increment: num;
+  content: counter(num);
+  margin-right: 10px;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--color-primary);
+}
+
+.num-list__item:not(:first-child) {
+  margin-top: 20px;
 }
 
 @keyframes rotate {
@@ -2956,6 +3034,31 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: column;
 }
 
+.btn-right,
+.btn-left {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.btn-left:before,
+.btn-right:before {
+  content: '';
+  display: inline-block;
+  background: url('../img/icons/right-gray-sharp-thin.svg') center / contain no-repeat;
+  width: 12px;
+  height: 30px;
+}
+
+.btn-left:before {
+  transform: rotate(180deg);
+}
+
 .swap-btns__btn--to {
   display: none;
 }
@@ -3092,6 +3195,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .foot {
+  position: relative;
   background: var(--color-gray-light);
   padding-top: 50px;
   flex: 0 0 auto;
@@ -5184,7 +5288,9 @@ a:hover,
 
 .header {
   position: relative;
+  z-index: 20;
   min-height: 160px;
+  background-color: #fff;
 }
 
 .header__logo {
@@ -7393,15 +7499,18 @@ a:hover,
   background-color:var(--color-gray-light);
 }
 
+.navigation__btn--active,
 .navigation__btn.tabs-btns__btn--active {
   color: var(--color-primary);
   cursor: default;
 }
 
+.navigation__btn--active:hover,
 .navigation__btn.tabs-btns__btn--active:hover {
   background-color: transparent;
 }
 
+.navigation__btn--active:before,
 .navigation__btn.tabs-btns__btn--active:before {
   content: '';
   position: absolute;
@@ -7994,4 +8103,125 @@ a:hover,
 
 .profile__card {
   margin: 30px 15px 0;
+}
+
+.small-slider {
+  position: relative;
+}
+
+.small-slider__slide {
+  height: 144px;
+}
+
+.small-slider__slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small-slider__btn-prev,
+.small-slider__btn-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.small-slider__btn-prev {
+  left: -25px;
+}
+
+.small-slider__btn-next {
+  right: -25px;
+}
+
+.contacts {
+  padding: 65px 0 100px;
+  position: relative;
+}
+
+.contacts__main-content {
+  margin-right: 50px;
+  max-width: 492px;
+}
+
+.contacts__breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.contacts__textboxes {
+  margin-top: 60px;
+}
+
+.contacts__street-tab {
+  margin-top: 55px;
+}
+
+.contacts__list {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(var(--color-gray--rgb), 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts__item {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__item:not(:first-child) {
+  margin-top: 28px;
+}
+
+.contacts__item-img {
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  width: 20px;
+}
+
+.contacts__timetable {
+  margin-top: 25px;
+  padding: 25px 0;
+  border-top: 1px solid rgba(var(--color-gray--rgb), 0.1);
+  border-bottom: 1px solid rgba(var(--color-gray--rgb), 0.1);
+}
+
+.contacts__steps {
+  margin-top: 55px;
+}
+
+.contacts__label {
+  margin-bottom: 20px;
+}
+
+.contacts__steps-item:not(:first-child) {
+  margin-top: 20px;
+}
+
+.contacts__map {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc((100vw - 1400px) / 2 + (1400px - 542px));
+}
+
+.contacts__map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+}
+
+.contacts__slider {
+  margin-top: 60px;
+}
+
+.contacts__btn {
+  margin-top: 60px;
 }
