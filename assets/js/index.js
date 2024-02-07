@@ -120,7 +120,7 @@ window.addEventListener("click", (e) => {
 });
 
 /* Scrollbar */
-Scrollbar.initAll({
+const scrollbar = Scrollbar.initAll({
   alwaysShowTracks: true,
   continuousScrolling: false,
   damping: 0.08,
@@ -149,7 +149,7 @@ $modals.forEach(($modal) => {
     if ($modal === e.target || e.target.classList.contains("modal-new__dialog")) {
       $modal.classList.remove("modal-new--active");
 
-      const $otherActiveModal = document.querySelector('.modal-new--active');
+      const $otherActiveModal = document.querySelector(".modal-new--active");
       if (!$otherActiveModal) {
         $modal.addEventListener("transitionend", () => unlockBody(absoluteSelectors), { once: true });
       }
@@ -170,7 +170,7 @@ $closeBtns.forEach(($btn) => {
 
     $modal.classList.remove("modal-new--active");
 
-    const $otherActiveModal = document.querySelector('.modal-new--active');
+    const $otherActiveModal = document.querySelector(".modal-new--active");
     if (!$otherActiveModal) {
       $modal.addEventListener("transitionend", () => unlockBody(absoluteSelectors), { once: true });
     }
@@ -178,14 +178,14 @@ $closeBtns.forEach(($btn) => {
 });
 
 function openModal($modal) {
-  const $otherActiveModal = document.querySelector('.modal-new--active');
+  const $otherActiveModal = document.querySelector(".modal-new--active");
   if (!$otherActiveModal) {
     lockBody(absoluteSelectors);
   } else {
-    const modalBodyScrollWidth = getScrollbarWidth($otherActiveModal.querySelector('.modal-new__body'));
-    $modal.querySelector('.modal-new__dialog').style.paddingRight = `${modalBodyScrollWidth}px`;
+    const modalBodyScrollWidth = getScrollbarWidth($otherActiveModal.querySelector(".modal-new__body"));
+    $modal.querySelector(".modal-new__dialog").style.paddingRight = `${modalBodyScrollWidth}px`;
   }
-  
+
   $modal.classList.add("modal-new--active");
 }
 
@@ -208,20 +208,20 @@ $inputs.forEach(($input) => {
 });
 
 /* IMask.js */
-const $maskInputs = document.querySelectorAll('.js-imask');
+const $maskInputs = document.querySelectorAll(".js-imask");
 $maskInputs.forEach(($input) => {
   const mask = $input.dataset.mask;
   const data = {
-    mask
-  }
+    mask,
+  };
 
   IMask($input, data);
 });
 
 /* Code inputs */
-const $codeInputsItems = document.querySelectorAll('.code-inputs');
+const $codeInputsItems = document.querySelectorAll(".code-inputs");
 $codeInputsItems.forEach(($codeInputs) => {
-  const $inputs = $codeInputs.querySelectorAll('.code-inputs__input');
+  const $inputs = $codeInputs.querySelectorAll(".code-inputs__input");
   const inpustMasks = [];
   $inputs.forEach(($input, index) => {
     const maskData = {
@@ -229,23 +229,23 @@ $codeInputsItems.forEach(($codeInputs) => {
       min: 0,
       max: 9,
       autofix: true,
-    }
+    };
     inpustMasks[index] = IMask($input, maskData);
 
-    $input.addEventListener('click', () => {
+    $input.addEventListener("click", () => {
       $input.select();
     });
 
-    $input.addEventListener('input', (e) => {
-      if ($input.value !== '' && index < $inputs.length - 1) {
+    $input.addEventListener("input", (e) => {
+      if ($input.value !== "" && index < $inputs.length - 1) {
         $inputs[index + 1].focus();
         $inputs[index + 1].select();
       }
     });
 
-    $input.addEventListener('keydown', (e) => {
+    $input.addEventListener("keydown", (e) => {
       if (e.keyCode === 8 || e.keyCode === 46) {
-        if (index <= 0 || $input.value !== '') {
+        if (index <= 0 || $input.value !== "") {
           return;
         }
 
@@ -253,11 +253,11 @@ $codeInputsItems.forEach(($codeInputs) => {
       }
     });
 
-    $input.addEventListener('paste', (e) => {
+    $input.addEventListener("paste", (e) => {
       e.preventDefault();
-      const data = e.clipboardData.getData('text/plain');
+      const data = e.clipboardData.getData("text/plain");
       let symbolNumber = 0;
-      for(let i = index; i < $inputs.length; i++) {
+      for (let i = index; i < $inputs.length; i++) {
         if (!data[symbolNumber] || !isNumeric(data[symbolNumber])) {
           return;
         }
@@ -270,57 +270,57 @@ $codeInputsItems.forEach(($codeInputs) => {
 });
 
 /* Edit form */
-const $editForms = document.querySelectorAll('.edit-form');
+const $editForms = document.querySelectorAll(".edit-form");
 $editForms.forEach(($editForm) => {
-  const $inputs = $editForm.querySelectorAll('.edit-form__input');
+  const $inputs = $editForm.querySelectorAll(".edit-form__input");
   $inputs.forEach(($input) => {
     const validateType = $input.dataset.validate;
-    const $field = $input.querySelector('.edit-input__field');
-    const $errorText = $input.querySelector('.edit-input__error-text');
+    const $field = $input.querySelector(".edit-input__field");
+    const $errorText = $input.querySelector(".edit-input__error-text");
     const initialValue = $field.value;
 
-    $input.addEventListener('input', () => {
-      if (validateType === 'email') {
+    $input.addEventListener("input", () => {
+      if (validateType === "email") {
         if (!validateEmail($field)) {
-          $input.classList.add('edit-input--error');
-          $errorText.innerText = 'Пожалуйста, введите корректный адрес e-mail';
+          $input.classList.add("edit-input--error");
+          $errorText.innerText = "Пожалуйста, введите корректный адрес e-mail";
         } else {
-          $input.classList.remove('edit-input--error');
+          $input.classList.remove("edit-input--error");
         }
-      } else if (validateType === 'phone') {
+      } else if (validateType === "phone") {
         if (!validatePhone($field)) {
-          $input.classList.add('edit-input--error');
-          $errorText.innerText = 'Пожалуйста, введите корректный номер телефона';
+          $input.classList.add("edit-input--error");
+          $errorText.innerText = "Пожалуйста, введите корректный номер телефона";
         } else if ($field.value !== initialValue) {
-          $editForm.classList.add('edit-form--no-confirm');
-          $input.classList.remove('edit-input--error');
-          $input.classList.add('edit-input--no-confirm');
-          $errorText.innerText = 'Пожалуйста, подтвердите номер телефона';
+          $editForm.classList.add("edit-form--no-confirm");
+          $input.classList.remove("edit-input--error");
+          $input.classList.add("edit-input--no-confirm");
+          $errorText.innerText = "Пожалуйста, подтвердите номер телефона";
         } else {
-          $input.classList.remove('edit-input--error', 'edit-input--no-confirm');
-          $editForm.classList.remove('edit-form--no-confirm');
+          $input.classList.remove("edit-input--error", "edit-input--no-confirm");
+          $editForm.classList.remove("edit-form--no-confirm");
         }
       } else {
         if (!validateEmpty($field)) {
-          $input.classList.add('edit-input--error');
-          $errorText.innerText = 'Поле обязательно для заполнения';
+          $input.classList.add("edit-input--error");
+          $errorText.innerText = "Поле обязательно для заполнения";
         } else {
-          $input.classList.remove('edit-input--error');
+          $input.classList.remove("edit-input--error");
         }
       }
     });
 
-    const $btn = $input.querySelector('.edit-input__btn');
-    $btn.addEventListener('click', () => {
+    const $btn = $input.querySelector(".edit-input__btn");
+    $btn.addEventListener("click", () => {
       $field.focus();
       $field.selectionStart = $field.selectionEnd = $field.value.length;
     });
   });
 
-  $editForm.addEventListener('submit', (e) => {
+  $editForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const $errorField = $editForm.querySelector('.edit-input--error');
+    const $errorField = $editForm.querySelector(".edit-input--error");
     const submitModal = $editForm.dataset.submitModal;
     if ($errorField || !submitModal) {
       return;
@@ -343,7 +343,7 @@ $forms.forEach(($form) => {
       const $input = $item.querySelector(".input__field");
       const validateType = $input.dataset.validate;
 
-      if (validateType === 'phone' && !validatePhone($input)) {
+      if (validateType === "phone" && !validatePhone($input)) {
         $item.classList.add("input--error");
         isError = true;
         return;
@@ -388,13 +388,13 @@ function validatePhone($input) {
   return true;
 }
 
-function validateEmail ($input) {
+function validateEmail($input) {
   return String($input.value)
     .toLowerCase()
     .match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     );
-};
+}
 
 /* Categories */
 const $categoriesToggleAllBtns = document.querySelectorAll(".categories__toggle-all");
@@ -543,7 +543,7 @@ window.addEventListener("click", (e) => {
 const $copyBtns = document.querySelectorAll(".js-btn-copy");
 $copyBtns.forEach(($btn) => {
   $btn.addEventListener("click", () => {
-    const value = $btn.dataset.copyValue || '';
+    const value = $btn.dataset.copyValue || "";
     navigator.clipboard.writeText(value);
   });
 });
@@ -740,43 +740,48 @@ $cartLists.forEach(($cartList) => {
 });
 
 /* Cart loader */
-const $cartTotalBtn = document.querySelector('.cart-total__btn');
-const $cartTotalLoader = document.querySelector('.cart-total__loader');
-$cartTotalBtn?.addEventListener('click', () => {
-  $cartTotalLoader.classList.add('cart-total__loader--active');
-}, { once: true });
+const $cartTotalBtn = document.querySelector(".cart-total__btn");
+const $cartTotalLoader = document.querySelector(".cart-total__loader");
+$cartTotalBtn?.addEventListener(
+  "click",
+  () => {
+    $cartTotalLoader.classList.add("cart-total__loader--active");
+  },
+  { once: true }
+);
 
 /* Swap buttons */
-const $swapBtnsItems = document.querySelectorAll('.swap-btns');
-$swapBtnsItems.forEach($swapBtns => {
-  const $fromBtn = $swapBtns.querySelector('.swap-btns__btn--from');
-  $fromBtn.addEventListener('click', () => {
-    $swapBtns.classList.add('swap-btns--active');
-  }), { once: true };
+const $swapBtnsItems = document.querySelectorAll(".swap-btns");
+$swapBtnsItems.forEach(($swapBtns) => {
+  const $fromBtn = $swapBtns.querySelector(".swap-btns__btn--from");
+  $fromBtn.addEventListener("click", () => {
+    $swapBtns.classList.add("swap-btns--active");
+  }),
+    { once: true };
 });
 
 /* Search */
-const $searchForms = document.querySelectorAll('.search');
-$searchForms.forEach($searchForm => {
-  const $closeBtn = $searchForm.querySelector('.search__close');
-  const $input = $searchForm.querySelector('.search__input');
+const $searchForms = document.querySelectorAll(".search");
+$searchForms.forEach(($searchForm) => {
+  const $closeBtn = $searchForm.querySelector(".search__close");
+  const $input = $searchForm.querySelector(".search__input");
 
-  $searchForm.addEventListener('click', () => {
-    if ($input.value !== '') {
-      $searchForm.classList.add('search--active', 'search--fill');
+  $searchForm.addEventListener("click", () => {
+    if ($input.value !== "") {
+      $searchForm.classList.add("search--active", "search--fill");
     }
   });
 
-  $closeBtn?.addEventListener('click', () => {
-    $input.value = '';
-    $searchForm.classList.remove('search--fill');
+  $closeBtn?.addEventListener("click", () => {
+    $input.value = "";
+    $searchForm.classList.remove("search--fill");
   });
 
-  $input.addEventListener('input', () => {
-    if ($input.value === '') {
-      $searchForm?.classList.remove('search--fill', 'search--active');
+  $input.addEventListener("input", () => {
+    if ($input.value === "") {
+      $searchForm?.classList.remove("search--fill", "search--active");
     } else {
-      $searchForm?.classList.add('search--fill', 'search--active');
+      $searchForm?.classList.add("search--fill", "search--active");
     }
   });
 });
@@ -788,16 +793,172 @@ window.addEventListener("click", (e) => {
     return;
   }
 
-  $activeSearch.classList.remove('search--active');
+  $activeSearch.classList.remove("search--active");
 });
 
+/* Select */
+const SELECT_CLASS = "simple-select";
+const SELECT_ACTIVE_CLASS = "simple-select--active";
+
+const INPUT_CLASS = "simple-select__input";
+
+const FIELD_CLASS = "simple-select__field";
+const FIELD_ACTIVE_CLASS = "simple-select__field--active";
+
+const LIST_CLASS = "simple-select__list";
+const LIST_ACTIVE_CLASS = "simple-select__list--active";
+
+const ITEM_CLASS = "simple-select__item";
+const ITEM_PLACEHOLDER_CLASS = "simple-select__item--placeholder";
+const ITEM_HOVER_CLASS = "simple-select__item--hover";
+
+const $selectFields = document.querySelectorAll(".select__field");
+$selectFields.forEach(($select) => {
+  const $simpleSelect = createElem("div", SELECT_CLASS);
+  $select.parentNode.insertBefore($simpleSelect, $select);
+  $select.classList.add(INPUT_CLASS);
+  $simpleSelect.append($select);
+  $simpleSelect.tabIndex = 1;
+
+  const $backdrop = createElem("div", `${SELECT_CLASS}__backdrop`);
+
+  /* Field */
+  const $simpleSelectField = createElem("div", FIELD_CLASS);
+  $simpleSelectField.innerText = $select.options[0].innerText;
+  $simpleSelectField.addEventListener("click", () => {
+    $simpleSelectList.classList.toggle(LIST_ACTIVE_CLASS);
+    $simpleSelectField.classList.toggle(FIELD_ACTIVE_CLASS);
+    $simpleSelect.classList.toggle(SELECT_ACTIVE_CLASS);
+
+    const offset = 15;
+    const allHeight = $simpleSelectField.offsetHeight + $simpleSelectList.offsetHeight + offset;
+    $backdrop.style.height = `${allHeight}px`;
+  });
+  $simpleSelect.append($simpleSelectField);
+
+  /* Items */
+  const $options = $select.querySelectorAll("option");
+  const $simpleSelectList = createElem("div", LIST_CLASS);
+  $options.forEach(($option, index) => {
+    const $item = createElem("div", ITEM_CLASS, {
+      innerText: $option.innerText,
+    });
+
+    if ($option.value === "") {
+      $item.classList.add(ITEM_PLACEHOLDER_CLASS);
+    }
+
+    $item.dataset.selectIndex = index;
+    $item.addEventListener("click", () => {
+      $select.selectedIndex = +$item.dataset.selectIndex;
+      $simpleSelectField.innerText = $item.innerText;
+      $simpleSelect.blur();
+      $simpleSelectList.classList.remove(LIST_ACTIVE_CLASS);
+      $simpleSelectField.classList.remove(FIELD_ACTIVE_CLASS);
+      $simpleSelect.classList.remove(SELECT_ACTIVE_CLASS);
+    });
+
+    $item.addEventListener("mouseover", () => {
+      const $oldHoverItem = $simpleSelect.querySelector(`.${ITEM_HOVER_CLASS}`);
+      if ($oldHoverItem) {
+        swapHoverItem($oldHoverItem, $item);
+      }
+
+      $item.classList.add(ITEM_HOVER_CLASS);
+    });
+
+    $simpleSelectList.append($item);
+  });
+  $simpleSelect.append($simpleSelectList);
+
+  $simpleSelect.append($backdrop);
+
+  /* Close when click outside */
+  window.addEventListener("click", (e) => {
+    if (!e.target.classList.contains(SELECT_CLASS) && !e.target.closest(`.${SELECT_CLASS}`)) {
+      $simpleSelectList.classList.remove(LIST_ACTIVE_CLASS);
+      $simpleSelectField.classList.remove(FIELD_ACTIVE_CLASS);
+      $simpleSelect.classList.remove(SELECT_ACTIVE_CLASS);
+    }
+  });
+
+  /* Key controls */
+  $simpleSelect.addEventListener("keyup", (e) => {
+    if (e.code === "Enter") {
+      if ($simpleSelectList.classList.contains(LIST_ACTIVE_CLASS)) {
+        const $hoverItem = $simpleSelect.querySelector(`.${ITEM_HOVER_CLASS}`);
+        $hoverItem.click();
+      } else {
+        openList($simpleSelectList);
+      }
+    } else if (e.code === "Escape") {
+      $simpleSelectList.classList.remove(LIST_ACTIVE_CLASS);
+      $simpleSelectField.classList.remove(FIELD_ACTIVE_CLASS);
+      $simpleSelect.classList.remove(SELECT_ACTIVE_CLASS);
+    } else if (e.code === "ArrowDown") {
+      const $oldHoverItem = $simpleSelect.querySelector(`.${ITEM_HOVER_CLASS}`);
+      if (!$oldHoverItem) {
+        const $newItem = $simpleSelect.querySelectorAll(`.${ITEM_CLASS}:not(.${ITEM_PLACEHOLDER_CLASS})`)[0];
+        $newItem.classList.add(ITEM_HOVER_CLASS);
+        return;
+      }
+
+      const oldIndex = +$oldHoverItem.dataset.selectIndex;
+      if (oldIndex >= $simpleSelect.querySelectorAll(`.${ITEM_CLASS}`).length - 1) {
+        return;
+      }
+
+      const $newItem = $simpleSelect.querySelectorAll(`.${ITEM_CLASS}`)[oldIndex + 1];
+      if (!$newItem.classList.contains(ITEM_PLACEHOLDER_CLASS)) {
+        swapHoverItem($oldHoverItem, $newItem);
+      }
+    } else if (e.code === "ArrowUp") {
+      const $oldHoverItem = $simpleSelect.querySelector(`.${ITEM_HOVER_CLASS}`);
+      if (!$oldHoverItem) {
+        const $newItem = $simpleSelect.querySelectorAll(`.${ITEM_CLASS}:not(.${ITEM_PLACEHOLDER_CLASS})`)[0];
+        $newItem.classList.add(ITEM_HOVER_CLASS);
+        return;
+      }
+
+      const oldIndex = +$oldHoverItem.dataset.selectIndex;
+      if (oldIndex < 1) {
+        return;
+      }
+
+      const $newItem = $simpleSelect.querySelectorAll(`.${ITEM_CLASS}`)[oldIndex - 1];
+      if (!$newItem.classList.contains(ITEM_PLACEHOLDER_CLASS)) {
+        swapHoverItem($oldHoverItem, $newItem);
+      }
+    }
+  });
+});
+
+function openList($list) {
+  $list.classList.add(LIST_ACTIVE_CLASS);
+}
+
+function swapHoverItem($oldItem, $newItem) {
+  $oldItem.classList.remove(ITEM_HOVER_CLASS);
+  $newItem.classList.add(ITEM_HOVER_CLASS);
+}
+
+function createElem(type, className, options) {
+  const $elem = document.createElement(type);
+  $elem.className = className;
+  for (let key in options) {
+    $elem[key] = options[key];
+  }
+
+  return $elem;
+}
+
 /* Small slider */
-const $smallSliders = document.querySelectorAll('.small-slider');
-$smallSliders.forEach($smallSlider => {
-  const $swiper = $smallSlider.querySelector('.small-slider__swiper');
-  const $btnPrev = $smallSlider.querySelector('.small-slider__btn-prev');
-  const $btnNext = $smallSlider.querySelector('.small-slider__btn-next');
-  
+const $smallSliders = document.querySelectorAll(".small-slider");
+$smallSliders.forEach(($smallSlider) => {
+  const $swiper = $smallSlider.querySelector(".small-slider__swiper");
+  const $btnPrev = $smallSlider.querySelector(".small-slider__btn-prev");
+  const $btnNext = $smallSlider.querySelector(".small-slider__btn-next");
+
   new Swiper($swiper, {
     spaceBetween: 30,
     slidesPerView: 3,
@@ -965,52 +1126,290 @@ popupForm.forEach((item) => {
   }
 });
 
+/* Chart */
+const chartsData = [
+  {
+    name: "all",
+    content: {
+      data: [
+        {
+          labels: [
+            "Самоклеящиеся плёнки",
+            "Самоклеящиеся плёнки",
+            "Листовые материалы",
+            "Листовые материалы",
+            "Бумага",
+            "Бумага",
+            "Баннерные ткани",
+            "Баннерные ткани",
+            "Инструменты и крепеж",
+            "Инструменты и крепеж",
+            "Самоклеящиеся плёнки",
+            "Самоклеящиеся плёнки",
+            "Листовые материалы",
+            "Листовые материалы",
+          ],
+          data: [343850, 281000, 250000, 230000, 120000, 80000, 45000, 70000, 30000, 20000, 15000, 10000, 8000, 6000],
+        },
+        {
+          labels: [
+            "Самоклеящиеся плёнки",
+            "Самоклеящиеся плёнки",
+            "Листовые материалы",
+            "Листовые материалы",
+            "Бумага",
+            "Бумага",
+            "Баннерные ткани",
+            "Баннерные ткани",
+            "Инструменты и крепеж",
+            "Инструменты и крепеж",
+            "Самоклеящиеся плёнки",
+            "Самоклеящиеся плёнки",
+            "Листовые материалы",
+            "Листовые материалы",
+          ],
+          data: [243000, 200000, 180000, 100000, 50000, 40000, 45000, 35000, 20000, 180000, 35000, 25000, 7000, 5000],
+        },
+        {
+          labels: [
+            "Самоклеящиеся плёнки",
+            "Самоклеящиеся плёнки",
+            "Листовые материалы",
+            "Листовые материалы",
+            "Бумага",
+            "Бумага",
+            "Баннерные ткани",
+            "Баннерные ткани",
+            "Инструменты и крепеж",
+            "Инструменты и крепеж",
+            "Самоклеящиеся плёнки",
+            "Самоклеящиеся плёнки",
+            "Листовые материалы",
+            "Листовые материалы",
+          ],
+          data: [140000, 220000, 100000, 50000, 70000, 60000, 45000, 55000, 25000, 40000, 15000, 8000, 2000, 1500],
+        },
+      ],
+      backgroundColor: ["#5E3FBE", "#F4F0FD", "#E5DAFB", "#CBB6F8", "#A88DEB", "#886BD8", "#472EA3", "#341F88"],
+      labelsParentClass: "chart",
+    },
+  },
+  {
+    name: "entity-1",
+    content: {
+      data: [
+        {
+          labels: ["Самоклеящиеся плёнки", "Самоклеящиеся плёнки", "Листовые материалы", "Листовые материалы", "Бумага", "Бумага"],
+          data: [323850, 261000, 230000, 210000, 110000, 70000],
+        },
+        {
+          labels: ["Самоклеящиеся плёнки", "Самоклеящиеся плёнки", "Листовые материалы", "Листовые материалы", "Бумага", "Бумага"],
+          data: [243000, 200000, 180000, 100000, 50000, 40000],
+        },
+        {
+          labels: ["Самоклеящиеся плёнки", "Самоклеящиеся плёнки", "Листовые материалы", "Листовые материалы", "Бумага", "Бумага"],
+          data: [140000, 220000, 100000, 50000, 70000, 60000],
+        },
+      ],
+      backgroundColor: ["#5E3FBE", "#F4F0FD", "#E5DAFB", "#CBB6F8", "#A88DEB", "#886BD8", "#472EA3", "#341F88"],
+      labelsParentClass: "chart",
+    },
+  },
+  {
+    name: "entity-2",
+    content: {
+      data: [
+        {
+          labels: ["Самоклеящиеся плёнки", "Бумага"],
+          data: [110000, 70000],
+        },
+        {
+          labels: ["Самоклеящиеся плёнки", "Бумага"],
+          data: [50000, 40000],
+        },
+        {
+          labels: ["Самоклеящиеся плёнки", "Бумага"],
+          data: [70000, 60000],
+        },
+      ],
+      backgroundColor: ["#5E3FBE", "#F4F0FD", "#E5DAFB", "#CBB6F8", "#A88DEB", "#886BD8", "#472EA3", "#341F88"],
+      labelsParentClass: "chart",
+    },
+  },
+  {
+    name: "all-offices",
+    content: {
+      data: [
+        {
+          labels: ["Самоклеящиеся плёнки", "Самоклеящиеся плёнки", "Листовые материалы", "Листовые материалы"],
+          data: [230000, 210000, 110000, 70000],
+        },
+        {
+          labels: ["Самоклеящиеся плёнки", "Самоклеящиеся плёнки", "Листовые материалы", "Листовые материалы"],
+          data: [180000, 100000, 50000, 40000],
+        },
+        {
+          labels: ["Самоклеящиеся плёнки", "Самоклеящиеся плёнки", "Листовые материалы", "Листовые материалы"],
+          data: [100000, 50000, 70000, 60000],
+        },
+      ],
+      backgroundColor: ["#5E3FBE", "#F4F0FD", "#E5DAFB", "#CBB6F8", "#A88DEB", "#886BD8", "#472EA3", "#341F88"],
+      labelsParentClass: "chart",
+    },
+  },
+];
+
+const $charts = document.querySelectorAll(".chart");
+$charts.forEach(($chart, chartIndex) => {
+  const $chartCanvas = $chart.querySelector(".chart__canvas");
+  const $chartLabels = $chart.querySelector(`.chart__labels`);
+  const chartName = $chart.dataset.chartName;
+  const chartData = chartsData.find((chartData) => chartData.name === chartName)?.content;
+  let chartLoaded = false;
+
+  if (!chartData) {
+    return;
+  }
+
+  const chart = new Chart($chartCanvas, {
+    type: "doughnut",
+    data: {
+      labels: chartData.data[0].labels,
+      datasets: [
+        {
+          data: chartData.data[0].data,
+          backgroundColor: chartData.backgroundColor,
+        },
+      ],
+    },
+    options: {
+      animation: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+        tooltip: {
+          boxPadding: 5,
+        },
+      },
+      cutout: 1,
+    },
+    plugins: [
+      {
+        beforeUpdate: function (chart) {
+          if (Scrollbar.has(document.querySelector(".chart__labels"))) {
+            Scrollbar.destroy(document.querySelector(".chart__labels"));
+          }
+
+          const ul = document.createElement("ul");
+          ul.className = `${chartData.labelsParentClass}__labels-list`;
+
+          let repeatColorIndex = 0;
+          let maxColorIndex;
+          chart.data.labels.forEach((label, i) => {
+            let $value = `<span class="chart__label-value">${chart.data.datasets[0].data[i].toLocaleString()} ₽</span>`;
+
+            if (!chart.data.datasets[0].backgroundColor[i] && !maxColorIndex) {
+              maxColorIndex = i;
+            }
+
+            let color;
+            if (chart.data.datasets[0].backgroundColor[i]) {
+              color = chart.data.datasets[0].backgroundColor[i];
+            } else if (repeatColorIndex >= maxColorIndex) {
+              repeatColorIndex = 0;
+              color = chart.data.datasets[0].backgroundColor[repeatColorIndex];
+            } else {
+              color = chart.data.datasets[0].backgroundColor[repeatColorIndex++];
+            }
+
+            ul.innerHTML += `
+              <li class="text text--gray ${chartData.labelsParentClass}__label">
+                <span class="${chartData.labelsParentClass}__label-point" style="background-color: ${color}">
+                </span>
+                <span class="${chartData.labelsParentClass}__label-name">${label}</span>
+                ${$value}
+              </li>
+            `;
+          });
+
+          $chartLabels.innerHTML = "";
+          $chartLabels.appendChild(ul);
+
+          Scrollbar.init(document.querySelector(".chart__labels"), {
+            alwaysShowTracks: true,
+            damping: 0.08,
+          });
+
+          return;
+        },
+        afterRender: function (chart) {
+          if (chartLoaded || chartIndex == 0) {
+            chart.options.animation = true;
+          } else {
+            chartLoaded = true;
+          }
+        },
+      },
+    ],
+  });
+
+  const $chartBtns = $chart.querySelectorAll(".chart__btn .textbox__input");
+  $chartBtns.forEach(($btn, index) => {
+    $btn.addEventListener("change", () => {
+      chart.data.labels = chartData.data[index].labels;
+      chart.data.datasets[0].data = chartData.data[index].data;
+      chart.update();
+    });
+  });
+});
+
 /* About */
-var slider1 = new Swiper('.aslider1 .swiper', {
-  direction: 'horizontal',
+var slider1 = new Swiper(".aslider1 .swiper", {
+  direction: "horizontal",
   spaceBetween: 0,
   slidesPerView: 1,
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
-})
-var slider2 = new Swiper('.aslider2 .swiper', {
-  direction: 'horizontal',
+});
+var slider2 = new Swiper(".aslider2 .swiper", {
+  direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 3,
   loop: true,
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
-})
-var slider3 = new Swiper('.slider3 .swiper', {
-  direction: 'horizontal',
+});
+var slider3 = new Swiper(".slider3 .swiper", {
+  direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 6,
   // loop: true,
   // Navigation arrows
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     clickable: true,
   },
-})
+});
 
 // Находим все элементы галереи
-const galleryItems = document.querySelectorAll('.as8Item img');
-const galleryContainer = document.querySelector('.gallery-container');
-const expandedImg = document.querySelector('.expanded-img');
-const closeBtn = document.querySelector('.close-btn');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+const galleryItems = document.querySelectorAll(".as8Item img");
+const galleryContainer = document.querySelector(".gallery-container");
+const expandedImg = document.querySelector(".expanded-img");
+const closeBtn = document.querySelector(".close-btn");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
 
 let currentIndex = 0;
 
@@ -1021,27 +1420,27 @@ function showImage(index) {
 
 // При клике на изображение в галерее
 galleryItems.forEach((item, index) => {
-  item.addEventListener('click', function () {
+  item.addEventListener("click", function () {
     currentIndex = index;
     showImage(currentIndex);
-    galleryContainer.style.display = 'block';
+    galleryContainer.style.display = "block";
   });
 });
 
 // Листание вперед по изображениям
-nextBtn?.addEventListener('click', function () {
+nextBtn?.addEventListener("click", function () {
   currentIndex = (currentIndex + 1) % galleryItems.length;
   showImage(currentIndex);
 });
 
 // Листание назад по изображениям
-prevBtn?.addEventListener('click', function () {
+prevBtn?.addEventListener("click", function () {
   currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
   showImage(currentIndex);
 });
-galleryContainer?.addEventListener('click', function (event) {
+galleryContainer?.addEventListener("click", function (event) {
   if (event.target === this) {
-    galleryContainer.style.display = 'none';
+    galleryContainer.style.display = "none";
   }
 });
 
@@ -1075,6 +1474,5 @@ function getScrollbarWidth($elem) {
 
 function isNumeric(str) {
   if (typeof str != "string") return false;
-  return !isNaN(str) &&
-         !isNaN(parseFloat(str))
+  return !isNaN(str) && !isNaN(parseFloat(str));
 }
