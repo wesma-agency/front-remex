@@ -973,11 +973,11 @@ const catalogBtn = document.querySelector(".catalog-btn");
 const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
 catalogBtn.addEventListener("click", () => {
-  catalogBtn.classList.toggle("active");
-  cattest.classList.toggle("active");
-  podmenu.classList.toggle("active");
+  catalogBtn?.classList.toggle("active");
+  cattest?.classList.toggle("active");
+  podmenu?.classList.toggle("active");
 });
-cattest.addEventListener("click", () => {
+cattest?.addEventListener("click", () => {
   catalogBtn.classList.toggle("active");
   cattest.classList.toggle("active");
   podmenu.classList.toggle("active");

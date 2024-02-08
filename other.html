@@ -18,9 +18,61 @@
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/normalize.css?v=14" />
     <link rel="stylesheet" href="assets/css/styles.css?v=14" />
+    <!-- pgs css -->
+    <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
+    <link rel="stylesheet" href="assets/libs/pgs-panel/css/jquery.mCustomScrollbar.css" />
+    <!-- end pgs css -->
   </head>
 
-  <body>
+  <body class="pgs-body">
+    <!-- pgs html -->
+
+    <div class="pgs-btn pgs-btn-active">
+      <span></span>
+      <span></span>
+    </div>
+    <div class="pgs pgs-active-panel">
+      <div class="pgs-nav pgs-active-panel">
+        <ul>
+          <li><a href="index.html">Главная страница</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="catalog-listing.html">Каталог - листинг товара</a></li>
+          <li><a href="catalog-subsection.html">Каталог - подраздел</a></li>
+          <li><a href="product-card.html">Карточка продукта</a></li>
+          <li><a href="about.html">О компании</a></li>
+          <li><a href="cart.html">Корзина</a></li>
+          <li><a href="template.html">Шаблон (Статьи)</a></li>
+          <li><a href="search.html">Результаты поиска</a></li>
+          <li><a href="search-404.html">Результаты поиска (404)</a></li>
+          <li><a href="profile.html">Профиль пользователя</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="lk.html">Личный кабинет</a></li>
+          <!-- <li><a href="#">Оформление заказа</a></li>
+              <li><a href="#">Заказы пользователя</a></li>
+              <li><a href="#">Заказы пользователя детальная</a></li> -->
+          <li><a href="faq.html">Частые вопросы</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <!-- <li><a href="#">Новости</a></li>
+              <li><a href="#">Новости детальная</a></li> -->
+          <li><a href="404.html">Страница 404</a></li>
+        </ul>
+      </div>
+      <div class="pgs-project-name">
+        <span>Ремэкс</span>
+      </div>
+      <div class="pgs-project-logo">
+        <span class="pgs-project-version-site">Adaptive</span>
+        <img src="/img/logo-273x93.svg" alt="" id="pgs-logo" />
+      </div>
+      <div class="pgs-footer pgs-active-panel">
+        <img src="assets/libs/pgs-panel/img/tech.png" alt="" id="tech" />
+        <img src="assets/libs/pgs-panel/img/logo-wesma.svg" alt="" id="pgs-logo-group" />
+        <a href="tel:+74951182474" id="pgs-phone">+7 (495) 118-24-74</a>
+        <a href="https://wesma.agency/" id="pgs-domen">wesma.agency</a>
+      </div>
+    </div>
+
+    <!-- end pgs html -->
     <div id="page">
       <header class="header">
         <div class="header__top">
@@ -111,7 +163,6 @@
                     <!-- /.popup -->
                   </div>
                 </div>
-                <!-- /.header__label -->
               </div>
               <!-- /.header__info -->
               <form class="search header__search" method="get">
@@ -120,7 +171,7 @@
                 </button>
                 <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
                 <button class="search__close" type="button">
-                  <img src="assets/img/icons/exit.svg" alt="">
+                  <img src="assets/img/icons/exit.svg" alt="" />
                 </button>
                 <div class="search-modal search__modal">
                   <div class="search-modal__categories">
@@ -152,8 +203,7 @@
                     </a>
                     <a class="search-modal__item" href="search.html">
                       <div class="text search-modal__item-name">
-                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
-                          anticold мат</span>
+                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</span>
                         <span class="text text--light search-modal__item-count">44 варианта</span>
                       </div>
                       <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
@@ -173,7 +223,6 @@
                   </div>
                 </div>
               </form>
-              <!-- /.search -->
               <form action="" method="post" class="language">
                 <label for="" class="language__result">
                   <span>RU</span>
@@ -252,7 +301,7 @@
                     </div>
                   </div>
                 </div>
-                <button type="button">
+                <button type="button" class="openModalBtn">
                   <span>
                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path
@@ -270,22 +319,22 @@
         <div class="header__bottom">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic">
-              <button class="catalog-btn active" type="button">
+              <button class="catalog-btn" type="button">
                 <i>
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_3458_7)">
+                    <g clip-path="url(#clip0_3446_2275)">
                       <path
                         d="M0 11.3929C0 11.0247 0.298477 10.7263 0.666667 10.7263H12.6667C13.0349 10.7263 13.3333 11.0247 13.3333 11.3929C13.3333 11.7611 13.0349 12.0596 12.6667 12.0596H0.666667C0.298477 12.0596 0 11.7611 0 11.3929Z"
-                        fill="#004ADA" />
+                        fill="white" />
                       <path
-                        d="M0 6.05961C0 5.69142 0.298477 5.39294 0.666667 5.39294H6.66667H12.6667C13.0349 5.39294 13.3333 5.69142 13.3333 6.05961C13.3333 6.4278 13.0349 6.72628 12.6667 6.72628H6.66667H0.666667C0.298477 6.72628 0 6.4278 0 6.05961Z"
-                        fill="#004ADA" />
+                        d="M0 6.05949C0 5.6913 0.298477 5.39282 0.666667 5.39282H6.66667H12.6667C13.0349 5.39282 13.3333 5.6913 13.3333 6.05949C13.3333 6.42768 13.0349 6.72616 12.6667 6.72616H6.66667H0.666667C0.298477 6.72616 0 6.42768 0 6.05949Z"
+                        fill="white" />
                       <path
                         d="M0 0.726237C0 0.358047 0.298477 0.0595703 0.666667 0.0595703H12.6667C13.0349 0.0595703 13.3333 0.358047 13.3333 0.726237C13.3333 1.09443 13.0349 1.3929 12.6667 1.3929H0.666667C0.298477 1.3929 0 1.09443 0 0.726237Z"
-                        fill="#004ADA" />
+                        fill="white" />
                     </g>
                     <defs>
-                      <clipPath id="clip0_3458_7">
+                      <clipPath id="clip0_3446_2275">
                         <rect width="14" height="12" fill="white" transform="translate(0 0.0595703)" />
                       </clipPath>
                     </defs>
@@ -338,14 +387,261 @@
           </div>
         </div>
         <!-- /.header__bottom -->
-        <div class="podmenu active act3">
+        <div class="header__hover">
+          <div class="container">
+            <div class="container__elem container__elem--12 container__elem--df container__elem--aic">
+              <a class="logo header__logo" href="index.html">
+                <img src="assets/img/design/logostart.svg" alt="" />
+              </a>
+              <button class="catalog-btn cattest" type="button">
+                <i>
+                  <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_3446_2275)">
+                      <path
+                        d="M0 11.3929C0 11.0247 0.298477 10.7263 0.666667 10.7263H12.6667C13.0349 10.7263 13.3333 11.0247 13.3333 11.3929C13.3333 11.7611 13.0349 12.0596 12.6667 12.0596H0.666667C0.298477 12.0596 0 11.7611 0 11.3929Z"
+                        fill="white" />
+                      <path
+                        d="M0 6.05949C0 5.6913 0.298477 5.39282 0.666667 5.39282H6.66667H12.6667C13.0349 5.39282 13.3333 5.6913 13.3333 6.05949C13.3333 6.42768 13.0349 6.72616 12.6667 6.72616H6.66667H0.666667C0.298477 6.72616 0 6.42768 0 6.05949Z"
+                        fill="white" />
+                      <path
+                        d="M0 0.726237C0 0.358047 0.298477 0.0595703 0.666667 0.0595703H12.6667C13.0349 0.0595703 13.3333 0.358047 13.3333 0.726237C13.3333 1.09443 13.0349 1.3929 12.6667 1.3929H0.666667C0.298477 1.3929 0 1.09443 0 0.726237Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_3446_2275">
+                        <rect width="14" height="12" fill="white" transform="translate(0 0.0595703)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </i>
+                <span>Каталог</span>
+              </button>
+              <div class="header__info">
+                <a href="tel:+74958594981">+7 495 859–49–81</a>
+                <div class="dropdown">
+                  <button class="header__label dropdown__btn dropdown__btn--iflex">
+                    <div class="city">Москва</div>
+                    <!-- /.city -->
+                    <div class="metro">
+                      <i></i>
+                      <span>Электрозаводская</span>
+                      <em>
+                        <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.91683 4.04175L5.00016 6.95842L2.0835 4.04175"
+                            stroke="#444444"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        </svg>
+                      </em>
+                    </div>
+                  </button>
+                  <div class="dropdown__main dropdown__main--mt-sm">
+                    <div class="popup popup--w295">
+                      <button class="dropdown__close popup__close" type="button">
+                        <span>
+                          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.1665 4.16666L20.8332 20.8333" stroke="#444444" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M4.1665 20.8333L20.8332 4.16666" stroke="#444444" stroke-linecap="round" stroke-linejoin="round" />
+                          </svg>
+                        </span>
+                      </button>
+                      <!-- /.popup__close -->
+                      <div class="popup__title1">Выберите офис</div>
+                      <!-- /.popup__title1 -->
+                      <div class="metrovibor">
+                        <div class="header__label header__label--def">
+                          <div class="city">Москва</div>
+                          <!-- /.city -->
+                          <div class="metro">
+                            <i></i>
+                            <span>Электрозаводская</span>
+                          </div>
+                          <!-- /.metro -->
+                        </div>
+                        <!-- /.header__label -->
+                        <div class="header__label">
+                          <div class="city">Москва</div>
+                          <!-- /.city -->
+                          <div class="metro">
+                            <i class="cv1"></i>
+                            <span>Некрасовка</span>
+                          </div>
+                          <!-- /.metro -->
+                        </div>
+                        <!-- /.header__label -->
+                        <div class="header__label">
+                          <div class="city">Москва</div>
+                          <!-- /.city -->
+                          <div class="metro">
+                            <i class="cv2"></i>
+                            <span>Новокосино</span>
+                          </div>
+                          <!-- /.metro -->
+                        </div>
+                        <!-- /.header__label -->
+                        <div class="header__label">
+                          <div class="city">Санкт-Петербург</div>
+                          <!-- /.city -->
+                          <div class="metro">
+                            <i class="cv3"></i>
+                            <span>Электросила</span>
+                          </div>
+                          <!-- /.metro -->
+                        </div>
+                        <!-- /.header__label -->
+                      </div>
+                      <!-- /.metrovibor -->
+                    </div>
+                    <!-- /.popup -->
+                  </div>
+                </div>
+                <!-- /.header__label -->
+              </div>
+              <!-- /.header__info -->
+              <form class="search header__search" method="get">
+                <button class="search__btn">
+                  <img src="assets/img/icons/search-gray.svg" alt="" />
+                </button>
+                <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
+                <button class="search__close" type="button">
+                  <img src="assets/img/icons/exit.svg" alt="" />
+                </button>
+                <div class="search-modal search__modal">
+                  <div class="search-modal__categories">
+                    <a class="search-modal__category" href="search.html">Пленка RexJet</a>
+                    <a class="search-modal__category" href="search.html">Красные пленки</a>
+                    <a class="search-modal__category" href="search.html">Прозрачные пленки</a>
+                  </div>
+                  <div class="search-modal__list">
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Профиль LNT белый</span>
+                        <span class="text text--light search-modal__item-count">90 вариантов</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">от 10 000 ₽</div>
+                    </a>
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                        <span class="text text--light search-modal__item-count">20 вариантов</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                    </a>
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Веер цветов плёнки ORACAL-641</span>
+                        <span class="text text--light search-modal__item-count">44 варианта</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">7 000 ₽</div>
+                    </a>
+                    <a class="search-modal__item" href="search.html">
+                      <div class="text search-modal__item-name">
+                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</span>
+                        <span class="text text--light search-modal__item-count">44 варианта</span>
+                      </div>
+                      <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
+                    </a>
+                  </div>
+                  <div class="search-modal__articles">
+                    <div class="search-modal__articles-header">
+                      <div class="title3">Статьи</div>
+                      <a class="link link--light link--line link--line-light link--hover-light" href="search.html">Найдено 32 статьи</a>
+                    </div>
+                    <div class="search-modal__articles-list">
+                      <a class="search-modal__article" href="search.html">
+                        <span class="label search-modal__article-label">Статья</span>
+                        <span class="search-modal__article-name">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <!-- /.search__group -->
+              <!-- /.search -->
+              <nav class="serviceMenu">
+                <button type="button">
+                  <span>
+                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M21 8.50625L14.3388 6.94875L10.92 0.5L7.2072 6.94L0 8.50625L5.1912 14.0712L3.9816 21.5L10.8696 18.2887L17.4468 21.5L16.3044 14.0275L21 8.50625ZM10.92 16.845L5.6196 19.3037L6.5352 13.625L2.52 9.3025L8.0052 8.1125L10.8612 3.125L13.5072 8.08625L18.6564 9.29375L14.9688 13.6687L15.8088 19.295L10.92 16.845Z"
+                        fill="#444444" />
+                    </svg>
+                  </span>
+                </button>
+                <div class="cart-menu header__cart-menu">
+                  <a class="cart-menu__btn" href="cart.html">
+                    <div class="serviceMenu__count">99</div>
+                    <!-- /.serviceMenu__count -->
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_3446_2324)">
+                        <path
+                          d="M16.9 4.24V0H4.9V4.24H0V21.59H22V4.24H16.9ZM15.4 4.24H6.4V1.5H15.4V4.24ZM20.5 20.09H1.5V5.74H20.5V20.09Z"
+                          fill="#444444" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_3446_2324">
+                          <rect width="22" height="22" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                  <div class="cart-menu__content">
+                    <div class="cart-menu__main">
+                      <div class="cart-menu__list">
+                        <div class="cart-menu__item">
+                          <div class="text text--semibold cart-menu__item-title">Склад на электрозаводской</div>
+                          <div class="cart-menu__item-price">
+                            <span>Сумма заказа</span>
+                            <span class="cart-menu__item-price-value">2 500 ₽</span>
+                          </div>
+                        </div>
+                        <div class="cart-menu__item">
+                          <div class="text text--semibold cart-menu__item-title">Склад в Реутове</div>
+                          <div class="cart-menu__item-price">
+                            <span>Сумма заказа</span>
+                            <span class="cart-menu__item-price-value">2 500 ₽</span>
+                          </div>
+                        </div>
+                        <div class="cart-menu__item">
+                          <div class="text text--semibold cart-menu__item-title">Склад в Санкт-Петербурге</div>
+                          <div class="cart-menu__item-price">
+                            <span>Сумма заказа</span>
+                            <span class="cart-menu__item-price-value">2 500 ₽</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-menu__total">
+                        <span>Итого</span>
+                        <span class="title3 cart-menu__total-value">7 500 ₽</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" class="openModalBtn">
+                  <span>
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M18.66 13.03H2.9L0 22H1.58L3.99 14.53H17.57L19.99 22H22L18.66 13.03ZM10.78 11.6C11.928 11.6039 13.0513 11.2671 14.0077 10.6322C14.9642 9.99733 15.7107 9.09288 16.1527 8.03343C16.5948 6.97397 16.7125 5.80716 16.491 4.68075C16.2695 3.55435 15.7186 2.51902 14.9083 1.70587C14.098 0.892726 13.0645 0.33834 11.9389 0.11292C10.8133 -0.1125 9.64606 0.00118554 8.58508 0.43958C7.5241 0.877975 6.61708 1.62136 5.97888 2.57559C5.34068 3.52983 5.00001 4.65199 5 5.79997C4.99999 7.33477 5.60831 8.807 6.6917 9.89413C7.77509 10.9813 9.24521 11.5947 10.78 11.6ZM10.78 1.49997C11.6305 1.49997 12.4618 1.75216 13.169 2.22465C13.8761 2.69714 14.4272 3.36871 14.7527 4.15443C15.0781 4.94015 15.1633 5.80474 14.9974 6.63886C14.8315 7.47298 14.4219 8.23916 13.8206 8.84053C13.2192 9.44189 12.453 9.85143 11.6189 10.0173C10.7848 10.1833 9.92018 10.0981 9.13446 9.77265C8.34874 9.4472 7.67717 8.89605 7.20468 8.18892C6.73219 7.48179 6.48 6.65043 6.48 5.79997C6.48264 4.66035 6.93652 3.56816 7.74236 2.76233C8.54819 1.95649 9.64038 1.50261 10.78 1.49997Z"
+                        fill="#444444" />
+                    </svg>
+                  </span>
+                </button>
+              </nav>
+              <!-- /.serviceMenu -->
+            </div>
+          </div>
+        </div>
+        <!-- /.header__hover -->
+        <div class="podmenu">
           <div class="podmenu__left">
             <nav>
               <ul>
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m1.jpg" alt="" />
+                      <img src="../assets/img/design/m1.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Пленка</span>
@@ -364,7 +660,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m2.jpg" alt="" />
+                      <img src="../assets/img/design/m2.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Листовые, пластики</span>
@@ -383,7 +679,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m3.jpg" alt="" />
+                      <img src="../assets/img/design/m3.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Бумага</span>
@@ -402,7 +698,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m4.jpg" alt="" />
+                      <img src="../assets/img/design/m4.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Баннер</span>
@@ -421,7 +717,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m5.jpg" alt="" />
+                      <img src="../assets/img/design/m5.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Профиль</span>
@@ -440,7 +736,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m6.jpg" alt="" />
+                      <img src="../assets/img/design/m6.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Клей, клейкие ленты</span>
@@ -459,7 +755,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m7.jpg" alt="" />
+                      <img src="../assets/img/design/m7.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>LED-продукция</span>
@@ -478,7 +774,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m8.jpg" alt="" />
+                      <img src="../assets/img/design/m8.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Мобильные стенды</span>
@@ -497,7 +793,7 @@
                 <li>
                   <a href="#">
                     <div class="podmenu__ico">
-                      <img src="assets/img/design/m9.jpg" alt="" />
+                      <img src="../assets/img/design/m9.jpg" alt="" />
                     </div>
                     <!-- /.podmenu__ico -->
                     <span>Инструменты и крепеж</span>
@@ -546,7 +842,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Самоклеящиеся плёнки для плоттерной резки</p>
+                          <p><a href="catalog-subsection.html">Самоклеящиеся плёнки для плоттерной</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -582,7 +878,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Пленка для печати</p>
+                          <p><a href="catalog-subsection.html">Пленка для печати</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -618,7 +914,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Монтажные пленки из бумаги</p>
+                          <p><a href="catalog-subsection.html">Монтажные пленки из бумаги</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -654,7 +950,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Пленки для ламинирования</p>
+                          <p><a href="catalog-subsection.html">Пленки для ламинирования</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -690,7 +986,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Перфорированные пленки</p>
+                          <p><a href="catalog-subsection.html">Перфорированные пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -726,7 +1022,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Светоотражающие пленки</p>
+                          <p><a href="catalog-subsection.html">Светоотражающие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -762,7 +1058,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Трафаретные пленки</p>
+                          <p><a href="catalog-subsection.html">Трафаретные пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -798,7 +1094,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -834,7 +1130,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -870,7 +1166,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -906,7 +1202,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -942,7 +1238,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -978,7 +1274,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1014,7 +1310,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1050,7 +1346,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1086,7 +1382,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1122,7 +1418,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Фосфоресцирующие пленки</p>
+                          <p><a href="catalog-subsection.html">Фосфоресцирующие пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1161,7 +1457,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Пленки для декорирования</p>
+                          <p><a href="catalog-subsection.html">Пленки для декорирования</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1197,7 +1493,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Автомобильные пленки</p>
+                          <p><a href="catalog-subsection.html">Автомобильные пленки</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1233,7 +1529,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Пленки для написания</p>
+                          <p><a href="catalog-subsection.html">Пленки для написания</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1269,7 +1565,7 @@
                           <!-- /.deactive -->
                         </span>
                         <div class="two3sec__cont">
-                          <p>Магнитный винил</p>
+                          <p><a href="catalog-subsection.html">Магнитный винил</a></p>
                           <div class="two3sec__contCont">
                             <a href="#">Oracal 970 RA</a>
                             <a href="#">Oracal 975</a>
@@ -1345,6 +1641,7 @@
         </div>
         <!-- /.podmenu -->
       </header>
+
       <main class="main">
         <section class="other">
           <div class="container">
@@ -1805,69 +2102,6 @@
                   </div>
                   <!-- /.popup -->
                 </div>
-                <!-- /.popupzzzzzz__item -->
-                <div class="popupzzzzzz__item">
-                  <div class="popup3">
-                    <div class="popup3__item">
-                      <div class="popup3__title">На электрозаводской</div>
-                      <!-- /.popup3__title -->
-                      <div class="slide2__balance slide2__balance--cvet2">
-                        <span>
-                          <i class="active"></i>
-                          <i class="active"></i>
-                          <i class="active"></i>
-                        </span>
-                        <strong>Много</strong>
-                      </div>
-                      <!-- /.slide2__balance -->
-                    </div>
-                    <!-- /.popup3__item -->
-                    <div class="popup3__item">
-                      <div class="popup3__title">В некрасовке</div>
-                      <!-- /.popup3__title -->
-                      <div class="slide2__balance slide2__balance--cvet1">
-                        <span>
-                          <i class="active"></i>
-                          <i class="active"></i>
-                          <i></i>
-                        </span>
-                        <strong>Достаточно</strong>
-                      </div>
-                      <!-- /.slide2__balance -->
-                    </div>
-                    <!-- /.popup3__item -->
-                    <div class="popup3__item">
-                      <div class="popup3__title">В некрасовке</div>
-                      <!-- /.popup3__title -->
-                      <div class="slide2__balance slide2__balance--cvet3">
-                        <span>
-                          <i class="active"></i>
-                          <i></i>
-                          <i></i>
-                        </span>
-                        <strong>Мало (2 шт)</strong>
-                      </div>
-                      <!-- /.slide2__balance -->
-                    </div>
-                    <!-- /.popup3__item -->
-                    <div class="popup3__item">
-                      <div class="popup3__title">В Реутове</div>
-                      <!-- /.popup3__title -->
-                      <div class="slide2__balance slide2__balance--cvet4">
-                        <span>
-                          <i></i>
-                          <i></i>
-                          <i></i>
-                        </span>
-                        <strong>Нет в наличии</strong>
-                      </div>
-                      <!-- /.slide2__balance -->
-                    </div>
-                    <!-- /.popup3__item -->
-                  </div>
-                  <!-- /.popup3 -->
-                </div>
-                <!-- /.popupzzzzzz__item -->
               </div>
             </div>
           </div>
@@ -1876,6 +2110,17 @@
       </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
+    <script src="https://unpkg.com/imask@7.3.0/dist/imask.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/index.js?v=14"></script>
     <script src="assets/js/other.js"></script>
+    <!-- pgs js -->
+    <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="assets/libs/pgs-panel/js/main.js"></script>
+    <!-- end pgs js -->
   </body>
 </html>
