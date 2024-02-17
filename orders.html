@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="shortcut icon" href="assets/img/design/favicon.ico" />
-    <title>О компании</title>
+    <title>Заказы пользователя</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swapdisplay=swap" rel="stylesheet" />
@@ -74,7 +74,7 @@
     </div>
 
     <!-- end pgs html -->
-    <div id="page">
+    <div id="page" class="page">
       <header class="header">
         <div class="header__top">
           <div class="container">
@@ -1642,1682 +1642,1198 @@
         <!-- /.podmenu -->
       </header>
 
-      <main class="main main--p-end-0">
-        <section class="section aslider1">
-          <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-
-              <div class="swiper-slide">
-                <div class="aslide1">
-                  <div class="aslide1__img">
-                    <img src="assets/img/design/aslide__img.jpg" alt="" />
+      <main class="main">
+        <div class="profile">
+          <div class="wrapper">
+            <div class="profile__content">
+              <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
+                <li>
+                  <a class="link link--hover-line link--line-light link--hover-light" href="index.html">Главная</a>
+                </li>
+                <li class="breadcrumbs__separate">/</li>
+                <li>
+                  <a class="link link--hover-line link--line-light link--hover-light" href="lk.html">Личный кабинет</a>
+                </li>
+                <li class="breadcrumbs__separate">/</li>
+                <li>Заказы</li>
+              </div>
+              <div class="title1 profile__title">Заказы</div>
+              <div class="profile__body">
+                <aside class="profile__sidebar">
+                  <div class="navigation">
+                    <div class="navigation__btns">
+                      <a class="navigation__btn" href="profile.html">Профиль</a>
+                      <span class="navigation__btn navigation__btn--active">Заказы</span>
+                      <a class="navigation__btn" href="#">Счета</a>
+                      <a class="navigation__btn" href="cart.html">
+                        Корзина
+                        <span class="navigation__btn-value">2</span>
+                      </a>
+                      <a class="navigation__btn" href="#">
+                        Избранные товары
+                        <span class="navigation__btn-value">6</span>
+                      </a>
+                      <a class="navigation__btn" href="#">Лист ожидания</a>
+                      <a class="navigation__btn" href="#">Оценка качества товара</a>
+                      <a class="navigation__btn" href="#">
+                        Уведомления
+                        <span class="navigation__btn-value">2</span>
+                      </a>
+                      <a class="navigation__btn" href="faq.html">FAQ</a>
+                    </div>
                   </div>
-                  <!-- /.aslide1__img -->
-                </div>
-                <!-- /.aslide1 -->
-              </div>
-              <div class="swiper-slide">
-                <div class="aslide1">
-                  <div class="aslide1__img">
-                    <img src="assets/img/design/aslide__img.jpg" alt="" />
-                  </div>
-                  <!-- /.aslide1__img -->
-                </div>
-                <!-- /.aslide1 -->
-              </div>
-              <div class="swiper-slide">
-                <div class="aslide1">
-                  <div class="aslide1__img">
-                    <img src="assets/img/design/aslide__img.jpg" alt="" />
-                  </div>
-                  <!-- /.aslide1__img -->
-                </div>
-                <!-- /.aslide1 -->
-              </div>
-              <div class="swiper-slide">
-                <div class="aslide1">
-                  <div class="aslide1__img">
-                    <img src="assets/img/design/aslide__img.jpg" alt="" />
-                  </div>
-                  <!-- /.aslide1__img -->
-                </div>
-                <!-- /.aslide1 -->
-              </div>
-              <div class="swiper-slide">
-                <div class="aslide1">
-                  <div class="aslide1__img">
-                    <img src="assets/img/design/aslide__img.jpg" alt="" />
-                  </div>
-                  <!-- /.aslide1__img -->
-                </div>
-                <!-- /.aslide1 -->
-              </div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-          <div class="aslider1__top">
-            <div class="container">
-              <div class="container__elem container__elem--12">
-                <ul class="breadcrumbs main__breadcrumbs">
-                  <li><a href="#">Главная</a></li>
-                  <li class="breadcrumbs__separate">/</li>
-                  <li>О компании</li>
-                </ul>
-                <!-- /.breadcrumbs -->
-                <div class="aslide1__h1">О компании</div>
-                <!-- /.aslide1__h1 -->
-              </div>
-            </div>
-          </div>
-          <!-- /.aslider1__top -->
-        </section>
-        <!-- /.section aslider1 -->
-        <section class="section as1">
-          <div class="container">
-            <div class="container__elem container__elem--12">
-              <div class="section__h2">Отзывы о компании</div>
-              <!-- /.section__h2 -->
-              <div class="section__podtext">
-                <div class="header__label">
-                  <div class="city">Москва</div>
-                  <!-- /.city -->
-                  <div class="metro">
-                    <i></i>
-                    <span>Электрозаводская</span>
-                    <em>
-                      <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <button class="but but--full profile__sidebar-btn">
+                    <svg
+                      class="but__icon but__icon--stroke"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_3908_8205" style="mask-type: luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="18" height="18">
+                        <path d="M18 0H0V18H18V0Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_3908_8205)">
                         <path
-                          d="M7.91683 4.04175L5.00016 6.95842L2.0835 4.04175"
-                          stroke="#444444"
-                          stroke-width="1.5"
+                          d="M11.7262 0.449219H0.449219V17.5492H11.7262V0.449219Z"
+                          stroke-miterlimit="6.2"
                           stroke-linecap="round"
                           stroke-linejoin="round" />
-                      </svg>
-                    </em>
+                        <path d="M17.5439 9H4.71094" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4.71094 9L8.48993 12.7" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M4.71094 8.99884L8.48993 5.29883" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                    </svg>
+                    <span>Выйти</span>
+                  </button>
+                </aside>
+                <div class="profile__main">
+                  <div class="tabs-btns nav-btns profile__tabs-btns" data-tabs-name="orders">
+                    <button class="nav-btns__btn nav-btns__btn--full tabs-btns__btn tabs-btns__btn--active">Активные заказы</button>
+                    <button class="nav-btns__btn nav-btns__btn--full tabs-btns__btn">История заказов</button>
                   </div>
-                  <!-- /.metro -->
-                </div>
-                <!-- /.header__label -->
-              </div>
-              <!-- /.section__podtext -->
-              <div class="aslider2">
-                <div class="swiper">
-                  <!-- Additional required wrapper -->
-                  <div class="swiper-wrapper">
-                    <!-- Slides -->
-
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Сотрудники были дружелюбными и готовыми помочь</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Я случайно наткнулся на компанию XYZ и был приятно удивлен их отличным обслуживанием клиентов. Сотрудники были
-                            дружелюбными и готовыми помочь.
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
+                  <div class="tabs-list" data-tabs-name="orders">
+                    <div class="tabs-list__item tabs-list__item--active">
+                      <div class="orders profile__orders">
+                        <div class="orders__header">
+                          <div class="title3 title3--lh-3 orders__title">Фильтр по заказам</div>
                         </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew1.jpg" alt="" />
+                        <div class="orders__filters">
+                          <form class="search orders__filters-search" method="get">
+                            <button class="search__btn">
+                              <img src="assets/img/icons/search-gray.svg" alt="" />
+                            </button>
+                            <input class="search__input" type="text" placeholder="Номер заказа" />
+                            <button class="search__close" type="button">
+                              <img src="assets/img/icons/exit.svg" alt="" />
+                            </button>
+                          </form>
+                          <div class="orders__filters-list">
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Статус</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">По юр.лицу</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Дата</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Тип доставки</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Название склада</span>
+                              </button>
+                            </div>
                           </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Наталия</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">21 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
                         </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
+                        <div class="orders__list">
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label order-info__address">Склад на Электрозаводской</div>
+                                <span class="label order-info__label">На рассмотрении</span>
+                                <div class="text text--light order-info__type">Онлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                    <button
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item js-open-modal"
+                                      data-modal-name="cancel-order">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M1.33008 1.33594L10.6702 10.6689"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                        <path
+                                          d="M1.33008 10.6689L10.6702 1.33594"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                      </svg>
+                                      <span>Отменить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ООО «Новая Филькина грамота»</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">100 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 500 150 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/7.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45082</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/7.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45082</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Восторг - это ничего не сказать!</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Приводила школьную группу (2класс) на экскурсию в музей-усадьбу Измайлово сказать, что это восторг - это ничего
-                            не сказать!!!!
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label address-label--purple order-info__address">Склад в Санкт-Петербурге</div>
+                                <span class="label label--warning order-info__label">Ожидает оплаты</span>
+                                <div class="text text--light order-info__type">Офлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                    <button
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item js-open-modal"
+                                      data-modal-name="cancel-order">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M1.33008 1.33594L10.6702 10.6689"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                        <path
+                                          d="M1.33008 10.6689L10.6702 1.33594"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                      </svg>
+                                      <span>Отменить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ООО «Новая Филькина грамота»</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">100 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 500 150 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/7.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45082</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/7.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45082</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                          <!-- /.rew__txt -->
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label order-info__address">Склад на Электрозаводской</div>
+                                <span class="label label--warning order-info__label">Ожидает доставки</span>
+                                <div class="text text--light order-info__type">Онлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                    <button
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item js-open-modal"
+                                      data-modal-name="cancel-order">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M1.33008 1.33594L10.6702 10.6689"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                        <path
+                                          d="M1.33008 10.6689L10.6702 1.33594"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                      </svg>
+                                      <span>Отменить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ИП Смирнов</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">10 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 777 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label address-label--pink order-info__address">Склад в Некрасовке</div>
+                                <span class="label label--primary order-info__label">Оплачен и комплектуется</span>
+                                <div class="text text--light order-info__type">Онлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                    <button
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item js-open-modal"
+                                      data-modal-name="cancel-order">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M1.33008 1.33594L10.6702 10.6689"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                        <path
+                                          d="M1.33008 10.6689L10.6702 1.33594"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                      </svg>
+                                      <span>Отменить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ИП Смирнов</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">150 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 000 777 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label order-info__address">Склад на Электрозаводской</div>
+                                <span class="label label--success order-info__label">Выполнен</span>
+                                <div class="text text--light order-info__type">Онлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ИП Смирнов</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">150 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 000 777 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label order-info__address">Склад на Электрозаводской</div>
+                                <span class="label label--danger order-info__label">Отменен</span>
+                                <div class="text text--light order-info__type">Онлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ИП Смирнов</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">150 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 000 777 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew2.jpg" alt="" />
+                        <button class="but orders__more-btn">Показать еще</button>
+                        <div class="orders__footer">
+                          <div class="pagination orders__pagination">
+                            <a class="pagination__link pagination__link--left" href="#">Назад</a>
+                            <a class="pagination__link" href="#">1</a>
+                            <span class="pagination__active" href="#">2</span>
+                            <a class="pagination__link" href="#">3</a>
+                            <a class="pagination__link" href="#">4</a>
+                            <a class="pagination__link" href="#">5</a>
+                            <a class="pagination__link" href="#">...</a>
+                            <a class="pagination__link" href="#">42</a>
+                            <a class="pagination__link pagination__link--right" href="#">Дальше</a>
                           </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Ольга Никитина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">18 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
+                          <div class="text text--light orders__count">60 из 552</div>
                         </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Очень приятная атмосфера</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Очень красивая, ухоженная территория, прекрасные деревья, памятники архитектуры в хорошем состоянии. Очень
-                            приятная атмосфера, здесь хорошо неторопливо гулять ...
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
-                        </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew3.jpg" alt="" />
-                          </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Елена Кралина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">15 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
-                        </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Очень приятная атмосфера</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Очень красивая, ухоженная территория, прекрасные деревья, памятники архитектуры в хорошем состоянии. Очень
-                            приятная атмосфера, здесь хорошо неторопливо гулять ...
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
-                        </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew3.jpg" alt="" />
-                          </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Елена Кралина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">15 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
-                        </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Очень приятная атмосфера</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Очень красивая, ухоженная территория, прекрасные деревья, памятники архитектуры в хорошем состоянии. Очень
-                            приятная атмосфера, здесь хорошо неторопливо гулять ...
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
-                        </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew3.jpg" alt="" />
-                          </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Елена Кралина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">15 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
-                        </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Очень приятная атмосфера</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Очень красивая, ухоженная территория, прекрасные деревья, памятники архитектуры в хорошем состоянии. Очень
-                            приятная атмосфера, здесь хорошо неторопливо гулять ...
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
-                        </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew3.jpg" alt="" />
-                          </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Елена Кралина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">15 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
-                        </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Очень приятная атмосфера</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Очень красивая, ухоженная территория, прекрасные деревья, памятники архитектуры в хорошем состоянии. Очень
-                            приятная атмосфера, здесь хорошо неторопливо гулять ...
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
-                        </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew3.jpg" alt="" />
-                          </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Елена Кралина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">15 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
-                        </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="rew">
-                        <div class="rew__top">
-                          <div class="rew__stars">
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                            <span>
-                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_2455_16782)">
-                                  <path
-                                    d="M6 5L8 1.5L8.5 1L10.5 5L15 6.5L12 10L12.5 14.5L8.5 12.5L3.5 14.5L4.5 10L1 6L6 5Z"
-                                    fill="#F4AF26" />
-                                  <path
-                                    d="M16 5.856L10.9248 4.7168L8.32 0L5.4912 4.7104L0 5.856L3.9552 9.9264L3.0336 15.36L8.2816 13.0112L13.2928 15.36L12.4224 9.8944L16 5.856ZM8.32 11.9552L4.2816 13.7536L4.9792 9.6L1.92 6.4384L6.0992 5.568L8.2752 1.92L10.2912 5.5488L14.2144 6.432L11.4048 9.632L12.0448 13.7472L8.32 11.9552Z"
-                                    fill="#F4AF26" />
-                                </g>
-                                <defs>
-                                  <clipPath id="clip0_2455_16782">
-                                    <rect width="16" height="15.36" fill="white" />
-                                  </clipPath>
-                                </defs>
-                              </svg>
-                            </span>
-                          </div>
-                          <!-- /.rew__stars -->
-                          <div class="rew__title">Очень приятная атмосфера</div>
-                          <!-- /.rew__title -->
-                          <div class="rew__txt">
-                            Очень красивая, ухоженная территория, прекрасные деревья, памятники архитектуры в хорошем состоянии. Очень
-                            приятная атмосфера, здесь хорошо неторопливо гулять ...
-                          </div>
-                          <!-- /.rew__txt -->
-                          <a href="#" class="rew__link">Читать полностью</a>
-                          <!-- /.rew__link -->
-                        </div>
-                        <!-- /.rew__top -->
-                        <div class="rew__bottom">
-                          <div class="rew__img">
-                            <img src="assets/img/design/rew3.jpg" alt="" />
-                          </div>
-                          <!-- /.rew__img -->
-                          <div class="rew__wr">
-                            <div class="rew__title1">Елена Кралина</div>
-                            <!-- /.rew__title1 -->
-                            <div class="rew__date">15 июня</div>
-                            <!-- /.rew__date -->
-                          </div>
-                          <!-- /.rew__wr -->
-                        </div>
-                        <!-- /.rew__bottom -->
-                      </div>
-                      <!-- /.rew -->
-                    </div>
-                  </div>
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              </div>
-              <!-- /.aslider2 -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as1 -->
-        <section class="section as2">
-          <div class="container">
-            <div class="container__elem container__elem--12 container__elem--rel">
-              <div class="as2__limg">
-                <img src="assets/img/design/kart7.jpg" alt="" />
-              </div>
-              <!-- /.as2__limg -->
-              <div class="as2__content">
-                <div class="as2__h2">Мы являемся одним из лидеров на российском рынке по поставкам самоклеящейся пленки</div>
-                <!-- /.as2__h2 -->
-                <div class="as2__wrap">
-                  <article>
-                    <h2>Профиль компании</h2>
-                    <p>
-                      Компания Ремэкс – один из крупнейших поставщиков материалов для наружной и интерьерной рекламы, печати, строительства,
-                      световой рекламы, промышленного и архитектурного дизайна, оформления интерьеров и других отраслей.
-                    </p>
-                    <p>
-                      Мы являемся одним из лидеров на российском рынке по поставкам самоклеящейся пленки от крупнейшего немецкого
-                      производителя пленок Orafol. В нашем ассортименте вы найдете все необходимые виды и размеры материалов, которые
-                      помогут сделать ваш продукт еще более заметным и привлекательным:
-                    </p>
-                  </article>
-                  <div class="as2__line"></div>
-                  <!-- /.as2__line -->
-                  <article>
-                    <ul class="spisok">
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">Самоклеющуюся аппликационную пленку</div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">
-                          Пленку и баннерные ткани для трафаретной,
-                          <br />
-                          сольвентной, экосольвентной печати и шелкографии
-                        </div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">Бумагу для широкоформатной печати</div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">
-                          Листовые материалы и пластики (оргстекло, ПВХ,
-                          <br />
-                          полистирол, поликарбонат, ПЭТ, алюминиевые
-                          <br />
-                          композитные панели и др.)
-                        </div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">Алюминиевые и пластиковые профили</div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">
-                          Светодиодную продукцию (светодиодные ленты и
-                          <br />
-                          модули, блоки питания и устройства управления)
-                        </div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">Скотчи, клеи и инструменты</div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                      <li>
-                        <div class="spisok__ico">
-                          <svg width="7" height="15" viewBox="0 0 7 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1.4001 13.636L5.6001 7.49963L1.4001 1.36328" stroke="#444444" stroke-width="1.5" />
-                          </svg>
-                        </div>
-                        <!-- /.spisok__ico -->
-                        <div class="spisok__txt">Мобильные стенды и материалы для indoor - рекламы</div>
-                        <!-- /.spisok__txt -->
-                      </li>
-                    </ul>
-                    <!-- /.spisok -->
-                  </article>
-                </div>
-                <!-- /.as2__wrap -->
-              </div>
-              <!-- /.as2__content -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as2 -->
-        <section class="section as3">
-          <div class="container">
-            <div class="container__elem container__elem--6">
-              <div class="section__h2">
-                Компания Ремэкс
-                <br />
-                образована в 1993 году
-              </div>
-              <!-- /.section__h2 -->
-            </div>
-            <div class="container__elem container__elem--6">
-              <article>
-                <h2>История компании</h2>
-                <p>Более 25 лет мы работаем для наших партнеров, вместе мы выросли и укрепились на рынке рекламных материалов.</p>
-                <p>
-                  С самого начала своей деятельности компания работает как профессиональный и надежный поставщик материалов для рекламы,
-                  дизайна и строительства. Постепенно, наращивая свое присутствие на российском рынке, компания открыла офисы в Москве,
-                  Московской области (г. Реутов) и в Санкт-Петербурге. На сегодня ГК «Ремэкс» насчитывает более 150 сотрудников,
-                  обеспечивающих высокий уровень сервиса для Вас.
-                </p>
-                <p>Данные по оценке условий труда.</p>
-              </article>
-            </div>
-          </div>
-        </section>
-        <!-- /.section as3 -->
-        <section class="section as4">
-          <div class="container">
-            <div class="container__elem container__elem--12 container__elem--df">
-              <div class="as4__box">
-                <div class="as4__h2">Наши клиенты растут вместе с нами</div>
-                <!-- /.as4__h2 -->
-                <p>
-                  Компания «Ремэкс» строит свои отношения с клиентами в расчете на долговременное взаимовыгодное сотрудничество, на
-                  принципах точного выполнения взятых на себя обязательств.
-                </p>
-              </div>
-              <!-- /.as4__box -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as4 -->
-        <section class="section as5">
-          <div class="container">
-            <div class="container__elem container__elem--3">
-              <div class="as5__h2">
-                Мы
-                <br />
-                предлагаем
-              </div>
-              <!-- /.as5__h2 -->
-            </div>
-            <div class="container__elem container__elem--9">
-              <div class="as5__wr">
-                <div class="as5Item">
-                  <div class="as5Item__fd">
-                    <div class="as5Item__img">
-                      <img src="assets/img/design/z1.png" alt="" />
-                    </div>
-                    <!-- /.as5Item__img -->
-                    <div class="as5Item__txt">Широкий ассортимент самых востребованных и перспективных товаров</div>
-                    <!-- /.as5Item__txt -->
-                  </div>
-                  <!-- /.as5Item__fd -->
-                </div>
-                <!-- /.as5Item -->
-                <div class="as5Item">
-                  <div class="as5Item__fd">
-                    <div class="as5Item__img">
-                      <img src="assets/img/design/z2.png" alt="" />
-                    </div>
-                    <!-- /.as5Item__img -->
-                    <div class="as5Item__txt">Постоянное наличие материалов на складе</div>
-                    <!-- /.as5Item__txt -->
-                  </div>
-                  <!-- /.as5Item__fd -->
-                </div>
-                <!-- /.as5Item -->
-                <div class="as5Item">
-                  <div class="as5Item__fd">
-                    <div class="as5Item__img">
-                      <img src="assets/img/design/z3.png" alt="" />
-                    </div>
-                    <!-- /.as5Item__img -->
-                    <div class="as5Item__txt">Гибкую систему индивидуальных скидок</div>
-                    <!-- /.as5Item__txt -->
-                  </div>
-                  <!-- /.as5Item__fd -->
-                </div>
-                <!-- /.as5Item -->
-                <div class="as5Item">
-                  <div class="as5Item__fd">
-                    <div class="as5Item__img">
-                      <img src="assets/img/design/z4z.png" alt="" />
-                    </div>
-                    <!-- /.as5Item__img -->
-                    <div class="as5Item__txt">Оперативное обслуживание</div>
-                    <!-- /.as5Item__txt -->
-                  </div>
-                  <!-- /.as5Item__fd -->
-                </div>
-                <!-- /.as5Item -->
-                <div class="as5Item">
-                  <div class="as5Item__fd">
-                    <div class="as5Item__img">
-                      <img src="assets/img/design/z5.png" alt="" />
-                    </div>
-                    <!-- /.as5Item__img -->
-                    <div class="as5Item__txt">Профессиональные консультации опытных специалистов по каждому продукту</div>
-                    <!-- /.as5Item__txt -->
-                  </div>
-                  <!-- /.as5Item__fd -->
-                </div>
-                <!-- /.as5Item -->
-                <div class="as5Item">
-                  <div class="as5Item__fd">
-                    <div class="as5Item__img">
-                      <img src="assets/img/design/z6.png" alt="" />
-                    </div>
-                    <!-- /.as5Item__img -->
-                    <div class="as5Item__txt">Дополнительные услуги - доставка и прямолинейная резка листовых</div>
-                    <!-- /.as5Item__txt -->
-                  </div>
-                  <!-- /.as5Item__fd -->
-                </div>
-                <!-- /.as5Item -->
-              </div>
-              <!-- /.as5__wr -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as5 -->
-        <section class="section as6">
-          <div class="as6__top">
-            <div class="container">
-              <div class="container__elem container__elem--6">
-                <div class="section__h2">Мы можем предложить нашим клиентам самые востребованные товары и лучшие бренды</div>
-                <!-- /.section__h2 -->
-              </div>
-              <div class="container__elem container__elem--6">
-                <div class="as6__wr">
-                  <div class="as6__h2">Наши поставщики</div>
-                  <!-- /.as6__h2 -->
-                  <p>
-                    Благодаря успешному сотрудничеству с известными производителями из стран Европы, США, ЮВА и России на протяжении уже
-                    многих лет, мы можем предложить нашим клиентам самые востребованные товары и лучшие бренды.
-                  </p>
-                  <p>
-                    На сегодняшний день наша компания является дилером известных производителей и представляет на российском рынке такие
-                    марки, как Oracal, Orajet, Unext, Plexiglas, Gebau, Новаттро, Elkamet, Cosmofen, LBY, Carboglass, 3M, LNT, Grossbond и
-                    т.д.
-                  </p>
-                </div>
-                <!-- /.as6__wr -->
-              </div>
-            </div>
-          </div>
-          <!-- /.as6__top -->
-          <div class="as6__bottom">
-            <div class="container">
-              <div class="container__elem container__elem--12">
-                <div class="slider3">
-                  <div class="swiper">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                      <!-- Slides -->
-
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b1.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">Orafol</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Россия</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b2.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">Next</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">США</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b3.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">Destek</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Германия</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b4.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">Gebau Kunststoff</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">США</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b5.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">LNT Style</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Китай</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b6.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">ЗM</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Великобритания</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b6.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">ЗM</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Великобритания</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b6.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">ЗM</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Великобритания</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="slide4">
-                          <div class="slide4__img">
-                            <img src="assets/img/design/b6.png" alt="" />
-                          </div>
-                          <!-- /.slide4__img -->
-                          <div class="slide4__box">
-                            <div class="slide4__title">ЗM</div>
-                            <!-- /.slide4__title -->
-                            <div class="slide4__country">Великобритания</div>
-                            <!-- /.slide4__country -->
-                          </div>
-                          <!-- /.slide4__box -->
-                        </div>
-                        <!-- /.slide4 -->
                       </div>
                     </div>
-                    <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+                    <div class="tabs-list__item">
+                      <div class="orders profile__orders">
+                        <div class="orders__header">
+                          <div class="title3 title3--lh-3 orders__title">Фильтр по заказам</div>
+                          <div class="orders__date">
+                            <span class="text text--gray-dark orders__date-text">Дата последнего обновления:</span>
+                            <span class="text text--light orders__date-value">31.12.2024</span>
+                            <span class="text text--light orders__date-value">17:45</span>
+                          </div>
+                          <div class="tooltip">
+                            <button
+                              class="link link--gray-dark link--hover-primary tooltip__btn js-open-modal"
+                              data-modal-name="offline-request-sent">
+                              <svg
+                                class="link__icon link__icon--fill-gray"
+                                width="17"
+                                height="17"
+                                viewBox="0 0 17 17"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M9.54051 12.0617C9.54051 12.1807 9.4905 12.2937 9.4105 12.3767C9.3305 12.4607 9.21043 12.5077 9.09043 12.5077C8.82043 12.5077 8.55045 12.3977 8.36045 12.2027C8.16045 12.0087 8.05052 11.7437 8.05052 11.4687V8.49969C8.05052 8.46069 8.04048 8.42268 8.01048 8.39468C7.98048 8.36668 7.9505 8.35168 7.9105 8.35168C7.7905 8.35168 7.67043 8.3047 7.59043 8.2207C7.51043 8.1377 7.46043 8.0237 7.46043 7.9057C7.46043 7.7877 7.51043 7.6747 7.59043 7.5907C7.67043 7.5077 7.7905 7.46069 7.9105 7.46069C8.1805 7.46069 8.45048 7.56971 8.64048 7.76471C8.84048 7.95971 8.95042 8.22369 8.95042 8.49969V11.4687C8.95042 11.5077 8.96046 11.5457 8.99046 11.5737C9.02046 11.6017 9.05043 11.6167 9.09043 11.6167C9.21043 11.6167 9.3305 11.6637 9.4105 11.7477C9.4905 11.8307 9.54051 11.9437 9.54051 12.0617ZM8.20042 5.97668C8.35042 5.97668 8.49046 5.93271 8.62046 5.85071C8.74046 5.76971 8.83048 5.6537 8.89048 5.5177C8.94048 5.3827 8.96052 5.23369 8.93052 5.08969C8.90052 4.94569 8.83045 4.81269 8.73045 4.70969C8.62045 4.60569 8.49044 4.53471 8.35044 4.50571C8.20044 4.47771 8.05051 4.49271 7.92051 4.54871C7.78051 4.60471 7.67043 4.69969 7.59043 4.82169C7.50043 4.94369 7.46043 5.0877 7.46043 5.2337C7.46043 5.4307 7.54052 5.6197 7.68052 5.7587C7.82052 5.8977 8.01042 5.97668 8.20042 5.97668ZM16.0704 8.49969C16.0704 9.99669 15.6305 11.4607 14.7905 12.7057C13.9605 13.9507 12.7805 14.9207 11.4005 15.4937C10.0105 16.0667 8.49049 16.2167 7.02049 15.9247C5.55049 15.6327 4.21049 14.9117 3.15049 13.8527C2.09049 12.7937 1.37042 11.4447 1.08042 9.97668C0.780422 8.50768 0.930476 6.98569 1.51048 5.60269C2.08048 4.21969 3.05051 3.03669 4.29051 2.20569C5.54051 1.37369 7.00047 0.929688 8.50047 0.929688C10.5105 0.931688 12.4304 1.72969 13.8504 3.14969C15.2704 4.56869 16.0704 6.49269 16.0704 8.49969ZM15.1805 8.49969C15.1805 7.17869 14.7905 5.8867 14.0505 4.7887C13.3205 3.6897 12.2805 2.8337 11.0605 2.3287C9.84052 1.8227 8.49042 1.6907 7.20042 1.9487C5.90042 2.2057 4.7105 2.8427 3.7805 3.7767C2.8405 4.7107 2.21042 5.90069 1.95042 7.19669C1.69042 8.49269 1.82042 9.83569 2.33042 11.0557C2.83042 12.2767 3.69051 13.3197 4.79051 14.0537C5.89051 14.7877 7.18047 15.1797 8.50047 15.1797C10.2705 15.1777 11.9704 14.4727 13.2204 13.2207C14.4704 11.9687 15.1805 10.2707 15.1805 8.49969Z" />
+                              </svg>
+                              <span
+                                class="link__text link__text--line link__text--line-hold-dashed link__text--line-hold-dashed-hover-primary">
+                                Получить офлайн заказы
+                              </span>
+                            </button>
+                            <div class="tooltip__content">
+                              <div class="text text--gray">
+                                <p>Импортируйте историю офлайн-заказов в личный кабинет.</p>
+                                <p>Для отображения офлайн-заказов обновите страницу через 10 минут.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="orders__filters">
+                          <form class="search orders__filters-search" method="get">
+                            <button class="search__btn">
+                              <img src="assets/img/icons/search-gray.svg" alt="" />
+                            </button>
+                            <input class="search__input" type="text" placeholder="Номер заказа" />
+                            <button class="search__close" type="button">
+                              <img src="assets/img/icons/exit.svg" alt="" />
+                            </button>
+                          </form>
+                          <div class="orders__filters-list">
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Статус</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">По юр.лицу</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Дата</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Тип доставки</span>
+                              </button>
+                            </div>
+                            <div class="sort orders__filters-item">
+                              <button class="link link--arrow sort__btn">
+                                <span class="sort__btn-text">Название склада</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="orders__list">
+                          <div class="order-info orders__item">
+                            <div class="accordion">
+                              <div class="order-info__header accordion__btn">
+                                <div class="text text--semibold text--gray-dark order-info__title">Заказ E-45495</div>
+                                <span class="text text--light text--flex order-info__date">от 01.01.2021</span>
+                                <div class="address-label address-label--pink order-info__address">Склад в Некрасовке</div>
+                                <span class="label label--primary order-info__label">Оплачен и комплектуется</span>
+                                <div class="text text--light order-info__type">Онлайн-заказ</div>
+                              </div>
+                              <div class="accordion__static">
+                                <div class="order-info__controls">
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      Запросить документы
+                                    </button>
+                                    <a
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item"
+                                      href="#">
+                                      Скачать PDF-заказа
+                                    </a>
+                                  </div>
+                                  <div class="order-info__controls-list">
+                                    <button class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="15"
+                                        viewBox="0 0 12 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M6.00073 11.4001C7.04073 11.4001 8.05075 11.063 8.90075 10.436C9.75075 9.80901 10.3807 8.92301 10.7207 7.90201C11.0607 6.88101 11.0908 5.77404 10.8008 4.73704C10.5108 3.70004 9.91069 2.78305 9.09069 2.11405C8.28069 1.44605 7.28072 1.05802 6.24072 1.00602C5.20072 0.954019 4.17078 1.24004 3.30078 1.82304C2.43078 2.40704 1.75071 3.26004 1.36071 4.26304C0.970714 5.26604 0.900743 6.37006 1.14074 7.42106M7.88073 7.50004L4.75073 10.75L7.88073 14"
+                                          stroke="#444444" />
+                                      </svg>
+                                      <span>Повторить заказ</span>
+                                    </button>
+                                    <button
+                                      class="link link--gray-dark link--line link--line-dark link--lh-2 order-info__controls-item js-open-modal"
+                                      data-modal-name="cancel-order">
+                                      <svg
+                                        class="link__icon link__icon--mx-sm"
+                                        width="12"
+                                        height="12"
+                                        viewBox="0 0 12 12"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M1.33008 1.33594L10.6702 10.6689"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                        <path
+                                          d="M1.33008 10.6689L10.6702 1.33594"
+                                          stroke="#444444"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                      </svg>
+                                      <span>Отменить заказ</span>
+                                    </button>
+                                  </div>
+                                </div>
+                                <div class="order-info__meta">
+                                  <div class="order-info__meta-item order-info__meta-item--delivery">
+                                    <div class="text text--gray text--lh-5 text--semibold">Способ доставки:</div>
+                                    <div class="text text--gray text--lh-5">СДЭК (самовывоз) - ПВЗ: Большая Академическая</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--payer">
+                                    <div class="text text--gray text--lh-5 text--semibold">Плательщик:</div>
+                                    <div class="text text--gray text--lh-5">ИП Смирнов</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--count">
+                                    <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                    <div class="text text--gray text--lh-5 text--no-space">150 шт.</div>
+                                  </div>
+                                  <div class="order-info__meta-item order-info__meta-item--sum">
+                                    <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                    <div class="text text--gray text--lh-5">1 000 777 580 ₽</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion__content">
+                                <div class="accordion__main">
+                                  <div class="order-info__main">
+                                    <div class="order-info__list-box">
+                                      <div class="order-info__list" data-scrollbar data-scrollbar-continue>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/5.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45080</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">1 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">15 580 ₽</div>
+                                          </div>
+                                        </div>
+                                        <div class="order-product order-info__item">
+                                          <a href="product-card.html" class="order-product__img">
+                                            <img src="assets/img/products/6.jpg" alt="" />
+                                          </a>
+                                          <div class="order-product__info">
+                                            <div class="text text--light text--sm order-product__code">Код товара: 45081</div>
+                                            <a href="product-card.html" class="link link--gray-dark order-product__title">
+                                              Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                            </a>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--count">
+                                            <div class="text text--gray text--lh-5 text--semibold">Товаров:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">3 шт.</div>
+                                          </div>
+                                          <div class="order-product__meta-item order-product__meta-item--sum">
+                                            <div class="text text--gray text--lh-5 text--semibold">Сумма:</div>
+                                            <div class="text text--gray text--lh-5 text--no-space">30 580 ₽</div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- /.slider3 -->
               </div>
-            </div>
-          </div>
-          <!-- /.as6__bottom -->
-        </section>
-        <!-- /.section as6 -->
-        <section class="section as7">
-          <div class="container">
-            <div class="container__elem container__elem--12 container__elem--df container__elem--jcsb">
-              <div class="section__h2">
-                Компания Ремэкс представляет
-                <br />
-                на российском рынке собственные
-                <br />
-                торговые марки:
-              </div>
-              <!-- /.section__h2 -->
-              <div class="as7Item">
-                <div class="as7Item__title">Пленку для широкоформатной печати Rexjet</div>
-                <!-- /.as7Item__title -->
-                <a href="#" class="as7Item__link">Подробнее</a>
-                <!-- /.as7Item__link -->
-              </div>
-              <!-- /.as7Item -->
-            </div>
-            <div class="container__elem container__elem--12">
-              <div class="as7__wrap">
-                <a href="#" class="as7Item">
-                  <div class="as7Item__title">Акриловое стекло Rexglass</div>
-                  <!-- /.as7Item__title -->
-                  <div class="as7Item__link">Подробнее</div>
-                  <!-- /.as7Item__link -->
-                </a>
-                <!-- /.as7Item -->
-                <a href="#" class="as7Item">
-                  <div class="as7Item__title">Листовой ПВХ-пластик Rexplast</div>
-                  <!-- /.as7Item__title -->
-                  <div class="as7Item__link">Подробнее</div>
-                  <!-- /.as7Item__link -->
-                </a>
-                <!-- /.as7Item -->
-                <a href="#" class="as7Item">
-                  <div class="as7Item__title">Баннерная ткань Rexprint</div>
-                  <!-- /.as7Item__title -->
-                  <div class="as7Item__link">Подробнее</div>
-                  <!-- /.as7Item__link -->
-                </a>
-                <!-- /.as7Item -->
-                <a href="#" class="as7Item">
-                  <div class="as7Item__title">НАН- ПЭТ –полиэтилентерефталат листы</div>
-                  <!-- /.as7Item__title -->
-                  <div class="as7Item__link">Подробнее</div>
-                  <!-- /.as7Item__link -->
-                </a>
-                <!-- /.as7Item -->
-              </div>
-              <!-- /.as7__wrap -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as7 -->
-        <section class="section as8">
-          <div class="container">
-            <div class="container__elem container__elem--12">
-              <div class="section__h2">Сертификаты</div>
-              <!-- /.section__h2 -->
-              <div class="as8__wrap">
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s1.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s2.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s3.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s4.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s5.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s6.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-                <div class="as8Item">
-                  <div class="as8Item__img">
-                    <img src="assets/img/design/s7.jpg" alt="" />
-                  </div>
-                  <!-- /.as8Item__img -->
-                </div>
-                <!-- /.as8Item -->
-              </div>
-              <!-- /.as8__wrap -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as8 -->
-        <section class="section as9">
-          <div class="container">
-            <div class="container__elem container__elem--6">
-              <div class="as9__title">Наши реквизиты</div>
-              <!-- /.as9__title -->
-              <div class="as9__button">
-                <button type="button">
-                  <span>Смотреть</span>
-                </button>
-              </div>
-              <!-- /.as9__button -->
-            </div>
-            <div class="container__elem container__elem--6">
-              <div class="as9__title">Написать письмо директору</div>
-              <!-- /.as9__title -->
-              <div class="as9__button as9__button--def">
-                <button type="button">
-                  <span>Написать</span>
-                </button>
-              </div>
-              <!-- /.as9__button -->
-            </div>
-          </div>
-        </section>
-        <!-- /.section as9 -->
-        <div class="gallery-container">
-          <div class="gallery-content">
-            <!-- Здесь будут отображаться увеличенные изображения -->
-            <img class="expanded-img" src="" alt="" />
-            <div class="gallery-controls">
-              <button class="prev-btn">&lt;</button>
-              <button class="next-btn">&gt;</button>
             </div>
           </div>
         </div>
@@ -3720,6 +3236,46 @@
                   <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
                   на отправку ваших персональных данных.
                 </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="cancel-order">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Отменить заказ</div>
+              <p class="text text--danger text--lh-2 text--semibold form__text">Отмена заказа необратима</p>
+              <p class="text text--gray text--lh-2 form__text form__text--mt-xs">Вы действительно хотите отменить данный заказ?</p>
+              <div class="form__btns form__btns--mt-lg">
+                <button class="but but--full form__btns-item js-close-modal">Не отменять</button>
+                <button class="but but--full but--primary form__btns-item">Отменить</button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="offline-request-sent">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Запрос на офлайн заказы отправлен</div>
+              <p class="text text--gray text--lh-2 form__text">Для отображения офлайн заказов обновите страницу через 10 минут</p>
+              <div class="form__btns form__btns--mt-lg">
+                <button class="but but--primary but--full form__btns-item js-close-modal">Ок</button>
               </div>
             </form>
             <button class="modal-new__close js-close-modal">

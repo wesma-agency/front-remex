@@ -120,10 +120,20 @@ window.addEventListener("click", (e) => {
 });
 
 /* Scrollbar */
-const scrollbar = Scrollbar.initAll({
-  alwaysShowTracks: true,
-  continuousScrolling: false,
-  damping: 0.08,
+const $scrollbarElems = document.querySelectorAll("[data-scrollbar]");
+$scrollbarElems.forEach(($scrollbarElem) => {
+  const options = {
+    alwaysShowTracks: true,
+    continuousScrolling: false,
+    damping: 0.08,
+  };
+
+
+  if ($scrollbarElem.dataset.scrollbarContinue === '') {
+    options.continuousScrolling = true;
+  }
+
+  Scrollbar.init($scrollbarElem, options);
 });
 
 /* Modal */
@@ -967,6 +977,21 @@ $smallSliders.forEach(($smallSlider) => {
       nextEl: $btnNext,
     },
   });
+});
+
+/* Tooltips */
+const $tooltips = document.querySelectorAll('.tooltip');
+$tooltips.forEach($tooltip => {
+  const $btn = $tooltip.querySelector('.tooltip__btn');
+  const $content = $tooltip.querySelector('.tooltip__content');
+  const options = {
+    content: $content.innerHTML,
+    allowHTML: true,
+    maxWidth: 300,
+    placement: 'top-end',
+  };
+
+  tippy($btn, options);
 });
 
 const catalogBtn = document.querySelector(".catalog-btn");
