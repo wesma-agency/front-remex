@@ -997,11 +997,12 @@ const catalogBtn = document.querySelector(".catalog-btn");
 const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
-catalogBtn.addEventListener("click", () => {
+catalogBtn.addEventListener("click", () => {  
   catalogBtn?.classList.toggle("active");
   cattest?.classList.toggle("active");
   podmenu?.classList.toggle("active");
-  podmenuMob?.classList.toggle("active");
+  podmenuMob?.classList.toggle("active"); 
+  document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden'; 
 });
 cattest?.addEventListener("click", () => {
   catalogBtn.classList.toggle("active");
@@ -1038,7 +1039,7 @@ moveHeaderHandler();
 window.addEventListener("scroll", moveHeaderHandler);
 
 function moveHeaderHandler() {
-  if (window.scrollY >= 400) {
+  if (window.scrollY >= 5) {
     headert.classList.add("dvij");
     podmenu.classList.add("act");
   } else {
