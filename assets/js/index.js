@@ -1009,6 +1009,7 @@ cattest?.addEventListener("click", () => {
   cattest.classList.toggle("active");
   podmenu.classList.toggle("active");
   podmenuMob.classList.toggle("active");
+  document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden'; 
 });
 window.addEventListener("click", (e) => {
   if (e.target.closest(".catalog-btn")) {
