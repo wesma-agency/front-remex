@@ -997,19 +997,22 @@ const catalogBtn = document.querySelector(".catalog-btn");
 const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
+const headerContainer = document.querySelector(".header");
 catalogBtn.addEventListener("click", () => {  
   catalogBtn?.classList.toggle("active");
   cattest?.classList.toggle("active");
   podmenu?.classList.toggle("active");
   podmenuMob?.classList.toggle("active"); 
-  document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden'; 
+  document.body.classList.toggle('body__mobile-lock');
+  headerContainer?.classList.toggle('header__catalog-active');
 });
 cattest?.addEventListener("click", () => {
   catalogBtn.classList.toggle("active");
   cattest.classList.toggle("active");
   podmenu.classList.toggle("active");
   podmenuMob.classList.toggle("active");
-  document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden'; 
+  document.body.classList.toggle('body__mobile-lock');
+  headerContainer?.classList.toggle('header__catalog-active');
 });
 window.addEventListener("click", (e) => {
   if (e.target.closest(".catalog-btn")) {
@@ -1031,6 +1034,9 @@ window.addEventListener("click", (e) => {
   $activePodmenuMob.classList.remove("active");
 
   catalogBtn.classList.remove("active");
+
+  document.body.classList.remove('body__mobile-lock');
+  headerContainer?.classList.remove('header__catalog-active');
 });
 
 const headert = document.querySelector(".header");
@@ -1660,11 +1666,23 @@ addEventListener("DOMContentLoaded", () => {
 
   // search popup
   const searchBtnMedia = document.querySelector(".search__btn-media");
+  const searchBtnMediaHover = document.querySelector(".search__btn-media-hover");
   const searchPopupClose = document.querySelector(".popup-search__close");
   const searchPopup = document.querySelector(".popup-search");
 
   if (searchBtnMedia) {
     searchBtnMedia.addEventListener("click", () => {
+      if (searchPopup.classList.contains("--hidden")) {
+        searchPopup.classList.remove("--hidden");
+      }
+    });
+    searchPopupClose.addEventListener("click", () => {
+      searchPopup.classList.add("--hidden");
+    });
+  }
+  
+  if (searchBtnMediaHover) {
+    searchBtnMediaHover.addEventListener("click", () => {
       if (searchPopup.classList.contains("--hidden")) {
         searchPopup.classList.remove("--hidden");
       }
