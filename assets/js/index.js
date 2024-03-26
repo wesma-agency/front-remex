@@ -7,7 +7,7 @@ $accordions.forEach(($accordion) => {
   const delay = $accordion.dataset.accordionDelay || 500;
   let animated = false;
 
-  $content.style.transition = `height ${delay / 1000}s, transform ${delay / 1000}s`;
+  $content.style.transition = `height ${delay / 1000}s, transform ${delay / 60}s`;
 
   $btn.addEventListener("click", () => {
     if (animated) {
@@ -1046,7 +1046,7 @@ moveHeaderHandler();
 window.addEventListener("scroll", moveHeaderHandler);
 
 function moveHeaderHandler() {
-  if (window.scrollY >= 5) {
+  if (window.scrollY) {
     headert.classList.add("dvij");
     podmenu.classList.add("act");
   } else {
@@ -1517,28 +1517,7 @@ var slider2 = new Swiper(".aslider2 .swiper", {
 //   pagination: {
 //     el: ".swiper-pagination",
 //     clickable: true,
-//   },
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 2,
-//       spaceBetween: 20,
-//     },
-//     361: {
-//       slidesPerView: 2,
-//       spaceBetween: 20,
-//     },
-//     641: {
-//       slidesPerView: 3,
-//       spaceBetween: 20,
-//     },
-//     769: {
-//       slidesPerView: 4,
-//       spaceBetween: 20,
-//     },
-//     1001: {
-//       slidesPerView: 6,
-//     },
-//   },
+//   },//   
 // });
 
 const $advantages = document.querySelector(".s6__top");
@@ -1666,7 +1645,6 @@ addEventListener("DOMContentLoaded", () => {
 
   // search popup
   const searchBtnMedia = document.querySelector(".search__btn-media");
-  const searchBtnMediaHover = document.querySelector(".search__btn-media-hover");
   const searchPopupClose = document.querySelector(".popup-search__close");
   const searchPopup = document.querySelector(".popup-search");
 
@@ -1679,16 +1657,6 @@ addEventListener("DOMContentLoaded", () => {
     searchPopupClose.addEventListener("click", () => {
       searchPopup.classList.add("--hidden");
     });
-  }
+  }  
   
-  if (searchBtnMediaHover) {
-    searchBtnMediaHover.addEventListener("click", () => {
-      if (searchPopup.classList.contains("--hidden")) {
-        searchPopup.classList.remove("--hidden");
-      }
-    });
-    searchPopupClose.addEventListener("click", () => {
-      searchPopup.classList.add("--hidden");
-    });
-  }
 });
