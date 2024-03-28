@@ -994,26 +994,26 @@ $tooltips.forEach(($tooltip) => {
 });
 
 const catalogBtn = document.querySelector(".catalog-btn");
-const cattest = document.querySelector(".cattest");
+// const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
 const headerContainer = document.querySelector(".header");
 catalogBtn.addEventListener("click", () => {  
   catalogBtn?.classList.toggle("active");
-  cattest?.classList.toggle("active");
+  // cattest?.classList.toggle("active");
   podmenu?.classList.toggle("active");
   podmenuMob?.classList.toggle("active"); 
   document.body.classList.toggle('body__mobile-lock');
   headerContainer?.classList.toggle('header__catalog-active');
 });
-cattest?.addEventListener("click", () => {
-  catalogBtn.classList.toggle("active");
-  cattest.classList.toggle("active");
-  podmenu.classList.toggle("active");
-  podmenuMob.classList.toggle("active");
-  document.body.classList.toggle('body__mobile-lock');
-  headerContainer?.classList.toggle('header__catalog-active');
-});
+// cattest?.addEventListener("click", () => {
+//   catalogBtn.classList.toggle("active");
+//   cattest.classList.toggle("active");
+//   podmenu.classList.toggle("active");
+//   podmenuMob.classList.toggle("active");
+//   document.body.classList.toggle('body__mobile-lock');
+//   headerContainer?.classList.toggle('header__catalog-active');
+// });
 window.addEventListener("click", (e) => {
   if (e.target.closest(".catalog-btn")) {
     return;
@@ -1042,18 +1042,6 @@ window.addEventListener("click", (e) => {
 const headert = document.querySelector(".header");
 const buttonzz = document.querySelectorAll(".product-card__controls");
 const buttonzz1 = document.querySelectorAll(".add");
-moveHeaderHandler();
-window.addEventListener("scroll", moveHeaderHandler);
-
-function moveHeaderHandler() {
-  if (window.scrollY) {
-    headert.classList.add("dvij");
-    podmenu.classList.add("act");
-  } else {
-    headert.classList.remove("dvij");
-    podmenu.classList.remove("act");
-  }
-}
 
 /* Sliders */
 var slider = new Swiper(".slider .swiper", {
@@ -1510,15 +1498,6 @@ var slider2 = new Swiper(".aslider2 .swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-// var slider3 = new Swiper(".slider3 .swiper", {
-//   direction: "horizontal",
-//   spaceBetween: 30,
-//   slidesPerView: 6,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },//   
-// });
 
 const $advantages = document.querySelector(".s6__top");
 if ($advantages) {
@@ -1617,7 +1596,6 @@ function isNumeric(str) {
 addEventListener("DOMContentLoaded", () => {
   const headerCatalogBtn = document.getElementById("headerCatalogBtn");
   const parentElement = document.getElementById("headerTopContainer");
-  const headerCatalogBtnM = document.getElementById("headerCatalogBtn");
   const mediaQueryTablet = window.matchMedia("(max-width: 1000px)");
   const mediaQueryMob = window.matchMedia("(max-width: 640px)");
 
@@ -1625,15 +1603,14 @@ addEventListener("DOMContentLoaded", () => {
   const parentLink = document.querySelector(".copy.--move-js");
 
   function handleTabletChange(e) {
-    if (e.matches) {
+    if (e.matches && headerCatalogBtn) {
       parentElement.after(headerCatalogBtn);
       parentLink.after(footLink);
     }
   }
   function handleMobileChange(e) {
-    if (e.matches) {
+    if (e.matches && headerCatalogBtn) {
       headerCatalogBtn.children[1].innerHTML = "Меню";
-      cattest.children[1].innerHTML = "Меню";
     }
   }
   if (headerCatalogBtn) {
