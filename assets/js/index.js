@@ -998,11 +998,11 @@ const catalogBtn = document.querySelector(".catalog-btn");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
 const headerContainer = document.querySelector(".header");
-catalogBtn.addEventListener("click", () => {  
+catalogBtn.addEventListener("click", () => {
   catalogBtn?.classList.toggle("active");
   // cattest?.classList.toggle("active");
   podmenu?.classList.toggle("active");
-  podmenuMob?.classList.toggle("active"); 
+  podmenuMob?.classList.toggle("active");
   document.body.classList.toggle('body__mobile-lock');
   headerContainer?.classList.toggle('header__catalog-active');
 });
@@ -1050,7 +1050,11 @@ var slider = new Swiper(".slider .swiper", {
   slidesPerView: 1,
   // centeredSlides: true,
   loop: true,
-
+  autoplay: {
+    delay: 2000,
+  },
+  disableOnInteraction: false,
+  
   // If we need pagination
   pagination: {
     el: ".slider .swiper-pagination",
@@ -1068,6 +1072,10 @@ var slider1 = new Swiper(".slider2 .swiper", {
   direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 2,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
   navigation: {
     nextEl: ".slider2 .swiper-button-next",
     prevEl: ".slider2 .swiper-button-prev",
@@ -1094,9 +1102,11 @@ var slider11 = new Swiper(".slider22 .swiper", {
   direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 2,
+  loop: true,
   autoplay: {
     delay: 2000,
   },
+
   navigation: {
     nextEl: ".slider22 .swiper-button-next",
     prevEl: ".slider22 .swiper-button-prev",
@@ -1123,6 +1133,10 @@ var slider4 = new Swiper(".slider69 .swiper", {
   direction: "horizontal",
   spaceBetween: 30,
   slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
     el: ".slider69 .swiper-pagination",
     clickable: true,
@@ -1149,6 +1163,10 @@ var slider2 = new Swiper(".slider3 .swiper", {
   direction: "horizontal",
   spaceBetween: 10,
   slidesPerView: 2,
+  loop: true,
+  autoplay: {
+    delay: 2000,
+  },
   pagination: {
     el: ".slider3 .swiper-pagination",
     clickable: true,
@@ -1176,6 +1194,9 @@ var slider3 = new Swiper(".slider4 .swiper", {
   spaceBetween: 30,
   slidesPerView: 1,
   loop: true,
+  autoplay: {
+    delay: 2000,
+  },
   // Navigation arrows
   navigation: {
     nextEl: ".slider4 .swiper-button-next",
@@ -1634,6 +1655,6 @@ addEventListener("DOMContentLoaded", () => {
     searchPopupClose.addEventListener("click", () => {
       searchPopup.classList.add("--hidden");
     });
-  }  
-  
+  }
+
 });
