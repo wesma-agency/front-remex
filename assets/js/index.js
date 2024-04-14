@@ -993,6 +993,30 @@ $tooltips.forEach(($tooltip) => {
   tippy($btn, options);
 });
 
+/* News */
+const $newsColumns = document.querySelectorAll(".news__column");
+let newsMoved = false;
+if ($newsColumns.length === 3) {
+  const $items = $newsColumns[2].querySelectorAll(".news__column-item");
+  $items.forEach(($item) => $item.classList.add("news__column-item--3"));
+
+  const $items3 = document.querySelectorAll(".news__column-item--3");
+  newsItemsHandler($items);
+  window.addEventListener("resize", () => newsItemsHandler($items3));
+}
+
+function newsItemsHandler($items) {
+  if (window.innerWidth <= 1280 && !newsMoved) {
+    $items.forEach(($item, index) => {
+      index % 2 === 0 ? $newsColumns[0].append($item) : $newsColumns[1].append($item);
+    });
+    newsMoved = true;
+  } else if (window.innerWidth > 1280 && newsMoved) {
+    $items.forEach(($item) => $newsColumns[2].append($item));
+    newsMoved = false;
+  }
+}
+
 const catalogBtn = document.querySelector(".catalog-btn");
 // const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
@@ -1003,8 +1027,8 @@ catalogBtn.addEventListener("click", () => {
   // cattest?.classList.toggle("active");
   podmenu?.classList.toggle("active");
   podmenuMob?.classList.toggle("active");
-  document.body.classList.toggle('body__mobile-lock');
-  headerContainer?.classList.toggle('header__catalog-active');
+  document.body.classList.toggle("body__mobile-lock");
+  headerContainer?.classList.toggle("header__catalog-active");
 });
 // cattest?.addEventListener("click", () => {
 //   catalogBtn.classList.toggle("active");
@@ -1035,8 +1059,8 @@ window.addEventListener("click", (e) => {
 
   catalogBtn.classList.remove("active");
 
-  document.body.classList.remove('body__mobile-lock');
-  headerContainer?.classList.remove('header__catalog-active');
+  document.body.classList.remove("body__mobile-lock");
+  headerContainer?.classList.remove("header__catalog-active");
 });
 
 const headert = document.querySelector(".header");
@@ -1054,7 +1078,7 @@ var slider = new Swiper(".slider .swiper", {
     delay: 2000,
   },
   disableOnInteraction: false,
-  
+
   // If we need pagination
   pagination: {
     el: ".slider .swiper-pagination",
@@ -1172,18 +1196,19 @@ var slider2 = new Swiper(".slider3 .swiper", {
     clickable: true,
   },
   breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    640: {
+    640.01: {
       slidesPerView: 3,
+      spaceBetween: 20,
     },
-    768: {
+    890.01: {
       slidesPerView: 4,
       spaceBetween: 20,
     },
-    1000: {
+    1280.01: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    1440.01: {
       slidesPerView: 6,
       spaceBetween: 30,
     },
@@ -1212,6 +1237,73 @@ var slider3 = new Swiper(".slider4 .swiper", {
     },
     1000: {
       slidesPerView: 3,
+    },
+  },
+});
+
+new Swiper(".as5__swiper", {
+  slidesPerView: 1,
+  enabled: true,
+  pagination: {
+    el: ".as5__pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    640.01: {
+      enabled: false,
+      spaceBetween: 0,
+    },
+  },
+});
+
+new Swiper(".as7__swiper", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  enabled: true,
+  pagination: {
+    el: ".as7__pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    767.01: {
+      enabled: false,
+      spaceBetween: 0,
+    },
+  },
+});
+
+new Swiper(".as8__swiper", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  enabled: true,
+  pagination: {
+    el: ".as8__pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".as8__next",
+    prevEl: ".as8__prev",
+  },
+  breakpoints: {
+    1280.01: {
+      slidesPerView: 7,
+      spaceBetween: 30,
+    },
+    1080.01: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    },
+    890.01: {
+      slidesPerView: 5,
+      spaceBetween: 20,
+    },
+    767.01: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    640.01: {
+      slidesPerView: 4,
+      spaceBetween: 20,
     },
   },
 });
@@ -1510,13 +1602,27 @@ var slider1 = new Swiper(".aslider1 .swiper", {
 });
 var slider2 = new Swiper(".aslider2 .swiper", {
   direction: "horizontal",
-  spaceBetween: 30,
-  slidesPerView: 3,
+  spaceBetween: 20,
+  slidesPerView: 1,
   loop: true,
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".aslider2 .swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    1280: {
+      spaceBetween: 30,
+      slidesPerView: 3,
+    },
+    767.01: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
   },
 });
 
@@ -1538,8 +1644,22 @@ if ($advantages) {
   });
 }
 
+moveAbout2Title();
+window.addEventListener("resize", moveAbout2Title);
+
+function moveAbout2Title() {
+  moveElement({
+    element: ".as2__h2",
+    from: ".as2__content",
+    to: ".as2__body",
+    fromInsertType: "prepend",
+    toInsertType: "prepend",
+    width: 1280,
+  });
+}
+
 // Находим все элементы галереи
-const galleryItems = document.querySelectorAll(".as8Item img");
+const galleryItems = document.querySelectorAll(".as8Item");
 const galleryContainer = document.querySelector(".gallery-container");
 const expandedImg = document.querySelector(".expanded-img");
 const closeBtn = document.querySelector(".close-btn");
@@ -1550,7 +1670,7 @@ let currentIndex = 0;
 
 // Показываем увеличенное изображение
 function showImage(index) {
-  expandedImg.src = galleryItems[index].src;
+  expandedImg.src = galleryItems[index].querySelector("img").src;
 }
 
 // При клике на изображение в галерее
@@ -1612,6 +1732,26 @@ function isNumeric(str) {
   return !isNaN(str) && !isNaN(parseFloat(str));
 }
 
+function moveElement(options) {
+  const { element, from, to, width, fromInsertType = "append", toInsertType = "append" } = options;
+
+  const $elem = document.querySelector(element);
+  const $from = document.querySelector(from);
+  const $to = document.querySelector(to);
+
+  if (!$elem || !$from || !$to) {
+    return;
+  }
+
+  setTimeout(() => {
+    if (window.innerWidth <= width && $elem.parentNode === $from) {
+      $to[toInsertType]($elem);
+    } else if (window.innerWidth >= width && $elem.parentNode !== $from) {
+      $from[fromInsertType]($elem);
+    }
+  });
+}
+
 /* for media */
 
 addEventListener("DOMContentLoaded", () => {
@@ -1652,9 +1792,8 @@ addEventListener("DOMContentLoaded", () => {
         searchPopup.classList.remove("--hidden");
       }
     });
-    searchPopupClose.addEventListener("click", () => {
+    searchPopupClose?.addEventListener("click", () => {
       searchPopup.classList.add("--hidden");
     });
   }
-
 });
