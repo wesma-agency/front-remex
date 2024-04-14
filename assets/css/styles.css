@@ -144,6 +144,11 @@ body.over {
 .main__section--mt-lg {
   margin-top: 100px;
 }
+
+.main__collections {
+  margin-top: 95px;
+}
+
 /* 
 .main__info {
   margin-top: 100px;
@@ -9426,6 +9431,10 @@ a:hover,
 
   .main__as8 {
     margin-top: 90px;
+  }
+
+  .main__collections {
+    margin-top: 85px;
   }
 
   .main__breadcrumbs {
