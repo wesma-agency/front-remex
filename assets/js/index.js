@@ -54,21 +54,26 @@ $tabsBtnsBoxes.forEach(($tabsBtnsBox) => {
   const $btns = $tabsBtnsBox.querySelectorAll(".tabs-btns__btn");
   $btns.forEach(($btn, index) => {
     $btn.addEventListener("click", () => {
-      const tabsName = $tabsBtnsBox.dataset.tabsName;
-
-      const $oldActiveBtn = document.querySelector(`.tabs-btns[data-tabs-name="${tabsName}"] > .tabs-btns__btn--active`);
-      const $oldActiveTab = document.querySelector(`.tabs-list[data-tabs-name="${tabsName}"] > .tabs-list__item--active`);
-      const $newActiveBtn = document.querySelectorAll(`.tabs-btns[data-tabs-name="${tabsName}"] > .tabs-btns__btn`)[index];
-      const $newActiveTab = document.querySelectorAll(`.tabs-list[data-tabs-name="${tabsName}"] > .tabs-list__item`)[index];
-
-      $oldActiveTab.classList.remove("tabs-list__item--active");
-      $oldActiveBtn.classList.remove("tabs-btns__btn--active");
-
-      $newActiveBtn.classList.add("tabs-btns__btn--active");
-      $newActiveTab.classList.add("tabs-list__item--active");
+      changeTab($tabsBtnsBox.dataset.tabsName, index);
     });
   });
 });
+
+function changeTab(name, index) {
+  const $oldActiveBtn = document.querySelector(`.tabs-btns[data-tabs-name="${name}"] > .tabs-btns__btn--active`);
+  const $oldActiveTab = document.querySelector(`.tabs-list[data-tabs-name="${name}"] > .tabs-list__item--active`);
+  const $newActiveBtn = document.querySelectorAll(`.tabs-btns[data-tabs-name="${name}"] > .tabs-btns__btn`)[index];
+  const $newActiveTab = document.querySelectorAll(`.tabs-list[data-tabs-name="${name}"] > .tabs-list__item`)[index];
+
+  $oldActiveTab.classList.remove("tabs-list__item--active");
+  $oldActiveBtn.classList.remove("tabs-btns__btn--active");
+
+  $newActiveBtn.classList.add("tabs-btns__btn--active");
+  $newActiveTab.classList.add("tabs-list__item--active");
+
+  const $tabSelect = document.querySelector(`.select[data-tabs-name=${name}]`);
+  $tabSelect?.querySelectorAll(".simple-select__item")[index].click();
+}
 
 /* Smooth scroll */
 const $anchors = document.querySelectorAll('a[href*="#"]');
@@ -820,9 +825,12 @@ const LIST_ACTIVE_CLASS = "simple-select__list--active";
 const ITEM_CLASS = "simple-select__item";
 const ITEM_PLACEHOLDER_CLASS = "simple-select__item--placeholder";
 const ITEM_HOVER_CLASS = "simple-select__item--hover";
+const ITEM_ACTIVE_CLASS = "simple-select__item--active";
 
 const $selectFields = document.querySelectorAll(".select__field");
 $selectFields.forEach(($select) => {
+  const $selectBox = $select.closest(".select");
+
   const $simpleSelect = createElem("div", SELECT_CLASS);
   $select.parentNode.insertBefore($simpleSelect, $select);
   $select.classList.add(INPUT_CLASS);
@@ -848,6 +856,8 @@ $selectFields.forEach(($select) => {
   /* Items */
   const $options = $select.querySelectorAll("option");
   const $simpleSelectList = createElem("div", LIST_CLASS);
+  let isActiveItem = false;
+  let hasPlaceholder = [...$options].find(($option) => $option.value === "");
   $options.forEach(($option, index) => {
     const $item = createElem("div", ITEM_CLASS, {
       innerText: $option.innerText,
@@ -857,14 +867,27 @@ $selectFields.forEach(($select) => {
       $item.classList.add(ITEM_PLACEHOLDER_CLASS);
     }
 
+    if (!hasPlaceholder && !isActiveItem && $option.value !== "") {
+      $item.classList.add(ITEM_ACTIVE_CLASS);
+      isActiveItem = true;
+    }
+
     $item.dataset.selectIndex = index;
     $item.addEventListener("click", () => {
+      const $oldActiveItem = $simpleSelectList.querySelector(`.${ITEM_ACTIVE_CLASS}`);
+      $oldActiveItem?.classList.remove(ITEM_ACTIVE_CLASS);
+      $item.classList.add(ITEM_ACTIVE_CLASS);
+
       $select.selectedIndex = +$item.dataset.selectIndex;
       $simpleSelectField.innerText = $item.innerText;
       $simpleSelect.blur();
       $simpleSelectList.classList.remove(LIST_ACTIVE_CLASS);
       $simpleSelectField.classList.remove(FIELD_ACTIVE_CLASS);
       $simpleSelect.classList.remove(SELECT_ACTIVE_CLASS);
+
+      if ($selectBox.dataset.tabsName) {
+        changeTab($selectBox.dataset.tabsName, index);
+      }
     });
 
     $item.addEventListener("mouseover", () => {
@@ -965,15 +988,43 @@ function createElem(type, className, options) {
 const $smallSliders = document.querySelectorAll(".small-slider");
 $smallSliders.forEach(($smallSlider) => {
   const $swiper = $smallSlider.querySelector(".small-slider__swiper");
+  const $pagination = $smallSlider.querySelector(".small-slider__pagination");
   const $btnPrev = $smallSlider.querySelector(".small-slider__btn-prev");
   const $btnNext = $smallSlider.querySelector(".small-slider__btn-next");
 
   new Swiper($swiper, {
-    spaceBetween: 30,
-    slidesPerView: 3,
+    spaceBetween: 10,
+    slidesPerView: 2,
+    loop: true,
     navigation: {
       prevEl: $btnPrev,
       nextEl: $btnNext,
+    },
+    pagination: {
+      el: $pagination,
+      clickable: true,
+    },
+    breakpoints: {
+      1280.01: {
+        spaceBetween: 30,
+        slidesPerView: 3,
+      },
+      890.01: {
+        spaceBetween: 30,
+        slidesPerView: 6,
+      },
+      767.01: {
+        spaceBetween: 30,
+        slidesPerView: 4,
+      },
+      640.01: {
+        spaceBetween: 20,
+        slidesPerView: 4,
+      },
+      480.01: {
+        spaceBetween: 10,
+        slidesPerView: 3,
+      },
     },
   });
 });
@@ -1092,67 +1143,45 @@ var slider = new Swiper(".slider .swiper", {
   },
 });
 
-var slider1 = new Swiper(".slider2 .swiper", {
-  direction: "horizontal",
-  spaceBetween: 30,
-  slidesPerView: 2,
-  loop: true,
-  autoplay: {
-    delay: 2000,
-  },
-  navigation: {
-    nextEl: ".slider2 .swiper-button-next",
-    prevEl: ".slider2 .swiper-button-prev",
-  },
-  pagination: {
-    el: ".slider2 + .swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    1000: {
-      slidesPerView: 4,
-    },
-  },
-});
-var slider11 = new Swiper(".slider22 .swiper", {
-  direction: "horizontal",
-  spaceBetween: 30,
-  slidesPerView: 2,
-  loop: true,
-  autoplay: {
-    delay: 2000,
-  },
+const $sliders2 = document.querySelectorAll(".slider2");
+$sliders2.forEach(($slider2) => {
+  const $swiper = $slider2.querySelector(".swiper");
+  const $prevBtn = $slider2.querySelector(".swiper-button-prev");
+  const $nextBtn = $slider2.querySelector(".swiper-button-next");
+  const $pagination = $slider2.querySelector(".swiper-pagination");
 
-  navigation: {
-    nextEl: ".slider22 .swiper-button-next",
-    prevEl: ".slider22 .swiper-button-prev",
-  },
-  pagination: {
-    el: ".slider22 + .swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 2,
-      spaceBetween: 10,
+  new Swiper($swiper, {
+    direction: "horizontal",
+    spaceBetween: 30,
+    slidesPerView: 2,
+    loop: true,
+    autoplay: {
+      delay: 2000,
     },
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+    navigation: {
+      prevEl: $prevBtn,
+      nextEl: $nextBtn,
     },
-    1000: {
-      slidesPerView: 4,
+    pagination: {
+      el: $pagination,
+      clickable: true,
     },
-  },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 4,
+      },
+    },
+  });
 });
+
 var slider4 = new Swiper(".slider69 .swiper", {
   direction: "horizontal",
   spaceBetween: 30,
@@ -1304,6 +1333,23 @@ new Swiper(".as8__swiper", {
     640.01: {
       slidesPerView: 4,
       spaceBetween: 20,
+    },
+  },
+});
+
+const seriesSlider = new Swiper(".catalog__series-slider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  enabled: true,
+  pagination: {
+    el: ".catalog__series-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    767.01: {
+      enabled: false,
+      spaceBetween: 0,
+      slidesPerView: "auto",
     },
   },
 });
@@ -1658,6 +1704,37 @@ function moveAbout2Title() {
   });
 }
 
+/* Header catalog btn */
+moveCatalogBtn();
+window.addEventListener("resize", moveCatalogBtn);
+
+function moveCatalogBtn() {
+  moveElement({
+    element: ".header__catalog-btn",
+    from: ".header__bottom-container-elem",
+    to: ".header__logo",
+    fromInsertType: "prepend",
+    toInsertType: "after",
+    width: 1140,
+  });
+}
+
+const $headerCatalogBtn = document.querySelector(".header__catalog-btn");
+const $span = $headerCatalogBtn.querySelector("span");
+const defaultText = $span.innerHTML;
+const mobileText = $headerCatalogBtn.dataset.mobileText;
+
+catalogBtnTextHandler($span, defaultText, mobileText);
+window.addEventListener("resize", () => catalogBtnTextHandler($span, defaultText, mobileText));
+
+function catalogBtnTextHandler($span, defaultText, mobileText) {
+  if (window.innerWidth <= 767 && $span.innerHTML === defaultText) {
+    $span.innerHTML = mobileText;
+  } else if (window.innerWidth > 767 && $span.innerHTML !== defaultText) {
+    $span.innerHTML = defaultText;
+  }
+}
+
 // Находим все элементы галереи
 const galleryItems = document.querySelectorAll(".as8Item");
 const galleryContainer = document.querySelector(".gallery-container");
@@ -1746,7 +1823,7 @@ function moveElement(options) {
   setTimeout(() => {
     if (window.innerWidth <= width && $elem.parentNode === $from) {
       $to[toInsertType]($elem);
-    } else if (window.innerWidth >= width && $elem.parentNode !== $from) {
+    } else if (window.innerWidth > width && $elem.parentNode !== $from) {
       $from[fromInsertType]($elem);
     }
   });
@@ -1756,29 +1833,20 @@ function moveElement(options) {
 
 addEventListener("DOMContentLoaded", () => {
   const headerCatalogBtn = document.getElementById("headerCatalogBtn");
-  const parentElement = document.getElementById("headerTopContainer");
-  const mediaQueryTablet = window.matchMedia("(max-width: 1000px)");
-  const mediaQueryMob = window.matchMedia("(max-width: 640px)");
+  const mediaQueryTablet = window.matchMedia("(max-width: 1140px)");
 
   const footLink = document.querySelector(".foot__col.--move-js");
   const parentLink = document.querySelector(".copy.--move-js");
 
   function handleTabletChange(e) {
     if (e.matches && headerCatalogBtn) {
-      parentElement.after(headerCatalogBtn);
       parentLink.after(footLink);
     }
   }
-  function handleMobileChange(e) {
-    if (e.matches && headerCatalogBtn) {
-      headerCatalogBtn.children[1].innerHTML = "Меню";
-    }
-  }
+
   if (headerCatalogBtn) {
     mediaQueryTablet.addEventListener("change", handleTabletChange);
-    mediaQueryMob.addEventListener("change", handleMobileChange);
     handleTabletChange(mediaQueryTablet);
-    handleMobileChange(mediaQueryMob);
   }
 
   // search popup
