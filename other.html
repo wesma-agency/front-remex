@@ -16,8 +16,8 @@
       integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/normalize.css?v=18" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=18" />
+    <link rel="stylesheet" href="assets/css/normalize.css?v=19" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=19" />
     <!-- pgs css -->
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/jquery.mCustomScrollbar.css" />
@@ -165,13 +165,15 @@
               </div>
               <!-- /.header__info -->
               <form class="search header__search" method="get">
-                <button class="search__btn">
-                  <img src="assets/img/icons/search-gray.svg" alt="" />
-                </button>
-                <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
-                <button class="search__close" type="button">
-                  <img src="assets/img/icons/exit.svg" alt="">
-                </button>
+                <div class="search__field">
+                  <button class="search__btn">
+                    <img src="assets/img/icons/search-gray.svg" alt="" />
+                  </button>
+                  <input class="search__input" type="text" placeholder="Введите название товара или артикул..." />
+                  <button class="search__close" type="button">
+                    <img src="assets/img/icons/exit.svg" alt="" />
+                  </button>
+                </div>
                 <div class="search-modal search__modal">
                   <div class="search-modal__categories">
                     <a class="search-modal__category" href="search.html">Пленка RexJet</a>
@@ -202,8 +204,7 @@
                     </a>
                     <a class="search-modal__item" href="search.html">
                       <div class="text search-modal__item-name">
-                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м)
-                          anticold мат</span>
+                        <span>Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</span>
                         <span class="text text--light search-modal__item-count">44 варианта</span>
                       </div>
                       <div class="text text--gray-dark text--semibold search-modal__item-price">320 000 ₽</div>
@@ -212,8 +213,7 @@
                   <div class="search-modal__articles">
                     <div class="search-modal__articles-header">
                       <div class="title3">Статьи</div>
-                      <a class="link link--light link--line link--line-light link--hover-light" href="search.html">Найдено
-                        32 статьи</a>
+                      <a class="link link--light link--line link--line-light link--hover-light" href="search.html">Найдено 32 статьи</a>
                     </div>
                     <div class="search-modal__articles-list">
                       <a class="search-modal__article" href="search.html">
@@ -3014,15 +3014,17 @@
         <div class="popup-search__title">Поиск</div>
         <div class="popup-search__label">Введите название товара или артикул</div>
         <div class="popup-search__form">
-          <form class="search" method="get">
-            <button class="search__btn">
-              <img src="assets/img/icons/search-gray.svg" alt="" />
-            </button>
-            <input class="search__input" type="text" />
-            <button class="search__close" type="button">
-              <img src="assets/img/icons/exit.svg" alt="" />
-            </button>
-            <div class="search-modal search__modal">
+          <form class="search popup-search__form-main" method="get">
+            <div class="search__field">
+              <button class="search__btn">
+                <img src="assets/img/icons/search-gray.svg" alt="" />
+              </button>
+              <input class="search__input" type="text" />
+              <button class="search__close" type="button">
+                <img src="assets/img/icons/exit.svg" alt="" />
+              </button>
+            </div>
+            <div class="search-modal search__modal">             
               <div class="search-modal__categories">
                 <a class="search-modal__category" href="search.html">Пленка RexJet</a>
                 <a class="search-modal__category" href="search.html">Красные пленки</a>
@@ -3069,8 +3071,7 @@
                     <span class="search-modal__article-name">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
                   </a>
                 </div>
-              </div>
-            </div>
+              </div>           
           </form>
         </div>
       </div>
@@ -3083,7 +3084,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="assets/js/index.js?v=18"></script>
+    <script src="assets/js/index.js?v=19"></script>
     <script src="assets/js/other.js"></script>
     <!-- pgs js -->
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
