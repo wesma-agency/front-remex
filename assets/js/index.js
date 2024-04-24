@@ -1156,7 +1156,7 @@ $sliders2.forEach(($slider2) => {
       el: $pagination,
       clickable: true,
     },
-    breakpoints: {      
+    breakpoints: {
       768: {
         slidesPerView: 3,
         spaceBetween: 20,
@@ -1185,7 +1185,7 @@ var slider4 = new Swiper(".slider69 .swiper", {
     nextEl: ".slider69 .swiper-button-next",
     prevEl: ".slider69 .swiper-button-prev",
   },
-  breakpoints: {    
+  breakpoints: {
     640: {
       slidesPerView: 2,
       spaceBetween: 20,
@@ -1683,6 +1683,34 @@ function moveAbout2Title() {
     fromInsertType: "prepend",
     toInsertType: "prepend",
     width: 1280,
+  });
+}
+
+/* Ymaps */
+if (typeof ymaps !== 'undefined') {
+  ymaps.ready(ymapsInit);
+}
+
+function ymapsInit() {
+  const $contactsMaps = document.querySelectorAll(".contacts__map");
+  $contactsMaps.forEach($map => {
+    $frame = $map.querySelector('.contacts__map-frame');
+
+    const map = new ymaps.Map($frame, {
+      center: [55.78733810809794,37.69983762976508],
+      zoom: 15,
+    });
+
+    map.behaviors.disable('multiTouch');
+
+    const geoObject = new ymaps.GeoObject({
+      geometry: {
+        type: "Point",
+        coordinates: [55.78724138294855,37.69970888373237],
+      },
+    });
+
+    map.geoObjects.add(geoObject);
   });
 }
 
