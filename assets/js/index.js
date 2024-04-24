@@ -1069,26 +1069,16 @@ function newsItemsHandler($items) {
 }
 
 const catalogBtn = document.querySelector(".catalog-btn");
-// const cattest = document.querySelector(".cattest");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
 const headerContainer = document.querySelector(".header");
 catalogBtn.addEventListener("click", () => {
   catalogBtn?.classList.toggle("active");
-  // cattest?.classList.toggle("active");
   podmenu?.classList.toggle("active");
   podmenuMob?.classList.toggle("active");
   document.body.classList.toggle("body__mobile-lock");
   headerContainer?.classList.toggle("header__catalog-active");
 });
-// cattest?.addEventListener("click", () => {
-//   catalogBtn.classList.toggle("active");
-//   cattest.classList.toggle("active");
-//   podmenu.classList.toggle("active");
-//   podmenuMob.classList.toggle("active");
-//   document.body.classList.toggle('body__mobile-lock');
-//   headerContainer?.classList.toggle('header__catalog-active');
-// });
 window.addEventListener("click", (e) => {
   if (e.target.closest(".catalog-btn")) {
     return;
@@ -1152,7 +1142,7 @@ $sliders2.forEach(($slider2) => {
 
   new Swiper($swiper, {
     direction: "horizontal",
-    spaceBetween: 30,
+    spaceBetween: 10,
     slidesPerView: 2,
     loop: true,
     autoplay: {
@@ -1166,17 +1156,14 @@ $sliders2.forEach(($slider2) => {
       el: $pagination,
       clickable: true,
     },
-    breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 10,
-      },
+    breakpoints: {      
       768: {
         slidesPerView: 3,
         spaceBetween: 20,
       },
       1000: {
         slidesPerView: 4,
+        spaceBetween: 30,
       },
     },
   });
@@ -1184,7 +1171,7 @@ $sliders2.forEach(($slider2) => {
 
 var slider4 = new Swiper(".slider69 .swiper", {
   direction: "horizontal",
-  spaceBetween: 30,
+  spaceBetween: 10,
   slidesPerView: 1,
   loop: true,
   autoplay: {
@@ -1198,17 +1185,14 @@ var slider4 = new Swiper(".slider69 .swiper", {
     nextEl: ".slider69 .swiper-button-next",
     prevEl: ".slider69 .swiper-button-prev",
   },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
+  breakpoints: {    
     640: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
     1000: {
       slidesPerView: 3,
+      spaceBetween: 30,
     },
   },
 });
@@ -1245,7 +1229,7 @@ var slider2 = new Swiper(".slider3 .swiper", {
 });
 var slider3 = new Swiper(".slider4 .swiper", {
   direction: "horizontal",
-  spaceBetween: 30,
+  spaceBetween: 20,
   slidesPerView: 1,
   loop: true,
   autoplay: {
@@ -1257,15 +1241,13 @@ var slider3 = new Swiper(".slider4 .swiper", {
     prevEl: ".slider4 .swiper-button-prev",
   },
   breakpoints: {
-    320: {
-      slidesPerView: 1,
-    },
     640: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
     1000: {
       slidesPerView: 3,
+      spaceBetween: 30,
     },
   },
 });
@@ -1858,10 +1840,12 @@ addEventListener("DOMContentLoaded", () => {
     searchBtnMedia.addEventListener("click", () => {
       if (searchPopup.classList.contains("--hidden")) {
         searchPopup.classList.remove("--hidden");
+        document.body.classList.add("body--lock");
       }
     });
     searchPopupClose?.addEventListener("click", () => {
       searchPopup.classList.add("--hidden");
+      document.body.classList.remove("body--lock");
     });
   }
 });

@@ -777,6 +777,12 @@ body.over {
   width: 100%;
 }
 
+.link--line-white.--transform:hover svg {
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+  transition: 0.6s;
+}
+
 .link__text--line-white:before,
 .link--line-white:before {
   background: var(--color-white);
@@ -2021,8 +2027,8 @@ div.scrollbar-track-x {
   flex-basis: 0;
   flex-grow: 1;
   flex: 0 0 auto;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
   width: 100%;
 }
 
@@ -4654,18 +4660,21 @@ div.as5__slide {
 }
 
 .podmenu__right .partners::-webkit-scrollbar-track,
-.podmenu__nav1::-webkit-scrollbar-track {
+.podmenu__nav1::-webkit-scrollbar-track,
+.search-modal::-webkit-scrollbar-track {
   background-color: #ededed;
   border-radius: 24px;
 }
 
 .podmenu__right .partners::-webkit-scrollbar,
-.podmenu__nav1::-webkit-scrollbar {
+.podmenu__nav1::-webkit-scrollbar,
+.search-modal::-webkit-scrollbar {
   width: 2px;
 }
 
 .podmenu__right .partners::-webkit-scrollbar-thumb,
-.podmenu__nav1::-webkit-scrollbar-thumb {
+.podmenu__nav1::-webkit-scrollbar-thumb,
+.search-modal::-webkit-scrollbar-thumb {
   border-radius: 24px;
   background-color: var(--color-gray);
 }
@@ -8496,6 +8505,8 @@ a:hover,
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   box-shadow: 0px 0px 25px rgba(var(--color-black--rgb), 0.05);
+  height:90vh;
+  overflow: auto;
 }
 
 .search-modal__categories {
@@ -10062,38 +10073,6 @@ a:hover,
 /* media queries for 1140px */
 
 @media (max-width: 1140px) {
-}
-
-/* media queries for 1040px */
-
-@media (max-width: 1040px) {
-  .categories__item {
-    width: calc(50% - 20px);
-  }
-}
-
-/* media queries for 1000px */
-
-@media (hover: hover) {
-  .catalog-btn:hover {
-    background: var(--color-white);
-    border: 1px solid var(--color-primary);
-  }
-
-  .catalog-btn:hover {
-    background: var(--color-white);
-  }
-
-  .catalog-btn:hover svg path {
-    fill: var(--color-primary);
-  }
-
-  .catalog-btn:hover span {
-    color: var(--color-primary);
-  }
-}
-
-@media (max-width: 1140px) {
   .s1 {
     padding-top: 55px;
   }
@@ -10134,11 +10113,6 @@ a:hover,
     margin-left: 30px;
   }
 
-  /* .catalog-btn:hover {
-    background: var(--color-white);
-    border: 1px solid var(--color-primary);
-  }
-   */
   .header .podmenu.active {
     position: fixed;
     top: 90px;
@@ -10158,6 +10132,11 @@ a:hover,
 
   .header__bottom .header__catalog-btn {
     display: none;
+  }
+
+  .search {
+    max-width: 770px;
+    margin: 0 auto;
   }
 
   .search.header__search {
@@ -10183,8 +10162,9 @@ a:hover,
   .popup-search {
     display: flex;
     align-self: center;
-    position: absolute;
-    top: 3%;
+    position: fixed;
+    top: 0;
+    height: 100vh;
     z-index: 9999;
   }
 
@@ -10194,7 +10174,7 @@ a:hover,
     gap: 30px;
     width: 100vw;
     padding: 40px 16px;
-    justify-content: center;
+    justify-content: flex-start;
     background: var(--color-white);
   }
 
@@ -10203,6 +10183,9 @@ a:hover,
     font-weight: 600;
     line-height: 17.6px;
     color: var(--color-gray);
+
+    width: 770px;
+    margin: 0 auto;
   }
 
   .popup-search__label {
@@ -10211,6 +10194,9 @@ a:hover,
     line-height: 1.4;
     text-align: left;
     color: rgba(var(--color-gray--rgb), 0.5);
+
+    width: 770px;
+    margin: 0 auto;
   }
 
   .serviceMenu {
@@ -10386,6 +10372,39 @@ a:hover,
 
   .cart-menu:hover .cart-menu__content {
     display: none;
+  }
+
+  .search-modal {
+    height: 80vh;
+  }
+}
+
+/* media queries for 1040px */
+
+@media (max-width: 1040px) {
+  .categories__item {
+    width: calc(50% - 20px);
+  }
+}
+
+/* media queries of hover for mobile */
+
+@media (hover: hover) {
+  .catalog-btn:hover {
+    background: var(--color-white);
+    border: 1px solid var(--color-primary);
+  }
+
+  .catalog-btn:hover {
+    background: var(--color-white);
+  }
+
+  .catalog-btn:hover svg path {
+    fill: var(--color-primary);
+  }
+
+  .catalog-btn:hover span {
+    color: var(--color-primary);
   }
 }
 
@@ -10764,6 +10783,17 @@ a:hover,
   }
 }
 
+/* media queries for 801px ...special upon request */
+
+@media (max-width: 801px) {
+  .popup-search__title {
+    width: 100%;
+  }
+  .popup-search__label {
+    width: 100%;
+  }
+}
+
 /* media queries for 768px */
 
 @media (max-width: 768px) {
@@ -11049,7 +11079,7 @@ a:hover,
   }
 
   .s2 {
-    padding-top: 40px;    
+    padding-top: 40px;
   }
 
   .slider2 {
@@ -11860,7 +11890,7 @@ a:hover,
     padding-bottom: 15px;
     margin-bottom: 20px;
   }
-  
+
   .collections__text {
     margin-top: 10px;
   }
@@ -11885,10 +11915,6 @@ a:hover,
 @media (max-width: 640px) {
   .title1 {
     font-size: 30px;
-  }
-
-  .popup-search {
-    top: 140px;
   }
 
   .header__top .container__elem {
@@ -12185,10 +12211,10 @@ a:hover,
     width: 100%;
   }
 
-  .podmenu__mobile svg {
+  /* .podmenu__mobile svg {
     transform: rotate(0deg);
     transition: transform 0.1s;
-  }
+  } */
 
   .podmenu__mobile .accordion--active .deactive svg {
     transform: rotate(0deg);
@@ -12844,9 +12870,9 @@ a:hover,
     position: relative;
     padding-bottom: 38px;
   }
-  
+
   .slider2:after {
-    content: '';
+    content: "";
     position: absolute;
     left: -10px;
     bottom: 28px;
