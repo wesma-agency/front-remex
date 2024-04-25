@@ -1068,17 +1068,24 @@ function newsItemsHandler($items) {
   }
 }
 
-const catalogBtn = document.querySelector(".catalog-btn");
+const $catalogBtns = document.querySelectorAll(".catalog-btn");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
 const headerContainer = document.querySelector(".header");
-catalogBtn.addEventListener("click", () => {
-  catalogBtn?.classList.toggle("active");
-  podmenu?.classList.toggle("active");
-  podmenuMob?.classList.toggle("active");
-  document.body.classList.toggle("body__mobile-lock");
-  headerContainer?.classList.toggle("header__catalog-active");
-});
+$catalogBtns.forEach($catalogBtn => {
+  $catalogBtn.addEventListener("click", () => {
+    podmenu?.classList.toggle("active");
+    podmenuMob?.classList.toggle("active");
+    document.body.classList.toggle("body__mobile-lock");
+    headerContainer?.classList.toggle("header__catalog-active");
+
+    if ($catalogBtn.classList.contains('active')) {
+      $catalogBtns.forEach($catalogBtn => $catalogBtn.classList.remove("active"));
+    } else {
+      $catalogBtns.forEach($catalogBtn => $catalogBtn.classList.add("active"));
+    }
+  });
+})
 window.addEventListener("click", (e) => {
   if (e.target.closest(".catalog-btn")) {
     return;
@@ -1098,15 +1105,27 @@ window.addEventListener("click", (e) => {
   $activePodmenu.classList.remove("active");
   $activePodmenuMob.classList.remove("active");
 
-  catalogBtn.classList.remove("active");
+  $catalogBtns.forEach($catalogBtn => $catalogBtn.classList.remove("active"));
 
   document.body.classList.remove("body__mobile-lock");
   headerContainer?.classList.remove("header__catalog-active");
 });
 
-const headert = document.querySelector(".header");
+const $header = document.querySelector(".header");
 const buttonzz = document.querySelectorAll(".product-card__controls");
 const buttonzz1 = document.querySelectorAll(".add");
+moveHeaderHandler();
+window.addEventListener("scroll", moveHeaderHandler);
+
+function moveHeaderHandler() {
+  if (window.scrollY >= 160 && !$header.classList.contains('header--scroll')) {
+    $header.classList.add("header--scroll");
+    podmenu.classList.add("act");
+  } else if (window.scrollY < 160 && $header.classList.contains('header--scroll')) {
+    $header.classList.remove("header--scroll");
+    podmenu.classList.remove("act");
+  }
+}
 
 /* Sliders */
 var slider = new Swiper(".slider .swiper", {
@@ -1712,6 +1731,28 @@ function ymapsInit() {
 
     map.geoObjects.add(geoObject);
   });
+}
+
+/* Contacts */
+const $contactsMaps = document.querySelectorAll(".contacts__map");
+
+contactsMapsHandler();
+window.addEventListener("scroll", contactsMapsHandler);
+window.addEventListener("resize", contactsMapsHandler);
+
+function contactsMapsHandler() {
+  if (window.innerWidth < 1280) {
+    return;
+  }
+
+  const value = Math.min(window.scrollY, 160);
+  $contactsMaps.forEach(($map) => $map.style.transform = `translateY(-${value}px)`);
+
+  if (window.scrollY >= 160 && !$contactsMaps[0].classList.contains('contacts__map--scroll')) {
+    $contactsMaps.forEach(($map) => $map.classList.add('contacts__map--scroll'));
+  } else if (window.scrollY < 160 && $contactsMaps[0].classList.contains('contacts__map--scroll')) {
+    $contactsMaps.forEach(($map) => $map.classList.remove('contacts__map--scroll'));
+  }
 }
 
 /* Header catalog btn */
