@@ -1687,26 +1687,26 @@ function moveAbout2Title() {
 }
 
 /* Ymaps */
-if (typeof ymaps !== 'undefined') {
+if (typeof ymaps !== "undefined") {
   ymaps.ready(ymapsInit);
 }
 
 function ymapsInit() {
   const $contactsMaps = document.querySelectorAll(".contacts__map");
-  $contactsMaps.forEach($map => {
-    $frame = $map.querySelector('.contacts__map-frame');
+  $contactsMaps.forEach(($map) => {
+    $frame = $map.querySelector(".contacts__map-frame");
 
     const map = new ymaps.Map($frame, {
-      center: [55.78733810809794,37.69983762976508],
+      center: [55.78733810809794, 37.69983762976508],
       zoom: 15,
     });
 
-    map.behaviors.disable('multiTouch');
+    map.behaviors.disable("drag");
 
     const geoObject = new ymaps.GeoObject({
       geometry: {
         type: "Point",
-        coordinates: [55.78724138294855,37.69970888373237],
+        coordinates: [55.78724138294855, 37.69970888373237],
       },
     });
 
