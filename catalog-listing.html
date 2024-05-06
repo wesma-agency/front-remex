@@ -17,8 +17,8 @@
       integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/normalize.css?v=21" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=21" />
+    <link rel="stylesheet" href="assets/css/normalize.css?v=22" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=22" />
     <!-- pgs css -->
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/jquery.mCustomScrollbar.css" />
@@ -54,7 +54,7 @@
           <li><a href="faq.html">Частые вопросы</a></li>
           <li><a href="delivery.html">Доставка</a></li>
           <li><a href="news.html">Новости</a></li>
-          <!-- <li><a href="#">Новости детальная</a></li> -->
+          <li><a href="news-detail.html">Новости детальная</a></li>
           <li><a href="404.html">Страница 404</a></li>
         </ul>
       </div>
@@ -5457,10 +5457,12 @@
                         </div>
                       </div>
                     </div>
-                    <button class="but catalog__more-btn">Показать еще</button>
-                    <div class="catalog__footer">
-                      <div class="pagination catalog__pagination">
-                        <a class="pagination__link pagination__link--left" href="#">Назад</a>
+                    <div class="section-footer">
+                      <button class="but section-footer__more-btn">Показать еще</button>
+                      <div class="pagination section-footer__pagination section-footer__pagination--desktop">
+                        <a class="pagination__link pagination__link--left" href="#">
+                          <span>Назад</span>
+                        </a>
                         <a class="pagination__link" href="#">1</a>
                         <span class="pagination__active" href="#">2</span>
                         <a class="pagination__link" href="#">3</a>
@@ -5468,9 +5470,25 @@
                         <a class="pagination__link" href="#">5</a>
                         <a class="pagination__link" href="#">...</a>
                         <a class="pagination__link" href="#">42</a>
-                        <a class="pagination__link pagination__link--right" href="#">Дальше</a>
+                        <a class="pagination__link pagination__link--right" href="#">
+                          <span>Дальше</span>
+                        </a>
                       </div>
-                      <div class="text text--light catalog__count">60 из 552</div>
+                      <div class="pagination section-footer__pagination section-footer__pagination--mobile">
+                        <a class="pagination__link pagination__link--left" href="#">
+                          <span>Назад</span>
+                        </a>
+                        <a class="pagination__link" href="#">1</a>
+                        <span class="pagination__active" href="#">2</span>
+                        <a class="pagination__link" href="#">3</a>
+                        <a class="pagination__link" href="#">4</a>
+                        <a class="pagination__link" href="#">...</a>
+                        <a class="pagination__link" href="#">42</a>
+                        <a class="pagination__link pagination__link--right" href="#">
+                          <span>Дальше</span>
+                        </a>
+                      </div>
+                      <div class="text text--light section-footer__count">60 из 552</div>
                     </div>
                   </div>
                 </div>
@@ -5479,7 +5497,7 @@
           </div>
         </div>
 
-        <section class="info main__info">
+        <section class="info main__catalog-info">
           <div class="wrapper">
             <div class="info__content">
               <div class="info__left">
@@ -5910,7 +5928,8 @@
                     <span class="search-modal__article-name">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</span>
                   </a>
                 </div>
-              </div>           
+              </div>
+            </div>           
           </form>
         </div>
       </div>
@@ -6014,7 +6033,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="assets/js/index.js?v=21"></script>
+    <script src="assets/js/index.js?v=22"></script>
     <!-- pgs js -->
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>

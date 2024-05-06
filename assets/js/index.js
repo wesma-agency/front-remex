@@ -1072,20 +1072,20 @@ const $catalogBtns = document.querySelectorAll(".catalog-btn");
 const podmenu = document.querySelector(".podmenu");
 const podmenuMob = document.querySelector(".podmenu__mobile");
 const headerContainer = document.querySelector(".header");
-$catalogBtns.forEach($catalogBtn => {
+$catalogBtns.forEach(($catalogBtn) => {
   $catalogBtn.addEventListener("click", () => {
     podmenu?.classList.toggle("active");
     podmenuMob?.classList.toggle("active");
     document.body.classList.toggle("body__mobile-lock");
     headerContainer?.classList.toggle("header__catalog-active");
 
-    if ($catalogBtn.classList.contains('active')) {
-      $catalogBtns.forEach($catalogBtn => $catalogBtn.classList.remove("active"));
+    if ($catalogBtn.classList.contains("active")) {
+      $catalogBtns.forEach(($catalogBtn) => $catalogBtn.classList.remove("active"));
     } else {
-      $catalogBtns.forEach($catalogBtn => $catalogBtn.classList.add("active"));
+      $catalogBtns.forEach(($catalogBtn) => $catalogBtn.classList.add("active"));
     }
   });
-})
+});
 window.addEventListener("click", (e) => {
   if (e.target.closest(".catalog-btn")) {
     return;
@@ -1105,7 +1105,7 @@ window.addEventListener("click", (e) => {
   $activePodmenu.classList.remove("active");
   $activePodmenuMob.classList.remove("active");
 
-  $catalogBtns.forEach($catalogBtn => $catalogBtn.classList.remove("active"));
+  $catalogBtns.forEach(($catalogBtn) => $catalogBtn.classList.remove("active"));
 
   document.body.classList.remove("body__mobile-lock");
   headerContainer?.classList.remove("header__catalog-active");
@@ -1118,10 +1118,10 @@ moveHeaderHandler();
 window.addEventListener("scroll", moveHeaderHandler);
 
 function moveHeaderHandler() {
-  if (window.scrollY >= 160 && !$header.classList.contains('header--scroll')) {
+  if (window.scrollY >= 160 && !$header.classList.contains("header--scroll")) {
     $header.classList.add("header--scroll");
     podmenu.classList.add("act");
-  } else if (window.scrollY < 160 && $header.classList.contains('header--scroll')) {
+  } else if (window.scrollY < 160 && $header.classList.contains("header--scroll")) {
     $header.classList.remove("header--scroll");
     podmenu.classList.remove("act");
   }
@@ -1351,6 +1351,78 @@ const seriesSlider = new Swiper(".catalog__series-slider", {
       enabled: false,
       spaceBetween: 0,
       slidesPerView: "auto",
+    },
+  },
+});
+
+new Swiper(".news-section__small-slider", {
+  slidesPerView: 2,
+  spaceBetween: 10,
+  enabled: true,
+  pagination: {
+    el: ".news-section__small-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".news-section__small-slider-next",
+    prevEl: ".news-section__small-slider-prev",
+  },
+  breakpoints: {
+    890.01: {
+      slidesPerView: 4,
+      spaceBetween: 28,
+    },
+    640.01: {
+      slidesPerView: 3.2,
+      spaceBetween: 20,
+    },
+  },
+});
+
+new Swiper(".news-section__slider", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  enabled: true,
+  pagination: {
+    el: ".news-section__pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".news-section__slider-next",
+    prevEl: ".news-section__slider-prev",
+  },
+  breakpoints: {
+    890.01: {
+      slidesPerView: 2,
+      spaceBetween: 27,
+    },
+    640.01: {
+      slidesPerView: 2,
+      spaceBetween: 22,
+    },
+  },
+});
+
+new Swiper(".news__slider", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  enabled: true,
+  pagination: {
+    el: ".news__slider-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".news__slider-next",
+    prevEl: ".news__slider-prev",
+  },
+  breakpoints: {
+    1080.01: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    767.01: {
+      slidesPerView: 2,
+      spaceBetween: 27,
     },
   },
 });
@@ -1736,9 +1808,11 @@ function ymapsInit() {
 /* Contacts */
 const $contactsMaps = document.querySelectorAll(".contacts__map");
 
-contactsMapsHandler();
-window.addEventListener("scroll", contactsMapsHandler);
-window.addEventListener("resize", contactsMapsHandler);
+if ($contactsMaps.length) {
+  contactsMapsHandler();
+  window.addEventListener("scroll", contactsMapsHandler);
+  window.addEventListener("resize", contactsMapsHandler);
+}
 
 function contactsMapsHandler() {
   if (window.innerWidth < 1280) {
@@ -1746,12 +1820,12 @@ function contactsMapsHandler() {
   }
 
   const value = Math.min(window.scrollY, 160);
-  $contactsMaps.forEach(($map) => $map.style.transform = `translateY(-${value}px)`);
+  $contactsMaps.forEach(($map) => ($map.style.transform = `translateY(-${value}px)`));
 
-  if (window.scrollY >= 160 && !$contactsMaps[0].classList.contains('contacts__map--scroll')) {
-    $contactsMaps.forEach(($map) => $map.classList.add('contacts__map--scroll'));
-  } else if (window.scrollY < 160 && $contactsMaps[0].classList.contains('contacts__map--scroll')) {
-    $contactsMaps.forEach(($map) => $map.classList.remove('contacts__map--scroll'));
+  if (window.scrollY >= 160 && !$contactsMaps[0].classList.contains("contacts__map--scroll")) {
+    $contactsMaps.forEach(($map) => $map.classList.add("contacts__map--scroll"));
+  } else if (window.scrollY < 160 && $contactsMaps[0].classList.contains("contacts__map--scroll")) {
+    $contactsMaps.forEach(($map) => $map.classList.remove("contacts__map--scroll"));
   }
 }
 
