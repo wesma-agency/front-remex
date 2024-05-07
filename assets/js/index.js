@@ -650,7 +650,14 @@ $counters.forEach(($counter) => {
 const $product = document.querySelector(".product");
 if ($product) {
   const navSlider = new Swiper(".product__other-slider", {
-    slidesPerView: "auto",
+    slidesPerView: 4.45,
+    spaceBetween: 15,
+    breakpoints: {
+      1280.01: {
+        slidesPerView: "auto",
+        spaceBetween: false
+      }
+    }
   });
 
   new Swiper(".product__main-img-slider", {
@@ -658,12 +665,42 @@ if ($product) {
     slidesPerView: 1,
     spaceBetween: 20,
     loop: true,
+    pagination: {
+      el: '.product__main-img-pagination',
+      clickable: true,
+    },
     thumbs: {
       swiper: navSlider,
     },
     mousewheel: {
       sensitivity: 1.4,
     },
+  });
+}
+
+moveProductHeader();
+window.addEventListener("resize", moveProductHeader);
+
+function moveProductHeader() {
+  moveElement({
+    element: ".product__header",
+    from: ".product__info",
+    to: ".product__main",
+    fromInsertType: "prepend",
+    toInsertType: "prepend",
+    width: 1280,
+  });
+}
+
+moveProductSidebar();
+window.addEventListener("resize", moveProductSidebar);
+
+function moveProductSidebar() {
+  moveElement({
+    element: ".product__sidebar-main",
+    from: ".product__sidebar",
+    to: ".product__tablet-sidebar",
+    width: 890,
   });
 }
 
@@ -1180,7 +1217,7 @@ $sliders2.forEach(($slider2) => {
         slidesPerView: 3,
         spaceBetween: 20,
       },
-      1000: {
+      1140.01: {
         slidesPerView: 4,
         spaceBetween: 30,
       },

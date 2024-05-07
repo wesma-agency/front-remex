@@ -17,8 +17,8 @@
       integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/normalize.css?v=22" />
-    <link rel="stylesheet" href="assets/css/styles.css?v=22" />
+    <link rel="stylesheet" href="assets/css/normalize.css?v=23" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=23" />
     <!-- pgs css -->
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/jquery.mCustomScrollbar.css" />
@@ -4305,9 +4305,9 @@
               <div class="as9__col">
                 <div class="title3 title3--white title3--lh-3 as9__title">Написать письмо директору</div>
                 <!-- /.as9__title -->
-                <a class="but but--primary but--column but--xs but--text-xl as9__button as9__button--def" href="#">
+                <button class="but but--primary but--column but--xs but--text-xl as9__button as9__button--def js-open-modal" data-modal-name="write-director">
                   <span>Написать</span>
-                </a>
+                </button>
                 <!-- /.as9__button -->
               </div>
             </div>
@@ -4827,6 +4827,36 @@
       </div>
     </div>
 
+    <div class="modal-new" data-name="write-director">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Написать директору компании</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Обращение</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Отправить</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close modal-new__close--outside js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
@@ -4834,7 +4864,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-    <script src="assets/js/index.js?v=22"></script>
+    <script src="assets/js/index.js?v=23"></script>
     <!-- pgs js -->
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
