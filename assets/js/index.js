@@ -655,9 +655,9 @@ if ($product) {
     breakpoints: {
       1280.01: {
         slidesPerView: "auto",
-        spaceBetween: false
-      }
-    }
+        spaceBetween: false,
+      },
+    },
   });
 
   new Swiper(".product__main-img-slider", {
@@ -666,7 +666,7 @@ if ($product) {
     spaceBetween: 20,
     loop: true,
     pagination: {
-      el: '.product__main-img-pagination',
+      el: ".product__main-img-pagination",
       clickable: true,
     },
     thumbs: {
@@ -1163,6 +1163,15 @@ function moveHeaderHandler() {
     podmenu.classList.remove("act");
   }
 }
+
+/* Checkbox btn */
+const $checkboxBtns = document.querySelectorAll(".checkbox-btn");
+$checkboxBtns.forEach(($btn) => {
+  const $switch = $btn.querySelector(".checkbox-btn__switch");
+  $switch?.addEventListener("click", () => {
+    $btn.classList.toggle("checkbox-btn--active");
+  });
+});
 
 /* Sliders */
 var slider = new Swiper(".slider .swiper", {
