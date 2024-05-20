@@ -2046,6 +2046,7 @@ div.scrollbar-track-x {
 }
 
 .checkbox-btn__link {
+  flex: 1 1 auto;
   line-height: 1.4;
 }
 
@@ -4839,13 +4840,8 @@ div.as5__slide {
   padding: 10px 0;
 }
 
-.podmenu__navig-mobile-btn .checkbox-btn__main {
-  padding-left: 31px;
-}
-
 .podmenu__navig-mobile-btn .checkbox-btn__list {
   margin-top: 18px;
-  padding-left: 31px;
 }
 
 .podmenu__navig-mobile-btn .checkbox-btn__item:not(:first-child) {
@@ -4877,6 +4873,7 @@ div.as5__slide {
   height: 100%;
   padding-right: 10px;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .podmenu__nav-list {
@@ -4994,7 +4991,8 @@ div.as5__slide {
 .accordion__link {
   display: flex;
   align-items: center;
-  padding: 20px 0 10px 31px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .checkbox_vib .two3sec__wr {
@@ -10964,11 +10962,6 @@ a:hover,
     width: 100%;
   }
 
-  .podmenu__left nav ul li a:not(.accordion__link) {
-    max-width: 290px;
-    min-width: 290px;
-  }
-
   .podmenu__list {
     min-height: 565px;
   }
@@ -11001,6 +10994,11 @@ a:hover,
 
   .podmenu__links:last-child {
     height: auto;
+  }
+
+  .podmenu__link {
+    max-width: 290px;
+    min-width: 290px;
   }
 
   #contentLink {
@@ -11313,6 +11311,10 @@ a:hover,
 
   .header--scroll .header__hover {
     display: none;
+  }
+
+  .podmenu__submenu {
+    padding: 30px;
   }
 
   .text--my-lg p:not(:first-child) {
@@ -11795,10 +11797,6 @@ a:hover,
 
   .podmenu__list {
     min-height: 645px;
-  }
-
-  .podmenu__submenu {
-    padding: 30px;
   }
 
   .podmenu__nav {
@@ -13569,12 +13567,6 @@ a:hover,
 
   .checkbox_vib .two3sec__cont p {
     max-width: 100%;
-  }
-
-  .podmenu__left nav ul li a:not(.accordion__link) {
-    max-width: 100%;
-    min-width: 100%;
-    height: 27px;
   }
 
   .podmenu__left nav ul li:not(:first-of-type) {
