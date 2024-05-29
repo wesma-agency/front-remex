@@ -14471,6 +14471,11 @@ a:hover,
     display: block;
     margin-bottom: 20px;
   }
+
+  .edit-input__label,
+  .edit-input__field {
+    font-size: 15px;
+  }
 }
 
 /* Фича для поиска косячных и выступающих элементов */
