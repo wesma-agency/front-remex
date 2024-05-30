@@ -14417,12 +14417,54 @@ a:hover,
   margin-bottom: 23px;
 }
 
+.profile__btns-lk {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.profile__exit-btn {
+  max-width: 72px;
+  border: none;
+  padding: 0;
+}
+.profile__exit-btn:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+.profile__exit-btn:hover .but__icon--stroke {
+  stroke: var(--color-primary);
+}
+
+.order-info__header.accordion__btn {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: none;
+}
+.order-info__header.accordion__btn--active {
+  margin-bottom: 0px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color-primary);
+}
+.order-info__meta {
+  margin-bottom: 25px;
+}
+
+/* Адаптив */
 @media (max-width: 1920px) {
   .profile__cards-accordeon {
     display: none;
   }
 
+  .orders__date,
+  .tooltip {
+    display: none;
+  }
+
   .profile__select {
+    display: none;
+  }
+
+  .orders__bottom {
     display: none;
   }
 }
@@ -14439,6 +14481,71 @@ a:hover,
   }
   .phone-confirmation span {
     padding: 6px 3px 6px 3px;
+  }
+
+  .profile__tabs-btns {
+    max-width: 570px;
+  }
+
+  .orders__filters {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 570px;
+  }
+  .orders__filters-search {
+    margin-bottom: 25px;
+    flex: 1 0 auto;
+  }
+
+  .orders__filters-list {
+    width: 100%;
+  }
+  .orders__filters-list:not(:first-child) {
+    margin-left: auto;
+  }
+  .orders__filters-item:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .order-info__header {
+    flex-wrap: wrap;
+  }
+  .order-info__address {
+    margin-left: auto;
+  }
+  .order-info__label {
+    margin-left: 40px;
+  }
+
+  .order-info__controls-list {
+    flex-wrap: wrap;
+  }
+  .order-info__controls {
+    padding-bottom: 0;
+  }
+  .order-info__controls-list:nth-child(2) {
+    justify-content: flex-end;
+  }
+  .order-info__controls-item {
+    margin-bottom: 30px;
+  }
+  .order-info__controls-item:not(:first-child) {
+    margin-left: 0;
+  }
+
+  .orders__more-btn,
+  .orders__footer {
+    display: none;
+  }
+
+  .orders__bottom {
+    display: block;
+  }
+  .orders__bottom-btn {
+    display: block;
+  }
+  .orders__bottom-footer {
+    display: flex;
   }
 }
 
@@ -14477,8 +14584,3 @@ a:hover,
     font-size: 15px;
   }
 }
-
-/* Фича для поиска косячных и выступающих элементов */
-/* * {
-  outline: 1px solid red !important;
-} */
