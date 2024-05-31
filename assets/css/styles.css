@@ -10117,6 +10117,18 @@ width: 100%;
 /*
 МИШИНО
 */
+.profile__card {
+    padding: 30px 30px 30px 30px;
+  }
+  
+  .profile-card__btn {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+  }
+
+
+
 
 .statistics__chart {
     display: grid;
@@ -10218,7 +10230,9 @@ width: 100%;
 }
 .personal__account--cards{
     justify-content: space-between;
+    
 }
+
 /* media queries for 1600px */
 
 @media (max-width: 1600px) {
@@ -10898,6 +10912,11 @@ width: 100%;
         padding-top: 40px;
     }
 
+    .profile__full-card:not(:first-child)
+    {
+        margin-top: 20px;
+    }
+
 
 
 }
@@ -10948,9 +10967,9 @@ width: 100%;
   }
 
   .podmenu__nav-btn {
-    width: 100%;
+    width: 100%
   }
-
+  
   .podmenu__nav-btn:nth-child(2n) {
     margin-left: 0;
   }
@@ -13034,7 +13053,9 @@ width: 100%;
 
 @media (max-width: 640px) {
 
-
+    .lk_sidebar{
+        width: 100% !important;
+    }
     .wrapper {
         padding: 0 40px;
     }
@@ -14104,15 +14125,7 @@ transition: transform 0.1s;
 }
 
 /* Alex Levchuk */
-.profile__card {
-  padding: 30px 30px 30px 30px;
-}
 
-.profile-card__btn {
-  display: flex;
-  align-items: center;
-  margin-top: 0;
-}
 .profile-card__btn-arrow {
   margin-left: auto;
   display: flex;
@@ -14289,6 +14302,9 @@ transition: transform 0.1s;
   .profile__sidebar {
     display: none;
   }
+  .lk_sidebar{
+    display: block !important;
+}
 
   .profile__title {
     margin-bottom: 30px;
@@ -14307,4 +14323,8 @@ transition: transform 0.1s;
   .edit-input__field {
     font-size: 15px;
   }
+}
+
+.lk-card__btn{
+    margin-top: 30px;
 }
