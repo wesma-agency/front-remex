@@ -1682,8 +1682,8 @@ $charts.forEach(($chart, chartIndex) => {
     plugins: [
       {
         beforeUpdate: function (chart) {
-          if (Scrollbar.has(document.querySelector(".chart__labels"))) {
-            Scrollbar.destroy(document.querySelector(".chart__labels"));
+          if (Scrollbar.has($chartLabels)) {
+            Scrollbar.destroy($chartLabels);
           }
 
           const ul = document.createElement("ul");
@@ -1721,7 +1721,7 @@ $charts.forEach(($chart, chartIndex) => {
           $chartLabels.innerHTML = "";
           $chartLabels.appendChild(ul);
 
-          Scrollbar.init(document.querySelector(".chart__labels"), {
+          Scrollbar.init($chartLabels, {
             alwaysShowTracks: true,
             damping: 0.08,
           });
