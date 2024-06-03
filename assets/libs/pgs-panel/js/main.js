@@ -14,6 +14,7 @@ $(document).ready(function(){
 		scrollInertia: 400,
 		advanced:{
 			updateOnBrowserResize: true
+			/*updateOnContentResize: true*/
 		}
 	});
 });
