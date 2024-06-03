@@ -14061,6 +14061,13 @@ transition: transform 0.1s;
 
 /* Alex Levchuk */
 
+.profile__cards {
+  flex-wrap: nowrap;
+  column-gap: 30px;
+}
+.profile__cards-row {
+  row-gap: 30px;
+}
 .profile-card__btn-arrow {
   margin-left: auto;
   display: flex;
