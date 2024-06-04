@@ -1386,7 +1386,8 @@ body.over {
 }
 
 .dropdown__main {
-  display: none !important;
+  /* display: none !important; */
+  display: none;
   position: absolute;
   left: 0;
   top: 100%;
