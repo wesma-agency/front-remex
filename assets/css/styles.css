@@ -14061,7 +14061,14 @@ transition: transform 0.1s;
 }
 
 /* Alex Levchuk */
-
+.profile__card {
+  padding: 30px 30px 30px 30px;
+}
+.profile-card__btn {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
 .profile__cards {
   flex-wrap: nowrap;
   column-gap: 30px;
@@ -14326,10 +14333,20 @@ transition: transform 0.1s;
   }
 }
 
-@media (max-width: 359.98px) {
+@media (max-width: 640px) {
   .profile__sidebar {
     display: none;
   }
+  .profile__select {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 359.98px) {
+  /* .profile__sidebar {
+    display: none;
+  } */
   .lk_sidebar {
     display: block !important;
   }
@@ -14342,10 +14359,10 @@ transition: transform 0.1s;
     margin-right: -20px;
   }
 
-  .profile__select {
+  /* .profile__select {
     display: block;
     margin-bottom: 20px;
-  }
+  } */
 
   .edit-input__label,
   .edit-input__field {
