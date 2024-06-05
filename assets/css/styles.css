@@ -1374,7 +1374,7 @@ body.over {
 }
 
 .dropdown__main {
-    display: none !important;
+    display: none;
     position: absolute;
     left: 0;
     top: 100%;
@@ -10114,9 +10114,7 @@ width: 100%;
 }
 
 
-/*
-МИШИНО
-*/
+/*Михаил Шестаков*/
 .profile__card {
     padding: 30px 30px 30px 30px;
   }
@@ -10916,8 +10914,6 @@ width: 100%;
     {
         margin-top: 20px;
     }
-
-
 
 }
 
@@ -12993,7 +12989,7 @@ width: 100%;
     }
 
 
-    /*МИШИНО*/
+    /*Михаил Шестаков*/
     .statistics__chart {
         display: grid;
         width: 100%;
@@ -13053,9 +13049,7 @@ width: 100%;
 
 @media (max-width: 640px) {
 
-    .lk_sidebar{
-        width: 100% !important;
-    }
+    
     .wrapper {
         padding: 0 40px;
     }
@@ -13346,10 +13340,7 @@ width: 100%;
         padding: 25px 0 10px;
         width: 100%;
     }
-    /* .podmenu__mobile svg {
-transform: rotate(0deg);
-transition: transform 0.1s;
-} */
+    
     .podmenu__mobile .accordion--active .deactive svg {
         transform: rotate(0deg);
     }
@@ -13859,7 +13850,7 @@ transition: transform 0.1s;
     }
 
 
-/*МИШИНО*/
+    /*Михаил Шестаков*/
 
     .profile__body {
         flex-direction: column;
@@ -13891,7 +13882,6 @@ transition: transform 0.1s;
 
     }
 
-
     .profile-card{
         padding-inline: 20px;
     }
@@ -13905,10 +13895,6 @@ transition: transform 0.1s;
     .profile-card__cart-address:not(:last-child) {
         margin-right: 0;
     }
-
-
- 
-
 
     .chart__price {
         font-size: 24px;
@@ -13927,6 +13913,11 @@ transition: transform 0.1s;
 
     .profile-card {
         padding: 25px 20px 25px;
+    }
+
+    .lk_sidebar{
+        display: block;
+        width: 100% !important;
     }
 
 }
@@ -13984,9 +13975,8 @@ transition: transform 0.1s;
     .slider2 .slider2__pagination.swiper-pagination-bullets {
         bottom: 0;
     }
-    /*
-    МИША 
-    */
+
+    /*Михаил Шестаков*/
     html{
         font-size: 15px;
     }
@@ -14030,12 +14020,6 @@ transition: transform 0.1s;
         margin-left: 10px;
     }
 
-    /*.expect-item__price:not(:last-child) {
-        margin-right: 25px;
-    }
-    .expect-item__title:not(:last-child) {
-        margin-right: 20px;
-    }*/
 
     .expect-item__price--with_btn{
         flex-direction: column-reverse;
@@ -14074,40 +14058,7 @@ transition: transform 0.1s;
         max-height: 550px;
     }
 
-    
 
-    /*.profile__sidebar {
-        position: static;
-        width: calc(100% - 5px);
-        margin-bottom: 30px;
-        max-height: 500px;
-    }
-    .profile__body {
-        flex-direction: column;
-    }
-    .profile__sidebar-btn {
-        display: none;
-    }
-    .navigation__btns {
-        transition: 0.2s;
-        height: 62px;
-    }
-    .navigation__btns::after {}
-    .navigation__btn--active {
-        border: 1px solid #004ada
-    }
-    .navigation__btn--active::before {
-        width: 0;
-    }
-    .navigation__btn:not(:nth-child(2)) {
-        display: none;
-    }
-    .navigation__btns:hover {
-        height: 700%;
-    }*/
-
-
-   
 
 
     .profile-card__orders {
