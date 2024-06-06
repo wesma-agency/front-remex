@@ -6181,17 +6181,6 @@ a:hover,
   margin-left: 0;
 }
 
-/* .catalog-btn:hover {
-background: var(--color-white);
-}
-
-.catalog-btn:hover svg path {
-fill: var(--color-primary);
-}
-
-.catalog-btn:hover span {
-color: var(--color-primary);
-} */
 
 .modal-background {
   display: none;
@@ -7610,6 +7599,8 @@ width: calc(33.33% - 30px);
   .product__other-slider-wrapper {
     transform: translate(0, 0) !important;
   }
+
+  
 }
 
 .product__other-slide {
@@ -8673,7 +8664,7 @@ width: calc(33.33% - 30px);
 
 .cart-item__right {
   margin-left: auto;
-  max-width: 345px;
+  max-width: 450px;
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -8693,7 +8684,7 @@ width: calc(33.33% - 30px);
 }
 
 .cart-item__counter {
-  margin-right: 15px;
+  margin-right: 0;
   flex: 0 0 auto;
 }
 
@@ -8707,6 +8698,7 @@ width: calc(33.33% - 30px);
 
 .cart-item__price-value {
   max-width: 115px;
+  text-wrap: nowrap;
 }
 
 .cart-item__price-value:not(:last-child) {
@@ -8721,13 +8713,11 @@ width: calc(33.33% - 30px);
   margin-left: auto;
 }
 
-.cart-item__price ~ .cart-item__delete-btn {
-  margin-left: 15px;
-}
+
 
 .cart__sidebar {
   padding-top: 5px;
-  margin-left: 30px;
+  margin-left: 10px;
   flex: 0 0 365px;
 }
 
@@ -8780,6 +8770,7 @@ width: calc(33.33% - 30px);
 
 .cart-total__item-value--success {
   color: var(--color-success);
+  text-wrap: nowrap;
 }
 
 .cart-total__btn {
@@ -9689,26 +9680,6 @@ width: calc(33.33% - 30px);
   justify-content: space-between;
 }
 
-/* .order-info__meta-item:not(:first-child) {
-  margin-left: 20px;
-} */
-
-/* .order-info__meta-item--delivery {
-  flex: 0 0 35.8%;
-} */
-
-/* .order-info__meta-item--payer {
-  flex: 0 0 23.2%;
-} */
-
-/* .order-info__meta-item--count {
-  flex: 0 0 65px;
-} */
-
-/* .order-info__meta-item--sum {
-  flex: 0 1 101px;
-} */
-
 .order-info__main {
   padding-top: 23px;
 }
@@ -10124,9 +10095,7 @@ width: calc(33.33% - 30px);
   border-top: 1px solid rgba(var(--color-gray--rgb), 0.1);
 }
 
-/*
-МИШИНО
-*/
+/* Михаил Шестаков */
 .profile__card {
   padding: 30px 30px 30px 30px;
 }
@@ -10201,6 +10170,12 @@ width: calc(33.33% - 30px);
 .no-adaptive__menu {
   display: block;
 }
+.no-adaptive__menu-tab{
+  display: flex;
+}
+.card_selection{
+  margin-bottom: 25px
+}
 
 .no-adaptive {
   display: block;
@@ -10228,6 +10203,10 @@ width: calc(33.33% - 30px);
 }
 .personal__account--cards {
   justify-content: space-between;
+}
+
+.with-adaptive__btn{
+  display: none;
 }
 
 /* media queries for 1600px */
@@ -10264,6 +10243,9 @@ width: calc(33.33% - 30px);
   }
   .not-found__img {
     width: 850px;
+  }
+  .cart__sidebar{
+    flex: 0 0 300px
   }
 }
 
@@ -10760,7 +10742,7 @@ width: calc(33.33% - 30px);
   .product__tabs-btn:not(:first-child) {
     margin-left: 20px;
   }
-  /*Мишино*/
+/* Михаил Шестаков */
   .profile-card__appeal {
     flex-direction: column;
     gap: 40px;
@@ -10776,6 +10758,49 @@ width: calc(33.33% - 30px);
   .chart__main {
     width: 100%;
   }
+
+
+  /*Михал Шестаков Корзина*/
+
+  .cart__body{
+    flex-direction: column;
+  }
+  .cart__main{
+  }
+  .cart__tabs-btns{
+    width: 100%;
+  }
+  .cart-item__right{
+    max-width: 385px;
+  }
+    /*Оформить заказ*/
+  .cart__sidebar{
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    flex: auto;
+    z-index: 5;
+  }
+  .cart-fixed__none{
+    display: none;
+  
+  }
+  
+  .cart-fixed__block{
+    padding: 0;
+    border:none;
+  }
+
+  .with-adaptive{
+    width: 100%;
+  }
+
+  .cart-total__item{
+    
+  }
+
 }
 
 @media (max-width: 1292px) {
@@ -10838,9 +10863,7 @@ width: calc(33.33% - 30px);
   .chart__label:nth-child(2n + 1) {
     margin-right: 0;
   }
-  /*
-    ФОРМА
-    */
+  /*ФОРМА*/
 
   .profile-card__appeal {
     flex-direction: column;
@@ -10854,8 +10877,7 @@ width: calc(33.33% - 30px);
     margin-top: 30px;
     width: 100%;
   }
-  .profile__full-card {
-  }
+
   .timetable__item:not(:first-child) {
     margin-left: auto;
   }
@@ -10886,6 +10908,12 @@ width: calc(33.33% - 30px);
   .with-adaptive {
     display: block;
   }
+  .with-adaptive__btn{
+    display: block;
+    margin-top: 15px;
+    margin-inline: 20px;
+  }
+
   .expect-item__price:not(:last-child) {
     margin-right: 20px;
   }
@@ -11370,6 +11398,10 @@ width: calc(33.33% - 30px);
   .news__slider-box .swiper-button-next {
     right: -15px;
   }
+
+  .cart-item__info {
+    flex: 0 1 200px;
+  }
 }
 
 /* media queries for 890px */
@@ -11754,16 +11786,144 @@ width: calc(33.33% - 30px);
   .store-list__item:nth-child(2n + 1) {
     padding-right: 0;
   }
+  /*Михаил Шестаков*/
+
+  .cart-item__price{
+    margin: 0;
+  }
+  .cart-item__meta{
+    margin-left: 1%;
+    margin-right: 1%;
+
+  }
+}
+
+
+
+
+
+
+/*Михаил Шестаков*/
+@media (max-width: 820px) {
+
+      .cart__tabs-btns{
+        width: 100%;
+      }
+
+      .cart__section:not(:first-child){
+            margin-top: 80px;
+      }
+ 
+      .cart-list__item{
+        display: grid;
+        justify-content: start;
+        grid-template-columns: 22px 1fr 3fr 22px;
+        grid-template-rows: auto auto;
+        gap: 10px; 
+        width: 100%;     
+        }
+        
+
+    .cart-item__img{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .cart-item__info{
+        flex: auto;
+        max-width: none;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .cart-item__delete-btn{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .cart-item__right{
+        max-width: 385px;
+        max-width: none;
+        gap:10%;
+        margin: 0;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+
+    .cart-item__meta{
+        justify-content: space-between;
+        flex-direction: row;
+        align-items:center;
+        margin: 0;
+        flex:0 0 40%;
+
+    }
+
+    .cart-item__price{
+        flex-direction: row-reverse;
+        gap:55%;
+
+    }
+    .cart-item__price-value:not(:last-child){
+        margin-bottom: 0;
+    }
+
+
+
+    .cart-item__discuss:not(:first-child){
+        margin: 0;
+    }
+    .cart-item__another--store,
+      .cart-item__over,
+      .cart-item__ordered{
+        grid-template-columns: 0px 1fr 4fr 22px;
+      }
+      .cart-item__another--store>.cart-item__img,
+      .cart-item__over>.cart-item__img,
+      .cart-item__ordered>.cart-item__img{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .cart-item__over>.cart-item__right>.cart-item__price>button,
+    .cart-item__another--store>.cart-item__right>.cart-item__price>.product-stock>.stock-item>button{
+        text-wrap: nowrap;
+    }
+
+    
+    .cart-item__over>.cart-item__right>.cart-item__price,
+    .cart-item__another--store>.cart-item__right>.cart-item__price{
+        margin: 0 auto 0 ;
+
+    }
+
+      .cart-item__another--store{
+
+      }
+      .cart-item__ordered>.cart-item__img{
+
+      }
 }
 
 /* media queries for 801px ...special upon request */
-
 @media (max-width: 801px) {
   .popup-search__title,
   .popup-search__label,
   .search {
     max-width: 100%;
   }
+
+
+
 }
 
 /* media queries for 768px */
@@ -12970,7 +13130,7 @@ width: calc(33.33% - 30px);
     font-size: 26px;
   }
 
-  /*МИШИНО*/
+  /* Михаил Шестаков */
   .statistics__chart {
     display: grid;
     width: 100%;
@@ -13021,9 +13181,7 @@ width: calc(33.33% - 30px);
 /* media queries for 640px */
 
 @media (max-width: 640px) {
-  .lk_sidebar {
-    width: 100% !important;
-  }
+  
   .wrapper {
     padding: 0 40px;
   }
@@ -13314,10 +13472,7 @@ width: calc(33.33% - 30px);
     padding: 25px 0 10px;
     width: 100%;
   }
-  /* .podmenu__mobile svg {
-transform: rotate(0deg);
-transition: transform 0.1s;
-} */
+  
   .podmenu__mobile .accordion--active .deactive svg {
     transform: rotate(0deg);
   }
@@ -13826,7 +13981,10 @@ transition: transform 0.1s;
     bottom: 0;
   }
 
-  /*МИШИНО*/
+  /* Михаил Шестаков */
+  .card__tabs-select{
+    margin-bottom: 25px;
+  }
 
   .profile__body {
     flex-direction: column;
@@ -13841,6 +13999,9 @@ transition: transform 0.1s;
   }
   .with-adaptive__menu {
     display: block;
+  }
+  .no-adaptive__menu-tab{
+    display: none;
   }
   .no-adaptive__menu {
     display: none;
@@ -13887,9 +14048,94 @@ transition: transform 0.1s;
   .profile-card {
     padding: 25px 20px 25px;
   }
+  .pagination-padding{
+    padding-bottom: 0;
+  }
+  .with-adaptive__btn{
+    margin-top: 60px;
+  }
+}
+
+
+
+/*Шестаков Михаил*/
+@media (max-width: 550px) {
+    .cart-item__over>.cart-item__right>.cart-item__price,
+    .cart-item__another--store>.cart-item__right>.cart-item__price{
+gap: 20px;
+        
+    }
+
 }
 
 @media (max-width: 499px) {
+
+/*Михаил Шестаков*/
+.cart__section:not(:first-child) {
+margin-bottom: 30px;
+margin-top: 40px;
+}
+
+.cart__title{
+ margin-bottom: 30px;
+}
+.cart-item__meta{
+    flex-direction: column;
+    align-items: start;
+    flex: none;
+}
+
+
+
+.cart-list__item{
+  grid-template-columns: auto, auto, auto, auto;
+}
+.cart-list__item:last-child{
+    padding-bottom: 15px;
+}
+.cart-list__item:not(:first-child){
+    padding-top: 15px;
+}
+.cart-item__right{
+    justify-content: space-between;
+    grid-column-end: 5;
+}
+
+.cart-item__delete-btn{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    align-self:flex-start;
+
+}
+.cart-item__img{
+  width: 50px;
+  height: 40px;
+}
+
+.cart-item__info{
+  max-width: 220px;
+}
+
+.cart-item__over>.cart-item__right>.cart-item__price, 
+.cart-item__another--store>.cart-item__right>.cart-item__price{
+  flex-direction: column;
+  justify-content: end;
+  align-items:end;
+  gap: 0;
+  margin: 0;
+}
+
+  .cart-item__another--store>.cart-item__right>.cart-item__price>.cart-item__price-value,
+  .cart-item__over>.cart-item__right>.cart-item__price>.cart-item__price-value{
+    margin:30px 0 10px
+  }
+ 
+
+
+
+
   .wrapper {
     padding: 0 10px;
   }
@@ -13939,12 +14185,14 @@ transition: transform 0.1s;
   .slider2 .slider2__pagination.swiper-pagination-bullets {
     bottom: 0;
   }
-  /*
-    МИША 
-    */
+  /* Михаил Шестаков */
   html {
     font-size: 15px;
   }
+  .pagination-padding{
+    padding-bottom: 0;
+  }
+
 
   /*ВЫПАДАЮЩЙ СПИСОК ПРОФИЛЯ*/
   .profile__body {
@@ -13972,13 +14220,6 @@ transition: transform 0.1s;
   .profile-card__order > span {
     margin-left: 10px;
   }
-
-  /*.expect-item__price:not(:last-child) {
-        margin-right: 25px;
-    }
-    .expect-item__title:not(:last-child) {
-        margin-right: 20px;
-    }*/
 
   .expect-item__price--with_btn {
     flex-direction: column-reverse;
@@ -14015,36 +14256,6 @@ transition: transform 0.1s;
   .simple-select__list {
     max-height: 550px;
   }
-
-  /*.profile__sidebar {
-        position: static;
-        width: calc(100% - 5px);
-        margin-bottom: 30px;
-        max-height: 500px;
-    }
-    .profile__body {
-        flex-direction: column;
-    }
-    .profile__sidebar-btn {
-        display: none;
-    }
-    .navigation__btns {
-        transition: 0.2s;
-        height: 62px;
-    }
-    .navigation__btns::after {}
-    .navigation__btn--active {
-        border: 1px solid #004ada
-    }
-    .navigation__btn--active::before {
-        width: 0;
-    }
-    .navigation__btn:not(:nth-child(2)) {
-        display: none;
-    }
-    .navigation__btns:hover {
-        height: 700%;
-    }*/
 
   .profile-card__orders {
     padding-right: 35px;
@@ -14341,12 +14552,14 @@ transition: transform 0.1s;
     display: block;
     margin-bottom: 20px;
   }
+  .lk_sidebar {
+    display: block;
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 359.98px) {
-  /* .profile__sidebar {
-    display: none;
-  } */
+
   .lk_sidebar {
     display: block !important;
   }
@@ -14358,11 +14571,6 @@ transition: transform 0.1s;
   .phone-confirmation .edit-input__field {
     margin-right: -20px;
   }
-
-  /* .profile__select {
-    display: block;
-    margin-bottom: 20px;
-  } */
 
   .edit-input__label,
   .edit-input__field {
@@ -14507,3 +14715,5 @@ transition: transform 0.1s;
 .lk-card__btn {
   margin-top: 30px;
 }
+
+
