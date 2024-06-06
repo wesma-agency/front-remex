@@ -1840,7 +1840,14 @@
                 <div class="cart__main">
                   <div class="cart__section">
                     <div class="title1 cart__title">Корзина</div>
-                    <div class="tabs-btns nav-btns cart__tabs-btns" data-tabs-name="cart">
+                    <div class="select select--border card__tabs-select with-adaptive__menu" data-tabs-name="cart">
+                      <select class="select__field">
+                        <option value="1">Офис и склад на Электрозаводской <span class="nav-btns__btn-value">6</span> </option>
+                        <option value="2">Склад в Некрасовке <span class="nav-btns__btn-value">5</span></option>
+                        <option value="3">Заказные товары</option>
+                      </select>
+                    </div>
+                    <div class="tabs-btns nav-btns cart__tabs-btns no-adaptive__menu-tab" data-tabs-name="cart">
                       <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">
                         Офис и склад на Электрозаводской
                         <span class="nav-btns__btn-value">6</span>
@@ -1889,16 +1896,17 @@
                                   <span class="text__value">1 000 ₽</span>
                                 </div>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -1914,19 +1922,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -1940,16 +1948,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45080</div>
                                 <a class="text text--gray-dark" href="product-card.html">Веер цветов плёнки ORACAL-641</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -1965,19 +1974,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -1998,16 +2008,17 @@
                                   <span class="text__value">1 000 ₽</span>
                                 </div>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / 1/3 листа</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / 1/3 листа</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2023,19 +2034,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2049,17 +2061,18 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45060</div>
                                 <a class="text text--gray-dark" href="product-card.html">RexJet plus</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">2 000 ₽ / рулон</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                  <div class="text text--sm text--success cart-item__discuss-value">1 600 ₽ / рулон</div>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">2 000 ₽ / рулон</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <div class="text text--sm text--success cart-item__discuss-value">1 600 ₽ / рулон</div>
+                                    </button>
+                                    
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2075,19 +2088,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2101,16 +2115,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45050</div>
                                 <a class="text text--gray-dark" href="product-card.html">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2126,19 +2141,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2154,16 +2170,17 @@
                                   Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
                                 </a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 000 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                             
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 000 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2179,19 +2196,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -2226,16 +2244,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45080</div>
                                 <a class="text text--gray-dark" href="product-card.html">Веер цветов плёнки ORACAL-641</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2251,19 +2270,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2284,16 +2303,17 @@
                                   <span class="text__value">1 000 ₽</span>
                                 </div>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / 1/3 листа</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / 1/3 листа</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2309,19 +2329,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
-                              </div>
+                               </div>
+                               <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2335,16 +2355,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45060</div>
                                 <a class="text text--gray-dark" href="product-card.html">RexJet plus</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">2 000 ₽ / рулон</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">2 000 ₽ / рулон</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2360,19 +2381,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2386,16 +2408,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45050</div>
                                 <a class="text text--gray-dark" href="product-card.html">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2411,19 +2434,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2439,16 +2462,17 @@
                                   Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
                                 </a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 000 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 000 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2464,19 +2488,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -2511,16 +2535,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45060</div>
                                 <a class="text text--gray-dark" href="product-card.html">RexJet plus</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">2 000 ₽ / рулон</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">2 000 ₽ / рулон</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2536,19 +2561,20 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
+                                
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2562,16 +2588,17 @@
                                 <div class="text text--sm text--light text--lh-1 cart-item__code">Код товара: 45050</div>
                                 <a class="text text--gray-dark" href="product-card.html">Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя</a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 250 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2587,19 +2614,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                             <div class="cart-item cart-list__item">
                               <label class="checkbox cart-item__checkbox">
@@ -2615,16 +2642,17 @@
                                   Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
                                 </a>
                               </div>
-                              <div class="cart-item__meta">
-                                <div class="text text--gray-dark cart-item__price-one">1 000 ₽ / метр</div>
-                                <div class="cart-item__discuss">
-                                  <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
-                                    <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
-                                    <span>Обсудить цену</span>
-                                  </button>
-                                </div>
-                              </div>
+                              
                               <div class="cart-item__right">
+                                <div class="cart-item__meta">
+                                  <div class="text text--gray-dark cart-item__price-one">1 000 ₽ / метр</div>
+                                  <div class="cart-item__discuss">
+                                    <button class="link link--gray link--sm link--iflex js-open-modal" data-modal-name="discuss-price">
+                                      <img class="link__icon link__icon--mx-lg" src="assets/img/icons/comment-rub.svg" alt="" />
+                                      <span>Обсудить цену</span>
+                                    </button>
+                                  </div>
+                                </div>
                                 <div class="counter counter--shadow cart-item__counter">
                                   <button class="counter__btn counter__btn--minus">
                                     <img src="assets/img/icons/minus-gray.svg" alt="" />
@@ -2640,19 +2668,19 @@
                                     ₽
                                   </div>
                                 </div>
-                                <button class="cart-delete cart-item__delete-btn">
-                                  <svg
-                                    class="cart-delete__icon"
-                                    width="22"
-                                    height="24"
-                                    viewBox="0 0 22 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                      d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                      stroke-linecap="square" />
-                                  </svg>
-                                </button>
                               </div>
+                              <button class="cart-delete cart-item__delete-btn">
+                                <svg
+                                  class="cart-delete__icon"
+                                  width="22"
+                                  height="24"
+                                  viewBox="0 0 22 24"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                    stroke-linecap="square" />
+                                </svg>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -2673,7 +2701,7 @@
                         </button>
                       </div>
                       <div class="cart-list__main">
-                        <div class="cart-item cart-list__item">
+                        <div class="cart-item cart-list__item cart-item__ordered">
                           <a class="cart-item__img" href="product-card.html">
                             <img src="assets/img/products/5.jpg" alt="" />
                           </a>
@@ -2696,16 +2724,16 @@
                             <div class="cart-item__price">
                               <button class="link link--gray-dark link--line link--line-dark">Перенести товар</button>
                             </div>
-                            <button class="cart-delete cart-item__delete-btn">
-                              <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
                           </div>
+                          <button class="cart-delete cart-item__delete-btn">
+                            <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                stroke-linecap="square" />
+                            </svg>
+                          </button>
                         </div>
-                        <div class="cart-item cart-list__item">
+                        <div class="cart-item cart-list__item cart-item__ordered">
                           <a class="cart-item__img" href="product-card.html">
                             <img src="assets/img/products/3.jpg" alt="" />
                           </a>
@@ -2728,14 +2756,15 @@
                             <div class="cart-item__price">
                               <button class="link link--gray-dark link--line link--line-dark">Добавить товар</button>
                             </div>
-                            <button class="cart-delete cart-item__delete-btn">
-                              <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
+                            
                           </div>
+                          <button class="cart-delete cart-item__delete-btn">
+                            <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                stroke-linecap="square" />
+                            </svg>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2754,7 +2783,7 @@
                         </button>
                       </div>
                       <div class="cart-list__main">
-                        <div class="cart-item cart-list__item">
+                        <div class="cart-item cart-list__item cart-item__over">
                           <a class="cart-item__img" href="product-card.html">
                             <img src="assets/img/products/6.jpg" alt="" />
                           </a>
@@ -2828,14 +2857,14 @@
                               </div>
                               <button class="link link--gray-dark link--line link--line-dark">В лист ожидания</button>
                             </div>
-                            <button class="cart-delete cart-item__delete-btn">
-                              <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
                           </div>
+                          <button class="cart-delete cart-item__delete-btn">
+                            <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                stroke-linecap="square" />
+                            </svg>
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -2854,7 +2883,7 @@
                         </button>
                       </div>
                       <div class="cart-list__main">
-                        <div class="cart-item cart-list__item">
+                        <div class="cart-item cart-list__item cart-item__another--store">
                           <a class="cart-item__img" href="product-card.html">
                             <img src="assets/img/products/7.jpg" alt="" />
                           </a>
@@ -2937,45 +2966,79 @@
                                 </div>
                               </div>
                             </div>
-                            <button class="cart-delete cart-item__delete-btn">
-                              <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                  d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                  stroke-linecap="square" />
-                              </svg>
-                            </button>
+                           
                           </div>
+                          <button class="cart-delete cart-item__delete-btn">
+                            <svg class="cart-delete__icon" width="22" height="24" viewBox="0 0 22 24" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                stroke-linecap="square" />
+                            </svg>
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <div class="cart-total with-adaptive">
+                  <div class="title2 cart-total__title">Ваш заказ</div>
+                  <div class="cart-total__list">
+                    <div class="cart-total__item">
+                      <span>Выбрано товаров</span>
+                      <span class="cart-total__item-value">
+                        <span class="cart-total__item-value-num">4</span>
+                        шт.
+                      </span>
+                    </div>
+                    <div class="cart-total__item">
+                      <span>Вес заказа</span>
+                      <span class="cart-total__item-value">
+                        <span class="cart-total__item-value-num">8, 51</span>
+                        кг
+                      </span>
+                    </div>
+                    <div class="cart-total__item">
+                      <span>Общая стоимость</span>
+                      <span class="cart-total__item-value cart-total__item-value--xl">
+                        <span class="cart-total__item-value-num">8 500</span>
+                        ₽
+                      </span>
+                    </div>
+                    <div class="cart-total__item cart-total__item--no-border">
+                      <span>С учетом предложения</span>
+                      <span class="cart-total__item-value cart-total__item-value--xl cart-total__item-value--success">
+                        <span class="cart-total__item-value-num">6 500</span>
+                        ₽
+                      </span>
+                    </div>
+                  </div>
+                </div>
                 <aside class="cart__sidebar">
-                  <div class="cart-total">
-                    <div class="title2 cart-total__title">Ваш заказ</div>
+                  <div class="cart-total cart-fixed">
+                    <div class="title2 cart-total__title cart-fixed__none">Ваш заказ</div>
                     <div class="cart-total__list">
-                      <div class="cart-total__item">
+                      <div class="cart-total__item cart-fixed__none">
                         <span>Выбрано товаров</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num">4</span>
                           шт.
                         </span>
                       </div>
-                      <div class="cart-total__item">
+                      <div class="cart-total__item cart-fixed__none">
                         <span>Вес заказа</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num">8, 51</span>
                           кг
                         </span>
                       </div>
-                      <div class="cart-total__item">
+                      <div class="cart-total__item cart-fixed__block">
                         <span>Общая стоимость</span>
                         <span class="cart-total__item-value cart-total__item-value--xl">
                           <span class="cart-total__item-value-num">8 500</span>
                           ₽
                         </span>
                       </div>
-                      <div class="cart-total__item cart-total__item--no-border">
+                      <div class="cart-total__item cart-total__item--no-border cart-fixed__none">
                         <span>С учетом предложения</span>
                         <span class="cart-total__item-value cart-total__item-value--xl cart-total__item-value--success">
                           <span class="cart-total__item-value-num">6 500</span>
@@ -2989,7 +3052,7 @@
                       <span class="text text--gray loader__text">Проверяем остатки</span>
                     </div>
                   </div>
-                  <div class="swap-btns cart-total__btn">
+                  <div class="swap-btns cart-total__btn cart-share__btn cart-fixed__none">
                     <button
                       class="but but--full swap-btns__btn swap-btns__btn--from js-btn-copy"
                       data-copy-value="https://wesma-agency.github.io/front-remex/cart.html">
@@ -3012,7 +3075,7 @@
                       <span>Ссылка скопирована</span>
                     </button>
                   </div>
-                  <p class="text text--light cart__sidebar-text">
+                  <p class="text text--light cart__sidebar-text cart-fixed__none">
                     Здесь будет размещен короткий абзац текста о&nbsp;предложенной цене и условиях услуги. Пока что в этом блоке мы
                     используем текст-заглушку
                   </p>
@@ -3029,7 +3092,7 @@
                 <div class="section__h2">Сопутствующие товары</div>
                 <!-- /.section__h2 -->
               </div>
-              <form action="" method="post" class="slider2">
+              <form action="" method="post" class="slider2 pagination-padding">
                 <div class="swiper swiper-container">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -4012,14 +4075,42 @@
                     </div>
                   </div>
                 </div>
+                <div class="swiper-pagination"></div>
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+                
               </form>
               <!-- /.slider2 -->
             </div>
           </div>
         </section>
+        <div class="swap-btns cart-total__btn cart-share__btn cart-fixed__none with-adaptive__btn">
+          <button
+            class="but but--full swap-btns__btn swap-btns__btn--from js-btn-copy"
+            data-copy-value="https://wesma-agency.github.io/front-remex/cart.html">
+            <svg
+              class="but__icon but__icon--mx-xl but__icon--stroke"
+              width="14"
+              height="15"
+              viewBox="0 0 14 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.25 3.83984L4.5 6.7168M4.5 8.71094L9.5 11.6669M11.12 4.75C11.62 4.75 12.1 4.55199 12.45 4.20099C12.8 3.84899 13 3.372 13 2.875C13 2.378 12.8 1.90101 12.45 1.54901C12.1 1.19801 11.62 1 11.12 1C10.63 1 10.15 1.19801 9.80005 1.54901C9.45005 1.90101 9.25 2.378 9.25 2.875C9.25 3.372 9.45005 3.84899 9.80005 4.20099C10.15 4.55199 10.63 4.75 11.12 4.75ZM2.87 9.625C3.37 9.625 3.84995 9.42699 4.19995 9.07599C4.54995 8.72399 4.75 8.247 4.75 7.75C4.75 7.253 4.54995 6.77601 4.19995 6.42401C3.84995 6.07301 3.37 5.875 2.87 5.875C2.38 5.875 1.90005 6.07301 1.55005 6.42401C1.20005 6.77601 1 7.253 1 7.75C1 8.247 1.20005 8.72399 1.55005 9.07599C1.90005 9.42699 2.38 9.625 2.87 9.625ZM11.12 10.75C11.62 10.75 12.1 10.948 12.45 11.299C12.8 11.651 13 12.128 13 12.625C13 13.122 12.8 13.599 12.45 13.951C12.1 14.302 11.62 14.5 11.12 14.5C10.63 14.5 10.15 14.302 9.80005 13.951C9.45005 13.599 9.25 13.122 9.25 12.625C9.25 12.128 9.45005 11.651 9.80005 11.299C10.15 10.948 10.63 10.75 11.12 10.75Z"
+                stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+            <span>Поделиться корзиной</span>
+          </button>
+          <button class="but but--primary but--hover-primary but--full but--active swap-btns__btn swap-btns__btn--to">
+            <img class="but__icon" src="assets/img/icons/check-white.svg" alt="" />
+            <span>Ссылка скопирована</span>
+          </button>
+        </div>
+
+
+
       </main>
 
       <footer class="foot">
