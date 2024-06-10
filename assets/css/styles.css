@@ -14811,3 +14811,12 @@ margin-top: 40px;
 }
 
 
+.news-item:hover.news-item>.title3--lh-3 {
+  color:#007aff;
+  transition: all 0.2s;
+}
+
+
+.news-item:hover.news-item>.title3--lh-3>a {
+  color:#007aff;
+}
