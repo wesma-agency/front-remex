@@ -1075,7 +1075,6 @@ body.over {
 .textbox__input {
   display: none;
 }
-
 .textbox__switch {
   padding: 5px 15px 6px;
   line-height: 1.4375;
@@ -1088,8 +1087,7 @@ body.over {
   cursor: pointer;
   transition: border 0.3s, background 0.3s, color 0.3s;
 }
-
-.textbox__input:checked ~ .textbox__switch {
+.textbox__input:checked + .textbox__switch {
   background-color: var(--color-white);
   box-shadow: 0px 0px 25px 0px rgba(var(--color-black--rgb), 0.05);
   color: var(--color-primary);
@@ -14060,6 +14058,8 @@ transition: transform 0.1s;
   }
 }
 
+/* ===================================== */
+/* ===================================== */
 /* Alex Levchuk */
 .profile__card {
   padding: 30px 30px 30px 30px;
@@ -14140,8 +14140,29 @@ transition: transform 0.1s;
   column-gap: 80px;
 }
 
+/* Страница Каталог Листинг */
+.filters__btn {
+  cursor: pointer;
+}
+.filters__btn-text {
+  display: flex;
+  align-items: center;
+}
+.filters__btn-text::before {
+  content: "";
+  margin-right: 6px;
+  background: url("../img/icons/filter.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+}
+
+/* ===================================== */
 /* Адаптив */
 @media (max-width: 1920px) {
+  /* Страница Профиль пользователя */
   .profile__cards-accordeon {
     display: none;
   }
@@ -14155,6 +14176,7 @@ transition: transform 0.1s;
     display: none;
   }
 
+  /* Страница Заказы пользователя */
   .orders__bottom {
     display: none;
   }
@@ -14163,9 +14185,40 @@ transition: transform 0.1s;
   .orders__pagination_360 {
     display: none;
   }
+
+  /* Страница Каталог Листинг */
+  .catalog__textboxes {
+    display: flex;
+  }
+  .catalog__textboxes--bottom {
+    display: none;
+  }
+
+  .catalog-series {
+    display: block;
+  }
+  .catalog__top-list {
+    display: none;
+  }
+
+  .catalog__products-count {
+    display: none;
+  }
+
+  .mobile-filters {
+    display: none;
+  }
+
+  .catalog__series-slider-box--sm {
+    display: none;
+  }
+  .catalog__series-mobile-btn--sm {
+    display: none;
+  }
 }
 
 @media (max-width: 999.98px) {
+  /* Страница Профиль пользователя */
   .profile__cards-row {
     display: none;
   }
@@ -14183,6 +14236,7 @@ transition: transform 0.1s;
     max-width: 570px;
   }
 
+  /* Страница Заказы пользователя */
   .orders__filters {
     display: flex;
     flex-wrap: wrap;
@@ -14270,9 +14324,126 @@ transition: transform 0.1s;
   .order-product__meta-item--sum {
     flex: 0 0 55px;
   }
+
+  /* Страница Каталог Листинг */
+  .catalog__sidebar {
+    display: none;
+  }
+
+  .catalog__textboxes {
+    display: none;
+  }
+  .catalog__textboxes--bottom {
+    display: flex;
+  }
+
+  .catalog-series {
+    display: none;
+  }
+  .catalog__series.catalog__series-items {
+    margin-bottom: 0;
+  }
+
+  .catalog__top-list {
+    display: block;
+  }
+  .catalog__top-item {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(var(--color-gray--rgb), 0.1);
+  }
+  .catalog__top-item:nth-child(1) {
+    margin-top: 0;
+    padding-top: 25px;
+    border-top: 1px solid rgba(var(--color-gray--rgb), 0.1);
+  }
+  .catalog__top-item:nth-child(2) .accordion--active {
+    padding-bottom: 25px;
+  }
+
+  .catalog-top__tags {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .top-item__btn {
+    display: flex;
+    align-items: center;
+  }
+  .top-item__btn-arrow {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+  }
+  .top-item__btn-arrow::before {
+    content: "";
+    display: inline-block;
+    background: url(../img/icons/right-gray.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: rotate(90deg);
+    width: 15px;
+    height: 15px;
+  }
+  .top-item__btn.accordion__btn--active .top-item__btn-arrow {
+    transform: rotate(-180deg);
+  }
+
+  .catalog__products-count {
+    display: block;
+    margin-left: auto;
+  }
+  .catalog__products-sizes {
+    margin-left: 10px;
+  }
+
+  .mobile-filters {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -200%;
+    max-width: 409px;
+    min-width: 409px;
+    height: 100%;
+    padding: 35px 40px;
+    background-color: #fff;
+    z-index: 25;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-filters.active {
+    left: 0;
+  }
+
+  .mobile-filters__close-btn {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 45px;
+    transition: transform 0.3s ease-in;
+  }
+  .mobile-filters__close-btn img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .bg.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#fff, 0.1);
+    backdrop-filter: blur(10px);
+  }
 }
 
 @media (max-width: 767.98px) {
+  /* Страница Профиль пользователя */
   .profile__sidebar {
     width: 235px;
   }
@@ -14283,6 +14454,7 @@ transition: transform 0.1s;
     align-items: flex-start;
   }
 
+  /* Страница Заказы пользователя */
   .orders__filters-list {
     flex-wrap: wrap;
     gap: 30px;
@@ -14331,6 +14503,12 @@ transition: transform 0.1s;
     width: fit-content;
     padding: 0;
   }
+
+  /* Страница Каталог Листинг */
+  .mobile-filters {
+    max-width: 369px;
+    min-width: 369px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -14369,6 +14547,7 @@ transition: transform 0.1s;
     font-size: 15px;
   }
 
+  /* Страница Заказы пользователя */
   .order-info {
     padding: 20px 20px;
   }
@@ -14502,6 +14681,41 @@ transition: transform 0.1s;
   .orders__bottom-footer {
     justify-content: center;
   }
+
+  /* Страница Каталог Листинг */
+  .catalog__products-count {
+    display: none;
+  }
+  .catalog__products-sort:not(:first-child) {
+    margin-left: auto;
+  }
+
+  .bg.active {
+    display: none;
+  }
+
+  .mobile-filters__close-btn {
+    justify-content: flex-end;
+  }
+
+  .catalog__series-list--desctop {
+    display: none;
+  }
+
+  .catalog__series-slider-box--sm {
+    display: block;
+    overflow: hidden;
+  }
+  .catalog__series-mobile-btn--sm {
+    display: block;
+  }
+
+  /* .catalog__textboxes--bottom {
+    flex-wrap: nowrap;
+  }
+  .textbox__switch {
+    text-wrap: nowrap;
+  } */
 }
 
 .lk-card__btn {
