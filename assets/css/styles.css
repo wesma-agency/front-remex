@@ -15021,6 +15021,20 @@ width: calc(33.33% - 30px);
   transition: all 0.2s;
 }
 
+
 .news-item:hover.news-item > .title3--lh-3 > a {
   color: #007aff;
 }
+
+.droptab-item{
+  display: none;
+}
+
+.droptab-item__active{
+  display: block;
+}
+
+span.readMore{
+display: none;
+}
+
