@@ -15035,3 +15035,17 @@ margin-top: 40px;
 .news-item:hover.news-item>.title3--lh-3>a {
   color:#007aff;
 }
+
+.droptab-item{
+  display: none;
+}
+
+.droptab-item__active{
+  display: block;
+}
+
+
+
+span.readMore{
+display: none;
+}
