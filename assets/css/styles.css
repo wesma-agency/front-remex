@@ -9707,12 +9707,15 @@ width: calc(33.33% - 30px);
 .orders__header {
   margin-bottom: 23px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  row-gap: 15px;
 }
 
 .orders__date {
-  margin-left: 160px;
-  margin-right: auto;
+  /* margin-left: 160px; */
+  /* margin-right: auto; */
 }
 
 .orders__date:last-child {
@@ -14425,7 +14428,7 @@ width: calc(33.33% - 30px);
 
   .orders__date,
   .tooltip {
-    display: none;
+    /* display: none; */
   }
 
   .profile__select {
