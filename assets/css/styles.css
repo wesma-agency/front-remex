@@ -3943,7 +3943,15 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .foot__col .header__label .metro {
-  margin-left: -1px;
+ /* margin-left: -1px;*/
+}
+
+.foot__col .header__info .metrovibor{
+  margin-top: 0;
+}
+
+.foot__col .header__info .popup--w295{
+padding: 14px 26px 8px;
 }
 
 .foot__col nav {
