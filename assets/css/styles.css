@@ -1405,6 +1405,11 @@ body.over {
   display: block;
 }
 
+.city{
+  width: 100%;
+  text-wrap: nowrap;
+}
+
 div.scrollbar-track {
   background-color: #ededed;
 }
