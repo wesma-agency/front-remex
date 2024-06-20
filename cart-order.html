@@ -1859,7 +1859,7 @@
                 <li>Оформление заказа</li>
               </div>
               <div class="cart-order__body">
-                <div class="cart-order__main">
+                <div class="cart__sidebar cart-order__main">
                   <div class="cart-order__section">
                     <!-- <div class="title1 cart-order__title">Оформление заказа</div> -->
 
@@ -1871,6 +1871,7 @@
                             <option value="2">Юридическое лицо</option>
                           </select>
                         </div>
+
                         <div class="accordion accordion--active">
                           <div class="cart-order__top accordion__btn">
                             <div class="cart-order__top-number">1</div>
@@ -1887,6 +1888,7 @@
                                 <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Физическое лицо</button>
                                 <button class="nav-btns__btn tabs-btns__btn">Юридическое лицо</button>
                               </div>
+
                               <div class="tabs-list" data-tabs-name="cart-order-customer">
                                 <div class="tabs-list__item tabs-list__item--active">
                                   <div class="cart-order-list">
@@ -1966,6 +1968,7 @@
                             <option value="3">Доставка до транспортной компании</option>
                           </select>
                         </div>
+
                         <div class="accordion accordion">
                           <div class="cart-order__top accordion__btn">
                             <div class="cart-order__top-number">2</div>
@@ -2000,15 +2003,16 @@
                                               <div class="work-schedule__hours">с 9:00 до 18:00</div>
                                             </div>
                                             <div class="work-schedule__item">
+                                              <div class="work-schedule__day">Суббота:</div>
+                                              <div class="work-schedule__hours">с 10:00 до 15:00</div>
+                                            </div>
+                                            <div class="work-schedule__item">
                                               <div class="work-schedule__day">Воскресенье:</div>
                                               <div class="work-schedule__hours">выходной</div>
                                             </div>
-                                            <div class="work-schedule__item">
-                                              <div class="work-schedule__day"></div>
-                                              <div class="work-schedule__hours"></div>
-                                            </div>
                                           </div>
                                         </div>
+
                                         <div class="self-delivery__column">
                                           <div class="self-delivery__map">
                                             <img class="self-delivery__map-img" src="/assets/img/cart-order/map.jpg" alt="Карта" />
@@ -2025,7 +2029,7 @@
                                       <div class="courier-delivery">
                                         <div class="courier-delivery__top">
                                           <div class="courier-delivery__address">
-                                            <div class="input js-form-input customer-info__input">
+                                            <div class="input js-form-input customer-info__input-address">
                                               <div class="input__main">
                                                 <input class="input__field" type="text" data-validate="empty" />
                                                 <span class="input__placeholder input__placeholder--required">
@@ -2036,7 +2040,7 @@
                                             </div>
                                           </div>
                                           <div class="courier-delivery__date-time">
-                                            <div class="input js-form-input customer-info__input">
+                                            <div class="input js-form-input customer-info__input-date">
                                               <div class="input__main">
                                                 <input class="input__field" type="text" data-validate="empty" />
                                                 <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
@@ -2045,8 +2049,9 @@
                                             </div>
                                           </div>
                                         </div>
+
                                         <div class="courier-delivery__info">
-                                          <div class="input js-form-input customer-info__input">
+                                          <div class="input js-form-input customer-info__input-details">
                                             <div class="input__main">
                                               <input class="input__field" type="text" data-validate="empty" />
                                               <span class="input__placeholder input__placeholder--required">
@@ -2056,13 +2061,53 @@
                                             <div class="input__error">Поле обязательно для заполнения</div>
                                           </div>
                                         </div>
+
                                         <div class="courier-delivery__details">
                                           <div class="courier-delivery__item">
-                                            <label class="courier-delivery__person"></label>
+                                            <div class="courier__label delivery__label">
+                                              <input
+                                                class="toggle-input"
+                                                type="checkbox"
+                                                name="another-persone"
+                                                value="Получает другой человек" />
+                                              <span class="toggle-switch"></span>
+                                              <span class="toggle-text">Получает другой человек</span>
+                                            </div>
+
+                                            <div class="another-persone__details">
+                                              <div class="input js-form-input another-persone__input">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="text" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">Имя</span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                              <div class="input js-form-input another-persone__input">
+                                                <div class="input__main">
+                                                  <input
+                                                    class="input__field js-imask"
+                                                    type="text"
+                                                    data-validate="phone"
+                                                    data-mask="+{7} (000) 000-00-00" />
+                                                  <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                            </div>
                                           </div>
+
                                           <div class="courier-delivery__item">
-                                            <label class="courier-delivery__comment"></label>
-                                            <div class="input js-form-input customer-info__input">
+                                            <div class="courier__label delivery__label">
+                                              <input
+                                                class="toggle-input"
+                                                type="checkbox"
+                                                name="delivery-comment"
+                                                value="Комментарий к доставке" />
+                                              <span class="toggle-switch"></span>
+                                              <span class="toggle-text">Комментарий к доставке</span>
+                                            </div>
+
+                                            <div class="input js-form-input courier-delivery__comment">
                                               <div class="input__main">
                                                 <input class="input__field" type="text" data-validate="empty" />
                                                 <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
@@ -2082,7 +2127,7 @@
                                       <div class="form__choice-tk">
                                         <div class="tk__list">
                                           <label class="checkbox filter__checkbox tk__item">
-                                            <input class="checkbox__input tk-radio" type="radio" name="tk" value="Мои ТК" />
+                                            <input class="checkbox__input tk-radio" type="radio" name="tk" value="Мои ТК" checked />
                                             <span class="checkbox__switch checkbox__switch--circle"></span>
                                             <span class="checkbox__text">Мои ТК</span>
                                           </label>
@@ -2092,7 +2137,70 @@
                                             <span class="checkbox__text">Рекомендованные ТК</span>
                                           </label>
                                         </div>
-                                        <a class="cart-order__choice-tk" type="button">Выбрать ТК из списка</a>
+                                        <a class="choice-tk__link">Выбрать ТК из списка</a>
+                                      </div>
+
+                                      <div class="another-tk">
+                                        <div class="another-tk__label delivery__label">
+                                          <input
+                                            class="toggle-input"
+                                            type="checkbox"
+                                            name="delivery-comment"
+                                            value="Комментарий к доставке" />
+                                          <span class="toggle-switch"></span>
+                                          <span class="toggle-text">Предложить другую ТК</span>
+                                        </div>
+
+                                        <div class="another-tk__info">
+                                          <div class="another-tk__info-details">
+                                            <div class="another-tk__info-search-form">
+                                              <div class="input js-form-input info-search-form__input">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="text" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">
+                                                    ИНН транспортной компании
+                                                  </span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                              <div class="info-search-form__btn" type="button">Подтвердить</div>
+                                            </div>
+                                            <div class="another-tk__info-delivery-date">
+                                              <div class="input js-form-input another-tk__input-date">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="text" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="another-tk__info-props">
+                                            <p>ООО Филькина грамота</p>
+                                            <p>ИНН 7722327689</p>
+                                            <p>г. Новосибирск, ул. Кривощековская, д. 15, корп. 1, этаж 1,2</p>
+                                          </div>
+
+                                          <div class="another-tk__info-comment">
+                                            <div class="another-tk__label-comment delivery__label">
+                                              <input
+                                                class="toggle-input"
+                                                type="checkbox"
+                                                name="delivery-comment"
+                                                value="Комментарий к доставке" />
+                                              <span class="toggle-switch"></span>
+                                              <span class="toggle-text">Комментарий к доставке</span>
+                                            </div>
+                                            <div class="input js-form-input another-tk__comment">
+                                              <div class="input__main">
+                                                <input class="input__field" type="text" data-validate="empty" />
+                                                <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
+                                              </div>
+                                              <div class="input__error">Поле обязательно для заполнения</div>
+                                            </div>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </div>
@@ -2111,6 +2219,7 @@
                             <option value="3">Оплата по счету</option>
                           </select>
                         </div>
+
                         <div class="accordion accordion">
                           <div class="cart-order__top accordion__btn">
                             <div class="cart-order__top-number">3</div>
@@ -2133,31 +2242,51 @@
                                 <div class="tabs-list__item tabs-list__item--active">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
-                                      <div class="self-delivery">
-                                        <div class="self-delivery__column">
-                                          <div class="self-delivery__store">
-                                            <p class="self-delivery__store-title">Офис и склад на Электрозаводской</p>
-                                            <p class="self-delivery__store-address">Электрозаводская улица, 21с27</p>
-                                          </div>
-                                          <div class="self-delivery__work-schedule">
-                                            <div class="work-schedule__item">
-                                              <div class="work-schedule__day">По будням:</div>
-                                              <div class="work-schedule__hours">с 9:00 до 18:00</div>
-                                            </div>
-                                            <div class="work-schedule__item">
-                                              <div class="work-schedule__day">Воскресенье:</div>
-                                              <div class="work-schedule__hours">выходной</div>
-                                            </div>
-                                            <div class="work-schedule__item">
-                                              <div class="work-schedule__day"></div>
-                                              <div class="work-schedule__hours"></div>
-                                            </div>
-                                          </div>
+                                      <div class="cart-order__payment-list">
+                                        <div class="cart-order__payment-item">
+                                          <label class="checkbox filter__checkbox customer__item">
+                                            <input
+                                              class="checkbox__input customer-radio"
+                                              type="radio"
+                                              name="payment"
+                                              value="ООО Филькина грамота"
+                                              checked />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                          </label>
+                                          <img src="/assets/img/cart-order/visa-payment-1.png" alt="visa" />
                                         </div>
-                                        <div class="self-delivery__column">
-                                          <div class="self-delivery__map">
-                                            <img class="self-delivery__map-img" src="/assets/img/cart-order/map.jpg" alt="Карта" />
-                                          </div>
+                                        <div class="cart-order__payment-item">
+                                          <label class="checkbox filter__checkbox customer__item">
+                                            <input
+                                              class="checkbox__input customer-radio"
+                                              type="radio"
+                                              name="payment"
+                                              value="ООО Филькина грамота" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                          </label>
+                                          <img src="/assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                        </div>
+                                        <div class="cart-order__payment-item">
+                                          <label class="checkbox filter__checkbox customer__item">
+                                            <input
+                                              class="checkbox__input customer-radio"
+                                              type="radio"
+                                              name="payment"
+                                              value="ООО Филькина грамота" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                          </label>
+                                          <img src="/assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                        </div>
+                                        <div class="cart-order__payment-item">
+                                          <label class="checkbox filter__checkbox customer__item">
+                                            <input
+                                              class="checkbox__input customer-radio"
+                                              type="radio"
+                                              name="payment"
+                                              value="ООО Филькина грамота" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                          </label>
+                                          <img src="/assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
                                         </div>
                                       </div>
                                     </div>
@@ -2167,24 +2296,10 @@
                                 <div class="tabs-list__item">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
-                                      <div class="form__choice-customer">
-                                        <div class="customer__list">
-                                          <label class="checkbox filter__checkbox customer__item">
-                                            <input
-                                              class="checkbox__input customer-radio"
-                                              type="radio"
-                                              name="customer"
-                                              value="ООО Филькина грамота" />
-                                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                                            <span class="checkbox__text">ООО Филькина грамота</span>
-                                          </label>
-                                          <label class="checkbox filter__checkbox customer__item">
-                                            <input class="checkbox__input customer-radio" type="radio" name="customer" value="ИП Смирнов" />
-                                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                                            <span class="checkbox__text">ИП Смирнов</span>
-                                          </label>
-                                        </div>
-                                        <button class="cart-order__add-customer" type="button">Добавить юр. лицо</button>
+                                      <div class="payment-descr">
+                                        <p class="text text--gray payment-descr__text">
+                                          Сообщите номер заказа / счета менеджеру на ресепшене для его оплаты при получении
+                                        </p>
                                       </div>
                                     </div>
                                   </div>
@@ -2193,24 +2308,10 @@
                                 <div class="tabs-list__item">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
-                                      <div class="form__choice-customer">
-                                        <div class="customer__list">
-                                          <label class="checkbox filter__checkbox customer__item">
-                                            <input
-                                              class="checkbox__input customer-radio"
-                                              type="radio"
-                                              name="customer"
-                                              value="ООО Филькина грамота" />
-                                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                                            <span class="checkbox__text">ООО Филькина грамота</span>
-                                          </label>
-                                          <label class="checkbox filter__checkbox customer__item">
-                                            <input class="checkbox__input customer-radio" type="radio" name="customer" value="ИП Смирнов" />
-                                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                                            <span class="checkbox__text">ИП Смирнов</span>
-                                          </label>
-                                        </div>
-                                        <button class="cart-order__add-customer" type="button">Добавить юр. лицо</button>
+                                      <div class="payment-descr">
+                                        <p class="text text--gray payment-descr__text">
+                                          Сообщите номер заказа / счета менеджеру на ресепшене для его оплаты при получении
+                                        </p>
                                       </div>
                                     </div>
                                   </div>
