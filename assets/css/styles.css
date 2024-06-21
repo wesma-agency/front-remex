@@ -14438,10 +14438,14 @@ width: calc(33.33% - 30px);
   column-gap: 30px;
 }
 .cart-order__main {
-  flex: 1 1 930px;
+  flex: 0 0 930px;
 }
 .cart-order__sidebar {
+  position: sticky;
   flex: 0 0 440px;
+  top: 90px;
+  /* padding-top: 5px; */
+  height: 100%;
 }
 
 .cart-order__title {
@@ -14545,6 +14549,9 @@ width: calc(33.33% - 30px);
   display: flex;
   flex-direction: column;
   /* row-gap: 20px; */
+}
+.customer__item {
+  cursor: pointer;
 }
 /* .customer-radio {
   display: none;
@@ -14738,6 +14745,9 @@ width: calc(33.33% - 30px);
 .tk__list .tk__item {
   margin-top: 0;
 }
+.tk__item {
+  cursor: pointer;
+}
 .choice-tk__link {
   display: flex;
   flex-direction: column;
@@ -14807,41 +14817,70 @@ width: calc(33.33% - 30px);
   column-gap: 80px;
 }
 
+.cart-order-slider {
+  width: 870px;
+  height: 100%;
+}
+.cart-order-slide {
+  /* text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
 .cart-order__payment-list {
   display: flex;
   column-gap: 20px;
 }
 .cart-order__payment-item {
+  position: relative;
   display: flex;
-  flex: 1 1 203px;
-  /* width: 203px; */
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 203px;
+  /* min-width: 203px; */
+  height: 100px;
   padding: 12px;
   border: 1px solid rgba(68, 68, 68, 0.1);
+  transition: border-color 0.4s ease;
 }
-.cart-order__payment-item:nth-child(1) img {
+/* .cart-order__payment-item:hover {
+  border-color: rgba(68, 68, 68, 0.4);
+} */
+.cart-order__payment-item > label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding-right: calc(100% - 46px);
+  padding-bottom: calc(100% - 146px);
+  cursor: pointer;
+  z-index: 5;
+}
+.cart-order__payment-item:has(input:checked) {
+  border: 1px solid var(--color-primary);
+}
+.cart-order__payment-item img {
+  z-index: 1;
+}
+
+/* .cart-order__payment-item:nth-child(1) img {
   width: 91px;
   height: 27.6px;
-  align-self: center;
-  margin-left: 22px;
 }
 .cart-order__payment-item:nth-child(2) img {
   width: 78px;
   height: 65px;
-  align-self: center;
-  margin-left: 29px;
 }
 .cart-order__payment-item:nth-child(3) img {
   width: 82px;
   height: 49px;
-  align-self: center;
-  margin-left: 27px;
 }
 .cart-order__payment-item:nth-child(4) img {
   width: 102px;
   height: 41px;
-  align-self: center;
-  margin-left: 17px;
-}
+} */
 .payment-descr__text {
   display: flex;
   align-items: center;

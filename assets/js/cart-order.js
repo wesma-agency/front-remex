@@ -37,3 +37,24 @@ function showHideContent() {
     });
   });
 }
+
+const cartOrderSlider = new Swiper(".cart-order-slider", {
+  direction: "horizontal",
+  slidesPerView: 4,
+  spaceBetween: 20,
+  loop: true,
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 2,
+  //     spaceBetween: 20,
+  //   },
+  //   1140.01: {
+  //     slidesPerView: 3,
+  //     spaceBetween: 30,
+  //   },
+  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
