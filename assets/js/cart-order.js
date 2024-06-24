@@ -42,7 +42,6 @@ const cartOrderSlider = new Swiper(".cart-order-slider", {
   direction: "horizontal",
   slidesPerView: 4,
   spaceBetween: 20,
-  loop: true,
   // breakpoints: {
   //   768: {
   //     slidesPerView: 2,

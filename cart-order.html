@@ -76,15 +76,15 @@
     <!-- end pgs html -->
     <div id="page" class="page">
       <header class="header">
-        <div class="header__top">
+        <div class="header__top cart-order__header-top">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__top-container-elem">
               <a href="index.html" id="headerTopContainer" class="logo header__logo">
-                <img src="assets/img/design/logo.svg" alt="" />
                 <img src="assets/img/design/logostart.svg" alt="" />
+                <img src="assets/img/design/logo.svg" alt="" />
               </a>
               <!-- /.logo -->
-              <div class="header__info">
+              <div class="header__info cart-order__header-info">
                 <a href="tel:+74958594981">+7 495 859–49–81</a>
                 <div class="dropdown">
                   <button class="header__label dropdown__btn dropdown__btn--iflex">
@@ -177,7 +177,16 @@
                 </div>
               </div>
               <!-- /.header__info -->
-              <form class="search header__search" method="get">
+
+              <div class="cart-order__header-store">
+                <div class="header-store__name">Склад на Электрозаводской</div>
+                <div class="header-store__address">Электрозаводская улица, 21с27</div>
+              </div>
+              <div class="cart-order__header-phone">
+                <a href="tel:+74958594981">+7 495 859–49–81</a>
+              </div>
+
+              <form class="search header__search cart-order__header-search" method="get">
                 <div class="search__field">
                   <button class="search__btn">
                     <img src="assets/img/icons/search-gray.svg" alt="" />
@@ -237,9 +246,9 @@
                   </div>
                 </div>
               </form>
-
               <!-- /.search__btn for media -->
-              <nav class="serviceMenu">
+
+              <nav class="serviceMenu cart-order__serviceMenu">
                 <form action="" method="post" class="language">
                   <label for="" class="language__result">
                     <span>RU</span>
@@ -333,11 +342,15 @@
                 </button>
               </nav>
               <!-- /.serviceMenu -->
+
+              <div class="cart-order__header-btn">
+                <span>Вернуться в корзину</span>
+              </div>
             </div>
           </div>
         </div>
         <!-- /.header__top -->
-        <div class="header__bottom">
+        <div class="header__bottom cart-order__header-bottom">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__bottom-container-elem">
               <button id="headerCatalogBtn" class="catalog-btn header__catalog-btn" type="button" data-mobile-text="Меню">
@@ -415,7 +428,17 @@
               <a class="logo header__logo" href="index.html">
                 <img src="assets/img/design/logostart.svg" alt="" />
               </a>
-              <button class="catalog-btn cattest" type="button">
+
+              <div class="cart-order__header-store">
+                <div class="header-store__name">Склад на Электрозаводской</div>
+                <div class="header-store__address">Электрозаводская улица, 21с27</div>
+              </div>
+
+              <div class="cart-order__header-phone">
+                <a href="tel:+74958594981">+7 495 859–49–81</a>
+              </div>
+
+              <button class="catalog-btn cattest cart-order-hover__catalog-btn" type="button">
                 <i>
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -428,7 +451,7 @@
                 </i>
                 <span>Каталог</span>
               </button>
-              <div class="header__info">
+              <div class="header__info cart-order-hover__header-info">
                 <a href="tel:+74958594981">+7 495 859–49–81</a>
                 <div class="dropdown">
                   <button class="header__label dropdown__btn dropdown__btn--iflex">
@@ -520,7 +543,7 @@
                 <!-- /.header__label -->
               </div>
               <!-- /.header__info -->
-              <form class="search header__search" method="get">
+              <form class="search header__search cart-order-hover__header-search" method="get">
                 <div class="search__field">
                   <button class="search__btn">
                     <img src="assets/img/icons/search-gray.svg" alt="" />
@@ -581,7 +604,7 @@
                 </div>
               </form>
               <!-- /.search -->
-              <nav class="serviceMenu">
+              <nav class="serviceMenu cart-order-hover__serviceMenu">
                 <button type="button">
                   <span>
                     <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -646,6 +669,10 @@
                 </button>
               </nav>
               <!-- /.serviceMenu -->
+
+              <div class="cart-order__header-btn">
+                <span>Вернуться в корзину</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1849,7 +1876,7 @@
         <div class="cart-order">
           <div class="wrapper">
             <div class="cart-order__content">
-              <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
+              <!-- <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
                 <li>
                   <a class="link link--hover-line link--line-light link--hover-light" href="index.html">
                     <img src="assets/img/icons/home-light.svg" alt="" />
@@ -1857,7 +1884,7 @@
                 </li>
                 <li class="breadcrumbs__separate"></li>
                 <li>Оформление заказа</li>
-              </div>
+              </div> -->
               <div class="cart-order__body">
                 <div class="cart-order__main">
                   <div class="cart-order__section">
@@ -2242,118 +2269,120 @@
                                 <div class="tabs-list__item tabs-list__item--active">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
-                                      <div class="swiper cart-order-slider">
-                                        <div class="swiper-wrapper">
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота"
-                                                  checked />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/visa-payment-1.png" alt="visa" />
+                                      <div class="cart-order-list__slider">
+                                        <div class="swiper cart-order-slider">
+                                          <div class="swiper-wrapper">
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота"
+                                                    checked />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/visa-payment-1.png" alt="visa" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота" />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота" />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота" />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота"
-                                                  checked />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/visa-payment-1.png" alt="visa" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота"
+                                                    checked />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/visa-payment-1.png" alt="visa" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота" />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота" />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                              </div>
                                             </div>
-                                          </div>
-                                          <div class="swiper-slide cart-order-slide">
-                                            <div class="cart-order__payment-item">
-                                              <label class="checkbox filter__checkbox customer__item">
-                                                <input
-                                                  class="checkbox__input customer-radio"
-                                                  type="radio"
-                                                  name="payment"
-                                                  value="ООО Филькина грамота" />
-                                                <span class="checkbox__switch checkbox__switch--circle"></span>
-                                              </label>
-                                              <img src="/assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="/assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
                                         <div class="swiper-controls">
-                                          <div class="swiper-button-prev"></div>
-                                          <div class="swiper-button-next"></div>
+                                          <div class="swiper-button-prev btn-prev"></div>
+                                          <div class="swiper-button-next btn-next"></div>
                                         </div>
                                       </div>
                                       <!-- <div class="cart-order__payment-list">
@@ -2441,9 +2470,21 @@
 
                 <aside class="cart-order__sidebar">
                   <div class="cart-total cart-fixed">
-                    <div class="title2 cart-total__title cart-fixed__none">Ваш заказ</div>
+                    <div class="title2 cart-total__title cart-fixed__none cart-order-total__title">Ваш заказ</div>
                     <div class="cart-total__list">
-                      <div class="cart-total__item cart-fixed__none">
+                      <div class="cart-total__item cart-fixed__none cart-order-summary">
+                        <div class="cart-order-summary__info">
+                          <p>Оформляем 10 товаров за</p>
+                          <p class="cart-total__item-value cart-order-summary__value">
+                            <span class="cart-total__item-value-num cart-total__count">760 000 580</span>
+                            ₽
+                          </p>
+                        </div>
+                        <div class="cart-order-summary__btn">
+                          <img src="/assets/img/icons/right-gray.svg" alt="icon" />
+                        </div>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none cart-total__item--no-border">
                         <span>Выбрано товаров</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__count">4</span>
@@ -2455,6 +2496,26 @@
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__mass">8, 51</span>
                           кг
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Тип получения</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__delivery-method">Самовывоз</span>
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Стоимость доставки</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__delivery-price">500</span>
+                          ₽
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Дата доставки</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__delivery-date">14.09.2024</span>
+                          ₽
                         </span>
                       </div>
                       <div class="cart-total__item cart-fixed__block">
@@ -2472,7 +2533,7 @@
                         </span>
                       </div>
                     </div>
-                    <button class="but but--primary but--full cart-total__btn">Отправить на рассмотрение</button>
+                    <button class="but but--primary but--full cart-total__btn cart-order__total-btn">Отправить на рассмотрение</button>
                   </div>
 
                   <p class="text text--light cart-order__sidebar-text">
