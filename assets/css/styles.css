@@ -10250,6 +10250,7 @@ width: calc(33.33% - 30px);
   line-height: 11px;
   text-align: left; 
   color: #444444;
+  cursor: pointer;
 }
 .link__regustration:before,
 .link__forgot-password:before{

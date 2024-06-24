@@ -4828,7 +4828,8 @@
               <div class="form__main">
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty">
+
+                    <input class="input__field" type="text" data-validate="email">
                     <span class="input__placeholder  required__field">Почта</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
@@ -4848,7 +4849,9 @@
                 </div>
               </div>
             </form>
-            <button class="modal-new__close js-close-modal">
+
+            <button class="modal-new__close modal-new__close--outside js-close-modal">
+
               <img src="assets/img/icons/exit.svg" alt="">
             </button>
           </div>
@@ -4864,17 +4867,18 @@
               <div class="form__main">
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty">
+
+                    <input class="input__field" type="email" data-validate="email">
+
                     <span class="input__placeholder  required__field">Почта</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty">
-                    <span class="input__placeholder  required__field">Имя</span>
+                    <input class="input__field" type="name" data-validate="no_required">
+                    <span class="input__placeholder">Имя</span>
                   </div>
-                  <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__conteiner ">
@@ -4898,7 +4902,7 @@
                 </p>
               </div>
             </form>
-            <button class="modal-new__close js-close-modal">
+            <button class="modal-new__close modal-new__close--outside js-close-modal">
               <img src="assets/img/icons/exit.svg" alt="">
             </button>
           </div>
