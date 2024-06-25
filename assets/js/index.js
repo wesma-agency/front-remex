@@ -151,6 +151,11 @@ $openBtns.forEach(($btn) => {
       return;
     }
 
+    if($btn.getAttribute('data-modal-name')==='regustration'||$btn.getAttribute('data-modal-name')==='forgot-password'){
+      const $modal = document.querySelector(`.modal-new[data-name="authorization"`);
+      $modal.classList.remove("modal-new--active")
+    }
+
     openModal($modal);
   });
 });
@@ -202,6 +207,8 @@ function openModal($modal) {
 
   $modal.classList.add("modal-new--active");
 }
+
+
 
 /* Input */
 const $inputs = document.querySelectorAll(".input");
@@ -349,6 +356,7 @@ $editForms.forEach(($editForm) => {
 const $forms = document.querySelectorAll(".js-form");
 $forms.forEach(($form) => {
   $form.addEventListener("submit", (e) => {
+
     e.preventDefault();
 
     let isError = false;
@@ -361,20 +369,31 @@ $forms.forEach(($form) => {
         $item.classList.add("input--error");
         isError = true;
         return;
+      } else if (validateType  === "email" && !validateEmail($input)) {
+        $item.classList.add("input--error");
+        isError = true;
+        return;
+      } else if(validateType==="no_required")
+      {
+        return;
       } else if (validateType && !validateEmpty($input)) {
         $item.classList.add("input--error");
         isError = true;
         return;
-      }
-    });
-
+      } 
+    }); 
+    if (!isError){
+      window.location.reload();
+    }
+    
     const submitModal = $form.dataset.submitModal;
     if (isError || !submitModal) {
       return;
     }
-
     const $modal = document.querySelector(`.modal-new[data-name="${submitModal}"`);
     openModal($modal);
+    
+  
   });
 
   const $formItems = $form.querySelectorAll(".js-form-input");
@@ -2038,3 +2057,7 @@ addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+
+/*for BUTTON FORM RELOAD*/
+
