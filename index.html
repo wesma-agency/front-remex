@@ -4843,7 +4843,7 @@
                 </div>
                 <button class="but but--primary but--full form__btn">Войти</button>
                 <div class="link__help">
-                  <div class="block--link"><a class="link__forgot-password">Забыли пароль?</a></div>
+                  <div class="block--link"><a class="link__forgot-password js-open-modal" data-modal-name="forgot-password">Забыли пароль?</a></div>
                   <span>/</span>
                   <div class="block--link"><a class="link__regustration js-open-modal" data-modal-name="regustration">Зарегистрироваться</a></div>
                 </div>
@@ -4856,6 +4856,46 @@
         </div>
       </div>
     </div>
+
+    <div class="modal-new" data-name="forgot-password">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Восстановление пароля</div>
+              <div class="form__main">
+                <div class="text">Введите адрес электронной почты, который вы использовали при регистрации. Вы получите ссылку для сброса пароля на почту</div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+
+                    <input class="input__field" type="email" data-validate="email">
+
+                    <span class="input__placeholder  required__field">Почта</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--primary but--full form__btn">Отправить</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br>
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     <div class="modal-new" data-name="regustration">
       <div class="modal-new__body">
         <div class="modal-new__dialog">

@@ -151,10 +151,9 @@ $openBtns.forEach(($btn) => {
       return;
     }
 
-    if($btn.getAttribute('data-modal-name')==='regustration'){
+    if($btn.getAttribute('data-modal-name')==='regustration'||$btn.getAttribute('data-modal-name')==='forgot-password'){
       const $modal = document.querySelector(`.modal-new[data-name="authorization"`);
       $modal.classList.remove("modal-new--active")
-
     }
 
     openModal($modal);
