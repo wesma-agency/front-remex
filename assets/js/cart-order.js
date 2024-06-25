@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   toggleAccordion();
   showHideContent();
+  showCartOrderPopup();
 });
 
 function toggleAccordion() {
@@ -17,6 +18,27 @@ function toggleAccordion() {
         icon.classList.add("active");
       }
     });
+  });
+}
+
+function showCartOrderPopup() {
+  const cartOrderAsideBtn = document.querySelector(".cart-total__list .cart-order-summary");
+
+  const cartOrderAsidePopup = document.querySelector(".cart-order__popup");
+  const cartOrderAsidePopupTop = document.querySelector(".cart-order__popup-top");
+
+  const cartOrderAsidePopupBtn = document.querySelector(".cart-order__popup .cart-order__top-btn");
+  const cartOrderAsideAccordion = document.querySelector(".cart-total__list .cart-order__top-btn");
+
+  cartOrderAsideBtn.addEventListener("click", () => {
+    cartOrderAsidePopup.classList.add("active");
+    cartOrderAsidePopupBtn.classList.add("active");
+  });
+
+  cartOrderAsidePopupTop.addEventListener("click", () => {
+    cartOrderAsidePopup.classList.remove("active");
+    cartOrderAsidePopupBtn.classList.remove("active");
+    cartOrderAsideAccordion.classList.remove("active");
   });
 }
 
