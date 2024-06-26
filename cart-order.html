@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="shortcut icon" href="assets/img/design/favicon.ico" />
-    <title>Доставка и оплата</title>
+    <title>Оформление заказа</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swapdisplay=swap" rel="stylesheet" />
@@ -49,7 +49,7 @@
           <li><a href="contacts.html">Контакты</a></li>
           <li><a href="lk.html">Личный кабинет</a></li>
           <li><a href="orders.html">Заказы пользователя</a></li>
-          <li><a href="cart-order.html">Оформление заказа</a></li>
+          <li><a href="#">Оформление заказа</a></li>
           <!-- <li><a href="#">Заказы пользователя детальная</a></li> -->
           <li><a href="faq.html">Частые вопросы</a></li>
           <li><a href="delivery.html">Доставка</a></li>
@@ -76,15 +76,15 @@
     <!-- end pgs html -->
     <div id="page" class="page">
       <header class="header">
-        <div class="header__top">
+        <div class="header__top cart-order__header-top">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__top-container-elem">
               <a href="index.html" id="headerTopContainer" class="logo header__logo">
-                <img src="assets/img/design/logo.svg" alt="" />
                 <img src="assets/img/design/logostart.svg" alt="" />
+                <img src="assets/img/design/logo.svg" alt="" />
               </a>
               <!-- /.logo -->
-              <div class="header__info">
+              <div class="header__info cart-order__header-info">
                 <a href="tel:+74958594981">+7 495 859–49–81</a>
                 <div class="dropdown">
                   <button class="header__label dropdown__btn dropdown__btn--iflex">
@@ -177,7 +177,16 @@
                 </div>
               </div>
               <!-- /.header__info -->
-              <form class="search header__search" method="get">
+
+              <div class="cart-order__header-store">
+                <div class="header-store__name">Склад на Электрозаводской</div>
+                <div class="header-store__address">Электрозаводская улица, 21с27</div>
+              </div>
+              <div class="cart-order__header-phone">
+                <a href="tel:+74958594981">+7 495 859–49–81</a>
+              </div>
+
+              <form class="search header__search cart-order__header-search" method="get">
                 <div class="search__field">
                   <button class="search__btn">
                     <img src="assets/img/icons/search-gray.svg" alt="" />
@@ -237,9 +246,9 @@
                   </div>
                 </div>
               </form>
-
               <!-- /.search__btn for media -->
-              <nav class="serviceMenu">
+
+              <nav class="serviceMenu cart-order__serviceMenu">
                 <form action="" method="post" class="language">
                   <label for="" class="language__result">
                     <span>RU</span>
@@ -333,11 +342,15 @@
                 </button>
               </nav>
               <!-- /.serviceMenu -->
+
+              <a class="cart-order__header-btn" href="/cart.html">
+                <span>Вернуться в корзину</span>
+              </a>
             </div>
           </div>
         </div>
         <!-- /.header__top -->
-        <div class="header__bottom">
+        <div class="header__bottom cart-order__header-bottom">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__bottom-container-elem">
               <button id="headerCatalogBtn" class="catalog-btn header__catalog-btn" type="button" data-mobile-text="Меню">
@@ -415,7 +428,17 @@
               <a class="logo header__logo" href="index.html">
                 <img src="assets/img/design/logostart.svg" alt="" />
               </a>
-              <button class="catalog-btn cattest" type="button">
+
+              <div class="cart-order__header-store">
+                <div class="header-store__name">Склад на Электрозаводской</div>
+                <div class="header-store__address">Электрозаводская улица, 21с27</div>
+              </div>
+
+              <div class="cart-order__header-phone">
+                <a href="tel:+74958594981">+7 495 859–49–81</a>
+              </div>
+
+              <button class="catalog-btn cattest cart-order-hover__catalog-btn" type="button">
                 <i>
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -428,7 +451,7 @@
                 </i>
                 <span>Каталог</span>
               </button>
-              <div class="header__info">
+              <div class="header__info cart-order-hover__header-info">
                 <a href="tel:+74958594981">+7 495 859–49–81</a>
                 <div class="dropdown">
                   <button class="header__label dropdown__btn dropdown__btn--iflex">
@@ -520,7 +543,7 @@
                 <!-- /.header__label -->
               </div>
               <!-- /.header__info -->
-              <form class="search header__search" method="get">
+              <form class="search header__search cart-order-hover__header-search" method="get">
                 <div class="search__field">
                   <button class="search__btn">
                     <img src="assets/img/icons/search-gray.svg" alt="" />
@@ -581,7 +604,7 @@
                 </div>
               </form>
               <!-- /.search -->
-              <nav class="serviceMenu">
+              <nav class="serviceMenu cart-order-hover__serviceMenu">
                 <button type="button">
                   <span>
                     <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -646,6 +669,10 @@
                 </button>
               </nav>
               <!-- /.serviceMenu -->
+
+              <a class="cart-order__header-btn" href="/cart.html">
+                <span>Вернуться в корзину</span>
+              </a>
             </div>
           </div>
         </div>
@@ -1846,642 +1873,889 @@
       </header>
 
       <main class="main">
-        <section class="delivery">
-          <div class="delivery__header">
-            <div class="wrapper">
-              <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
+        <div class="cart-order">
+          <div class="wrapper">
+            <div class="cart-order__content">
+              <!-- <div class="breadcrumbs breadcrumbs--gray main__breadcrumbs">
                 <li>
                   <a class="link link--hover-line link--line-light link--hover-light" href="index.html">
                     <img src="assets/img/icons/home-light.svg" alt="" />
                   </a>
                 </li>
                 <li class="breadcrumbs__separate"></li>
-                <li>Доставка и оплата</li>
-              </div>
-              <div class="title1 delivery__title">Доставка и оплата</div>
-              <div class="tabs-btns nav-btns delivery__tabs-btns" data-tabs-name="delivery">
-                <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Доставка по Москве и МО</button>
-                <button class="nav-btns__btn tabs-btns__btn">Доставка по Санкт-Петербургу</button>
-                <button class="nav-btns__btn tabs-btns__btn">Доставка в регионы РФ</button>
-              </div>
-              <div class="select select--border delivery__tabs-select" data-tabs-name="delivery">
-                <select class="select__field">
-                  <option value="1">Доставка по Москве и МО</option>
-                  <option value="2">Доставка по Санкт-Петербургу</option>
-                  <option value="3">Доставка в регионы РФ</option>
-                </select>
-              </div>
-            </div>
-          </div>
-          <div class="delivery__main">
-            <div class="tabs-list" data-tabs-name="delivery">
-              <div class="delivery__tabs-item tabs-list__item tabs-list__item--active">
-                <div class="info info--no-line main__delivery-info">
-                  <div class="wrapper">
-                    <div class="info__content">
-                      <div class="info__left">
-                        <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--middle">
-                          Доставка по Москве и&nbsp;Московской области
-                        </div>
-                      </div>
-                      <div class="info__right">
-                        <div class="info__list">
-                          <div class="info__item info__item--border-top">
-                            <div class="title3 title3--gray-dark title3--lh-3">1 200 ₽ &nbsp;— в пределах МКАД</div>
-                          </div>
-                          <div class="info__item info__item--border-bottom">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              <strong>бесплатно</strong>
-                              — при заказе от 20 000 ₽
-                            </div>
-                          </div>
-                        </div>
-                        <div class="text text--gray">
-                          Стоимость доставки крупногабаритного материала (длина более 4 метров) и доставки за МКАД и по Московской области
-                          согласовывается при заказе.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <li>Оформление заказа</li>
+              </div> -->
+              <div class="cart-order__body">
+                <div class="cart-order__main">
+                  <div class="cart-order__section">
+                    <!-- <div class="title1 cart-order__title">Оформление заказа</div> -->
 
-                <div class="goods-receipt main__goods-receipt">
-                  <div class="wrapper">
-                    <div class="goods-receipt__content">
-                      <div class="goods-receipt__main">
-                        <div class="title2 title2--spacing-2 goods-receipt__title">Получение товара</div>
-                        <div class="goods-receipt__info-list">
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Доставка</div>
-                            <div class="text-content goods-receipt__list">
-                              <ul>
-                                <li>Доставка осуществляется до адреса клиента, все погрузо-разгрузочные работы ведутся силами клиента.</li>
-                                <li>
-                                  Если вы не можете принять товар в согласованное время, повторная доставка возможна при оплате пропущенной
-                                  доставки
-                                </li>
-                              </ul>
+                    <div class="cart-order__list">
+                      <div class="cart-order__item">
+                        <div class="select select--border cart-order__tabs-select with-adaptive__menu" data-tabs-name="cart-order-customer">
+                          <select class="select__field">
+                            <option value="1">Физическое лицо</option>
+                            <option value="2">Юридическое лицо</option>
+                          </select>
+                        </div>
+
+                        <div class="accordion accordion--active">
+                          <div class="cart-order__top accordion__btn">
+                            <div class="cart-order__top-number">1</div>
+                            <div class="cart-order__top-title">Данные покупателя</div>
+                            <div class="cart-order__top-btn active">
+                              <img src="assets/img/icons/right-gray-sharp.svg" alt="Icon" />
                             </div>
                           </div>
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Документы</div>
-                            <div class="text-content goods-receipt__list">
-                              <ul>
-                                <li>
-                                  <div>
-                                    <p>Юридическому лицу для получения товара, необходимо иметь при себе доверенность и паспорт.</p>
-                                    <p class="light">
-                                      Или печать компании-плательщика, если получатель обладает правом подписи (подтверждается приказом о
-                                      праве подписи).
-                                    </p>
+                          <div class="accordion__content">
+                            <div class="accordion__main">
+                              <div
+                                class="tabs-btns nav-btns cart-order__tabs-btns no-adaptive__menu-tab"
+                                data-tabs-name="cart-order-customer">
+                                <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Физическое лицо</button>
+                                <button class="nav-btns__btn tabs-btns__btn">Юридическое лицо</button>
+                              </div>
+
+                              <div class="tabs-list" data-tabs-name="cart-order-customer">
+                                <div class="tabs-list__item tabs-list__item--active">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__top">
+                                      <p class="text text--gray">Есть учетная запись?</p>
+                                      <a class="text text--gray" href="#">Войти</a>
+                                    </div>
+                                    <div class="cart-order-list__main">
+                                      <div class="form__customer-info">
+                                        <div class="input js-form-input customer-info__input">
+                                          <div class="input__main">
+                                            <input class="input__field" type="text" data-validate="empty" />
+                                            <span class="input__placeholder input__placeholder--required">Имя</span>
+                                          </div>
+                                          <div class="input__error">Поле обязательно для заполнения</div>
+                                        </div>
+                                        <div class="input js-form-input customer-info__input">
+                                          <div class="input__main">
+                                            <input
+                                              class="input__field js-imask"
+                                              type="text"
+                                              data-validate="phone"
+                                              data-mask="+{7} (000) 000-00-00" />
+                                            <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
+                                          </div>
+                                          <div class="input__error">Поле обязательно для заполнения</div>
+                                        </div>
+                                        <div class="input js-form-input customer-info__input">
+                                          <div class="input__main">
+                                            <input class="input__field" type="text" data-validate="empty" />
+                                            <span class="input__placeholder input__placeholder--required">E-mail</span>
+                                          </div>
+                                          <div class="input__error">Поле обязательно для заполнения</div>
+                                        </div>
+                                      </div>
+                                    </div>
                                   </div>
-                                </li>
-                                <li>Физическому лицу для получения товара документы не требуются.</li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="important-card goods-receipt__card">
-                        <img class="important-card__img" src="assets/img/warning.svg" alt="" />
-                        <div class="important-card__info">
-                          <div class="title3 title3--spacing-2 title3--primary important-card__title">Важно!</div>
-                          <div class="text text--gray important-card__text">
-                            <p>Внимательно проверяйте целостность и&nbsp;количество товара согласно накладной.</p>
-                            <p>После проставления подписи претензии на целостность и количество товара не&nbsp;принимаются.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="delivery__tabs-item tabs-list__item">
-                <div class="info info--no-line main__delivery-info">
-                  <div class="wrapper">
-                    <div class="info__content">
-                      <div class="info__left">
-                        <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--middle">
-                          Доставка по Санкт-Петербургу
-                        </div>
-                      </div>
-                      <div class="info__right">
-                        <div class="info__list">
-                          <div class="info__item info__item--border-top">
-                            <div class="title3 title3--gray-dark title3--lh-3">900 ₽ &nbsp;— в пределах КАД</div>
-                            <div class="text text--gray info__text">
-                              Кроме Кудрово, Кронштадт, Лисий Нос, Горская, Стрельна, Петергоф, Ломоносов.
-                            </div>
-                          </div>
-                          <div class="info__item info__item--border-bottom">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              <strong>бесплатно</strong>
-                              — при заказе от 15 000 ₽
-                            </div>
-                          </div>
-                        </div>
-                        <div class="text text--gray">
-                          Стоимость доставки крупногабаритного материала (длина более 4 метров) и доставка в&nbsp;другие районы, за КАД и по
-                          Ленинградской области согласовывается при заказе.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                                </div>
 
-                <div class="goods-receipt main__goods-receipt">
-                  <div class="wrapper">
-                    <div class="goods-receipt__content">
-                      <div class="goods-receipt__main">
-                        <div class="title2 title2--spacing-2 goods-receipt__title">Получение товара</div>
-                        <div class="goods-receipt__info-list">
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Доставка</div>
-                            <div class="text-content goods-receipt__list">
-                              <ul>
-                                <li>Доставка осуществляется до адреса клиента, все погрузо-разгрузочные работы ведутся силами клиента.</li>
-                                <li>
-                                  Если вы не можете принять товар в согласованное время, повторная доставка возможна при оплате пропущенной
-                                  доставки
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                          <div class="goods-receipt__info-item">
-                            <div class="title3 goods-receipt__info-title">Документы</div>
-                            <div class="text-content goods-receipt__list">
-                              <ul>
-                                <li>
-                                  <div>
-                                    <p>Юридическому лицу для получения товара, необходимо иметь при себе доверенность и паспорт.</p>
-                                    <p class="light">
-                                      Или печать компании-плательщика, если получатель обладает правом подписи (подтверждается приказом о
-                                      праве подписи).
-                                    </p>
+                                <div class="tabs-list__item">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="form__choice-customer">
+                                        <div class="customer__list">
+                                          <label class="checkbox filter__checkbox customer__item">
+                                            <input
+                                              class="checkbox__input customer-radio"
+                                              type="radio"
+                                              name="customer"
+                                              value="ООО Филькина грамота"
+                                              checked />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">ООО Филькина грамота</span>
+                                          </label>
+                                          <label class="checkbox filter__checkbox customer__item">
+                                            <input class="checkbox__input customer-radio" type="radio" name="customer" value="ИП Смирнов" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">ИП Смирнов</span>
+                                          </label>
+                                        </div>
+                                        <button class="cart-order__add-customer" type="button">Добавить юр. лицо</button>
+                                      </div>
+                                    </div>
                                   </div>
-                                </li>
-                                <li>Физическому лицу для получения товара документы не требуются.</li>
-                              </ul>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="important-card goods-receipt__card">
-                        <img class="important-card__img" src="assets/img/warning.svg" alt="" />
-                        <div class="important-card__info">
-                          <div class="title3 title3--spacing-2 title3--primary important-card__title">Важно!</div>
-                          <div class="text text--gray important-card__text">
-                            <p>Внимательно проверяйте целостность и&nbsp;количество товара согласно накладной.</p>
-                            <p>После проставления подписи претензии на целостность и количество товара не&nbsp;принимаются.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="delivery__tabs-item tabs-list__item">
-                <div class="info info--no-line main__delivery-info">
-                  <div class="wrapper">
-                    <div class="info__content">
-                      <div class="info__left">
-                        <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--middle">
-                          Доставка в регионы РФ
-                        </div>
-                      </div>
-                      <div class="info__right">
-                        <div class="text text--gray info__text">
-                          Доставка осуществляется через любую транспортную компанию, выбранную покупателем. До транспортной компании:
-                        </div>
-                        <div class="info__list">
-                          <div class="info__item info__item--border-top">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              1 200 ₽ &nbsp;— в Москве
-                              <br />
-                              <strong>бесплатно</strong>
-                              — при заказе от 20 000 ₽
-                            </div>
-                          </div>
-                          <div class="info__item info__item--border-bottom">
-                            <div class="title3 title3--gray-dark title3--lh-3 title3--strong-success">
-                              900 ₽ &nbsp;— в Санкт-Петербурге
-                              <br />
-                              <strong>бесплатно</strong>
-                              — при заказе от 15 000 ₽
-                            </div>
-                          </div>
-                        </div>
-                        <div class="text text--gray">
-                          Стоимость доставки крупногабаритного материала (длина более 4 метров) и доставка за МКАД, по Московской области и
-                          регионам согласовывается при заказе.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="info info--no-line main__delivery-info">
-          <div class="wrapper">
-            <div class="info__content">
-              <div class="info__left">
-                <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--short">
-                  Условия оплаты для&nbsp;физических лиц
-                </div>
-              </div>
-              <div class="info__right info__right--pt-0">
-                <div class="info__list">
-                  <div class="info__item">
-                    <div class="title3 title3--gray-dark title3--lh-3">В офисах компании</div>
-                    <div class="text text--gray info__text">
-                      Можно оплатить товары и услуги наличными и картами: Мир, VISA, Mastercard, JCB
+                      <div class="cart-order__item">
+                        <div class="select select--border cart-order__tabs-select with-adaptive__menu" data-tabs-name="cart-order-delivery">
+                          <select class="select__field">
+                            <option value="1">Самовывоз</option>
+                            <option value="2">Доставка</option>
+                            <option value="3">Доставка до транспортной компании</option>
+                          </select>
+                        </div>
+
+                        <div class="accordion accordion">
+                          <div class="cart-order__top accordion__btn">
+                            <div class="cart-order__top-number">2</div>
+                            <div class="cart-order__top-title">Выберите способ получения</div>
+                            <div class="cart-order__top-btn">
+                              <img src="assets/img/icons/right-gray-sharp.svg" alt="Icon" />
+                            </div>
+                          </div>
+                          <div class="accordion__content">
+                            <div class="accordion__main">
+                              <div
+                                class="tabs-btns nav-btns cart-order__tabs-btns no-adaptive__menu-tab"
+                                data-tabs-name="cart-order-delivery">
+                                <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Самовывоз</button>
+                                <button class="nav-btns__btn tabs-btns__btn">Доставка</button>
+                                <button class="nav-btns__btn tabs-btns__btn">Доставка до транспортной компании</button>
+                              </div>
+
+                              <div class="tabs-list" data-tabs-name="cart-order-delivery">
+                                <div class="tabs-list__item tabs-list__item--active">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="self-delivery">
+                                        <div class="self-delivery__column">
+                                          <div class="self-delivery__store">
+                                            <p class="self-delivery__store-title">Офис и склад на Электрозаводской</p>
+                                            <p class="self-delivery__store-address">Электрозаводская улица, 21с27</p>
+                                          </div>
+                                          <div class="self-delivery__work-schedule">
+                                            <div class="work-schedule__item">
+                                              <div class="work-schedule__day">По будням:</div>
+                                              <div class="work-schedule__hours">с 9:00 до 18:00</div>
+                                            </div>
+                                            <div class="work-schedule__item">
+                                              <div class="work-schedule__day">Суббота:</div>
+                                              <div class="work-schedule__hours">с 10:00 до 15:00</div>
+                                            </div>
+                                            <div class="work-schedule__item">
+                                              <div class="work-schedule__day">Воскресенье:</div>
+                                              <div class="work-schedule__hours">выходной</div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="self-delivery__column">
+                                          <div class="self-delivery__map">
+                                            <img class="self-delivery__map-img" src="assets/img/cart-order/map.jpg" alt="Карта" />
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-list__item">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="courier-delivery">
+                                        <div class="courier-delivery__top">
+                                          <div class="courier-delivery__address">
+                                            <div class="input js-form-input customer-info__input-address">
+                                              <div class="input__main">
+                                                <input class="input__field" type="text" data-validate="empty" />
+                                                <span class="input__placeholder input__placeholder--required">
+                                                  Введите полный адрес доставки
+                                                </span>
+                                              </div>
+                                              <div class="input__error">Поле обязательно для заполнения</div>
+                                            </div>
+                                          </div>
+                                          <div class="courier-delivery__date-time">
+                                            <div class="input js-form-input customer-info__input-date">
+                                              <div class="input__main">
+                                                <input class="input__field" type="text" data-validate="empty" />
+                                                <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                              </div>
+                                              <div class="input__error">Поле обязательно для заполнения</div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="courier-delivery__info">
+                                          <div class="input js-form-input customer-info__input-details">
+                                            <div class="input__main">
+                                              <input class="input__field" type="text" data-validate="empty" />
+                                              <span class="input__placeholder input__placeholder--required">
+                                                Укажите доп. информацию по доставке
+                                              </span>
+                                            </div>
+                                            <div class="input__error">Поле обязательно для заполнения</div>
+                                          </div>
+                                        </div>
+
+                                        <div class="courier-delivery__details">
+                                          <div class="courier-delivery__item">
+                                            <div class="courier__label delivery__label">
+                                              <input
+                                                class="toggle-input"
+                                                type="checkbox"
+                                                name="another-persone"
+                                                value="Получает другой человек" />
+                                              <span class="toggle-switch"></span>
+                                              <span class="toggle-text">Получает другой человек</span>
+                                            </div>
+
+                                            <div class="another-persone__details">
+                                              <div class="input js-form-input another-persone__input">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="text" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">Имя</span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                              <div class="input js-form-input another-persone__input">
+                                                <div class="input__main">
+                                                  <input
+                                                    class="input__field js-imask"
+                                                    type="text"
+                                                    data-validate="phone"
+                                                    data-mask="+{7} (000) 000-00-00" />
+                                                  <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="courier-delivery__item">
+                                            <div class="courier__label delivery__label">
+                                              <input
+                                                class="toggle-input"
+                                                type="checkbox"
+                                                name="delivery-comment"
+                                                value="Комментарий к доставке" />
+                                              <span class="toggle-switch"></span>
+                                              <span class="toggle-text">Комментарий к доставке</span>
+                                            </div>
+
+                                            <div class="input js-form-input courier-delivery__comment">
+                                              <div class="input__main">
+                                                <input class="input__field" type="text" data-validate="empty" />
+                                                <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
+                                              </div>
+                                              <div class="input__error">Поле обязательно для заполнения</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-list__item">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="form__choice-tk">
+                                        <div class="tk__list">
+                                          <label class="checkbox filter__checkbox tk__item">
+                                            <input class="checkbox__input tk-radio" type="radio" name="tk" value="Мои ТК" checked />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">Мои ТК</span>
+                                          </label>
+                                          <label class="checkbox filter__checkbox tk__item">
+                                            <input class="checkbox__input tk-radio" type="radio" name="tk" value="Рекомендованные ТК" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">Рекомендованные ТК</span>
+                                          </label>
+                                        </div>
+                                        <a class="choice-tk__link">Выбрать ТК из списка</a>
+                                      </div>
+
+                                      <div class="another-tk">
+                                        <div class="another-tk__label delivery__label">
+                                          <input
+                                            class="toggle-input"
+                                            type="checkbox"
+                                            name="delivery-comment"
+                                            value="Комментарий к доставке" />
+                                          <span class="toggle-switch"></span>
+                                          <span class="toggle-text">Предложить другую ТК</span>
+                                        </div>
+
+                                        <div class="another-tk__info">
+                                          <div class="another-tk__info-details">
+                                            <div class="another-tk__info-search-form">
+                                              <div class="input js-form-input info-search-form__input">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="text" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">
+                                                    ИНН транспортной компании
+                                                  </span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                              <div class="info-search-form__btn" type="button">Подтвердить</div>
+                                            </div>
+                                            <div class="another-tk__info-delivery-date">
+                                              <div class="input js-form-input another-tk__input-date">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="text" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                                </div>
+                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                          <div class="another-tk__info-props">
+                                            <p>ООО Филькина грамота</p>
+                                            <p>ИНН 7722327689</p>
+                                            <p>г. Новосибирск, ул. Кривощековская, д. 15, корп. 1, этаж 1,2</p>
+                                          </div>
+
+                                          <div class="another-tk__info-comment">
+                                            <div class="another-tk__label-comment delivery__label">
+                                              <input
+                                                class="toggle-input"
+                                                type="checkbox"
+                                                name="delivery-comment"
+                                                value="Комментарий к доставке" />
+                                              <span class="toggle-switch"></span>
+                                              <span class="toggle-text">Комментарий к доставке</span>
+                                            </div>
+                                            <div class="input js-form-input another-tk__comment">
+                                              <div class="input__main">
+                                                <input class="input__field" type="text" data-validate="empty" />
+                                                <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
+                                              </div>
+                                              <div class="input__error">Поле обязательно для заполнения</div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="cart-order__item">
+                        <div class="select select--border cart-order__tabs-select with-adaptive__menu" data-tabs-name="cart-order-payment">
+                          <select class="select__field">
+                            <option value="1">Онлайн / QR код</option>
+                            <option value="2">Наличными</option>
+                            <option value="3">Оплата по счету</option>
+                          </select>
+                        </div>
+
+                        <div class="accordion accordion">
+                          <div class="cart-order__top accordion__btn">
+                            <div class="cart-order__top-number">3</div>
+                            <div class="cart-order__top-title">Выберите способ оплаты</div>
+                            <div class="cart-order__top-btn">
+                              <img src="assets/img/icons/right-gray-sharp.svg" alt="Icon" />
+                            </div>
+                          </div>
+                          <div class="accordion__content">
+                            <div class="accordion__main">
+                              <div
+                                class="tabs-btns nav-btns cart-order__tabs-btns no-adaptive__menu-tab"
+                                data-tabs-name="cart-order-payment">
+                                <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Онлайн / QR код</button>
+                                <button class="nav-btns__btn tabs-btns__btn">Наличными</button>
+                                <button class="nav-btns__btn tabs-btns__btn">Оплата по счету</button>
+                              </div>
+
+                              <div class="tabs-list" data-tabs-name="cart-order-payment">
+                                <div class="tabs-list__item tabs-list__item--active">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="cart-order-list__slider">
+                                        <div class="swiper cart-order-slider">
+                                          <div class="swiper-wrapper">
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота"
+                                                    checked />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/visa-payment-1.png" alt="visa" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота"
+                                                    checked />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/visa-payment-1.png" alt="visa" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/sber-payment-2.png" alt="sber" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/mastercard-payment-3.png" alt="master card" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-slide cart-order-slide">
+                                              <div class="cart-order__payment-item">
+                                                <label class="checkbox filter__checkbox customer__item">
+                                                  <input
+                                                    class="checkbox__input customer-radio"
+                                                    type="radio"
+                                                    name="payment"
+                                                    value="ООО Филькина грамота" />
+                                                  <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                </label>
+                                                <img src="assets/img/cart-order/qiwi-payment-4.png" alt="qiwi" />
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="swiper-controls">
+                                          <div class="swiper-button-prev btn-prev"></div>
+                                          <div class="swiper-button-next btn-next"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-list__item">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="payment-descr">
+                                        <p class="text text--gray payment-descr__text">
+                                          Сообщите номер заказа / счета менеджеру на ресепшене для его оплаты при получении
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-list__item">
+                                  <div class="cart-order-list">
+                                    <div class="cart-order-list__main">
+                                      <div class="payment-descr">
+                                        <p class="text text--gray payment-descr__text">
+                                          Сообщите номер заказа / счета менеджеру на ресепшене для его оплаты при получении
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="info__item">
-                    <div class="title3 title3--gray-dark title3--lh-3">При заказе на сайте или по телефону</div>
-                    <div class="text text--gray info__text">Картами: Мир, VISA, Mastercard, JCB</div>
-                  </div>
-                  <div class="info__item">
-                    <div class="text text--gray info__text">
-                      При выборе оплаты товара с помощью банковской карты необходимо связаться с&nbsp;менеджером для получения ссылки на
-                      оплату.
-                    </div>
-                  </div>
                 </div>
-                <div class="faq-item info__faq-item">
-                  <div class="accordion faq__item">
-                    <button class="title3 accordion__btn faq-item__btn">
-                      Оплата происходит через ПАО СБЕРБАНК
-                      <span class="faq-item__btn-arrow"></span>
-                    </button>
-                    <div class="accordion__content">
-                      <div class="accordion__main faq-item__main">
-                        <div class="text faq-item__text">
-                          <p>
-                            Для оплаты (ввода реквизитов карты) вы будете перенаправлены на платёжный шлюз ПАО СБЕРБАНК. Соединение с
-                            платёжным шлюзом и передача информации осуществляется в защищённом режиме с использованием протокола шифрования
-                            SSL. В случае если банк поддерживает технологию безопасного проведения интернет-платежей Verified By Visa,
-                            MasterCard SecureCode, MIR Accept, J-Secure для проведения платежа также может потребоваться ввод специального
-                            пароля. Настоящий сайт поддерживает 256-битное шифрование. Конфиденциальность сообщаемой персональной информации
-                            обеспечивается ПАО СБЕРБАНК. Введённая информация не будет предоставлена третьим лицам за исключением случаев,
-                            предусмотренных законодательством РФ. Проведение платежей по банковским картам осуществляется в строгом
-                            соответствии с требованиями платёжных систем МИР, Visa Int., MasterCard Europe Sprl, JCB.
+
+                <aside class="cart-order__sidebar">
+                  <div class="cart-total cart-fixed">
+                    <div class="title2 cart-total__title cart-fixed__none cart-order-total__title">Ваш заказ</div>
+                    <div class="cart-order__popup">
+                      <div class="cart-order__popup-top cart-order__top">
+                        <div class="cart-order-summary__info">
+                          <p>Оформляем 10 товаров за</p>
+                          <p class="cart-total__item-value cart-order-summary__value">
+                            <span class="cart-total__item-value-num cart-total__count">760 000 580</span>
+                            ₽
                           </p>
                         </div>
-                        <div class="text text--gray text--spacing-2 faq-item__text">
-                          <p>
-                            <b>
-                              <strong>Важно!</strong>
-                              Компания Ремэкс не принимает оплату заказов онлайн-переводом с карты на карту. Будьте внимательны и
-                              остерегайтесь мошенников.
-                            </b>
-                          </p>
+                        <div class="cart-order-summary__btn cart-order__top-btn">
+                          <img src="assets/img/icons/right-gray.svg" alt="icon" />
+                        </div>
+                      </div>
+                      <div class="cart-order__popup-bottom">
+                        <div class="cart-order__aside-list">
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</div>
+                            <div class="aside-item__count">
+                              4
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              100 589 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Профиль LNT белый</div>
+                            <div class="aside-item__count">
+                              27
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              320 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
+                            <div class="aside-item__count">
+                              10
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              589 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
+                            <div class="aside-item__count">
+                              46
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              200 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
+                            <div class="aside-item__count">
+                              59
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              1 964 185 134
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</div>
+                            <div class="aside-item__count">
+                              4
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              100 589 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Профиль LNT белый</div>
+                            <div class="aside-item__count">
+                              27
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              320 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
+                            <div class="aside-item__count">
+                              10
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              589 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
+                            <div class="aside-item__count">
+                              46
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              200 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
+                            <div class="aside-item__count">
+                              59
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              1 964 185 134
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</div>
+                            <div class="aside-item__count">
+                              4
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              100 589 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Профиль LNT белый</div>
+                            <div class="aside-item__count">
+                              27
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              320 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
+                            <div class="aside-item__count">
+                              10
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              589 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item aside-item__devider">
+                            <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
+                            <div class="aside-item__count">
+                              46
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              200 000
+                              <span>₽</span>
+                            </div>
+                          </div>
+                          <div class="cart-order__aside-item">
+                            <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
+                            <div class="aside-item__count">
+                              59
+                              <span>шт.</span>
+                            </div>
+                            <div class="aside-item__price">
+                              1 964 185 134
+                              <span>₽</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <section class="info info--no-line main__delivery-info">
-          <div class="wrapper">
-            <div class="info__content">
-              <div class="info__left">
-                <div class="title2 title2--gray-dark title2--lh-2 title2--spacing-2 info__title info__title--short">
-                  Условия обмена и&nbsp;возврата товара
-                </div>
-              </div>
-              <div class="info__right info__right--pt-0">
-                <div class="info__list">
-                  <div class="info__item info__item--offset-lg">
-                    <div class="title3 title3--gray-dark title3--lh-3">Обмен товара</div>
-                    <div class="text text--gray info__text">
-                      <p>
-                        Клиент вправе обменять товар надлежащего качества на аналогичный товар, если указанный товар не подошел по форме,
-                        габаритам, фасону, расцветке, размеру или комплектации, в течение 14 дней, не считая дня его покупки.
-                      </p>
-                      <p>
-                        Обмен товара надлежащего качества проводится, если указанный товар не был в употреблении, сохранены его товарный
-                        вид, потребительские свойства, а также имеется товарный или кассовый чек.
-                      </p>
-                      <p>
-                        Отсутствие у потребителя товарного чека или кассового чека не лишает его возможности ссылаться на свидетельские
-                        показания.
-                      </p>
+                    <div class="cart-total__list">
+                      <div class="cart-total__item cart-fixed__none cart-order-summary">
+                        <div class="accordion">
+                          <div class="accordion__btn cart-order__top">
+                            <div class="cart-order-summary__info">
+                              <p>Оформляем 10 товаров за</p>
+                              <p class="cart-total__item-value cart-order-summary__value">
+                                <span class="cart-total__item-value-num cart-total__count">760 000 580</span>
+                                ₽
+                              </p>
+                            </div>
+                            <div class="cart-order-summary__btn cart-order__top-btn">
+                              <img src="assets/img/icons/right-gray.svg" alt="icon" />
+                            </div>
+                          </div>
+                          <div class="accordion__content">
+                            <div class="accordion__main">
+                              <div class="cart-order__aside-list">
+                                <div class="cart-order__aside-item">
+                                  <div class="aside-item__name">
+                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                  </div>
+                                  <div class="aside-item__count">
+                                    4
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    100 589 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__aside-item">
+                                  <div class="aside-item__name">Профиль LNT белый</div>
+                                  <div class="aside-item__count">
+                                    27
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    320 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__aside-item">
+                                  <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
+                                  <div class="aside-item__count">
+                                    10
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    589 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__aside-item">
+                                  <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
+                                  <div class="aside-item__count">
+                                    46
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    200 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__aside-item">
+                                  <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
+                                  <div class="aside-item__count">
+                                    59
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    1 964 185 134
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none cart-total__item--no-border">
+                        <span>Выбрано товаров</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__count">4</span>
+                          шт.
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Вес заказа</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__mass">8, 51</span>
+                          кг
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Тип получения</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__delivery-method">Самовывоз</span>
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Стоимость доставки</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__delivery-price">500</span>
+                          ₽
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__none">
+                        <span>Дата доставки</span>
+                        <span class="cart-total__item-value">
+                          <span class="cart-total__item-value-num cart-total__delivery-date">14.09.2024</span>
+                          ₽
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-fixed__block">
+                        <span>Общая стоимость</span>
+                        <span class="cart-total__item-value cart-total__item-value--xl">
+                          <span class="cart-total__item-value-num cart-total__price">8 500</span>
+                          ₽
+                        </span>
+                      </div>
+                      <div class="cart-total__item cart-total__item--no-border cart-fixed__none">
+                        <span>С учетом предложения</span>
+                        <span class="cart-total__item-value cart-total__item-value--xl cart-total__item-value--success">
+                          <span class="cart-total__item-value-num cart-total__price-discount">6 500</span>
+                          ₽
+                        </span>
+                      </div>
                     </div>
+
+                    <button class="but but--primary but--full cart-total__btn cart-order__total-btn">Отправить на рассмотрение</button>
                   </div>
-                  <div class="info__item info__item--offset-lg">
-                    <div class="title3 title3--gray-dark title3--lh-3">Возврат товара</div>
-                    <div class="text text--gray info__text">
-                      <p>
-                        В случае, если аналогичный товар отсутствует в продаже на день обращения клиента, компания возвращает уплаченную за
-                        указанный товар денежную сумму. Возврат уплаченной за указанный товар денежной суммы осуществляется в течение трех
-                        дней со дня возврата указанного товара.
-                      </p>
-                      <p>
-                        По соглашению обеих сторон обмен товара может быть предусмотрен при поступлении аналогичного товара в продажу, о чем
-                        компания проинформирует клиента дополнительно.
-                      </p>
-                      <p>
-                        <b>
-                          <strong>Важно!</strong>
-                          Обмен или возврат пленки в нарезку возможен, если длина купленной пленки не менее 5 метров.
-                        </b>
-                      </p>
-                    </div>
-                  </div>
-                </div>
+
+                  <p class="text text--light cart-order__sidebar-text">
+                    Поля, отмеченные
+                    <span class="red-star">*</span>
+                    , обязательны для заполнения
+                    <br />
+                    Нажимая на кнопку - вы автоматически
+                    <span class="bold-underlined-text">соглашаетесь</span>
+                    на отправку ваших персональных данных.
+                  </p>
+                </aside>
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </main>
-
-      <footer class="foot">
-        <div class="container">
-          <div class="container__elem container__elem--12 container__elem--df">
-            <div class="foot__top">
-              <div class="foot__col-wrap-bottom --mobile">
-                <a href="" class="foot__ym">
-                  <img src="assets/img/design/ym.png" alt="" />
-                </a>
-                <div class="foot__wr foot__wr--1">
-                  <div class="footItem">
-                    <div class="footItem__label">Мы в соцсетях:</div>
-                    <!-- /.footItem__label -->
-                    <div class="footItem__icons">
-                      <a href="#" target="_blank">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
-                            fill="#1976D2" />
-                          <path
-                            d="M19.1315 8.9116C19.1571 8.82773 19.1693 8.74989 19.166 8.68049C19.1576 8.47935 19.0193 8.33325 18.6938 8.33325H17.2393C16.8721 8.33325 16.7027 8.55547 16.6038 8.77827C16.6038 8.77827 15.6971 10.6444 14.6522 11.8749C14.3133 12.231 14.1411 12.2221 13.9577 12.2221C13.8594 12.2221 13.611 12.1032 13.611 11.7771V8.89655C13.611 8.51103 13.5149 8.33325 13.2044 8.33325H10.6216C10.3955 8.33325 10.2778 8.51103 10.2778 8.68938C10.2778 9.05992 10.7766 9.14881 10.8333 10.1872V12.1999C10.8333 12.6888 10.7483 12.7777 10.565 12.7777C10.0705 12.7777 9.0972 11.111 8.44556 8.92659C8.30445 8.49662 8.16334 8.33325 7.79612 8.33325H6.32781C5.90393 8.33325 5.83337 8.54106 5.83337 8.76328C5.83337 9.16379 6.1667 11.3294 7.98612 13.8193C9.30558 15.6249 11.0438 16.6666 12.5827 16.6666C13.5149 16.6666 13.6105 16.4294 13.6105 16.0588V14.4077C13.611 13.9627 13.7127 13.8888 14.0094 13.8888C14.221 13.8888 14.6527 14.0277 15.486 14.9999C16.4471 16.121 16.6215 16.6666 17.1727 16.6666H18.6271C18.9649 16.6666 19.1587 16.5249 19.1665 16.2499C19.1682 16.1799 19.1582 16.1016 19.1354 16.0143C19.0276 15.6944 18.5332 14.9121 17.9165 14.1666C17.5749 13.7538 17.2377 13.3449 17.0827 13.1227C16.9788 12.9777 16.9393 12.8755 16.9443 12.7777C16.9494 12.6749 17.0027 12.5771 17.0827 12.4405C17.0682 12.4405 18.9482 9.80106 19.1315 8.9116Z"
-                            fill="white" />
-                        </svg>
-                      </a>
-                      <a href="#" target="_blank">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
-                            fill="#37AEE2" />
-                          <path
-                            d="M10.1994 14.3608L15.1674 18.1654C15.6826 18.5112 16.1242 18.3191 16.2714 17.6273L18.2953 7.71234C18.4793 6.86687 17.9641 6.48257 17.4122 6.75158L5.59945 11.5169C4.82666 11.8244 4.82666 12.324 5.45225 12.5161L8.50663 13.5153L15.4986 8.86523C15.8298 8.67308 16.1242 8.74994 15.9034 9.01895"
-                            fill="white" />
-                        </svg>
-                      </a>
-                      <a href="#" target="_blank">
-                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
-                            fill="#EA5A47" />
-                          <path
-                            d="M10.9167 14.8749L15.0255 12.4999L10.9167 10.1249V14.8749ZM20.0684 8.67617C20.1713 9.04825 20.2425 9.547 20.29 10.1803C20.3455 10.8137 20.3692 11.3599 20.3692 11.8349L20.4167 12.4999C20.4167 14.2337 20.29 15.5083 20.0684 16.3237C19.8705 17.0362 19.4113 17.4953 18.6988 17.6933C18.3267 17.7962 17.6459 17.8674 16.6009 17.9149C15.5717 17.9703 14.6296 17.9941 13.7588 17.9941L12.5 18.0416C9.18296 18.0416 7.11671 17.9149 6.30129 17.6933C5.58879 17.4953 5.12962 17.0362 4.93171 16.3237C4.82879 15.9516 4.75754 15.4528 4.71004 14.8195C4.65462 14.1862 4.63087 13.6399 4.63087 13.1649L4.58337 12.4999C4.58337 10.7662 4.71004 9.49159 4.93171 8.67617C5.12962 7.96367 5.58879 7.5045 6.30129 7.30659C6.67337 7.20367 7.35421 7.13242 8.39921 7.08492C9.42837 7.0295 10.3705 7.00575 11.2413 7.00575L12.5 6.95825C15.8171 6.95825 17.8834 7.08492 18.6988 7.30659C19.4113 7.5045 19.8705 7.96367 20.0684 8.67617Z"
-                            fill="white" />
-                        </svg>
-                      </a>
-                    </div>
-                    <!-- /.footItem__icons -->
-                  </div>
-                  <!-- /.footItem -->
-                  <div class="footItem">
-                    <div class="footItem__label">Мы принимаем:</div>
-                    <!-- /.footItem__label -->
-                    <div class="footItem__icons">
-                      <a href="#" target="_blank">
-                        <img src="assets/img/design/i1.jpg" alt="" />
-                      </a>
-                      <a href="#" target="_blank">
-                        <img src="assets/img/design/i2.jpg" alt="" />
-                      </a>
-                      <a href="#" target="_blank">
-                        <img src="assets/img/design/i3.jpg" alt="" />
-                      </a>
-                    </div>
-                    <!-- /.footItem__icons -->
-                  </div>
-                  <!-- /.footItem -->
-                </div>
-                <!-- /.foot__wr -->
-              </div>
-              <div class="foot__item-bottom">
-                <div class="foot__col">
-                  <a href="index.html" class="flogo">
-                    <img src="assets/img/design/flogo.svg" alt="" />
-                  </a>
-
-                  <!-- /.flogo -->
-                </div>
-                <!-- /.foot__col -->
-                <div class="foot__col">
-                  <div class="foot__col-wrap-top">
-                    <div class="foot__wr">
-                      <button type="button" class="link feed js-open-modal" data-modal-name="callback">
-                        <i>
-                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M13.3997 9.59269L10.0253 8.08049C9.87246 8.01498 9.70564 7.98864 9.54 8.00386C9.37436 8.01908 9.21514 8.07537 9.07674 8.16764C9.0627 8.17665 9.04933 8.18668 9.03674 8.19764L7.27311 9.69769C7.25481 9.70767 7.23444 9.71325 7.21361 9.714C7.19278 9.71474 7.17207 9.71063 7.15311 9.70198C6.0195 9.15482 4.84517 7.98763 4.29587 6.86973C4.28673 6.85118 4.28198 6.83077 4.28198 6.81009C4.28198 6.7894 4.28673 6.769 4.29587 6.75044L5.80092 4.96038C5.81172 4.94716 5.82173 4.93333 5.83092 4.91895C5.92191 4.78002 5.97688 4.62061 5.99084 4.45512C6.00481 4.28963 5.97734 4.12327 5.91092 3.97106L4.40944 0.605934C4.32417 0.407076 4.17671 0.241236 3.98918 0.133306C3.80166 0.0253749 3.58419 -0.0188247 3.36941 0.00734026C2.43603 0.130202 1.57929 0.588648 0.959233 1.29704C0.339175 2.00544 -0.00179705 2.91533 7.12324e-06 3.85677C7.12324e-06 9.44983 4.55016 14 10.1432 14C11.0846 14.0018 11.9945 13.6608 12.7029 13.0408C13.4113 12.4207 13.8698 11.564 13.9926 10.6306C14.0187 10.4168 13.9751 10.2003 13.8683 10.0133C13.7615 9.82631 13.5972 9.67878 13.3997 9.59269ZM10.1432 13.1428C5.02303 13.1428 0.857179 8.97695 0.857179 3.85677C0.854791 3.12383 1.11933 2.4151 1.60138 1.86299C2.08343 1.31087 2.75 0.953152 3.47655 0.856657H3.49298C3.52177 0.857194 3.54972 0.866416 3.57317 0.883114C3.59663 0.899812 3.61449 0.923207 3.62441 0.950232L5.13161 4.31535C5.1402 4.33406 5.14466 4.35441 5.14466 4.375C5.14466 4.39559 5.1402 4.41594 5.13161 4.43464L3.6237 6.22471C3.61245 6.23749 3.60218 6.2511 3.59299 6.26543C3.49863 6.40947 3.44307 6.57544 3.43168 6.74726C3.42029 6.91909 3.45346 7.09094 3.52798 7.24618C4.16158 8.54337 5.46876 9.84056 6.78024 10.4741C6.93638 10.5483 7.10907 10.5806 7.28146 10.5681C7.45384 10.5556 7.62004 10.4986 7.76384 10.4027C7.77741 10.3934 7.79098 10.3834 7.80384 10.3727L9.56676 8.87266C9.58417 8.86331 9.6034 8.85783 9.62312 8.85659C9.64285 8.85536 9.66261 8.85841 9.68105 8.86552L13.0562 10.3777C13.0837 10.3895 13.1069 10.4096 13.1224 10.4352C13.1379 10.4608 13.145 10.4907 13.1426 10.5206C13.0466 11.2475 12.6892 11.9145 12.1372 12.3971C11.5852 12.8797 10.8764 13.1448 10.1432 13.1428ZM8.00028 3.28532C8.00028 3.17165 8.04543 3.06264 8.12581 2.98226C8.20618 2.90188 8.3152 2.85673 8.42886 2.85673H10.2861V0.999519C10.2861 0.885851 10.3312 0.776838 10.4116 0.696462C10.492 0.616087 10.601 0.570932 10.7147 0.570932C10.8283 0.570932 10.9373 0.616087 11.0177 0.696462C11.0981 0.776838 11.1432 0.885851 11.1432 0.999519V2.85673H13.0004C13.1141 2.85673 13.2231 2.90188 13.3035 2.98226C13.3839 3.06264 13.429 3.17165 13.429 3.28532C13.429 3.39899 13.3839 3.508 13.3035 3.58837C13.2231 3.66875 13.1141 3.7139 13.0004 3.7139H11.1432V5.57111C11.1432 5.68478 11.0981 5.7938 11.0177 5.87417C10.9373 5.95455 10.8283 5.9997 10.7147 5.9997C10.601 5.9997 10.492 5.95455 10.4116 5.87417C10.3312 5.7938 10.2861 5.68478 10.2861 5.57111V3.7139H8.42886C8.3152 3.7139 8.20618 3.66875 8.12581 3.58837C8.04543 3.508 8.00028 3.39899 8.00028 3.28532Z"
-                              fill="#004ADA" />
-                          </svg>
-                        </i>
-                        <span class="link__text link__text--line link__text--line-light">Заказать звонок</span>
-                      </button>
-                      <button type="button" class="link feed js-open-modal" data-modal-name="ask">
-                        <i>
-                          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M10.5533 1.59884C9.7293 1.33929 8.8673 1.20791 8 1.20968C4.13425 1.20968 1 3.74761 1 6.87852C1 8.10052 1.47775 9.23277 2.29062 10.1579L1.4375 14L4.864 11.9477C5.85691 12.3467 6.92336 12.5503 8 12.5465C11.8658 12.5465 15 10.0086 15 6.87852C15 6.304 14.895 5.74961 14.6981 5.2271M13.25 1V4.35484M15 2.67742H11.5"
-                              stroke="#004ADA"
-                              stroke-linecap="round"
-                              stroke-linejoin="round" />
-                          </svg>
-                        </i>
-                        <span class="link__text link__text--line link__text--line-light">Задать вопрос</span>
-                      </button>
-                    </div>
-                    <!-- /.foot__wr -->
-                    <div class="header__info">
-                      <a href="tel:+74958594981">+7 (495) 859–49–81</a>
-                      <div class="header__label">
-                        <div class="city">
-                          <span>
-                            <i></i>
-                            Москва
-                          </span>
-                        </div>
-                        <!-- /.city -->
-                        <div class="metro">
-                          <span>м. Электрозаводская</span>
-                          <em>
-                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M7.91683 4.04175L5.00016 6.95842L2.0835 4.04175"
-                                stroke="#444444"
-                                stroke-width="1.5"
-                                stroke-linecap="round"
-                                stroke-linejoin="round" />
-                            </svg>
-                          </em>
-                        </div>
-                        <!-- /.metro -->
-                      </div>
-                      <!-- /.header__label -->
-                    </div>
-                    <!-- /.header__info -->
-                  </div>
-                  <div class="foot__col-wrap-bottom">
-                    <a href="" class="foot__ym">
-                      <img src="assets/img/design/ym.png" alt="" />
-                    </a>
-                    <div class="foot__wr foot__wr--1">
-                      <div class="footItem">
-                        <div class="footItem__label">Мы в соцсетях:</div>
-                        <!-- /.footItem__label -->
-                        <div class="footItem__icons">
-                          <a href="#" target="_blank">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
-                                fill="#1976D2" />
-                              <path
-                                d="M19.1315 8.9116C19.1571 8.82773 19.1693 8.74989 19.166 8.68049C19.1576 8.47935 19.0193 8.33325 18.6938 8.33325H17.2393C16.8721 8.33325 16.7027 8.55547 16.6038 8.77827C16.6038 8.77827 15.6971 10.6444 14.6522 11.8749C14.3133 12.231 14.1411 12.2221 13.9577 12.2221C13.8594 12.2221 13.611 12.1032 13.611 11.7771V8.89655C13.611 8.51103 13.5149 8.33325 13.2044 8.33325H10.6216C10.3955 8.33325 10.2778 8.51103 10.2778 8.68938C10.2778 9.05992 10.7766 9.14881 10.8333 10.1872V12.1999C10.8333 12.6888 10.7483 12.7777 10.565 12.7777C10.0705 12.7777 9.0972 11.111 8.44556 8.92659C8.30445 8.49662 8.16334 8.33325 7.79612 8.33325H6.32781C5.90393 8.33325 5.83337 8.54106 5.83337 8.76328C5.83337 9.16379 6.1667 11.3294 7.98612 13.8193C9.30558 15.6249 11.0438 16.6666 12.5827 16.6666C13.5149 16.6666 13.6105 16.4294 13.6105 16.0588V14.4077C13.611 13.9627 13.7127 13.8888 14.0094 13.8888C14.221 13.8888 14.6527 14.0277 15.486 14.9999C16.4471 16.121 16.6215 16.6666 17.1727 16.6666H18.6271C18.9649 16.6666 19.1587 16.5249 19.1665 16.2499C19.1682 16.1799 19.1582 16.1016 19.1354 16.0143C19.0276 15.6944 18.5332 14.9121 17.9165 14.1666C17.5749 13.7538 17.2377 13.3449 17.0827 13.1227C16.9788 12.9777 16.9393 12.8755 16.9443 12.7777C16.9494 12.6749 17.0027 12.5771 17.0827 12.4405C17.0682 12.4405 18.9482 9.80106 19.1315 8.9116Z"
-                                fill="white" />
-                            </svg>
-                          </a>
-                          <a href="#" target="_blank">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
-                                fill="#37AEE2" />
-                              <path
-                                d="M10.1994 14.3608L15.1674 18.1654C15.6826 18.5112 16.1242 18.3191 16.2714 17.6273L18.2953 7.71234C18.4793 6.86687 17.9641 6.48257 17.4122 6.75158L5.59945 11.5169C4.82666 11.8244 4.82666 12.324 5.45225 12.5161L8.50663 13.5153L15.4986 8.86523C15.8298 8.67308 16.1242 8.74994 15.9034 9.01895"
-                                fill="white" />
-                            </svg>
-                          </a>
-                          <a href="#" target="_blank">
-                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path
-                                d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
-                                fill="#EA5A47" />
-                              <path
-                                d="M10.9167 14.8749L15.0255 12.4999L10.9167 10.1249V14.8749ZM20.0684 8.67617C20.1713 9.04825 20.2425 9.547 20.29 10.1803C20.3455 10.8137 20.3692 11.3599 20.3692 11.8349L20.4167 12.4999C20.4167 14.2337 20.29 15.5083 20.0684 16.3237C19.8705 17.0362 19.4113 17.4953 18.6988 17.6933C18.3267 17.7962 17.6459 17.8674 16.6009 17.9149C15.5717 17.9703 14.6296 17.9941 13.7588 17.9941L12.5 18.0416C9.18296 18.0416 7.11671 17.9149 6.30129 17.6933C5.58879 17.4953 5.12962 17.0362 4.93171 16.3237C4.82879 15.9516 4.75754 15.4528 4.71004 14.8195C4.65462 14.1862 4.63087 13.6399 4.63087 13.1649L4.58337 12.4999C4.58337 10.7662 4.71004 9.49159 4.93171 8.67617C5.12962 7.96367 5.58879 7.5045 6.30129 7.30659C6.67337 7.20367 7.35421 7.13242 8.39921 7.08492C9.42837 7.0295 10.3705 7.00575 11.2413 7.00575L12.5 6.95825C15.8171 6.95825 17.8834 7.08492 18.6988 7.30659C19.4113 7.5045 19.8705 7.96367 20.0684 8.67617Z"
-                                fill="white" />
-                            </svg>
-                          </a>
-                        </div>
-                        <!-- /.footItem__icons -->
-                      </div>
-                      <!-- /.footItem -->
-                      <div class="footItem">
-                        <div class="footItem__label">Мы принимаем:</div>
-                        <!-- /.footItem__label -->
-                        <div class="footItem__icons">
-                          <a href="#" target="_blank">
-                            <img src="assets/img/design/i1.jpg" alt="" />
-                          </a>
-                          <a href="#" target="_blank">
-                            <img src="assets/img/design/i2.jpg" alt="" />
-                          </a>
-                          <a href="#" target="_blank">
-                            <img src="assets/img/design/i3.jpg" alt="" />
-                          </a>
-                        </div>
-                        <!-- /.footItem__icons -->
-                      </div>
-                      <!-- /.footItem -->
-                    </div>
-                    <!-- /.foot__wr -->
-                  </div>
-                </div>
-                <!-- /.foot__col -->
-              </div>
-              <div class="foot__item-top">
-                <div class="foot__col">
-                  <a href="catalog.html" class="link link--line foot__link">Перейти в каталог</a>
-                  <!-- /.foot__link -->
-                  <nav>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Пленка</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Листовые, пластики</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Бумага</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Баннер</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Профиль</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Клей, клейкие ленты</a>
-                  </nav>
-                </div>
-                <!-- /.foot__col -->
-                <div class="foot__col">
-                  <div class="foot__zag"></div>
-                  <!-- /.foot__zag -->
-                  <nav>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">LED-продукция</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Мобильные стенды</a>
-                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Инструменты, крепеж, упаковка</a>
-                  </nav>
-                </div>
-                <!-- /.foot__col -->
-                <div class="foot__col">
-                  <span class="foot__link foot__link--dont">Полезные страницы</span>
-                  <!-- /.foot__link -->
-                  <nav>
-                    <a class="link link--hover-line link--line-primary" href="about.html">О компании</a>
-                    <a class="link link--hover-line link--line-primary" href="#">Услуги</a>
-                    <a class="link link--hover-line link--line-primary" href="faq.html">Частые вопросы</a>
-                    <a class="link link--hover-line link--line-primary" href="#">Новости</a>
-                    <a class="link link--hover-line link--line-primary" href="#">Статьи</a>
-                    <a class="link link--hover-line link--line-primary" href="contacts.html">Контакты</a>
-                  </nav>
-                </div>
-                <!-- /.foot__col -->
-                <div class="foot__col">
-                  <div class="foot__zag"></div>
-                  <!-- /.foot__zag -->
-                  <nav>
-                    <a class="link link--line foot__link--highlight" href="#">Возврат товара</a>
-                    <a class="link link--hover-line link--line-primary" href="#">Прайс</a>
-                    <a class="link link--hover-line link--line-primary" href="#">Акции</a>
-                    <a class="link link--hover-line link--line-primary" href="delivery.html">Доставка и оплата</a>
-                    <a class="link link--hover-line link--line-primary" href="#">Реквизиты</a>
-                  </nav>
-                </div>
-                <!-- /.foot__col -->
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- /.foot__top -->
-        <div class="foot__bottom">
-          <div class="container">
-            <div class="container__elem container__elem--12 container__elem--df container__elem--aic --footer-mob">
-              <div class="foot__col">
-                <div class="copy --move-js">© 1993-2023. RemeX – лидер среди поставщиков материалов для наружной рекламы.</div>
-                <!-- /.copy -->
-              </div>
-              <!-- /.foot__col -->
-              <div class="foot__cols">
-                <div class="foot__col">
-                  <div class="z3213">ОГРН: 1047796568160</div>
-                </div>
-                <!-- /.foot__col -->
-                <div class="foot__col">
-                  <div class="z3213">ИНН: 7705611516</div>
-                </div>
-                <!-- /.foot__col -->
-              </div>
-              <div class="foot__col --move-js">
-                <a class="link link--line link--line-light" href="#">Политика обработки персональных данных</a>
-              </div>
-              <!-- /.foot__col -->
-            </div>
-          </div>
-        </div>
-        <!-- /.foot__bottom -->
-      </footer>
 
       <div class="modal" id="myModal">
         <div class="modal-content">
@@ -2704,6 +2978,184 @@
       </div>
     </div>
 
+    <div class="modal-new" data-name="discuss-price">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <div class="discuss-price modal-new__discuss-price">
+              <div class="title3 discuss-price__title">Обсудить цену</div>
+              <div class="text text--gray discuss-price__text">Цена будет рассмотрена после оформления заказа</div>
+              <div class="discuss-price__list">
+                <div class="small-item discuss-price__item">
+                  <div class="small-item__img">
+                    <img src="assets/img/products/5.jpg" alt="" />
+                  </div>
+                  <div class="text text--sm text--gray-dark small-item__title">
+                    <a href="#">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</a>
+                  </div>
+                  <div class="text text--semibold text--lg small-item__price">100 250 ₽</div>
+                </div>
+              </div>
+              <form class="discuss-price__form js-form" autocomplete="off">
+                <div class="input discuss-price__form-input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Предложите цену, ₽</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input discuss-price__form-input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Причина изменения цены</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                  <div class="text text--sm text--gray-white input__text">Ссылка на цену конкурента, фотография чека или счета</div>
+                </div>
+                <div class="discuss-price__form-btns">
+                  <button class="but but--full discuss-price__form-btn" type="button">
+                    <svg
+                      class="but__icon but__icon--fill"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
+                    </svg>
+                    <span>Загрузить файл</span>
+                  </button>
+                  <button class="but but--full but--primary discuss-price__form-btn" type="submit">Предложить цену</button>
+                </div>
+              </form>
+            </div>
+            <button class="modal-new__close">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="store-list">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <div class="store-list modal-new__store-list">
+              <div class="title3 store-list__title">Выберите склад куда переносим товар для заказа</div>
+              <div class="text text--gray store-list__text">Светодиодный модуль c линзой LBY 3д 2835 0,72W 70lm 7000К IP65 ZE03QA1</div>
+              <div class="store-list__items">
+                <div class="store-item store-list__item">
+                  <div class="text text--semibold store-item__title">Склад на электрозаводской</div>
+                  <div class="stock-item stock-item--gray store-item__stock">
+                    <span class="stock-item__circles">
+                      <i class="stock-item__circle"></i>
+                      <i class="stock-item__circle"></i>
+                      <i class="stock-item__circle"></i>
+                    </span>
+                    <strong class="stock-item__text">Нет в наличии</strong>
+                  </div>
+                  <div class="store-item__add">
+                    <div class="counter store-item__add-counter">
+                      <button class="counter__btn counter__btn--minus">
+                        <img src="assets/img/icons/minus-gray.svg" alt="" />
+                      </button>
+                      <input type="number" class="counter__input" value="1" min="1" />
+                      <button class="counter__btn counter__btn--plus">
+                        <img src="assets/img/icons/plus-gray.svg" alt="" />
+                      </button>
+                    </div>
+                    <button type="button" class="but but--sm store-item__add-btn">
+                      <span>Отправить заявку</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="store-item store-list__item">
+                  <div class="text text--semibold store-item__title">Склад на Некрасовке</div>
+                  <div class="stock-item stock-item--warning store-item__stock">
+                    <span class="stock-item__circles">
+                      <i class="stock-item__circle stock-item__circle--active"></i>
+                      <i class="stock-item__circle stock-item__circle--active"></i>
+                      <i class="stock-item__circle"></i>
+                    </span>
+                    <strong class="stock-item__text">Достаточно</strong>
+                  </div>
+                  <div class="store-item__add">
+                    <div class="counter store-item__add-counter">
+                      <button class="counter__btn counter__btn--minus">
+                        <img src="assets/img/icons/minus-gray.svg" alt="" />
+                      </button>
+                      <input type="number" class="counter__input" value="1" min="1" />
+                      <button class="counter__btn counter__btn--plus">
+                        <img src="assets/img/icons/plus-gray.svg" alt="" />
+                      </button>
+                    </div>
+                    <button type="button" class="but but--primary but--sm store-item__add-btn">
+                      <span>Купить</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="store-item store-list__item">
+                  <div class="text text--semibold store-item__title">Склад в Реутове</div>
+                  <div class="stock-item store-item__stock">
+                    <span class="stock-item__circles">
+                      <i class="stock-item__circle stock-item__circle--active"></i>
+                      <i class="stock-item__circle stock-item__circle--active"></i>
+                      <i class="stock-item__circle stock-item__circle--active"></i>
+                    </span>
+                    <strong class="stock-item__text">Много</strong>
+                  </div>
+                  <div class="store-item__add">
+                    <div class="counter store-item__add-counter">
+                      <button class="counter__btn counter__btn--minus">
+                        <img src="assets/img/icons/minus-gray.svg" alt="" />
+                      </button>
+                      <input type="number" class="counter__input" value="1" min="1" />
+                      <button class="counter__btn counter__btn--plus">
+                        <img src="assets/img/icons/plus-gray.svg" alt="" />
+                      </button>
+                    </div>
+                    <button type="button" class="but but--primary but--sm store-item__add-btn">
+                      <span>Купить</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="store-item store-list__item">
+                  <div class="text text--semibold store-item__title">Склад в Санкт-Петербурге</div>
+                  <div class="stock-item stock-item--gray store-item__stock">
+                    <span class="stock-item__circles">
+                      <i class="stock-item__circle"></i>
+                      <i class="stock-item__circle"></i>
+                      <i class="stock-item__circle"></i>
+                    </span>
+                    <strong class="stock-item__text">Нет в наличии</strong>
+                  </div>
+                  <div class="store-item__add">
+                    <div class="counter store-item__add-counter">
+                      <button class="counter__btn counter__btn--minus">
+                        <img src="assets/img/icons/minus-gray.svg" alt="" />
+                      </button>
+                      <input type="number" class="counter__input" value="1" min="1" />
+                      <button class="counter__btn counter__btn--plus">
+                        <img src="assets/img/icons/plus-gray.svg" alt="" />
+                      </button>
+                    </div>
+                    <button type="button" class="but but--sm store-item__add-btn">
+                      <span>Отправить заявку</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="modal-new__close">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.1/nouislider.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.8.4/smooth-scrollbar.min.js"></script>
@@ -2712,6 +3164,8 @@
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="assets/js/index.js?v=27"></script>
+    <script src="assets/js/cart.js"></script>
+    <script src="assets/js/cart-order.js"></script>
     <!-- pgs js -->
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
