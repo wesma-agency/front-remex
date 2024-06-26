@@ -22,23 +22,14 @@ function toggleAccordion() {
 }
 
 function showCartOrderPopup() {
-  const cartOrderAsideBtn = document.querySelector(".cart-total__list .cart-order-summary");
+  const cartOrderPopup = document.querySelector(".cart-order__popup");
 
-  const cartOrderAsidePopup = document.querySelector(".cart-order__popup");
-  const cartOrderAsidePopupTop = document.querySelector(".cart-order__popup-top");
-
-  const cartOrderAsidePopupBtn = document.querySelector(".cart-order__popup .cart-order__top-btn");
-  const cartOrderAsideAccordion = document.querySelector(".cart-total__list .cart-order__top-btn");
-
-  cartOrderAsideBtn.addEventListener("click", () => {
-    cartOrderAsidePopup.classList.add("active");
-    cartOrderAsidePopupBtn.classList.add("active");
-  });
-
-  cartOrderAsidePopupTop.addEventListener("click", () => {
-    cartOrderAsidePopup.classList.remove("active");
-    cartOrderAsidePopupBtn.classList.remove("active");
-    cartOrderAsideAccordion.classList.remove("active");
+  cartOrderPopup.addEventListener("click", () => {
+    if (cartOrderPopup.classList.contains("active")) {
+      cartOrderPopup.classList.remove("active");
+    } else {
+      cartOrderPopup.classList.add("active");
+    }
   });
 }
 
@@ -64,16 +55,24 @@ const cartOrderSlider = new Swiper(".cart-order-slider", {
   direction: "horizontal",
   slidesPerView: 4,
   spaceBetween: 20,
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 20,
-  //   },
-  //   1140.01: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 30,
-  //   },
-  // },
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    // 639.98: {
+    //   slidesPerView: 3,
+    //   spaceBetween: 20,
+    // },
+    767.98: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1198.98: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
