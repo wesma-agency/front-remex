@@ -14471,6 +14471,9 @@ width: calc(33.33% - 30px);
   display: none;
 }
 
+.cart-order__header-details {
+  display: flex;
+}
 .cart-order__header-store {
   display: flex;
   flex-direction: column;
@@ -14553,6 +14556,9 @@ width: calc(33.33% - 30px);
 }
 .cart-order__header-btn:hover span::before {
   background-color: #fff;
+}
+.cart-order__header-details .cart-order__header-btn {
+  display: none;
 }
 
 .cart-order__body {
@@ -14772,6 +14778,14 @@ width: calc(33.33% - 30px);
 }
 .courier-delivery__date-time {
   flex: 0 0 270px;
+}
+.customer-info__input-date .input__main {
+  display: flex;
+}
+.customer-info__input-date .input-date__calendar {
+  border: none;
+  border-bottom: 1px solid rgba(var(--color-gray--rgb), 0.5);
+  transition: border 0.3s;
 }
 
 .customer-info__input-details span::after,
@@ -15268,19 +15282,6 @@ width: calc(33.33% - 30px);
   }
 }
 
-@media (max-width: 1479.98px) {
-  /* Страница Оформление заказа */
-  /* .cart-order__main {
-    flex: 0 0 850px;
-  }
-  .cart-order__sidebar {
-    flex: 0 0 420px;
-  }
-  .cart-order-list__slider {
-    width: 790px;
-  } */
-}
-
 @media (max-width: 1279.98px) {
   /* Страница Оформление заказа */
   .cart-order__header-btn {
@@ -15308,13 +15309,16 @@ width: calc(33.33% - 30px);
   }
   .cart-order__popup-top-base {
     position: absolute;
-    top: 98px;
+    /* top: 98px; */
     left: 0;
     display: block;
     width: 100%;
     background-color: #f5f5f5;
-    padding: 22px 30px;
+    padding: 25px 30px;
     cursor: pointer;
+  }
+  .cart-order__popup.active {
+    top: 93px;
   }
 }
 
@@ -15657,6 +15661,18 @@ width: calc(33.33% - 30px);
   }
 
   /* Страница оформление заказа */
+  .nav-btns__btn {
+    flex: 1 1 auto;
+  }
+
+  .cart-order__header-details {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .cart-order__popup.active {
+    top: 80px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -15670,6 +15686,134 @@ width: calc(33.33% - 30px);
   .lk_sidebar {
     display: block;
     width: 100% !important;
+  }
+
+  /* Страница оформление заказа */
+  .cart-order__header-logo {
+    align-self: flex-start;
+  }
+  .cart-order__header-details .cart-order__header-btn {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    min-width: 238px;
+  }
+  .cart-order__header-btn {
+    display: none;
+  }
+
+  .cart-order-main {
+    padding-top: 121px;
+  }
+
+  .cart-order__item {
+    padding: 20px;
+  }
+
+  .cart-order__top,
+  .cart-order__tabs-select,
+  .cart-order-list__top {
+    margin-bottom: 30px;
+  }
+
+  .form__customer-info {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+
+  .self-delivery {
+    flex-direction: column;
+  }
+  .self-delivery__column {
+    width: 100%;
+  }
+  .self-delivery__work-schedule {
+    margin-bottom: 30px;
+  }
+
+  .courier-delivery__top {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .courier-delivery__address,
+  .courier-delivery__date-time {
+    flex: 0 0 auto;
+    margin-bottom: 30px;
+  }
+  .courier-delivery__info {
+    margin-bottom: 30px;
+  }
+  .courier-delivery__item:nth-child(1) {
+    margin-bottom: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .courier-delivery__item:nth-child(2) {
+    margin-top: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .another-persone__details,
+  .courier-delivery__comment {
+    display: none;
+  }
+  .another-persone__details.active {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    margin-top: 30px;
+  }
+  .courier-delivery__comment.active {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .another-tk__info-details {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .another-tk__info-search-form {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .another-tk__info-search-form .input,
+  .another-tk__info-search-form .info-search-form__btn {
+    flex: 1 1 auto;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .another-tk__info-delivery-date {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .another-tk__info-props {
+    margin-bottom: 30px;
+  }
+  .another-tk__info-comment {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .another-tk__comment {
+    display: none;
+  }
+  .another-tk__comment.active {
+    display: block;
+    margin-top: 30px;
+  }
+  .cart-order__popup-top-base {
+    display: none;
+  }
+  .cart-order__popup.active {
+    min-width: 100%;
+    top: 83px;
+  }
+  .cart-order__popup.active .cart-order__popup-top {
+    margin-bottom: 0;
+    /* margin-bottom: 20px; */
+  }
+  .payment-descr__text {
+    align-items: flex-start;
   }
 }
 

@@ -178,12 +178,17 @@
               </div>
               <!-- /.header__info -->
 
-              <div class="cart-order__header-store">
-                <div class="header-store__name">Склад на Электрозаводской</div>
-                <div class="header-store__address">Электрозаводская улица, 21с27</div>
-              </div>
-              <div class="cart-order__header-phone">
-                <a href="tel:+74958594981">+7 495 859–49–81</a>
+              <div class="cart-order__header-details">
+                <div class="cart-order__header-store">
+                  <div class="header-store__name">Склад на Электрозаводской</div>
+                  <div class="header-store__address">Электрозаводская улица, 21с27</div>
+                </div>
+                <div class="cart-order__header-phone">
+                  <a href="tel:+74958594981">+7 495 859–49–81</a>
+                </div>
+                <a class="cart-order__header-btn" href="/cart.html">
+                  <span>Вернуться в корзину</span>
+                </a>
               </div>
 
               <form class="search header__search cart-order__header-search" method="get">
@@ -1876,7 +1881,7 @@
         <!-- /.podmenu -->
       </header>
 
-      <main class="main">
+      <main class="main cart-order-main">
         <div class="cart-order">
           <div class="wrapper">
             <div class="cart-order__content">
@@ -2079,6 +2084,9 @@
                                               <div class="input__main">
                                                 <input class="input__field" type="text" data-validate="empty" />
                                                 <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                                <span class="input-date__calendar">
+                                                  <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                                </span>
                                               </div>
                                               <div class="input__error">Поле обязательно для заполнения</div>
                                             </div>
@@ -2443,6 +2451,7 @@
                         </p>
                       </div>
                     </div>
+
                     <div class="cart-order__popup">
                       <div class="cart-order__popup-top cart-order__top">
                         <div class="cart-order-summary__info">
