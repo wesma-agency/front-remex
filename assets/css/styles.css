@@ -16187,3 +16187,17 @@ span.readMore {
 .appeal-author__title {
   color: #000;
 }
+
+
+.successfully-form{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  padding: 40px 50px; 
+  text-align: center;
+  gap:20px;
+}
+
+.successfully-form>svg>path{
+  fill:#004ada;
+}
