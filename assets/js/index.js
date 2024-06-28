@@ -352,10 +352,21 @@ $editForms.forEach(($editForm) => {
   });
 });
 
+/* Form Close */
+function closeForm(form, successfullyFormDiv){
+  form.closest(".modal-new").classList.remove("modal-new--active");
+  
+  form.style.display="block";
+  successfullyFormDiv.remove();
+}
+
+
 /* Form validate */
 const $forms = document.querySelectorAll(".js-form");
 $forms.forEach(($form) => {
   $form.addEventListener("submit", (e) => {
+    const urlForm = $form.querySelector('input[name="route"]').value;
+    console.log(urlForm);
 
     e.preventDefault();
 
@@ -381,9 +392,48 @@ $forms.forEach(($form) => {
         isError = true;
         return;
       } 
-    }); 
+    });
+    
+    const successfullyFormDiv=document.createElement('div');
+    successfullyFormDiv.innerHTML=`<div class="successfully-form">
+          <div class="title3 title3--lh-3 as9__title"> Отправлено успешно!</div>
+          <svg
+            width="50px"
+            height="50px"
+            viewBox="0 0 14 14"
+            role="img"
+            focusable="false"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#43a047"
+              d="M1.00000001 7.71134025l3.83505154 3.8041237 8.16494844-8.16494844-.86597938-.86597938L4.83505155 9.7835052 1.86597939 6.81443303z"
+            />
+          </svg>
+          </div>`
+
     if (!isError){
-      window.location.reload();
+      fetch(urlForm, {
+        method: 'POST',
+        body: $form,
+      })
+        .then((response) => {
+          // Обрабатываем ответ от сервера
+          console.log(response);
+          console.log(successfullyFormDiv);
+          template=$form.innerHTML;
+          $form.style.display="none";
+
+          $form.parentElement.insertAdjacentElement(`afterbegin`, successfullyFormDiv);
+          setTimeout(closeForm, 3000, $form, successfullyFormDiv, template);
+
+        })
+        .catch((error) => {
+          // Обрабатываем ошибку
+          console.error(error);
+        });
+  
     }
     
     const submitModal = $form.dataset.submitModal;
