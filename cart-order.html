@@ -79,7 +79,7 @@
         <div class="header__top cart-order__header-top">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__top-container-elem">
-              <a href="index.html" id="headerTopContainer" class="logo header__logo">
+              <a href="index.html" id="headerTopContainer" class="logo header__logo cart-order__header-logo">
                 <img src="assets/img/design/logostart.svg" alt="" />
                 <img src="assets/img/design/logo.svg" alt="" />
               </a>
@@ -178,12 +178,17 @@
               </div>
               <!-- /.header__info -->
 
-              <div class="cart-order__header-store">
-                <div class="header-store__name">Склад на Электрозаводской</div>
-                <div class="header-store__address">Электрозаводская улица, 21с27</div>
-              </div>
-              <div class="cart-order__header-phone">
-                <a href="tel:+74958594981">+7 495 859–49–81</a>
+              <div class="cart-order__header-details">
+                <div class="cart-order__header-store">
+                  <div class="header-store__name">Склад на Электрозаводской</div>
+                  <div class="header-store__address">Электрозаводская улица, 21с27</div>
+                </div>
+                <div class="cart-order__header-phone">
+                  <a href="tel:+74958594981">+7 495 859–49–81</a>
+                </div>
+                <a class="cart-order__header-btn" href="/cart.html">
+                  <span>Вернуться в корзину</span>
+                </a>
               </div>
 
               <form class="search header__search cart-order__header-search" method="get">
@@ -353,7 +358,11 @@
         <div class="header__bottom cart-order__header-bottom">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__bottom-container-elem">
-              <button id="headerCatalogBtn" class="catalog-btn header__catalog-btn" type="button" data-mobile-text="Меню">
+              <!-- <button
+                id="headerCatalogBtn"
+                class="catalog-btn header__catalog-btn cart-order__catalog-btn"
+                type="button"
+                data-mobile-text="Меню">
                 <i>
                   <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_3446_2275)">
@@ -375,7 +384,7 @@
                   </svg>
                 </i>
                 <span>Каталог</span>
-              </button>
+              </button> -->
               <nav class="menu menu--ml35">
                 <ul>
                   <li>
@@ -1872,7 +1881,7 @@
         <!-- /.podmenu -->
       </header>
 
-      <main class="main">
+      <main class="main cart-order-main">
         <div class="cart-order">
           <div class="wrapper">
             <div class="cart-order__content">
@@ -1892,13 +1901,6 @@
 
                     <div class="cart-order__list">
                       <div class="cart-order__item">
-                        <div class="select select--border cart-order__tabs-select with-adaptive__menu" data-tabs-name="cart-order-customer">
-                          <select class="select__field">
-                            <option value="1">Физическое лицо</option>
-                            <option value="2">Юридическое лицо</option>
-                          </select>
-                        </div>
-
                         <div class="accordion accordion--active">
                           <div class="cart-order__top accordion__btn">
                             <div class="cart-order__top-number">1</div>
@@ -1909,6 +1911,15 @@
                           </div>
                           <div class="accordion__content">
                             <div class="accordion__main">
+                              <div
+                                class="select select--border cart-order__tabs-select with-adaptive__menu"
+                                data-tabs-name="cart-order-customer">
+                                <select class="select__field">
+                                  <option value="1">Физическое лицо</option>
+                                  <option value="2">Юридическое лицо</option>
+                                </select>
+                              </div>
+
                               <div
                                 class="tabs-btns nav-btns cart-order__tabs-btns no-adaptive__menu-tab"
                                 data-tabs-name="cart-order-customer">
@@ -1988,14 +1999,6 @@
                       </div>
 
                       <div class="cart-order__item">
-                        <div class="select select--border cart-order__tabs-select with-adaptive__menu" data-tabs-name="cart-order-delivery">
-                          <select class="select__field">
-                            <option value="1">Самовывоз</option>
-                            <option value="2">Доставка</option>
-                            <option value="3">Доставка до транспортной компании</option>
-                          </select>
-                        </div>
-
                         <div class="accordion accordion">
                           <div class="cart-order__top accordion__btn">
                             <div class="cart-order__top-number">2</div>
@@ -2006,6 +2009,16 @@
                           </div>
                           <div class="accordion__content">
                             <div class="accordion__main">
+                              <div
+                                class="select select--border cart-order__tabs-select with-adaptive__menu"
+                                data-tabs-name="cart-order-delivery">
+                                <select class="select__field">
+                                  <option value="1">Самовывоз</option>
+                                  <option value="2">Доставка</option>
+                                  <option value="3">Доставка до транспортной компании</option>
+                                </select>
+                              </div>
+
                               <div
                                 class="tabs-btns nav-btns cart-order__tabs-btns no-adaptive__menu-tab"
                                 data-tabs-name="cart-order-delivery">
@@ -2071,6 +2084,9 @@
                                               <div class="input__main">
                                                 <input class="input__field" type="text" data-validate="empty" />
                                                 <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                                <span class="input-date__calendar">
+                                                  <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                                </span>
                                               </div>
                                               <div class="input__error">Поле обязательно для заполнения</div>
                                             </div>
@@ -2239,14 +2255,6 @@
                       </div>
 
                       <div class="cart-order__item">
-                        <div class="select select--border cart-order__tabs-select with-adaptive__menu" data-tabs-name="cart-order-payment">
-                          <select class="select__field">
-                            <option value="1">Онлайн / QR код</option>
-                            <option value="2">Наличными</option>
-                            <option value="3">Оплата по счету</option>
-                          </select>
-                        </div>
-
                         <div class="accordion accordion">
                           <div class="cart-order__top accordion__btn">
                             <div class="cart-order__top-number">3</div>
@@ -2257,6 +2265,16 @@
                           </div>
                           <div class="accordion__content">
                             <div class="accordion__main">
+                              <div
+                                class="select select--border cart-order__tabs-select with-adaptive__menu"
+                                data-tabs-name="cart-order-payment">
+                                <select class="select__field">
+                                  <option value="1">Онлайн / QR код</option>
+                                  <option value="2">Наличными</option>
+                                  <option value="3">Оплата по счету</option>
+                                </select>
+                              </div>
+
                               <div
                                 class="tabs-btns nav-btns cart-order__tabs-btns no-adaptive__menu-tab"
                                 data-tabs-name="cart-order-payment">
@@ -2422,8 +2440,18 @@
                 </div>
 
                 <aside class="cart-order__sidebar">
-                  <div class="cart-total cart-fixed">
-                    <div class="title2 cart-total__title cart-fixed__none cart-order-total__title">Ваш заказ</div>
+                  <div class="cart-total cart-order-total">
+                    <div class="title2 cart-total__title cart-order-total__title">Ваш заказ</div>
+                    <div class="cart-order__popup-top-base">
+                      <div class="cart-order-summary__info">
+                        <p>Оформляем 10 товаров за</p>
+                        <p class="cart-total__item-value cart-order-summary__value">
+                          <span class="cart-total__item-value-num cart-total__count">760 000 580</span>
+                          ₽
+                        </p>
+                      </div>
+                    </div>
+
                     <div class="cart-order__popup">
                       <div class="cart-order__popup-top cart-order__top">
                         <div class="cart-order-summary__info">
@@ -2438,8 +2466,8 @@
                         </div>
                       </div>
                       <div class="cart-order__popup-bottom">
-                        <div class="cart-order__aside-list">
-                          <div class="cart-order__aside-item aside-item__devider">
+                        <div class="cart-order__product-list">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</div>
                             <div class="aside-item__count">
                               4
@@ -2450,7 +2478,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Профиль LNT белый</div>
                             <div class="aside-item__count">
                               27
@@ -2461,7 +2489,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
                             <div class="aside-item__count">
                               10
@@ -2472,7 +2500,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
                             <div class="aside-item__count">
                               46
@@ -2483,7 +2511,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
                             <div class="aside-item__count">
                               59
@@ -2494,7 +2522,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</div>
                             <div class="aside-item__count">
                               4
@@ -2505,7 +2533,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Профиль LNT белый</div>
                             <div class="aside-item__count">
                               27
@@ -2516,7 +2544,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
                             <div class="aside-item__count">
                               10
@@ -2527,7 +2555,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
                             <div class="aside-item__count">
                               46
@@ -2538,7 +2566,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
                             <div class="aside-item__count">
                               59
@@ -2549,7 +2577,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат</div>
                             <div class="aside-item__count">
                               4
@@ -2560,7 +2588,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Профиль LNT белый</div>
                             <div class="aside-item__count">
                               27
@@ -2571,7 +2599,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
                             <div class="aside-item__count">
                               10
@@ -2582,7 +2610,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item aside-item__devider">
+                          <div class="cart-order__product-item aside-item__devider">
                             <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
                             <div class="aside-item__count">
                               46
@@ -2593,7 +2621,7 @@
                               <span>₽</span>
                             </div>
                           </div>
-                          <div class="cart-order__aside-item">
+                          <div class="cart-order__product-item">
                             <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
                             <div class="aside-item__count">
                               59
@@ -2609,7 +2637,7 @@
                     </div>
 
                     <div class="cart-total__list">
-                      <div class="cart-total__item cart-fixed__none cart-order-summary">
+                      <div class="cart-total__item cart-order-summary">
                         <div class="accordion">
                           <div class="accordion__btn cart-order__top">
                             <div class="cart-order-summary__info">
@@ -2625,8 +2653,8 @@
                           </div>
                           <div class="accordion__content">
                             <div class="accordion__main">
-                              <div class="cart-order__aside-list">
-                                <div class="cart-order__aside-item">
+                              <div class="cart-order__product-list">
+                                <div class="cart-order__product-item aside-item__devider">
                                   <div class="aside-item__name">
                                     Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
                                   </div>
@@ -2639,7 +2667,7 @@
                                     <span>₽</span>
                                   </div>
                                 </div>
-                                <div class="cart-order__aside-item">
+                                <div class="cart-order__product-item aside-item__devider">
                                   <div class="aside-item__name">Профиль LNT белый</div>
                                   <div class="aside-item__count">
                                     27
@@ -2650,7 +2678,7 @@
                                     <span>₽</span>
                                   </div>
                                 </div>
-                                <div class="cart-order__aside-item">
+                                <div class="cart-order__product-item aside-item__devider">
                                   <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
                                   <div class="aside-item__count">
                                     10
@@ -2661,7 +2689,7 @@
                                     <span>₽</span>
                                   </div>
                                 </div>
-                                <div class="cart-order__aside-item">
+                                <div class="cart-order__product-item aside-item__devider">
                                   <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
                                   <div class="aside-item__count">
                                     46
@@ -2672,7 +2700,121 @@
                                     <span>₽</span>
                                   </div>
                                 </div>
-                                <div class="cart-order__aside-item">
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
+                                  <div class="aside-item__count">
+                                    59
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    1 964 185 134
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">
+                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                  </div>
+                                  <div class="aside-item__count">
+                                    4
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    100 589 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Профиль LNT белый</div>
+                                  <div class="aside-item__count">
+                                    27
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    320 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
+                                  <div class="aside-item__count">
+                                    10
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    589 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
+                                  <div class="aside-item__count">
+                                    46
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    200 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
+                                  <div class="aside-item__count">
+                                    59
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    1 964 185 134
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">
+                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                  </div>
+                                  <div class="aside-item__count">
+                                    4
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    100 589 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Профиль LNT белый</div>
+                                  <div class="aside-item__count">
+                                    27
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    320 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
+                                  <div class="aside-item__count">
+                                    10
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    589 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item aside-item__devider">
+                                  <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
+                                  <div class="aside-item__count">
+                                    46
+                                    <span>шт.</span>
+                                  </div>
+                                  <div class="aside-item__price">
+                                    200 000
+                                    <span>₽</span>
+                                  </div>
+                                </div>
+                                <div class="cart-order__product-item">
                                   <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
                                   <div class="aside-item__count">
                                     59
@@ -2688,34 +2830,34 @@
                           </div>
                         </div>
                       </div>
-                      <div class="cart-total__item cart-fixed__none cart-total__item--no-border">
+                      <div class="cart-total__item cart-total__item--no-border">
                         <span>Выбрано товаров</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__count">4</span>
                           шт.
                         </span>
                       </div>
-                      <div class="cart-total__item cart-fixed__none">
+                      <div class="cart-total__item">
                         <span>Вес заказа</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__mass">8, 51</span>
                           кг
                         </span>
                       </div>
-                      <div class="cart-total__item cart-fixed__none">
+                      <div class="cart-total__item">
                         <span>Тип получения</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__delivery-method">Самовывоз</span>
                         </span>
                       </div>
-                      <div class="cart-total__item cart-fixed__none">
+                      <div class="cart-total__item">
                         <span>Стоимость доставки</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__delivery-price">500</span>
                           ₽
                         </span>
                       </div>
-                      <div class="cart-total__item cart-fixed__none">
+                      <div class="cart-total__item">
                         <span>Дата доставки</span>
                         <span class="cart-total__item-value">
                           <span class="cart-total__item-value-num cart-total__delivery-date">14.09.2024</span>
@@ -2729,7 +2871,7 @@
                           ₽
                         </span>
                       </div>
-                      <div class="cart-total__item cart-total__item--no-border cart-fixed__none">
+                      <div class="cart-total__item cart-total__item--no-border">
                         <span>С учетом предложения</span>
                         <span class="cart-total__item-value cart-total__item-value--xl cart-total__item-value--success">
                           <span class="cart-total__item-value-num cart-total__price-discount">6 500</span>
