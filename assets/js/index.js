@@ -353,11 +353,19 @@ $editForms.forEach(($editForm) => {
 });
 
 /* Form Close */
-function closeForm(form, successfullyFormDiv){
+function closeForm(form, successfullyFormDiv, inputs ){
   form.closest(".modal-new").classList.remove("modal-new--active");
-  
   form.style.display="block";
   successfullyFormDiv.remove();
+  inputs.forEach((item)=>{
+
+    let input=item.querySelector(".input__field");
+    input.value='';
+
+    let placeholderInput=item.querySelector(".input__placeholder");
+    placeholderInput.classList.remove("input__placeholder--hide");
+  })
+
 }
 
 
@@ -366,8 +374,6 @@ const $forms = document.querySelectorAll(".js-form");
 $forms.forEach(($form) => {
   $form.addEventListener("submit", (e) => {
     const urlForm = $form.querySelector('input[name="route"]').value;
-    console.log(urlForm);
-
     e.preventDefault();
 
     let isError = false;
@@ -391,9 +397,9 @@ $forms.forEach(($form) => {
         $item.classList.add("input--error");
         isError = true;
         return;
-      } 
+      }
     });
-    
+
     const successfullyFormDiv=document.createElement('div');
     successfullyFormDiv.innerHTML=`<div class="successfully-form">
           <div class="title3 title3--lh-3 as9__title"> Отправлено успешно!</div>
@@ -416,36 +422,31 @@ $forms.forEach(($form) => {
     if (!isError){
       fetch(urlForm, {
         method: 'POST',
-        body: $form,
+        body: new FormData($form),
       })
         .then((response) => {
           // Обрабатываем ответ от сервера
-          console.log(response);
-          console.log(successfullyFormDiv);
-          template=$form.innerHTML;
           $form.style.display="none";
-
           $form.parentElement.insertAdjacentElement(`afterbegin`, successfullyFormDiv);
-          setTimeout(closeForm, 3000, $form, successfullyFormDiv, template);
+          setTimeout(closeForm, 3000, $form, successfullyFormDiv, $items);
 
         })
         .catch((error) => {
           // Обрабатываем ошибку
           console.error(error);
         });
-  
-    }
-    
+
+     }
+
     const submitModal = $form.dataset.submitModal;
     if (isError || !submitModal) {
       return;
     }
     const $modal = document.querySelector(`.modal-new[data-name="${submitModal}"`);
     openModal($modal);
-    
-  
-  });
 
+
+  });
   const $formItems = $form.querySelectorAll(".js-form-input");
   $formItems.forEach(($item) => {
     const $input = $item.querySelector(".input__field");
@@ -2111,3 +2112,19 @@ addEventListener("DOMContentLoaded", () => {
 
 /*for BUTTON FORM RELOAD*/
 
+
+addEventListener("DOMContentLoaded", () => {
+  const sections= document.querySelectorAll("details.news-section__tag");
+  console.log(sections);
+  if(sections){
+  sections.forEach(section => {
+    const list=section.querySelector(".catalog-tag__list");
+    const button=section.querySelector(".catalog-tag__btn")
+    if(list.querySelector("a.link")===null)
+    {
+      button.classList.add("catalog-tag__item--none");
+      button.classList.remove("catalog-tag__btn");
+      list.remove();
+    }
+  })}
+});
