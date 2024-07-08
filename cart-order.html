@@ -18,6 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/normalize.css?v=27" />
+    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css?v=27" />
     <!-- pgs css -->
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
@@ -358,7 +359,7 @@
         <div class="header__bottom cart-order__header-bottom">
           <div class="container">
             <div class="container__elem container__elem--12 container__elem--df container__elem--aic header__bottom-container-elem">
-              <!-- <button
+              <button
                 id="headerCatalogBtn"
                 class="catalog-btn header__catalog-btn cart-order__catalog-btn"
                 type="button"
@@ -384,7 +385,7 @@
                   </svg>
                 </i>
                 <span>Каталог</span>
-              </button> -->
+              </button>
               <nav class="menu menu--ml35">
                 <ul>
                   <li>
@@ -1987,7 +1988,18 @@
                                             <span class="checkbox__text">ИП Смирнов</span>
                                           </label>
                                         </div>
-                                        <button class="cart-order__add-customer" type="button">Добавить юр. лицо</button>
+
+                                        <!-- Выводить это сообщение, если список организаций пуст -->
+                                        <div class="no-customer__message">
+                                          <p>На данный момент у вас нет добавленных организаций</p>
+                                        </div>
+
+                                        <button
+                                          class="cart-order__add-customer js-open-modal"
+                                          data-modal-name="new-legal-entity"
+                                          type="button">
+                                          Добавить юр. лицо
+                                        </button>
                                       </div>
                                     </div>
                                   </div>
@@ -2081,13 +2093,15 @@
                                           </div>
                                           <div class="courier-delivery__date-time">
                                             <div class="input js-form-input customer-info__input-date">
-                                              <div class="input__main">
-                                                <input class="input__field" type="text" data-validate="empty" />
-                                                <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
-                                                <span class="input-date__calendar">
-                                                  <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
-                                                </span>
-                                              </div>
+                                              <a class="choice-date-time__link js-open-modal" data-modal-name="choice-date-time">
+                                                <div class="input__main">
+                                                  <input class="input__field" type="" data-validate="empty" />
+                                                  <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                                  <span class="input-date__calendar">
+                                                    <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                                  </span>
+                                                </div>
+                                              </a>
                                               <div class="input__error">Поле обязательно для заполнения</div>
                                             </div>
                                           </div>
@@ -2104,59 +2118,120 @@
                                             <div class="input__error">Поле обязательно для заполнения</div>
                                           </div>
                                         </div>
+                                      </div>
 
-                                        <div class="courier-delivery__details">
-                                          <div class="courier-delivery__item">
-                                            <div class="courier__label delivery__label">
-                                              <input
-                                                class="toggle-input"
-                                                type="checkbox"
-                                                name="another-persone"
-                                                value="Получает другой человек" />
-                                              <span class="toggle-switch"></span>
-                                              <span class="toggle-text">Получает другой человек</span>
-                                            </div>
+                                      <!-- Показывать этот div, если пользователь авторизован и у него есть список доступных адресов для доставки -->
+                                      <div class="courier-delivery__has-address">
+                                        <div class="has-address__col">
+                                          <div class="has-address__col-title">
+                                            Адрес доставки
+                                            <span>*</span>
+                                          </div>
+                                          <div class="cart-order-list cart-order__address-list">
+                                            <div class="address-list__main">
+                                              <div class="form__choice-adress">
+                                                <div class="address__list">
+                                                  <label class="checkbox filter__checkbox address__item">
+                                                    <input
+                                                      class="checkbox__input address-radio"
+                                                      type="radio"
+                                                      name="address__item"
+                                                      value="address"
+                                                      checked="" />
+                                                    <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                    <span class="checkbox__text">г. Москва, пр-кт Вернадского, д.3А</span>
+                                                  </label>
+                                                  <label class="checkbox filter__checkbox address__item">
+                                                    <input
+                                                      class="checkbox__input address-radio"
+                                                      type="radio"
+                                                      name="address__item"
+                                                      value="ИП Смирнов" />
+                                                    <span class="checkbox__switch checkbox__switch--circle"></span>
+                                                    <span class="checkbox__text">г. Москва, ул. Ленина, д.15, кв.5</span>
+                                                  </label>
+                                                </div>
 
-                                            <div class="another-persone__details">
-                                              <div class="input js-form-input another-persone__input">
-                                                <div class="input__main">
-                                                  <input class="input__field" type="text" data-validate="empty" />
-                                                  <span class="input__placeholder input__placeholder--required">Имя</span>
-                                                </div>
-                                                <div class="input__error">Поле обязательно для заполнения</div>
-                                              </div>
-                                              <div class="input js-form-input another-persone__input">
-                                                <div class="input__main">
-                                                  <input
-                                                    class="input__field js-imask"
-                                                    type="text"
-                                                    data-validate="phone"
-                                                    data-mask="+{7} (000) 000-00-00" />
-                                                  <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
-                                                </div>
-                                                <div class="input__error">Поле обязательно для заполнения</div>
+                                                <button
+                                                  class="cart-order__add-customer js-open-modal"
+                                                  data-modal-name="new-address"
+                                                  type="button">
+                                                  Новый адрес
+                                                </button>
                                               </div>
                                             </div>
                                           </div>
-
-                                          <div class="courier-delivery__item">
-                                            <div class="courier__label delivery__label">
-                                              <input
-                                                class="toggle-input"
-                                                type="checkbox"
-                                                name="delivery-comment"
-                                                value="Комментарий к доставке" />
-                                              <span class="toggle-switch"></span>
-                                              <span class="toggle-text">Комментарий к доставке</span>
+                                        </div>
+                                        <div class="has-address__col">
+                                          <div class="input js-form-input customer-info__input-date">
+                                            <div class="input__main">
+                                              <input class="input__field" type="text" data-validate="empty" />
+                                              <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                              <span class="input-date__calendar">
+                                                <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                              </span>
                                             </div>
+                                            <div class="input__error">Поле обязательно для заполнения</div>
+                                          </div>
+                                        </div>
+                                      </div>
 
-                                            <div class="input js-form-input courier-delivery__comment">
+                                      <!-- Показывать этот div, если у пользователь авторизован и у него нет доступных адресов доставки-->
+                                      <div class="no-address__message">
+                                        <p>На данный момент у вас нет добавленных адресов доставки</p>
+                                      </div>
+
+                                      <div class="courier-delivery__details">
+                                        <div class="courier-delivery__item">
+                                          <div class="courier__label delivery__label">
+                                            <input
+                                              class="toggle-input"
+                                              type="checkbox"
+                                              name="another-persone"
+                                              value="Получает другой человек" />
+                                            <span class="toggle-switch"></span>
+                                            <span class="toggle-text">Получает другой человек</span>
+                                          </div>
+
+                                          <div class="another-persone__details">
+                                            <div class="input js-form-input another-persone__input">
                                               <div class="input__main">
                                                 <input class="input__field" type="text" data-validate="empty" />
-                                                <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
+                                                <span class="input__placeholder input__placeholder--required">Имя</span>
                                               </div>
                                               <div class="input__error">Поле обязательно для заполнения</div>
                                             </div>
+                                            <div class="input js-form-input another-persone__input">
+                                              <div class="input__main">
+                                                <input
+                                                  class="input__field js-imask"
+                                                  type="text"
+                                                  data-validate="phone"
+                                                  data-mask="+{7} (000) 000-00-00" />
+                                                <span class="input__placeholder input__placeholder--required">+7 (_ _ _) _ _-_ _</span>
+                                              </div>
+                                              <div class="input__error">Поле обязательно для заполнения</div>
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                        <div class="courier-delivery__item">
+                                          <div class="courier__label delivery__label">
+                                            <input
+                                              class="toggle-input"
+                                              type="checkbox"
+                                              name="delivery-comment"
+                                              value="Комментарий к доставке" />
+                                            <span class="toggle-switch"></span>
+                                            <span class="toggle-text">Комментарий к доставке</span>
+                                          </div>
+
+                                          <div class="input js-form-input courier-delivery__comment">
+                                            <div class="input__main">
+                                              <input class="input__field" type="text" data-validate="empty" />
+                                              <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
+                                            </div>
+                                            <div class="input__error">Поле обязательно для заполнения</div>
                                           </div>
                                         </div>
                                       </div>
@@ -2169,80 +2244,155 @@
                                     <div class="cart-order-list__main">
                                       <div class="form__choice-tk">
                                         <div class="tk__list">
-                                          <label class="checkbox filter__checkbox tk__item">
-                                            <input class="checkbox__input tk-radio" type="radio" name="tk" value="Мои ТК" checked />
-                                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                                            <span class="checkbox__text">Мои ТК</span>
-                                          </label>
-                                          <label class="checkbox filter__checkbox tk__item">
-                                            <input class="checkbox__input tk-radio" type="radio" name="tk" value="Рекомендованные ТК" />
-                                            <span class="checkbox__switch checkbox__switch--circle"></span>
-                                            <span class="checkbox__text">Рекомендованные ТК</span>
-                                          </label>
+                                          <div class="tk__list-item">
+                                            <label class="checkbox filter__checkbox tk__item">
+                                              <input
+                                                class="checkbox__input tk-radio"
+                                                id="my-tk-item"
+                                                type="radio"
+                                                name="tk"
+                                                value="Мои ТК"
+                                                checked />
+                                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                                              <span class="checkbox__text">Мои ТК</span>
+                                            </label>
+                                          </div>
+                                          <div class="tk__list-item">
+                                            <label class="checkbox filter__checkbox tk__item">
+                                              <input
+                                                class="checkbox__input tk-radio"
+                                                id="recomendeed-tk-list"
+                                                type="radio"
+                                                name="tk"
+                                                value="Рекомендованные ТК" />
+                                              <span class="checkbox__switch checkbox__switch--circle"></span>
+                                              <span class="checkbox__text">Рекомендованные ТК</span>
+                                            </label>
+                                          </div>
                                         </div>
-                                        <a class="choice-tk__link">Выбрать ТК из списка</a>
                                       </div>
 
-                                      <div class="another-tk">
-                                        <div class="another-tk__label delivery__label">
+                                      <!-- Показывать этот div, если список транспортных компаний пуст -->
+                                      <div class="no-tk__message">
+                                        <p>В списке ещё нет транспортных компаний</p>
+                                      </div>
+
+                                      <div class="my-tk" id="my-tk-item">
+                                        <label class="checkbox filter__checkbox my-tk__item">
+                                          <input
+                                            class="checkbox__input my-tk-radio"
+                                            type="radio"
+                                            name="my-tk"
+                                            value="ООО Быстрые"
+                                            checked />
+                                          <span class="checkbox__switch checkbox__switch--circle"></span>
+                                          <span class="checkbox__text">ООО Быстрые</span>
+                                        </label>
+                                        <div class="my-tk__info">
+                                          <p>ООО Быстрые</p>
+                                          <p>ИНН 7722327689</p>
+                                          <p>г. Новосибирск, ул. Кривощековская, д. 15, корп. 1, этаж 1,2</p>
+                                        </div>
+                                      </div>
+
+                                      <div class="recomended-tk__list d-none" id="recomendeed-tk-list">
+                                        <div class="recomended-tk__item">
+                                          <label class="checkbox filter__checkbox">
+                                            <input
+                                              class="checkbox__input recomended-tk-radio"
+                                              type="radio"
+                                              name="recomended-tk"
+                                              value="ООО Быстрые"
+                                              checked />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">ООО Быстрые</span>
+                                          </label>
+                                        </div>
+                                        <div class="recomended-tk__item">
+                                          <label class="checkbox filter__checkbox">
+                                            <input
+                                              class="checkbox__input recomended-tk-radio"
+                                              type="radio"
+                                              name="recomended-tk"
+                                              value="АО Линии" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">АО Линии</span>
+                                          </label>
+                                        </div>
+                                        <div class="recomended-tk__item">
+                                          <label class="checkbox filter__checkbox">
+                                            <input
+                                              class="checkbox__input recomended-tk-radio"
+                                              type="radio"
+                                              name="recomended-tk"
+                                              value="Ryder" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">Ryder</span>
+                                          </label>
+                                        </div>
+                                        <div class="recomended-tk__item">
+                                          <label class="checkbox filter__checkbox">
+                                            <input
+                                              class="checkbox__input recomended-tk-radio"
+                                              type="radio"
+                                              name="recomended-tk"
+                                              value="Geodis" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">Geodis</span>
+                                          </label>
+                                        </div>
+                                        <div class="recomended-tk__item">
+                                          <label class="checkbox filter__checkbox">
+                                            <input
+                                              class="checkbox__input recomended-tk-radio"
+                                              type="radio"
+                                              name="recomended-tk"
+                                              value="C.H. Robinson" />
+                                            <span class="checkbox__switch checkbox__switch--circle"></span>
+                                            <span class="checkbox__text">C.H. Robinson</span>
+                                          </label>
+                                        </div>
+                                      </div>
+
+                                      <a class="choice-tk__link js-open-modal" data-modal-name="choice-tk">Выбрать ТК из списка</a>
+
+                                      <div class="tk__info-delivery-date">
+                                        <div class="input js-form-input tk__input-date">
+                                          <a class="choice-date-time__link js-open-modal" data-modal-name="choice-date-time">
+                                            <div class="input__main">
+                                              <input class="input__field" type="" data-validate="empty" />
+                                              <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                              <span class="input-date__calendar">
+                                                <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                              </span>
+                                            </div>
+                                          </a>
+                                          <div class="input__error">Поле обязательно для заполнения</div>
+                                        </div>
+                                      </div>
+
+                                      <div class="tk__info-props">
+                                        <p>ООО Филькина грамота</p>
+                                        <p>ИНН 7722327689</p>
+                                        <p>г. Новосибирск, ул. Кривощековская, д. 15, корп. 1, этаж 1,2</p>
+                                      </div>
+
+                                      <div class="tk__info-comment">
+                                        <div class="tk__label-comment delivery__label">
                                           <input
                                             class="toggle-input"
                                             type="checkbox"
                                             name="delivery-comment"
                                             value="Комментарий к доставке" />
                                           <span class="toggle-switch"></span>
-                                          <span class="toggle-text">Предложить другую ТК</span>
+                                          <span class="toggle-text">Комментарий к доставке</span>
                                         </div>
-
-                                        <div class="another-tk__info">
-                                          <div class="another-tk__info-details">
-                                            <div class="another-tk__info-search-form">
-                                              <div class="input js-form-input info-search-form__input">
-                                                <div class="input__main">
-                                                  <input class="input__field" type="text" data-validate="empty" />
-                                                  <span class="input__placeholder input__placeholder--required">
-                                                    ИНН транспортной компании
-                                                  </span>
-                                                </div>
-                                                <div class="input__error">Поле обязательно для заполнения</div>
-                                              </div>
-                                              <div class="info-search-form__btn" type="button">Подтвердить</div>
-                                            </div>
-                                            <div class="another-tk__info-delivery-date">
-                                              <div class="input js-form-input another-tk__input-date">
-                                                <div class="input__main">
-                                                  <input class="input__field" type="text" data-validate="empty" />
-                                                  <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
-                                                </div>
-                                                <div class="input__error">Поле обязательно для заполнения</div>
-                                              </div>
-                                            </div>
+                                        <div class="input js-form-input tk__comment">
+                                          <div class="input__main">
+                                            <input class="input__field" type="text" data-validate="empty" />
+                                            <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
                                           </div>
-
-                                          <div class="another-tk__info-props">
-                                            <p>ООО Филькина грамота</p>
-                                            <p>ИНН 7722327689</p>
-                                            <p>г. Новосибирск, ул. Кривощековская, д. 15, корп. 1, этаж 1,2</p>
-                                          </div>
-
-                                          <div class="another-tk__info-comment">
-                                            <div class="another-tk__label-comment delivery__label">
-                                              <input
-                                                class="toggle-input"
-                                                type="checkbox"
-                                                name="delivery-comment"
-                                                value="Комментарий к доставке" />
-                                              <span class="toggle-switch"></span>
-                                              <span class="toggle-text">Комментарий к доставке</span>
-                                            </div>
-                                            <div class="input js-form-input another-tk__comment">
-                                              <div class="input__main">
-                                                <input class="input__field" type="text" data-validate="empty" />
-                                                <span class="input__placeholder input__placeholder--required">Введите комментарий</span>
-                                              </div>
-                                              <div class="input__error">Поле обязательно для заполнения</div>
-                                            </div>
-                                          </div>
+                                          <div class="input__error">Поле обязательно для заполнения</div>
                                         </div>
                                       </div>
                                     </div>
@@ -2637,199 +2787,6 @@
                     </div>
 
                     <div class="cart-total__list">
-                      <div class="cart-total__item cart-order-summary">
-                        <div class="accordion">
-                          <div class="accordion__btn cart-order__top">
-                            <div class="cart-order-summary__info">
-                              <p>Оформляем 10 товаров за</p>
-                              <p class="cart-total__item-value cart-order-summary__value">
-                                <span class="cart-total__item-value-num cart-total__count">760 000 580</span>
-                                ₽
-                              </p>
-                            </div>
-                            <div class="cart-order-summary__btn cart-order__top-btn">
-                              <img src="assets/img/icons/right-gray.svg" alt="icon" />
-                            </div>
-                          </div>
-                          <div class="accordion__content">
-                            <div class="accordion__main">
-                              <div class="cart-order__product-list">
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">
-                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
-                                  </div>
-                                  <div class="aside-item__count">
-                                    4
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    100 589 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Профиль LNT белый</div>
-                                  <div class="aside-item__count">
-                                    27
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    320 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
-                                  <div class="aside-item__count">
-                                    10
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    589 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
-                                  <div class="aside-item__count">
-                                    46
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    200 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
-                                  <div class="aside-item__count">
-                                    59
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    1 964 185 134
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">
-                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
-                                  </div>
-                                  <div class="aside-item__count">
-                                    4
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    100 589 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Профиль LNT белый</div>
-                                  <div class="aside-item__count">
-                                    27
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    320 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
-                                  <div class="aside-item__count">
-                                    10
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    589 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
-                                  <div class="aside-item__count">
-                                    46
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    200 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
-                                  <div class="aside-item__count">
-                                    59
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    1 964 185 134
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">
-                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
-                                  </div>
-                                  <div class="aside-item__count">
-                                    4
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    100 589 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Профиль LNT белый</div>
-                                  <div class="aside-item__count">
-                                    27
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    320 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное</div>
-                                  <div class="aside-item__count">
-                                    10
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    589 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item aside-item__devider">
-                                  <div class="aside-item__name">Плёнка ORACAL 641 (1,26×50 м) 10 белая</div>
-                                  <div class="aside-item__count">
-                                    46
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    200 000
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                                <div class="cart-order__product-item">
-                                  <div class="aside-item__name">Веер цветов плёнки ORACAL-641</div>
-                                  <div class="aside-item__count">
-                                    59
-                                    <span>шт.</span>
-                                  </div>
-                                  <div class="aside-item__price">
-                                    1 964 185 134
-                                    <span>₽</span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                       <div class="cart-total__item cart-total__item--no-border">
                         <span>Выбрано товаров</span>
                         <span class="cart-total__item-value">
@@ -2889,7 +2846,7 @@
                     , обязательны для заполнения
                     <br />
                     Нажимая на кнопку - вы автоматически
-                    <span class="bold-underlined-text">соглашаетесь</span>
+                    <a class="cart-order__sidebar-link" href="#"><span class="bold-underlined-text">соглашаетесь</span></a>
                     на отправку ваших персональных данных.
                   </p>
                 </aside>
@@ -2898,6 +2855,286 @@
           </div>
         </div>
       </main>
+
+      <footer class="foot cart-oreder__foot">
+        <div class="container">
+          <div class="container__elem container__elem--12 container__elem--df">
+            <div class="foot__top">
+              <div class="foot__col-wrap-bottom --mobile">
+                <a href="" class="foot__ym">
+                  <img src="assets/img/design/ym.png" alt="" />
+                </a>
+                <div class="foot__wr foot__wr--1">
+                  <div class="footItem">
+                    <div class="footItem__label">Мы в соцсетях:</div>
+                    <!-- /.footItem__label -->
+                    <div class="footItem__icons">
+                      <a href="#" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
+                            fill="#1976D2" />
+                          <path
+                            d="M19.1315 8.9116C19.1571 8.82773 19.1693 8.74989 19.166 8.68049C19.1576 8.47935 19.0193 8.33325 18.6938 8.33325H17.2393C16.8721 8.33325 16.7027 8.55547 16.6038 8.77827C16.6038 8.77827 15.6971 10.6444 14.6522 11.8749C14.3133 12.231 14.1411 12.2221 13.9577 12.2221C13.8594 12.2221 13.611 12.1032 13.611 11.7771V8.89655C13.611 8.51103 13.5149 8.33325 13.2044 8.33325H10.6216C10.3955 8.33325 10.2778 8.51103 10.2778 8.68938C10.2778 9.05992 10.7766 9.14881 10.8333 10.1872V12.1999C10.8333 12.6888 10.7483 12.7777 10.565 12.7777C10.0705 12.7777 9.0972 11.111 8.44556 8.92659C8.30445 8.49662 8.16334 8.33325 7.79612 8.33325H6.32781C5.90393 8.33325 5.83337 8.54106 5.83337 8.76328C5.83337 9.16379 6.1667 11.3294 7.98612 13.8193C9.30558 15.6249 11.0438 16.6666 12.5827 16.6666C13.5149 16.6666 13.6105 16.4294 13.6105 16.0588V14.4077C13.611 13.9627 13.7127 13.8888 14.0094 13.8888C14.221 13.8888 14.6527 14.0277 15.486 14.9999C16.4471 16.121 16.6215 16.6666 17.1727 16.6666H18.6271C18.9649 16.6666 19.1587 16.5249 19.1665 16.2499C19.1682 16.1799 19.1582 16.1016 19.1354 16.0143C19.0276 15.6944 18.5332 14.9121 17.9165 14.1666C17.5749 13.7538 17.2377 13.3449 17.0827 13.1227C16.9788 12.9777 16.9393 12.8755 16.9443 12.7777C16.9494 12.6749 17.0027 12.5771 17.0827 12.4405C17.0682 12.4405 18.9482 9.80106 19.1315 8.9116Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                      <a href="#" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
+                            fill="#37AEE2" />
+                          <path
+                            d="M10.1994 14.3608L15.1674 18.1654C15.6826 18.5112 16.1242 18.3191 16.2714 17.6273L18.2953 7.71234C18.4793 6.86687 17.9641 6.48257 17.4122 6.75158L5.59945 11.5169C4.82666 11.8244 4.82666 12.324 5.45225 12.5161L8.50663 13.5153L15.4986 8.86523C15.8298 8.67308 16.1242 8.74994 15.9034 9.01895"
+                            fill="white" />
+                        </svg>
+                      </a>
+                      <a href="#" target="_blank">
+                        <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
+                            fill="#EA5A47" />
+                          <path
+                            d="M10.9167 14.8749L15.0255 12.4999L10.9167 10.1249V14.8749ZM20.0684 8.67617C20.1713 9.04825 20.2425 9.547 20.29 10.1803C20.3455 10.8137 20.3692 11.3599 20.3692 11.8349L20.4167 12.4999C20.4167 14.2337 20.29 15.5083 20.0684 16.3237C19.8705 17.0362 19.4113 17.4953 18.6988 17.6933C18.3267 17.7962 17.6459 17.8674 16.6009 17.9149C15.5717 17.9703 14.6296 17.9941 13.7588 17.9941L12.5 18.0416C9.18296 18.0416 7.11671 17.9149 6.30129 17.6933C5.58879 17.4953 5.12962 17.0362 4.93171 16.3237C4.82879 15.9516 4.75754 15.4528 4.71004 14.8195C4.65462 14.1862 4.63087 13.6399 4.63087 13.1649L4.58337 12.4999C4.58337 10.7662 4.71004 9.49159 4.93171 8.67617C5.12962 7.96367 5.58879 7.5045 6.30129 7.30659C6.67337 7.20367 7.35421 7.13242 8.39921 7.08492C9.42837 7.0295 10.3705 7.00575 11.2413 7.00575L12.5 6.95825C15.8171 6.95825 17.8834 7.08492 18.6988 7.30659C19.4113 7.5045 19.8705 7.96367 20.0684 8.67617Z"
+                            fill="white" />
+                        </svg>
+                      </a>
+                    </div>
+                    <!-- /.footItem__icons -->
+                  </div>
+                  <!-- /.footItem -->
+                  <div class="footItem">
+                    <div class="footItem__label">Мы принимаем:</div>
+                    <!-- /.footItem__label -->
+                    <div class="footItem__icons">
+                      <a href="#" target="_blank">
+                        <img src="assets/img/design/i1.jpg" alt="" />
+                      </a>
+                      <a href="#" target="_blank">
+                        <img src="assets/img/design/i2.jpg" alt="" />
+                      </a>
+                      <a href="#" target="_blank">
+                        <img src="assets/img/design/i3.jpg" alt="" />
+                      </a>
+                    </div>
+                    <!-- /.footItem__icons -->
+                  </div>
+                  <!-- /.footItem -->
+                </div>
+                <!-- /.foot__wr -->
+              </div>
+              <div class="foot__item-bottom">
+                <div class="foot__col">
+                  <a href="index.html" class="flogo">
+                    <img src="assets/img/design/flogo.svg" alt="" />
+                  </a>
+
+                  <!-- /.flogo -->
+                </div>
+                <!-- /.foot__col -->
+                <div class="foot__col">
+                  <div class="foot__col-wrap-top">
+                    <div class="foot__wr">
+                      <button type="button" class="link feed js-open-modal" data-modal-name="callback">
+                        <i>
+                          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M13.3997 9.59269L10.0253 8.08049C9.87246 8.01498 9.70564 7.98864 9.54 8.00386C9.37436 8.01908 9.21514 8.07537 9.07674 8.16764C9.0627 8.17665 9.04933 8.18668 9.03674 8.19764L7.27311 9.69769C7.25481 9.70767 7.23444 9.71325 7.21361 9.714C7.19278 9.71474 7.17207 9.71063 7.15311 9.70198C6.0195 9.15482 4.84517 7.98763 4.29587 6.86973C4.28673 6.85118 4.28198 6.83077 4.28198 6.81009C4.28198 6.7894 4.28673 6.769 4.29587 6.75044L5.80092 4.96038C5.81172 4.94716 5.82173 4.93333 5.83092 4.91895C5.92191 4.78002 5.97688 4.62061 5.99084 4.45512C6.00481 4.28963 5.97734 4.12327 5.91092 3.97106L4.40944 0.605934C4.32417 0.407076 4.17671 0.241236 3.98918 0.133306C3.80166 0.0253749 3.58419 -0.0188247 3.36941 0.00734026C2.43603 0.130202 1.57929 0.588648 0.959233 1.29704C0.339175 2.00544 -0.00179705 2.91533 7.12324e-06 3.85677C7.12324e-06 9.44983 4.55016 14 10.1432 14C11.0846 14.0018 11.9945 13.6608 12.7029 13.0408C13.4113 12.4207 13.8698 11.564 13.9926 10.6306C14.0187 10.4168 13.9751 10.2003 13.8683 10.0133C13.7615 9.82631 13.5972 9.67878 13.3997 9.59269ZM10.1432 13.1428C5.02303 13.1428 0.857179 8.97695 0.857179 3.85677C0.854791 3.12383 1.11933 2.4151 1.60138 1.86299C2.08343 1.31087 2.75 0.953152 3.47655 0.856657H3.49298C3.52177 0.857194 3.54972 0.866416 3.57317 0.883114C3.59663 0.899812 3.61449 0.923207 3.62441 0.950232L5.13161 4.31535C5.1402 4.33406 5.14466 4.35441 5.14466 4.375C5.14466 4.39559 5.1402 4.41594 5.13161 4.43464L3.6237 6.22471C3.61245 6.23749 3.60218 6.2511 3.59299 6.26543C3.49863 6.40947 3.44307 6.57544 3.43168 6.74726C3.42029 6.91909 3.45346 7.09094 3.52798 7.24618C4.16158 8.54337 5.46876 9.84056 6.78024 10.4741C6.93638 10.5483 7.10907 10.5806 7.28146 10.5681C7.45384 10.5556 7.62004 10.4986 7.76384 10.4027C7.77741 10.3934 7.79098 10.3834 7.80384 10.3727L9.56676 8.87266C9.58417 8.86331 9.6034 8.85783 9.62312 8.85659C9.64285 8.85536 9.66261 8.85841 9.68105 8.86552L13.0562 10.3777C13.0837 10.3895 13.1069 10.4096 13.1224 10.4352C13.1379 10.4608 13.145 10.4907 13.1426 10.5206C13.0466 11.2475 12.6892 11.9145 12.1372 12.3971C11.5852 12.8797 10.8764 13.1448 10.1432 13.1428ZM8.00028 3.28532C8.00028 3.17165 8.04543 3.06264 8.12581 2.98226C8.20618 2.90188 8.3152 2.85673 8.42886 2.85673H10.2861V0.999519C10.2861 0.885851 10.3312 0.776838 10.4116 0.696462C10.492 0.616087 10.601 0.570932 10.7147 0.570932C10.8283 0.570932 10.9373 0.616087 11.0177 0.696462C11.0981 0.776838 11.1432 0.885851 11.1432 0.999519V2.85673H13.0004C13.1141 2.85673 13.2231 2.90188 13.3035 2.98226C13.3839 3.06264 13.429 3.17165 13.429 3.28532C13.429 3.39899 13.3839 3.508 13.3035 3.58837C13.2231 3.66875 13.1141 3.7139 13.0004 3.7139H11.1432V5.57111C11.1432 5.68478 11.0981 5.7938 11.0177 5.87417C10.9373 5.95455 10.8283 5.9997 10.7147 5.9997C10.601 5.9997 10.492 5.95455 10.4116 5.87417C10.3312 5.7938 10.2861 5.68478 10.2861 5.57111V3.7139H8.42886C8.3152 3.7139 8.20618 3.66875 8.12581 3.58837C8.04543 3.508 8.00028 3.39899 8.00028 3.28532Z"
+                              fill="#004ADA" />
+                          </svg>
+                        </i>
+                        <span class="link__text link__text--line link__text--line-light">Заказать звонок</span>
+                      </button>
+                      <button type="button" class="link feed js-open-modal" data-modal-name="ask">
+                        <i>
+                          <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                              d="M10.5533 1.59884C9.7293 1.33929 8.8673 1.20791 8 1.20968C4.13425 1.20968 1 3.74761 1 6.87852C1 8.10052 1.47775 9.23277 2.29062 10.1579L1.4375 14L4.864 11.9477C5.85691 12.3467 6.92336 12.5503 8 12.5465C11.8658 12.5465 15 10.0086 15 6.87852C15 6.304 14.895 5.74961 14.6981 5.2271M13.25 1V4.35484M15 2.67742H11.5"
+                              stroke="#004ADA"
+                              stroke-linecap="round"
+                              stroke-linejoin="round" />
+                          </svg>
+                        </i>
+                        <span class="link__text link__text--line link__text--line-light">Задать вопрос</span>
+                      </button>
+                    </div>
+                    <!-- /.foot__wr -->
+                    <div class="header__info">
+                      <a href="tel:+74958594981">+7 (495) 859–49–81</a>
+                      <div class="header__label">
+                        <div class="city">
+                          <span>
+                            <i></i>
+                            Москва
+                          </span>
+                        </div>
+                        <!-- /.city -->
+                        <div class="metro">
+                          <span>м. Электрозаводская</span>
+                          <em>
+                            <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M7.91683 4.04175L5.00016 6.95842L2.0835 4.04175"
+                                stroke="#444444"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </em>
+                        </div>
+                        <!-- /.metro -->
+                      </div>
+                      <!-- /.header__label -->
+                    </div>
+                    <!-- /.header__info -->
+                  </div>
+                  <div class="foot__col-wrap-bottom">
+                    <a href="" class="foot__ym">
+                      <img src="assets/img/design/ym.png" alt="" />
+                    </a>
+                    <div class="foot__wr foot__wr--1">
+                      <div class="footItem">
+                        <div class="footItem__label">Мы в соцсетях:</div>
+                        <!-- /.footItem__label -->
+                        <div class="footItem__icons">
+                          <a href="#" target="_blank">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
+                                fill="#1976D2" />
+                              <path
+                                d="M19.1315 8.9116C19.1571 8.82773 19.1693 8.74989 19.166 8.68049C19.1576 8.47935 19.0193 8.33325 18.6938 8.33325H17.2393C16.8721 8.33325 16.7027 8.55547 16.6038 8.77827C16.6038 8.77827 15.6971 10.6444 14.6522 11.8749C14.3133 12.231 14.1411 12.2221 13.9577 12.2221C13.8594 12.2221 13.611 12.1032 13.611 11.7771V8.89655C13.611 8.51103 13.5149 8.33325 13.2044 8.33325H10.6216C10.3955 8.33325 10.2778 8.51103 10.2778 8.68938C10.2778 9.05992 10.7766 9.14881 10.8333 10.1872V12.1999C10.8333 12.6888 10.7483 12.7777 10.565 12.7777C10.0705 12.7777 9.0972 11.111 8.44556 8.92659C8.30445 8.49662 8.16334 8.33325 7.79612 8.33325H6.32781C5.90393 8.33325 5.83337 8.54106 5.83337 8.76328C5.83337 9.16379 6.1667 11.3294 7.98612 13.8193C9.30558 15.6249 11.0438 16.6666 12.5827 16.6666C13.5149 16.6666 13.6105 16.4294 13.6105 16.0588V14.4077C13.611 13.9627 13.7127 13.8888 14.0094 13.8888C14.221 13.8888 14.6527 14.0277 15.486 14.9999C16.4471 16.121 16.6215 16.6666 17.1727 16.6666H18.6271C18.9649 16.6666 19.1587 16.5249 19.1665 16.2499C19.1682 16.1799 19.1582 16.1016 19.1354 16.0143C19.0276 15.6944 18.5332 14.9121 17.9165 14.1666C17.5749 13.7538 17.2377 13.3449 17.0827 13.1227C16.9788 12.9777 16.9393 12.8755 16.9443 12.7777C16.9494 12.6749 17.0027 12.5771 17.0827 12.4405C17.0682 12.4405 18.9482 9.80106 19.1315 8.9116Z"
+                                fill="white" />
+                            </svg>
+                          </a>
+                          <a href="#" target="_blank">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
+                                fill="#37AEE2" />
+                              <path
+                                d="M10.1994 14.3608L15.1674 18.1654C15.6826 18.5112 16.1242 18.3191 16.2714 17.6273L18.2953 7.71234C18.4793 6.86687 17.9641 6.48257 17.4122 6.75158L5.59945 11.5169C4.82666 11.8244 4.82666 12.324 5.45225 12.5161L8.50663 13.5153L15.4986 8.86523C15.8298 8.67308 16.1242 8.74994 15.9034 9.01895"
+                                fill="white" />
+                            </svg>
+                          </a>
+                          <a href="#" target="_blank">
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0 2C0 0.89543 0.895431 0 2 0H23C24.1046 0 25 0.895431 25 2V23C25 24.1046 24.1046 25 23 25H2C0.89543 25 0 24.1046 0 23V2Z"
+                                fill="#EA5A47" />
+                              <path
+                                d="M10.9167 14.8749L15.0255 12.4999L10.9167 10.1249V14.8749ZM20.0684 8.67617C20.1713 9.04825 20.2425 9.547 20.29 10.1803C20.3455 10.8137 20.3692 11.3599 20.3692 11.8349L20.4167 12.4999C20.4167 14.2337 20.29 15.5083 20.0684 16.3237C19.8705 17.0362 19.4113 17.4953 18.6988 17.6933C18.3267 17.7962 17.6459 17.8674 16.6009 17.9149C15.5717 17.9703 14.6296 17.9941 13.7588 17.9941L12.5 18.0416C9.18296 18.0416 7.11671 17.9149 6.30129 17.6933C5.58879 17.4953 5.12962 17.0362 4.93171 16.3237C4.82879 15.9516 4.75754 15.4528 4.71004 14.8195C4.65462 14.1862 4.63087 13.6399 4.63087 13.1649L4.58337 12.4999C4.58337 10.7662 4.71004 9.49159 4.93171 8.67617C5.12962 7.96367 5.58879 7.5045 6.30129 7.30659C6.67337 7.20367 7.35421 7.13242 8.39921 7.08492C9.42837 7.0295 10.3705 7.00575 11.2413 7.00575L12.5 6.95825C15.8171 6.95825 17.8834 7.08492 18.6988 7.30659C19.4113 7.5045 19.8705 7.96367 20.0684 8.67617Z"
+                                fill="white" />
+                            </svg>
+                          </a>
+                        </div>
+                        <!-- /.footItem__icons -->
+                      </div>
+                      <!-- /.footItem -->
+                      <div class="footItem">
+                        <div class="footItem__label">Мы принимаем:</div>
+                        <!-- /.footItem__label -->
+                        <div class="footItem__icons">
+                          <a href="#" target="_blank">
+                            <img src="assets/img/design/i1.jpg" alt="" />
+                          </a>
+                          <a href="#" target="_blank">
+                            <img src="assets/img/design/i2.jpg" alt="" />
+                          </a>
+                          <a href="#" target="_blank">
+                            <img src="assets/img/design/i3.jpg" alt="" />
+                          </a>
+                        </div>
+                        <!-- /.footItem__icons -->
+                      </div>
+                      <!-- /.footItem -->
+                    </div>
+                    <!-- /.foot__wr -->
+                  </div>
+                </div>
+                <!-- /.foot__col -->
+              </div>
+              <div class="foot__item-top">
+                <div class="foot__col">
+                  <a href="catalog.html" class="link link--line foot__link">Перейти в каталог</a>
+                  <!-- /.foot__link -->
+                  <nav>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Пленка</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Листовые, пластики</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Бумага</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Баннер</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Профиль</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Клей, клейкие ленты</a>
+                  </nav>
+                </div>
+                <!-- /.foot__col -->
+                <div class="foot__col">
+                  <div class="foot__zag"></div>
+                  <!-- /.foot__zag -->
+                  <nav>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">LED-продукция</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Мобильные стенды</a>
+                    <a class="link link--hover-line link--line-primary" href="catalog-subsection.html">Инструменты, крепеж, упаковка</a>
+                  </nav>
+                </div>
+                <!-- /.foot__col -->
+                <div class="foot__col">
+                  <span class="foot__link foot__link--dont">Полезные страницы</span>
+                  <!-- /.foot__link -->
+                  <nav>
+                    <a class="link link--hover-line link--line-primary" href="about.html">О компании</a>
+                    <a class="link link--hover-line link--line-primary" href="#">Услуги</a>
+                    <a class="link link--hover-line link--line-primary" href="faq.html">Частые вопросы</a>
+                    <a class="link link--hover-line link--line-primary" href="#">Новости</a>
+                    <a class="link link--hover-line link--line-primary" href="#">Статьи</a>
+                    <a class="link link--hover-line link--line-primary" href="contacts.html">Контакты</a>
+                  </nav>
+                </div>
+                <!-- /.foot__col -->
+                <div class="foot__col">
+                  <div class="foot__zag"></div>
+                  <!-- /.foot__zag -->
+                  <nav>
+                    <a class="link link--line foot__link--highlight" href="#">Возврат товара</a>
+                    <a class="link link--hover-line link--line-primary" href="#">Прайс</a>
+                    <a class="link link--hover-line link--line-primary" href="#">Акции</a>
+                    <a class="link link--hover-line link--line-primary" href="delivery.html">Доставка и оплата</a>
+                    <a class="link link--hover-line link--line-primary" href="#">Реквизиты</a>
+                  </nav>
+                </div>
+                <!-- /.foot__col -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.foot__top -->
+        <div class="foot__bottom">
+          <div class="container">
+            <div class="container__elem container__elem--12 container__elem--df container__elem--aic --footer-mob">
+              <div class="foot__col">
+                <div class="copy --move-js">© 1993-2023. RemeX – лидер среди поставщиков материалов для наружной рекламы.</div>
+                <!-- /.copy -->
+              </div>
+              <!-- /.foot__col -->
+              <div class="foot__cols">
+                <div class="foot__col">
+                  <div class="z3213">ОГРН: 1047796568160</div>
+                </div>
+                <!-- /.foot__col -->
+                <div class="foot__col">
+                  <div class="z3213">ИНН: 7705611516</div>
+                </div>
+                <!-- /.foot__col -->
+              </div>
+              <div class="foot__col --move-js">
+                <a class="link link--line link--line-light" href="#">Политика обработки персональных данных</a>
+              </div>
+              <!-- /.foot__col -->
+            </div>
+          </div>
+        </div>
+        <!-- /.foot__bottom -->
+      </footer>
 
       <div class="modal" id="myModal">
         <div class="modal-content">
@@ -3064,6 +3301,335 @@
               </div>
             </form>
             <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--show" data-name="new-legal-entity">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новое юр. лицо</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Название юрлица</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">ИНН</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">КПП</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <textarea class="input__field input__field--area"></textarea>
+                    <span class="input__placeholder input__placeholder--xs">Напишите реквизиты в этом поле или загрузите файлом ниже</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--full form__btn" type="button">
+                  <svg
+                    class="but__icon but__icon--fill"
+                    width="14"
+                    height="14"
+                    viewBox="0 0 14 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z"></path>
+                  </svg>
+                  <span>Загрузить файл с реквизитами</span>
+                </button>
+                <p class="text text--sm text--gray-white form__message">
+                  Поддерживаются форматы (doc, docx, rtf, pdf, xls, xlsx, txt).
+                  <br />
+                  Ограничение по весу - 5 Mb
+                </p>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Добавить</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--show" data-name="new-address">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новый адрес</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder">Город</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder">Улица</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="form__group">
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder">Дом</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <input class="input__field" type="text" />
+                      <span class="input__placeholder">Кв/Офис</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" />
+                    <span class="input__placeholder">Что важно знать водителю?</span>
+                  </div>
+                </div>
+                <button class="but but--primary but--full form__btn">Добавить адрес</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--show choice-tk-modal" data-name="choice-tk">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Выберите ТК</div>
+              <div class="form__main cart-order__form-main">
+                <div class="input form__input js-form-input search-tk__input">
+                  <div class="input__main">
+                    <input class="input__field input__tk-search-field" type="text" />
+                    <span class="input__placeholder">Искать по ИНН или названию</span>
+                  </div>
+                  <!-- <div class="input__error">Поле обязательно для заполнения</div> -->
+                </div>
+
+                <div class="modal-tk">
+                  <div class="modal-tk__list modal-tk__priority-list">
+                    <div class="modal-tk__subtitle priority-list__subtitle">Приоритетные траспортные компании</div>
+                    <div class="priority-tk__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input priority-tk-radio" type="radio" name="priority-tk" value="ООО Быстрые" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">ООО Быстрые</span>
+                      </label>
+                    </div>
+                    <div class="priority-tk__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input priority-tk-radio" type="radio" name="priority-tk" value="АО Линии" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">АО Линии</span>
+                      </label>
+                    </div>
+                    <div class="priority-tk__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input priority-tk-radio" type="radio" name="priority-tk" value="Ryder" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Ryder</span>
+                      </label>
+                    </div>
+                    <div class="priority-tk__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input priority-tk-radio" type="radio" name="priority-tk" value="Geodis" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Geodis</span>
+                      </label>
+                    </div>
+                    <div class="priority-tk__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input priority-tk-radio" type="radio" name="priority-tk" value="C.H. Robinson" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">C.H. Robinson</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="modal-tk__list modal-tk__full-list">
+                    <div class="modal-tk__subtitle full-list__subtitle">Список траспортных компаний</div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="ООО Быстрые" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">ООО Быстрые</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="АО Линии" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">АО Линии</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="Ryder" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Ryder</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="Geodis" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Geodis</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="C.H. Robinson" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">C.H. Robinson</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="Сдек" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Сдек</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="ЖелДорЭкспедиция" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">ЖелДорЭкспедиция</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="Деловые Линии" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Деловые Линии</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="Скиф-Карго" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Скиф-Карго</span>
+                      </label>
+                    </div>
+                    <div class="full-list__item">
+                      <label class="checkbox filter__checkbox">
+                        <input class="checkbox__input full-tk-radio" type="radio" name="full-tk" value="Почта России" />
+                        <span class="checkbox__switch checkbox__switch--circle"></span>
+                        <span class="checkbox__text">Почта России</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="modal-tk__not-found">
+                  <div class="not-found__subtitle">
+                    <p>Не найдено</p>
+                  </div>
+                  <div class="not-found__text">
+                    <p>Продолжить оформление заказа с доставкой данной ТК</p>
+                  </div>
+
+                  <div class="another-tk">
+                    <div class="another-tk__label delivery__label">
+                      <input class="toggle-input" type="checkbox" name="delivery-comment" value="Комментарий к доставке" />
+                      <span class="toggle-switch"></span>
+                      <span class="toggle-text">Предложить другую ТК</span>
+                    </div>
+
+                    <div class="another-tk__info">
+                      <div class="another-tk__info-details">
+                        <div class="another-tk__info-search-form">
+                          <div class="input__main another-tk__input">
+                            <input class="input__field" type="text" data-validate="empty" />
+                            <span class="input__placeholder input__placeholder--required">ИНН транспортной компании</span>
+                          </div>
+                          <div class="input__main another-tk__input">
+                            <input class="input__field" type="text" data-validate="empty" />
+                            <span class="input__placeholder input__placeholder--required">Название компании</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="but but--primary but--full form__btn choice-tk__btn">Подтвердить</button>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal choice-tk-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new modal-new--show choice-date-time" data-name="choice-date-time">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Выберите дату и время</div>
+              <div class="form__main cart-order__form-main">
+                <div class="modal-date-time">
+                  <input type="hidden" id="datepicker" />
+                  <input type="hidden" id="timepicker" />
+                </div>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal choice-tk-close-modal">
               <img src="assets/img/icons/exit.svg" alt="" />
             </button>
           </div>
@@ -3312,6 +3878,7 @@
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/main.js"></script>
+    <script src="/assets/js/jquery.datetimepicker.full.min.js"></script>
     <!-- end pgs js -->
   </body>
 </html>
