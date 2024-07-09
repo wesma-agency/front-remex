@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   findTk();
   closeSearchTkModal();
   showDateTimePicker();
+  modifyDateTimePickerElems();
 });
 
 function toggleAccordion() {
@@ -175,7 +176,7 @@ function findTk() {
     // });
   }
 
-  let timeout = null;
+  // let timeout = null;
   tkSearchField.addEventListener("input", () => {
     // clearTimeout(timeout);
 
@@ -236,6 +237,36 @@ function showDateTimePicker() {
     step: 10,
   });
   $.datetimepicker.setLocale("ru");
+}
+
+function modifyDateTimePickerElems() {
+  const monthSelect = document.querySelectorAll(".xdsoft_datetimepicker .xdsoft_label>.xdsoft_select");
+  const monthContainer = document.querySelector(".xdsoft_monthpicker");
+  const monthDiv = document.createElement("div");
+  const monthBtnPrev = document.querySelector(".xdsoft_datetimepicker .xdsoft_prev");
+  const monthBtnNext = document.querySelector(".xdsoft_datetimepicker .xdsoft_next");
+  const monthLabel = document.querySelector(".xdsoft_datetimepicker .xdsoft_month ");
+  const yearLabel = document.querySelector(".xdsoft_datetimepicker .xdsoft_year");
+  const dateYearDiv = document.createElement("div");
+  const timePickerScroller = document.querySelector(".xdsoft_scroller");
+  console.dir(timePickerScroller);
+
+  monthContainer.insertAdjacentElement("afterbegin", monthDiv);
+  monthDiv.classList.add("month-div");
+  dateYearDiv.classList.add("month-year-div");
+
+  dateYearDiv.insertAdjacentElement("beforeend", monthLabel);
+  dateYearDiv.insertAdjacentElement("beforeend", yearLabel);
+
+  monthDiv.insertAdjacentElement("beforeend", monthBtnPrev);
+  monthDiv.insertAdjacentElement("beforeend", dateYearDiv);
+  monthDiv.insertAdjacentElement("beforeend", monthBtnNext);
+
+  monthSelect.forEach((item) => {
+    item.remove();
+  });
+
+  timePickerScroller.classList.remove("xdsoft_scroller");
 }
 
 const cartOrderSlider = new Swiper(".cart-order-slider", {
