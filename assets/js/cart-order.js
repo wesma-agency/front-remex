@@ -248,8 +248,6 @@ function modifyDateTimePickerElems() {
   const monthLabel = document.querySelector(".xdsoft_datetimepicker .xdsoft_month ");
   const yearLabel = document.querySelector(".xdsoft_datetimepicker .xdsoft_year");
   const dateYearDiv = document.createElement("div");
-  const timePickerScroller = document.querySelector(".xdsoft_scroller");
-  console.dir(timePickerScroller);
 
   monthContainer.insertAdjacentElement("afterbegin", monthDiv);
   monthDiv.classList.add("month-div");
@@ -265,8 +263,6 @@ function modifyDateTimePickerElems() {
   monthSelect.forEach((item) => {
     item.remove();
   });
-
-  timePickerScroller.classList.remove("xdsoft_scroller");
 }
 
 const cartOrderSlider = new Swiper(".cart-order-slider", {
