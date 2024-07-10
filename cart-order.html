@@ -17,8 +17,8 @@
       integrity="sha512-qveKnGrvOChbSzAdtSs8p69eoLegyh+1hwOMbmpCViIwj7rn4oJjdmMvWOuyQlTOZgTlZA0N2PXA7iA8/2TUYA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/air-datepicker.css" />
     <link rel="stylesheet" href="assets/css/normalize.css?v=27" />
-    <link rel="stylesheet" href="assets/css/jquery.datetimepicker.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css?v=27" />
     <!-- pgs css -->
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
@@ -3624,10 +3624,10 @@
               <div class="title3 form__title">Выберите дату и время</div>
               <div class="form__main cart-order__form-main">
                 <div class="modal-date-time">
-                  <input type="hidden" id="datepicker" />
+                  <input class="date-time-value" type="hidden" id="datePicker" />
 
-                  <div class="dropdown timepicker__dropdown">
-                    <div class="dropdown__btn dropdown__btn--iflex timepicker__btn">
+                  <div class="timepicker__dropdown">
+                    <div class="timepicker__btn">
                       <div class="timepicker__info">
                         <span class="timepicker__title">Время:</span>
                         <span class="timepicker__time">23:59</span>
@@ -3636,13 +3636,13 @@
                         <img src="assets/img/icons/right-gray.svg" alt="icon" />
                       </div>
                     </div>
-                    <div class="dropdown__main timepicker__content">
-                      <input type="hidden" id="timepicker" />
+                    <div class="timepicker__content">
+                      <ul class="select__list"></ul>
                     </div>
                   </div>
                 </div>
 
-                <button class="but but--primary but--full form__btn choice-date-time__btn">Подтвердить</button>
+                <button class="but but--primary but--full form__btn choice-date-time__btn" type="button">Подтвердить</button>
               </div>
             </form>
             <button class="modal-new__close js-close-modal choice-tk-close-modal">
@@ -3887,6 +3887,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="assets/js/air-datepicker.js"></script>
     <script src="assets/js/index.js?v=27"></script>
     <script src="assets/js/cart.js"></script>
     <script src="assets/js/cart-order.js"></script>
@@ -3894,7 +3895,6 @@
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script type="text/javascript" src="assets/libs/pgs-panel/js/main.js"></script>
-    <script src="assets/js/jquery.datetimepicker.full.min.js"></script>
     <!-- end pgs js -->
   </body>
 </html>
