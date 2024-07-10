@@ -15543,228 +15543,154 @@ width: calc(33.33% - 30px);
   cursor: pointer;
 }
 
-/* DatePicker */
-.xdsoft_calendar {
-  border: 1px solid rgba(68, 68, 68, 0.1);
-  border-radius: 4px;
-  overflow: hidden;
-}
-.xdsoft_datetimepicker.xdsoft_inline,
-.xdsoft_datepicker.active {
+/* Date Picker */
+.air-datepicker {
   width: 100%;
-}
-.xdsoft_datetimepicker {
-  border: none;
-  padding: 0;
-}
-.xdsoft_datetimepicker .xdsoft_datepicker {
-  margin: 0;
-}
-.xdsoft_datetimepicker .xdsoft_calendar td,
-.xdsoft_datetimepicker .xdsoft_calendar th {
   border: none;
 }
-.xdsoft_calendar tr {
-  display: flex;
-  max-width: 400px;
+.air-datepicker--navigation {
+  max-width: 157px;
 }
-.xdsoft_datetimepicker .xdsoft_calendar th {
-  width: 100%;
-  height: auto;
-  padding: 20px 0px;
-  background-color: #f5f5f5;
-  font-size: 16px;
-  font-weight: 600;
-  color: #222;
-}
-
-.xdsoft_datetimepicker .xdsoft_calendar td > div {
-  padding-right: 0;
-}
-.xdsoft_datetimepicker .xdsoft_calendar td {
-  width: 100%;
-  height: auto;
-  padding: 20px;
-  text-align: center;
-  font-size: 16px;
+.air-datepicker-nav--title {
+  flex-direction: column;
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 15px;
   color: #444;
-  opacity: 0.5;
-  background: #fff;
 }
-.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current {
-  background: var(--color-primary);
-  opacity: 1;
-  font-size: 16px;
-  font-weight: 600;
+.air-datepicker-nav--title i {
+  color: #444;
+  margin-left: 0;
 }
-.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
-  opacity: 1;
-}
-.xdsoft_datetimepicker .xdsoft_calendar td:hover {
-  font-size: 16px;
-  font-weight: 600 !important;
-  background: var(--color-primary) !important;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08) !important;
-}
-
-.xdsoft_monthpicker {
-  display: flex;
+.air-datepicker-nav {
+  align-items: center;
+  border-bottom: none;
   margin-bottom: 40px;
 }
-.xdsoft_datetimepicker .xdsoft_today_button {
-  display: none;
+.air-datepicker-nav--action {
+  width: 8px;
+  height: 18px;
 }
-.xdsoft_monthpicker {
-  max-width: 185px;
-}
-.xdsoft_datetimepicker .xdsoft_month {
-  width: 100px;
-  text-align: center;
-}
-.xdsoft_datetimepicker .xdsoft_year {
-  margin-right: 0;
-}
-.xdsoft_select .xdsoft_monthselect .xdsoft_scroller_box {
-  display: none !important;
-}
-.xdsoft_datetimepicker .xdsoft_label i {
-  display: none;
-}
-.xdsoft_datetimepicker .xdsoft_label {
-  font-family: "Source Sans 3", sans-serif !important;
-  font-weight: 400 !important;
-  font-size: 15px;
-  color: var(--color-gray);
+.air-datepicker--content {
   padding: 0;
+  border: 1px solid rgba(68, 68, 68, 0.1);
+  border-radius: 4px;
+}
+.air-datepicker-body--day-names {
+  height: 50px;
   margin: 0;
-  pointer-events: none;
+  background: #f5f5f5;
 }
-.xdsoft_datetimepicker .xdsoft_prev {
-  display: flex;
-  justify-content: center;
-  background: none;
+.air-datepicker-body--day-name {
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-gray-dark);
 }
-.xdsoft_datetimepicker .xdsoft_prev::before {
-  content: "";
-  width: 10px;
-  height: 22px;
-  background: url("../img/cart-order/month-arrow.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.air-datepicker-body--cells.-days- {
+  grid-auto-rows: 50px;
 }
-.xdsoft_datetimepicker .xdsoft_next {
-  display: flex;
-  justify-content: center;
-  background: none;
+.air-datepicker-cell {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(68, 68, 68, 0.5);
+  border-radius: 0;
 }
-.xdsoft_datetimepicker .xdsoft_next::before {
-  content: "";
-  width: 10px;
-  height: 22px;
-  background: url("../img/cart-order/month-arrow.svg");
-  transform: rotate(180deg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.air-datepicker-cell.-day-.-current- {
+  color: #fff;
+  background-color: var(--color-primary);
 }
-.month-div {
-  display: flex;
-  align-items: center;
+.air-datepicker-cell.-day-.-current-.focus {
+  color: #fff;
 }
-.month-year-div {
-  display: flex;
-  flex-direction: column;
-  /* row-gap: 10px; */
-  align-items: center;
-}
-.xdsoft_date.xdsoft_day_of_week6.xdsoft_date.xdsoft_weekend,
-.xdsoft_date.xdsoft_day_of_week0.xdsoft_date.xdsoft_weekend {
+.air-datepicker-cell.-day-.-weekend- {
   color: #d72028;
-  opacity: 1;
+}
+.air-datepicker-cell.-day-.-other-month- {
+  visibility: hidden;
 }
 
-/* TimePicker */
+/* Time Picker */
 .modal-date-time {
   position: relative;
 }
+
+/* .timepicker__dropdown.dropdown--active { */
 .timepicker__dropdown {
   position: absolute;
-  top: -18px;
+  top: -15px;
   right: 0;
   padding: 15px;
-  cursor: pointer;
-}
-.dropdown__main.timepicker__content {
-  position: absolute;
-  top: 40px;
-  left: -15px;
+  max-width: 193px;
+  width: 100%;
+  background: #fff;
   z-index: 10;
 }
+.timepicker__dropdown.active {
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.05);
+}
+
+.timepicker__info {
+  font-size: 16px;
+}
+.timepicker__title {
+  color: rgba(68, 68, 68, 0.5);
+}
+.timepicker__time {
+  color: #444;
+}
+.select-item {
+  font-size: 14px;
+}
+
 .timepicker__btn {
   display: flex;
   justify-content: space-between;
-  width: 163px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(68, 68, 68, 0.5);
-}
-.timepicker__content {
-  width: 210px;
-  padding: 0 15px 0 15px;
-}
-.timepicker__title {
-  font-size: 15px;
-  color: var(--color-gray);
-  opacity: 0.5;
-}
-.timepicker__time {
-  font-size: 15px;
-  color: var(--color-gray);
+  cursor: pointer;
 }
 .timepicker__icon {
+  margin-right: 5px;
   transform: rotate(90deg);
   transition: 0.4s ease;
 }
-.dropdown__btn--active .timepicker__icon {
+.timepicker__content {
+  display: none;
+}
+.timepicker__dropdown.active .timepicker__btn {
+  border-bottom: none;
+}
+.timepicker__dropdown.active .timepicker__icon {
   transform: rotate(-90deg);
 }
+.timepicker__dropdown.active .timepicker__content {
+  display: block;
+}
 
-.xdsoft_datetimepicker .xdsoft_timepicker {
-  width: 100%;
-  margin-left: 0;
+.timepicker__content {
+  background-color: #fff;
 }
-.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev,
-.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next {
-  display: none;
+
+.select__list {
+  min-width: 163px;
+  height: 145px;
+  list-style: none;
+  padding-left: 0;
+  overflow: hidden;
+  overflow-y: scroll;
 }
-.xdsoft_time_variant .xdsoft_scrollbar,
-.xdsoft_scrollbar > .xdsoft_scroller {
-  display: none;
+.select__list::-webkit-scrollbar {
+  width: 2px;
 }
-.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div {
-  border: none;
-  background: #fff;
-  font-size: 14px;
-  color: var(--color-gray);
-  text-align: left;
+.select__list::-webkit-scrollbar-track {
+  background: #ededed;
+}
+.select__list::-webkit-scrollbar-thumb {
+  background-color: #444;
+}
+.select-item {
   margin-bottom: 10px;
-}
-.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
-  height: 230px;
-  padding: 15px;
-  border: none;
-}
-.xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current {
-  background: var(--color-primary) !important;
-  color: #fff;
-  font-weight: 600;
-}
-.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
-  color: #fff !important;
-  background: rgba(0, 74, 218, 0.5) !important;
-  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.08) !important;
-}
-
-.xdsoft_scroller {
-  display: none !important;
+  cursor: pointer;
 }
 
 /* ===================================== */
@@ -16436,6 +16362,17 @@ width: calc(33.33% - 30px);
   .cart-order-total__title {
     font-size: 25px;
   }
+
+  /* Страница Оформление заказа */
+  .air-datepicker--navigation {
+    max-width: 115px;
+  }
+  .timepicker__dropdown {
+    max-width: 150px;
+  }
+  .select__list {
+    min-width: 130px;
+  }
 }
 
 @media (max-width: 359.98px) {
@@ -16629,23 +16566,6 @@ width: calc(33.33% - 30px);
   .textbox__switch {
     text-wrap: nowrap;
   } */
-
-  /* Страница Оформление заказа */
-  .timepicker__btn {
-    width: 130px;
-  }
-  .timepicker__content {
-    width: 200px;
-  }
-  .month-year-div .xdsoft_month {
-    width: 80px;
-  }
-  .xdsoft_calendar tr {
-    max-width: 296px;
-  }
-  .xdsoft_datetimepicker .xdsoft_calendar td {
-    padding: 20px 0;
-  }
 }
 
 .lk-card__btn {

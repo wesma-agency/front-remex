@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   findTk();
   closeSearchTkModal();
   showDateTimePicker();
-  modifyDateTimePickerElems();
 });
 
 function toggleAccordion() {
@@ -224,45 +223,83 @@ function closeSearchTkModal() {
 }
 
 function showDateTimePicker() {
-  $("#datepicker").datetimepicker({
+  const calendar = new AirDatepicker("#datePicker", {
     inline: true,
-    timepicker: false,
-    format: "d.m.Y",
-    dayOfWeekStart: 1,
+    selectedDates: [new Date()],
+    // timepicker: true,
+    // minutesStep: 10,
+    prevHtml:
+      '<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.6628 17.5885L1.16113 9.27668L7.6628 0.964844" stroke="#444444" stroke-width="0.9" /></svg>',
+    nextHtml:
+      '<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.337204 17.5885L6.83887 9.27668L0.337204 0.964844" stroke="#444444" stroke-width="0.87" /></svg>',
   });
-  $("#timepicker").datetimepicker({
-    inline: true,
-    datepicker: false,
-    format: "H:i",
-    step: 10,
-  });
-  $.datetimepicker.setLocale("ru");
-}
 
-function modifyDateTimePickerElems() {
-  const monthSelect = document.querySelectorAll(".xdsoft_datetimepicker .xdsoft_label>.xdsoft_select");
-  const monthContainer = document.querySelector(".xdsoft_monthpicker");
-  const monthDiv = document.createElement("div");
-  const monthBtnPrev = document.querySelector(".xdsoft_datetimepicker .xdsoft_prev");
-  const monthBtnNext = document.querySelector(".xdsoft_datetimepicker .xdsoft_next");
-  const monthLabel = document.querySelector(".xdsoft_datetimepicker .xdsoft_month ");
-  const yearLabel = document.querySelector(".xdsoft_datetimepicker .xdsoft_year");
-  const dateYearDiv = document.createElement("div");
+  function showHideDeliveryTimeList() {
+    const choiceTimeBtn = document.querySelector(".timepicker__dropdown");
+    const currentTime = document.querySelector(".timepicker__time");
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
 
-  monthContainer.insertAdjacentElement("afterbegin", monthDiv);
-  monthDiv.classList.add("month-div");
-  dateYearDiv.classList.add("month-year-div");
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
 
-  dateYearDiv.insertAdjacentElement("beforeend", monthLabel);
-  dateYearDiv.insertAdjacentElement("beforeend", yearLabel);
+    currentTime.innerHTML = `${hours}:${minutes}`;
 
-  monthDiv.insertAdjacentElement("beforeend", monthBtnPrev);
-  monthDiv.insertAdjacentElement("beforeend", dateYearDiv);
-  monthDiv.insertAdjacentElement("beforeend", monthBtnNext);
+    choiceTimeBtn.addEventListener("click", () => {
+      if (choiceTimeBtn.classList.contains("active")) {
+        choiceTimeBtn.classList.remove("active");
+      } else {
+        choiceTimeBtn.classList.add("active");
+      }
+    });
+  }
 
-  monthSelect.forEach((item) => {
-    item.remove();
-  });
+  function renderTimeList() {
+    const select = document.querySelector(`.select__list`);
+    const itemsList = [];
+    let hours, minutes;
+
+    for (let i = 0; i <= 1430; i += 10) {
+      hours = Math.floor(i / 60);
+      minutes = i % 60;
+
+      hours = hours < 10 ? "0" + hours : hours;
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+
+      const selectItem = document.createElement("li");
+      selectItem.classList.add("select-item");
+      // option.innerHTML = '<option></option>';
+      // option.setAttribute('value', i);
+      // option.textContent = `${hours}:${minutes}`;
+      selectItem.textContent = `${hours}:${minutes}`;
+      // select.append('<option></option>').setAttribute('value', i).textContetnt(`${hours}:${minutes}`);
+      select.insertAdjacentElement("beforeend", selectItem);
+
+      itemsList.push(selectItem);
+    }
+
+    return select.childNodes;
+  }
+
+  function choiceDeliveryTime() {
+    const timeItems = renderTimeList();
+    const choiceTimeBtn = document.querySelector(".timepicker__btn");
+    const currentTime = document.querySelector(".timepicker__time");
+    // const dateTimeInput = document.querySelector(".date-time-value");
+
+    timeItems.forEach((item) => {
+      item.addEventListener("click", () => {
+        currentTime.textContent = item.textContent;
+        choiceTimeBtn.classList.remove("active");
+        // dateTimeInput.value += ` ${item.textContent}`;
+      });
+    });
+  }
+
+  showHideDeliveryTimeList();
+  renderTimeList();
+  choiceDeliveryTime();
 }
 
 const cartOrderSlider = new Swiper(".cart-order-slider", {
