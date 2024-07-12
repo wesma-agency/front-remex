@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
   findTk();
   closeSearchTkModal();
   showDateTimePicker();
+  clearDeliveryDateTimeInput();
+  confirmDeliveryDateTime();
 });
 
 function toggleAccordion() {
@@ -16,7 +18,6 @@ function toggleAccordion() {
     const icon = el.querySelector(".cart-order__top-btn");
 
     el.addEventListener("click", () => {
-      // icon.classList.toggle("active");
       if (icon.classList.contains("active")) {
         icon.classList.remove("active");
       } else {
@@ -80,12 +81,9 @@ function switchTkItem() {
 
   tkItems.forEach((item) => {
     const inputs = item.querySelectorAll(".tk-radio");
-    // console.log(inputs);
 
     inputs.forEach((el) => {
       el.addEventListener("change", (e) => {
-        // console.log(e.target.id);
-
         if (e.target.id == myTk.id && e.target.id != recomendedTk.id) {
           myTk.classList.remove("d-none");
           recomendedTk.classList.add("d-none");
@@ -107,25 +105,16 @@ function findTk() {
   const tkItemsArr = [];
 
   priorityTkItems.forEach((item) => {
-    // const spanText = item.querySelector(".checkbox__text");
     const inputValue = item.querySelector("input");
 
-    // spanText.textContent = inputValue;
-
-    // tkItemsArr.push(spanText);
     tkItemsArr.push(inputValue);
   });
 
   fullListItems.forEach((item) => {
     const inputValue = item.querySelector("input");
-    // const spanText = item.querySelector(".checkbox__text");
-
-    // spanText.textContent = inputValue;
 
     tkItemsArr.push(inputValue);
-    // tkItemsArr.push(spanText);
   });
-  // console.log(tkItemsArr);
 
   notFoundMessage.style.display = "none";
 
@@ -151,7 +140,6 @@ function findTk() {
 
       if (result == 1) {
         notFoundMessage.style.display = "none";
-        // subTitle.forEach((item) => (item.style.display = "block"));
       }
     }
     function hideResult(item, result, subTitle) {
@@ -162,17 +150,6 @@ function findTk() {
         notFoundMessage.style.display = "block";
       }
     }
-
-    // tkItemsArr.forEach((item) => {
-    //   const tkName = item.value.toLowerCase();
-
-    //   if (tkName.includes(searchText)) {
-    //     console.log(searchText.localeCompare(tkName));
-    //     item.parentElement.style.display = "flex";
-    //   } else {
-    //     item.parentElement.style.display = "none";
-    //   }
-    // });
   }
 
   // let timeout = null;
@@ -188,7 +165,6 @@ function findTk() {
 function closeSearchTkModal() {
   const tkSearchField = document.querySelector(".input__tk-search-field");
   const closeBtn = document.querySelector(".choice-tk-close-modal");
-  // const confirmBtn = document.querySelector(".choice-tk__btn");
   const priorityTkItems = document.querySelectorAll(".priority-tk-radio");
   const fullListItems = document.querySelectorAll(".full-tk-radio");
   const notFoundMessage = document.querySelector(".modal-tk__not-found");
@@ -200,6 +176,7 @@ function closeSearchTkModal() {
 
   document.addEventListener("click", (e) => {
     const choiceTkModalActive = document.querySelector(".choice-tk-modal.modal-new--active");
+
     if (choiceTkModalActive && e.target !== choiceTkModalActive && !choiceTkModalActive.contains(e.target)) {
       resetForm();
     }
@@ -222,19 +199,22 @@ function closeSearchTkModal() {
   }
 }
 
-function showDateTimePicker() {
-  const calendar = new AirDatepicker("#datePicker", {
-    inline: true,
-    selectedDates: [new Date()],
-    // timepicker: true,
-    // minutesStep: 10,
-    prevHtml:
-      '<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.6628 17.5885L1.16113 9.27668L7.6628 0.964844" stroke="#444444" stroke-width="0.9" /></svg>',
-    nextHtml:
-      '<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.337204 17.5885L6.83887 9.27668L0.337204 0.964844" stroke="#444444" stroke-width="0.87" /></svg>',
-  });
+const calendar = new AirDatepicker("#datePicker", {
+  inline: true,
+  // selectedDates: [new Date()],
+  // timepicker: true,
+  // minutesStep: 10,
+  showOtherMonths: false,
+  minDate: Date.now(),
+  // buttons: ["today", "clear"],
+  prevHtml:
+    '<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.6628 17.5885L1.16113 9.27668L7.6628 0.964844" stroke="#444444" stroke-width="0.9" /></svg>',
+  nextHtml:
+    '<svg width="8" height="18" viewBox="0 0 8 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.337204 17.5885L6.83887 9.27668L0.337204 0.964844" stroke="#444444" stroke-width="0.87" /></svg>',
+});
 
-  function showHideDeliveryTimeList() {
+function showDateTimePicker() {
+  function toggleDeliveryTimeList() {
     const choiceTimeBtn = document.querySelector(".timepicker__dropdown");
     const currentTime = document.querySelector(".timepicker__time");
     let date = new Date();
@@ -269,11 +249,7 @@ function showDateTimePicker() {
 
       const selectItem = document.createElement("li");
       selectItem.classList.add("select-item");
-      // option.innerHTML = '<option></option>';
-      // option.setAttribute('value', i);
-      // option.textContent = `${hours}:${minutes}`;
       selectItem.textContent = `${hours}:${minutes}`;
-      // select.append('<option></option>').setAttribute('value', i).textContetnt(`${hours}:${minutes}`);
       select.insertAdjacentElement("beforeend", selectItem);
 
       itemsList.push(selectItem);
@@ -286,21 +262,98 @@ function showDateTimePicker() {
     const timeItems = renderTimeList();
     const choiceTimeBtn = document.querySelector(".timepicker__btn");
     const currentTime = document.querySelector(".timepicker__time");
-    // const dateTimeInput = document.querySelector(".date-time-value");
 
     timeItems.forEach((item) => {
       item.addEventListener("click", () => {
+        removeSelectedClass(timeItems);
+
+        item.classList.add("selected");
         currentTime.textContent = item.textContent;
         choiceTimeBtn.classList.remove("active");
-        // dateTimeInput.value += ` ${item.textContent}`;
       });
     });
+    function removeSelectedClass(items) {
+      items.forEach((item) => {
+        item.classList.remove("selected");
+      });
+    }
   }
 
-  showHideDeliveryTimeList();
+  toggleDeliveryTimeList();
   renderTimeList();
   choiceDeliveryTime();
 }
+
+function clearDeliveryDateTimeInput() {
+  const dateTimeModal = document.querySelector(".choice-date-time__modal");
+
+  openModal(".courier-delivery__input", "courier-delivery__input", "date-time__input", "courier-modal");
+  openModal(".tk-delivery__input", "tk-delivery__input", "date-time__input", "tk-modal");
+  openModal(".has-address__input", "has-address__input", "date-time__input", "has-address-modal");
+
+  function openModal(input, inputClass, inputWrapperClass, modalClass) {
+    const dateTimeInput = document.querySelector(input);
+
+    document.addEventListener("click", (e) => {
+      const currentElem = e.target;
+
+      if (currentElem.classList.contains(inputClass) || currentElem.classList.contains(inputWrapperClass)) {
+        dateTimeInput.value = "";
+        dateTimeModal.classList.add(modalClass);
+      }
+    });
+  }
+}
+
+function confirmDeliveryDateTime() {
+  const dateTimeInput = document.querySelector(".date-time-value");
+
+  const courierInput = document.querySelector(".courier-delivery__input");
+  const tkInput = document.querySelector(".tk-delivery__input");
+  const hasAdressInput = document.querySelector(".has-address__input");
+
+  const confirmBtn = document.querySelector(".choice-date-time__btn");
+  const spanText = document.querySelectorAll(".date-time__input span");
+  const dateTimeModal = document.querySelector(".choice-date-time__modal");
+  const currentTime = document.querySelector(".timepicker__time");
+  const timeItems = document.querySelectorAll(".select-item");
+
+  confirm("courier-modal", courierInput);
+  confirm("tk-modal", tkInput);
+  confirm("has-address-modal", hasAdressInput);
+
+  function confirm(modalClass, input) {
+    confirmBtn.addEventListener("click", () => {
+      if (dateTimeModal.classList.contains(modalClass)) {
+        timeItems.forEach((item) => {
+          if (!item.classList.contains("selected")) {
+            input.value = `${dateTimeInput.value} ${currentTime.textContent}`;
+          } else {
+            // deliveryInput.value = `${dateTimeInput.value} ${item.textContent}`;
+          }
+        });
+
+        spanText.forEach((item) => {
+          if (item.previousElementSibling == input) {
+            item.style.display = "none";
+          }
+        });
+
+        dateTimeModal.classList.remove("modal-new--active");
+        dateTimeModal.classList.remove(modalClass);
+        document.body.classList.remove("body--lock");
+        // calendar.clear();
+        // dateTimeInput.value = "";
+      }
+    });
+  }
+}
+
+// document.addEventListener("click", (e) => {
+//   e.stopPropagation();
+//   e.stopImmediatePropagation();
+//   console.log(e.target);
+// });
 
 const cartOrderSlider = new Swiper(".cart-order-slider", {
   direction: "horizontal",

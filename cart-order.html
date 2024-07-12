@@ -2094,12 +2094,16 @@
                                           <div class="courier-delivery__date-time">
                                             <div class="input js-form-input customer-info__input-date">
                                               <a class="choice-date-time__link js-open-modal" data-modal-name="choice-date-time">
-                                                <div class="input__main">
-                                                  <input class="input__field" type="" data-validate="empty" />
+                                                <div class="input__main date-time__input">
+                                                  <input
+                                                    class="input__field courier-delivery__input"
+                                                    type="text"
+                                                    name="courier-delivery__input"
+                                                    data-validate="empty" />
                                                   <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
-                                                  <span class="input-date__calendar">
+                                                  <!-- <span class="input-date__calendar">
                                                     <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
-                                                  </span>
+                                                  </span> -->
                                                 </div>
                                               </a>
                                               <div class="input__error">Поле обязательно для заполнения</div>
@@ -2164,13 +2168,15 @@
                                         </div>
                                         <div class="has-address__col">
                                           <div class="input js-form-input customer-info__input-date">
-                                            <div class="input__main">
-                                              <input class="input__field" type="text" data-validate="empty" />
-                                              <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
-                                              <span class="input-date__calendar">
-                                                <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
-                                              </span>
-                                            </div>
+                                            <a class="choice-date-time__link js-open-modal" data-modal-name="choice-date-time">
+                                              <div class="input__main date-time__input">
+                                                <input class="input__field has-address__input" type="text" data-validate="empty" />
+                                                <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
+                                                <!-- <span class="input-date__calendar">
+                                                  <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                                </span> -->
+                                              </div>
+                                            </a>
                                             <div class="input__error">Поле обязательно для заполнения</div>
                                           </div>
                                         </div>
@@ -2359,12 +2365,12 @@
                                       <div class="tk__info-delivery-date">
                                         <div class="input js-form-input tk__input-date">
                                           <a class="choice-date-time__link js-open-modal" data-modal-name="choice-date-time">
-                                            <div class="input__main">
-                                              <input class="input__field" type="" data-validate="empty" />
+                                            <div class="input__main date-time__input">
+                                              <input class="input__field tk-delivery__input" type="" data-validate="empty" />
                                               <span class="input__placeholder input__placeholder--required">Дата и время доставки</span>
-                                              <span class="input-date__calendar">
+                                              <!-- <span class="input-date__calendar">
                                                 <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
-                                              </span>
+                                              </span> -->
                                             </div>
                                           </a>
                                           <div class="input__error">Поле обязательно для заполнения</div>
@@ -3605,7 +3611,7 @@
                   </div>
                 </div>
 
-                <button class="but but--primary but--full form__btn choice-tk__btn">Подтвердить</button>
+                <button class="but but--primary but--full form__btn choice-tk__btn" type="button">Подтвердить</button>
               </div>
             </form>
             <button class="modal-new__close js-close-modal choice-tk-close-modal">
@@ -3616,7 +3622,7 @@
       </div>
     </div>
 
-    <div class="modal-new modal-new--show choice-date-time" data-name="choice-date-time">
+    <div class="modal-new modal-new--show choice-date-time__modal" data-name="choice-date-time">
       <div class="modal-new__body">
         <div class="modal-new__dialog">
           <div class="modal-new__content">
