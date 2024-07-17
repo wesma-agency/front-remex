@@ -14585,6 +14585,9 @@ width: calc(33.33% - 30px);
   display: flex;
   column-gap: 80px;
 }
+[data-name="offline-request-sent"] .title3.form__title {
+  padding-right: 10px;
+}
 
 /* Страница Каталог Листинг */
 .filters__btn {
@@ -14603,6 +14606,15 @@ width: calc(33.33% - 30px);
   background-repeat: no-repeat;
   width: 22px;
   height: 22px;
+}
+
+.catalog__products-filters {
+  display: none;
+  margin-right: 30px;
+}
+
+.catalog__products-sort:not(:first-child) {
+  margin-left: 0;
 }
 
 /* Страница Оформление заказа */
@@ -15750,6 +15762,24 @@ width: calc(33.33% - 30px);
   background: var(--color-primary);
 }
 
+/* Страница Карточка товара */
+.link--iflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Страница Корзина */
+.cart-delete.cart-item__delete-btn {
+  margin-left: 20px;
+}
+.cart-item__price {
+  margin: 0 0 0 auto;
+}
+.cart-item__counter {
+  margin-left: 50px;
+}
+
 /* ===================================== */
 /* Адаптив */
 @media (max-width: 1920px) {
@@ -15805,6 +15835,14 @@ width: calc(33.33% - 30px);
   }
   .catalog__series-mobile-btn--sm {
     display: none;
+  }
+}
+
+@media (max-width: 1280px) {
+  /* Страница Корзина */
+  .cart__sidebar {
+    position: relative;
+    z-index: 15;
   }
 }
 
@@ -16197,6 +16235,10 @@ width: calc(33.33% - 30px);
     min-width: 369px;
   }
 
+  .catalog__products-filters {
+    display: block;
+  }
+
   /* Страница оформление заказа */
   .nav-btns__btn {
     flex: 1 1 auto;
@@ -16218,6 +16260,16 @@ width: calc(33.33% - 30px);
   .lk_sidebar {
     display: block;
     width: 100% !important;
+  }
+
+  /* Страница Корзина */
+  .slider2:after {
+    display: none;
+  }
+
+  .cart__main .simple-select .simple-select__field span,
+  .cart__main .simple-select .simple-select__list .simple-select__item span {
+    color: rgba(var(--color-gray--rgb), 0.5);
   }
 
   /* Страница оформление заказа */
@@ -16430,6 +16482,16 @@ width: calc(33.33% - 30px);
   .select__list {
     min-width: 130px;
   }
+
+  /* Страница Каталог листинг */
+  .catalog__series-list--desctop {
+    display: none;
+  }
+
+  .catalog__series-slider-box--sm {
+    display: block;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 359.98px) {
@@ -16605,14 +16667,6 @@ width: calc(33.33% - 30px);
     justify-content: flex-end;
   }
 
-  .catalog__series-list--desctop {
-    display: none;
-  }
-
-  .catalog__series-slider-box--sm {
-    display: block;
-    overflow: hidden;
-  }
   .catalog__series-mobile-btn--sm {
     display: block;
   }
