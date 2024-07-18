@@ -2998,7 +2998,7 @@
                             <span>До 5 прямых резов</span>
                             <div class="text text--semibold text--danger product-sidebar__service-price">1 000 ₽</div>
                           </div>
-                          <button class="but product-sidebar__service-btn">
+                          <button class="but product-sidebar__service-btn js-open-modal" data-modal-name="upload-draft">
                             <svg
                               class="but__icon but__icon--fill"
                               width="14"
@@ -3009,7 +3009,7 @@
                               <path
                                 d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
                             </svg>
-                            <span>Загрузить чертежи резки</span>
+                            <span>Загрузка чертежей</span>
                           </button>
                           <div class="text text--sm text--light product-sidebar__service-ps">
                             Загружаемые файлы должны быть формата png, jpg, pdf. Общий вес загружаемых файлов не должен превышать 18 МБ.
@@ -5600,6 +5600,53 @@
                     Ссылка на цену конкурента, фотография чека или счета
                   </div>
                 </div>
+                <div class="discuss-price__form-btns">
+                  <button class="but but--full discuss-price__form-btn" type="button">
+                    <svg
+                      class="but__icon but__icon--fill"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 14 14"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7 10.577L3.462 7.038L4.169 6.319L6.5 8.65V0H7.5V8.65L9.83 6.32L10.538 7.038L7 10.577ZM0 14V9.962H1V13H13V9.962H14V14H0Z" />
+                    </svg>
+                    <span>Загрузить файл</span>
+                  </button>
+                  <button class="but but--full but--primary discuss-price__form-btn" type="submit">Отправить на рассмотрение</button>
+                </div>
+                <div class="text text--sm text--gray-white discuss-price__form-confirm">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения Нажимая на кнопку - вы автоматически
+                  <a class="link link--line link--line-light" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </div>
+              </form>
+            </div>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="upload-draft">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <div class="discuss-price modal-new__discuss-price">
+              <div class="title3 discuss-price__title">Загрузить чертеж</div>
+
+              <form class="discuss-price__form js-form" autocomplete="off">
+                <div class="input discuss-price__form-input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field input__field--mobile-text-sm" type="file" data-validate="empty" />
+                  </div>
+                </div>
+
                 <div class="discuss-price__form-btns">
                   <button class="but but--full discuss-price__form-btn" type="button">
                     <svg
