@@ -15607,6 +15607,16 @@ width: calc(33.33% - 30px);
   margin-left: 50px;
 }
 
+/* Страница Каталог */
+
+/* .category-list .category__item {
+  display: none;
+  transition: 0.4s ease;
+}
+.category-list .category__item.active {
+  display: block;
+} */
+
 /* ===================================== */
 /* Адаптив */
 @media (max-width: 1920px) {
@@ -15662,6 +15672,13 @@ width: calc(33.33% - 30px);
   }
   .catalog__series-mobile-btn--sm {
     display: none;
+  }
+}
+
+@media (max-width: 1292px) {
+  /* Страница Каталог товаров*/
+  .accordion__content {
+    padding-top: 0px;
   }
 }
 
