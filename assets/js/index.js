@@ -151,9 +151,9 @@ $openBtns.forEach(($btn) => {
       return;
     }
 
-    if($btn.getAttribute('data-modal-name')==='regustration'||$btn.getAttribute('data-modal-name')==='forgot-password'){
+    if ($btn.getAttribute("data-modal-name") === "regustration" || $btn.getAttribute("data-modal-name") === "forgot-password") {
       const $modal = document.querySelector(`.modal-new[data-name="authorization"`);
-      $modal.classList.remove("modal-new--active")
+      $modal.classList.remove("modal-new--active");
     }
 
     openModal($modal);
@@ -207,8 +207,6 @@ function openModal($modal) {
 
   $modal.classList.add("modal-new--active");
 }
-
-
 
 /* Input */
 const $inputs = document.querySelectorAll(".input");
@@ -353,21 +351,18 @@ $editForms.forEach(($editForm) => {
 });
 
 /* Form Close */
-function closeForm(form, successfullyFormDiv, inputs ){
+function closeForm(form, successfullyFormDiv, inputs) {
   form.closest(".modal-new").classList.remove("modal-new--active");
-  form.style.display="block";
+  form.style.display = "block";
   successfullyFormDiv.remove();
-  inputs.forEach((item)=>{
+  inputs.forEach((item) => {
+    let input = item.querySelector(".input__field");
+    input.value = "";
 
-    let input=item.querySelector(".input__field");
-    input.value='';
-
-    let placeholderInput=item.querySelector(".input__placeholder");
+    let placeholderInput = item.querySelector(".input__placeholder");
     placeholderInput.classList.remove("input__placeholder--hide");
-  })
-
+  });
 }
-
 
 /* Form validate */
 const $forms = document.querySelectorAll(".js-form");
@@ -386,12 +381,11 @@ $forms.forEach(($form) => {
         $item.classList.add("input--error");
         isError = true;
         return;
-      } else if (validateType  === "email" && !validateEmail($input)) {
+      } else if (validateType === "email" && !validateEmail($input)) {
         $item.classList.add("input--error");
         isError = true;
         return;
-      } else if(validateType==="no_required")
-      {
+      } else if (validateType === "no_required") {
         return;
       } else if (validateType && !validateEmpty($input)) {
         $item.classList.add("input--error");
@@ -400,8 +394,8 @@ $forms.forEach(($form) => {
       }
     });
 
-    const successfullyFormDiv=document.createElement('div');
-    successfullyFormDiv.innerHTML=`<div class="successfully-form">
+    const successfullyFormDiv = document.createElement("div");
+    successfullyFormDiv.innerHTML = `<div class="successfully-form">
           <div class="title3 title3--lh-3 as9__title"> Отправлено успешно!</div>
           <svg
             width="50px"
@@ -417,26 +411,24 @@ $forms.forEach(($form) => {
               d="M1.00000001 7.71134025l3.83505154 3.8041237 8.16494844-8.16494844-.86597938-.86597938L4.83505155 9.7835052 1.86597939 6.81443303z"
             />
           </svg>
-          </div>`
+          </div>`;
 
-    if (!isError){
+    if (!isError) {
       fetch(urlForm, {
-        method: 'POST',
+        method: "POST",
         body: new FormData($form),
       })
         .then((response) => {
           // Обрабатываем ответ от сервера
-          $form.style.display="none";
+          $form.style.display = "none";
           $form.parentElement.insertAdjacentElement(`afterbegin`, successfullyFormDiv);
           setTimeout(closeForm, 3000, $form, successfullyFormDiv, $items);
-
         })
         .catch((error) => {
           // Обрабатываем ошибку
           console.error(error);
         });
-
-     }
+    }
 
     const submitModal = $form.dataset.submitModal;
     if (isError || !submitModal) {
@@ -444,8 +436,6 @@ $forms.forEach(($form) => {
     }
     const $modal = document.querySelector(`.modal-new[data-name="${submitModal}"`);
     openModal($modal);
-
-
   });
   const $formItems = $form.querySelectorAll(".js-form-input");
   $formItems.forEach(($item) => {
@@ -1454,22 +1444,22 @@ new Swiper(".as8__swiper", {
   },
 });
 
-const seriesSlider = new Swiper(".catalog__series-slider", {
-  slidesPerView: 2,
-  spaceBetween: 10,
-  enabled: true,
-  pagination: {
-    el: ".catalog__series-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    767.01: {
-      enabled: false,
-      spaceBetween: 0,
-      slidesPerView: "auto",
-    },
-  },
-});
+// const seriesSlider = new Swiper(".catalog__series-slider", {
+//   slidesPerView: 2,
+//   spaceBetween: 10,
+//   enabled: true,
+//   pagination: {
+//     el: ".catalog__series-pagination",
+//     clickable: true,
+//   },
+//   breakpoints: {
+//     767.01: {
+//       enabled: false,
+//       spaceBetween: 0,
+//       slidesPerView: "auto",
+//     },
+//   },
+// });
 
 new Swiper(".news-section__small-slider", {
   slidesPerView: 2,
@@ -2109,22 +2099,20 @@ addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 /*for BUTTON FORM RELOAD*/
 
-
 addEventListener("DOMContentLoaded", () => {
-  const sections= document.querySelectorAll("details.news-section__tag");
-  console.log(sections);
-  if(sections){
-  sections.forEach(section => {
-    const list=section.querySelector(".catalog-tag__list");
-    const button=section.querySelector(".catalog-tag__btn")
-    if(list.querySelector("a.link")===null)
-    {
-      button.classList.add("catalog-tag__item--none");
-      button.classList.remove("catalog-tag__btn");
-      list.remove();
-    }
-  })}
+  const sections = document.querySelectorAll("details.news-section__tag");
+  // console.log(sections);
+  if (sections) {
+    sections.forEach((section) => {
+      const list = section.querySelector(".catalog-tag__list");
+      const button = section.querySelector(".catalog-tag__btn");
+      if (list.querySelector("a.link") === null) {
+        button.classList.add("catalog-tag__item--none");
+        button.classList.remove("catalog-tag__btn");
+        list.remove();
+      }
+    });
+  }
 });
