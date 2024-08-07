@@ -108,22 +108,7 @@
                   <div class="dropdown__main dropdown__main--mt-sm">
                     <div class="popup popup--w295">
                       <button class="dropdown__close popup__close" type="button">
-                        <span>
-                          <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M4.1665 4.16666L20.8332 20.8333"
-                              stroke="#444444"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2" />
-                            <path
-                              d="M4.1665 20.8333L20.8332 4.16666"
-                              stroke="#444444"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-width="2" />
-                          </svg>
-                        </span>
+                        <img src="assets/img/icons/exit.svg" alt="" />
                       </button>
                       <!-- /.popup__close -->
                       <div class="popup__title1">Выберите офис</div>
@@ -454,20 +439,7 @@
                   <div class="dropdown__main dropdown__main--mt-sm">
                     <div class="popup popup--w295">
                       <button class="dropdown__close popup__close" type="button">
-                        <span>
-                          <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M4.1665 4.16666L20.8332 20.8333"
-                              stroke="#444444"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"></path>
-                            <path
-                              d="M4.1665 20.8333L20.8332 4.16666"
-                              stroke="#444444"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"></path>
-                          </svg>
-                        </span>
+                        <img src="assets/img/icons/exit.svg" alt="" />
                       </button>
                       <!-- /.popup__close -->
                       <div class="popup__title1">Выберите офис</div>
@@ -4374,22 +4346,7 @@
                         <div class="dropdown__main dropdown__main--mt-sm">
                           <div class="popup popup--w295">
                             <button class="dropdown__close popup__close" type="button">
-                              <span>
-                                <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                  <path
-                                    d="M4.1665 4.16666L20.8332 20.8333"
-                                    stroke="#444444"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2" />
-                                  <path
-                                    d="M4.1665 20.8333L20.8332 4.16666"
-                                    stroke="#444444"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2" />
-                                </svg>
-                              </span>
+                              <img src="assets/img/icons/exit.svg" alt="" />
                             </button>
                             <!-- /.popup__close -->
                             <div class="popup__title1">Выберите офис</div>
@@ -4652,8 +4609,6 @@
             <!-- /.popup__links -->
           </div>
         </div>
-       
-        
       </div>
       <div class="modal-background" id="modalBackground"></div>
     </div>
@@ -4851,31 +4806,33 @@
               <div class="form__main">
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-
-                    <input class="input__field" type="text" data-validate="email">
-                    <span class="input__placeholder  required__field">Почта</span>
+                    <input class="input__field" type="text" data-validate="email" />
+                    <span class="input__placeholder required__field">Почта</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty">
-                    <span class="input__placeholder  required__field">Пароль</span>
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder required__field">Пароль</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <button class="but but--primary but--full form__btn">Войти</button>
                 <div class="link__help">
-                  <div class="block--link"><a class="link__forgot-password js-open-modal" data-modal-name="forgot-password">Забыли пароль?</a></div>
+                  <div class="block--link">
+                    <a class="link__forgot-password js-open-modal" data-modal-name="forgot-password">Забыли пароль?</a>
+                  </div>
                   <span>/</span>
-                  <div class="block--link"><a class="link__regustration js-open-modal" data-modal-name="regustration">Зарегистрироваться</a></div>
+                  <div class="block--link">
+                    <a class="link__regustration js-open-modal" data-modal-name="regustration">Зарегистрироваться</a>
+                  </div>
                 </div>
               </div>
             </form>
 
             <button class="modal-new__close js-close-modal">
-
-              <img src="assets/img/icons/exit.svg" alt="">
+              <img src="assets/img/icons/exit.svg" alt="" />
             </button>
           </div>
         </div>
@@ -4889,13 +4846,14 @@
             <form class="form modal-new__form js-form" autocomplete="off">
               <div class="title3 form__title">Восстановление пароля</div>
               <div class="form__main">
-                <div class="text">Введите адрес электронной почты, который вы использовали при регистрации. Вы получите ссылку для сброса пароля на почту</div>
+                <div class="text">
+                  Введите адрес электронной почты, который вы использовали при регистрации. Вы получите ссылку для сброса пароля на почту
+                </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
+                    <input class="input__field" type="email" data-validate="email" />
 
-                    <input class="input__field" type="email" data-validate="email">
-
-                    <span class="input__placeholder  required__field">Почта</span>
+                    <span class="input__placeholder required__field">Почта</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
@@ -4904,7 +4862,7 @@
                   Поля, отмеченные
                   <span class="text text--danger">*</span>
                   , обязательны для заполнения
-                  <br>
+                  <br />
                   Нажимая на кнопку - вы автоматически
                   <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
                   на отправку ваших персональных данных.
@@ -4912,14 +4870,12 @@
               </div>
             </form>
             <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="">
+              <img src="assets/img/icons/exit.svg" alt="" />
             </button>
           </div>
         </div>
       </div>
     </div>
-
-
 
     <div class="modal-new" data-name="regustration">
       <div class="modal-new__body">
@@ -4930,24 +4886,23 @@
               <div class="form__main">
                 <div class="input form__input js-form-input">
                   <div class="input__main">
+                    <input class="input__field" type="email" data-validate="email" />
 
-                    <input class="input__field" type="email" data-validate="email">
-
-                    <span class="input__placeholder  required__field">Почта</span>
+                    <span class="input__placeholder required__field">Почта</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="name" data-validate="no_required">
+                    <input class="input__field" type="name" data-validate="no_required" />
                     <span class="input__placeholder">Имя</span>
                   </div>
                 </div>
                 <div class="input form__input js-form-input">
-                  <div class="input__conteiner ">
-                    <div class="input__main input__main--regustration ">
-                      <input class="input__field input__field--regustration" type="text" data-validate="empty">
-                      <span class="input__placeholder  required__field">Пароль</span>
+                  <div class="input__conteiner">
+                    <div class="input__main input__main--regustration">
+                      <input class="input__field input__field--regustration" type="text" data-validate="empty" />
+                      <span class="input__placeholder required__field">Пароль</span>
                     </div>
                     <button class="input__generation">Сгенерировать</button>
                   </div>
@@ -4958,7 +4913,7 @@
                   Поля, отмеченные
                   <span class="text text--danger">*</span>
                   , обязательны для заполнения
-                  <br>
+                  <br />
                   Нажимая на кнопку - вы автоматически
                   <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
                   на отправку ваших персональных данных.
@@ -4966,54 +4921,54 @@
               </div>
             </form>
             <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="">
+              <img src="assets/img/icons/exit.svg" alt="" />
             </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class=" splashboard splashboard__cookies" data-name="cookies">
+    <div class="splashboard splashboard__cookies" data-name="cookies">
       <div class="splashboard__bottom cookies">
         <div class="cookies__container splashboard__container">
-          <div class="cookies__img ">
-            <img src="./assets/img/splashboard/cookies.png" alt="">
+          <div class="cookies__img">
+            <img src="./assets/img/splashboard/cookies.png" alt="" />
           </div>
-          <div class="cookies__text ">
+          <div class="cookies__text">
             <div class="text--description">
-              Мы используем файлы cookies, чтобы сайт был удобным и эффективным. Просматривая этот сайт, вы соглашаетесь с <a href="">политикой конфиденциальности</a>.
+              Мы используем файлы cookies, чтобы сайт был удобным и эффективным. Просматривая этот сайт, вы соглашаетесь с
+              <a href="">политикой конфиденциальности</a>
+              .
             </div>
           </div>
           <button class="but but--primary but--full form__btn cookies__btn">
             <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.835 2.97919C14.7279 2.87168 14.5818 2.81033 14.4287 2.80863C14.2756 2.80693 14.1281 2.86502 14.0186 2.97012L5.00492 11.8231L0.97845 7.87005C0.86956 7.76677 0.723718 7.70962 0.572338 7.71091C0.420957 7.7122 0.276149 7.77183 0.169103 7.87695C0.0620569 7.98208 0.00133728 8.12429 2.18255e-05 8.27295C-0.00129363 8.42161 0.0569004 8.56484 0.16207 8.67177L4.59615 13.0263C4.64961 13.0792 4.7132 13.1212 4.78326 13.1498C4.85331 13.1785 4.92845 13.1932 5.00434 13.1932C5.08024 13.1932 5.15537 13.1785 5.22543 13.1498C5.29549 13.1212 5.35908 13.0792 5.41253 13.0263L14.835 3.77297C14.9407 3.66699 15 3.52449 15 3.37608C15 3.22767 14.9407 3.08517 14.835 2.97919Z" fill="white"/>
+              <path
+                d="M14.835 2.97919C14.7279 2.87168 14.5818 2.81033 14.4287 2.80863C14.2756 2.80693 14.1281 2.86502 14.0186 2.97012L5.00492 11.8231L0.97845 7.87005C0.86956 7.76677 0.723718 7.70962 0.572338 7.71091C0.420957 7.7122 0.276149 7.77183 0.169103 7.87695C0.0620569 7.98208 0.00133728 8.12429 2.18255e-05 8.27295C-0.00129363 8.42161 0.0569004 8.56484 0.16207 8.67177L4.59615 13.0263C4.64961 13.0792 4.7132 13.1212 4.78326 13.1498C4.85331 13.1785 4.92845 13.1932 5.00434 13.1932C5.08024 13.1932 5.15537 13.1785 5.22543 13.1498C5.29549 13.1212 5.35908 13.0792 5.41253 13.0263L14.835 3.77297C14.9407 3.66699 15 3.52449 15 3.37608C15 3.22767 14.9407 3.08517 14.835 2.97919Z"
+                fill="white" />
             </svg>
-            <span>Понятно</span></button>
+            <span>Понятно</span>
+          </button>
         </div>
       </div>
     </div>
 
-    <div class=" splashboard splashboard__warning" data-name="warning">
+    <div class="splashboard splashboard__warning" data-name="warning">
       <div class="splashboard__bottom warning">
         <div class="warning__container splashboard__container">
-            <div class="warning__img ">
-              <img src="./assets/img/splashboard/warning.png" alt="">
-            </div>
-            <div class="warning__text ">
-                <div class="warning__text--title">
-                    Временно недоступна оплата банковскими картами в офисе №3.
-                </div>
-                <div class="text--description">
-                    Приносим извинения за неудобства. Скоро всё исправим!
-                </div>
-            </div>
+          <div class="warning__img">
+            <img src="./assets/img/splashboard/warning.png" alt="" />
+          </div>
+          <div class="warning__text">
+            <div class="warning__text--title">Временно недоступна оплата банковскими картами в офисе №3.</div>
+            <div class="text--description">Приносим извинения за неудобства. Скоро всё исправим!</div>
+          </div>
         </div>
       </div>
-      <button class="modal-new__close" > 
-        <img src="assets/img/icons/exit.svg" alt="">
+      <button class="modal-new__close">
+        <img src="assets/img/icons/exit.svg" alt="" />
       </button>
     </div>
-  
 
     <!-- AUTHORIZATION MODAL END-->
 

@@ -19,12 +19,6 @@ function renderCategoryList() {
       if (categoryItems.length <= 5) {
         item.nextElementSibling.style.display = "none";
       }
-
-      // if (categoryItems.length > 5) {
-      //   listItems.push(categoryItems);
-      // } else if (categoryItems.length <= 5) {
-      //   // item.nextElementSibling.style.display = "none";
-      // }
     });
 
     listItems.forEach((item) => {
@@ -51,22 +45,6 @@ function renderCategoryList() {
   }
 
   function renderAccordion() {
-    // console.log(accordionsArr);
-
-    // accordionItemsParent.forEach((item) => {
-    //   item.innerHTML = "<div>TEST</div>";
-    // });
-
-    // accordionsArr.forEach((item) => {
-    //   const items = [];
-
-    //   item.forEach((el) => {
-    //     items.push(el.outerHTML);
-    //   });
-
-    //   console.log(items);
-    // });
-
     const itemsArr = accordionsArr.map((item) => {
       const items = [];
 
@@ -77,7 +55,7 @@ function renderCategoryList() {
       return items.join("");
     });
 
-    console.log(itemsArr);
+    // console.log(itemsArr);
 
     accordionParentItems.forEach((item, i) => {
       item.insertAdjacentHTML("beforeend", itemsArr[i]);

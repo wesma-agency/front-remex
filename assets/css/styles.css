@@ -15872,13 +15872,19 @@ width: calc(33.33% - 30px);
 
 @media (max-width: 1280px) {
   /* Страница Корзина */
+  /* .cart__sidebar {
+    position: relative;
+    z-index: 15;
+  } */
+}
+
+@media (max-width: 1279.98px) {
+  /* Страница Корзина */
   .cart__sidebar {
     position: relative;
     z-index: 15;
   }
-}
 
-@media (max-width: 1279.98px) {
   /* Страница Оформление заказа */
   .cart-order__header-btn {
     min-width: 308px;
