@@ -6,55 +6,63 @@ function renderSeriesList() {
   const seriesItems = document.querySelectorAll(".swiper-slide.catalog__series-slide");
   const showHideListBtns = document.querySelectorAll(".show-hide-list-btn");
 
-  function getDeletingItems() {
-    const seriesList = [];
+  const seriesLabels = document.querySelectorAll(".product-series.catalog__series-item");
+  const labelsBtn = document.querySelectorAll(".but.catalog__series-item");
 
-    seriesItems.forEach((el) => {
-      seriesList.push(el);
+  function getDeletingItems(items) {
+    const arr = [];
+
+    items.forEach((item) => {
+      arr.push(item);
     });
 
-    return seriesList.slice(5);
+    return arr.slice(5);
   }
 
-  function hideFullList() {
-    const itemsToHide = getDeletingItems();
+  function hideFullList(list) {
+    const items = getDeletingItems(list);
 
-    itemsToHide.forEach((item) => {
+    items.forEach((item) => {
       item.style.display = "none";
     });
   }
 
-  function toggleFullList() {
-    const toggleItems = getDeletingItems();
-    // const isListShow = showHideListBtns.querySelectorAll(".show-full-list");
-    // const isListHide = showHideListBtns.querySelectorAll(".hide-full-list");
+  hideFullList(seriesItems);
+  hideFullList(seriesLabels);
 
-    showHideListBtns.forEach((btn) => {
-      const isListShow = btn.querySelector(".show-full-list");
-      const isListHide = btn.querySelector(".hide-full-list");
+  function toggleItemsStyle(items, style) {
+    items.forEach((item) => {
+      item.style.display = `${style}`;
+    });
+  }
+
+  function toggleFullList(btns, list) {
+    const toggleItems = getDeletingItems(list);
+
+    btns.forEach((btn) => {
+      const isShow = btn.querySelector(".show-full-list");
+      const isHide = btn.querySelector(".hide-full-list");
 
       btn.addEventListener("click", () => {
-        if (isListShow.classList.contains("active")) {
-          isListShow.classList.remove("active");
-          isListHide.classList.add("active");
-          toggleItems.forEach((item) => {
-            item.style.display = "block";
-          });
+        if (isShow.classList.contains("active")) {
+          isShow.classList.remove("active");
+          isHide.classList.add("active");
+
+          toggleItemsStyle(toggleItems, "block");
           seriesSlider.update();
-        } else if (isListHide.classList.contains("active")) {
-          isListHide.classList.remove("active");
-          isListShow.classList.add("active");
-          toggleItems.forEach((item) => {
-            item.style.display = "none";
-          });
+        } else if (isHide.classList.contains("active")) {
+          isHide.classList.remove("active");
+          isShow.classList.add("active");
+
+          toggleItemsStyle(toggleItems, "none");
           seriesSlider.update();
         }
       });
     });
   }
 
-  hideFullList();
-  toggleFullList();
+  toggleFullList(showHideListBtns, seriesItems);
+  toggleFullList(labelsBtn, seriesLabels);
 }
 
 const seriesSlider = new Swiper(".catalog__series-slider", {

@@ -15789,11 +15789,15 @@ width: calc(33.33% - 30px);
 
 /* Страница Результаты поиска */
 .show-hide-list-btn .show-full-list.active,
-.show-hide-list-btn .hide-full-list.active {
+.show-hide-list-btn .hide-full-list.active,
+.but.catalog__series-item .show-full-list.active,
+.but.catalog__series-item .hide-full-list.active {
   display: block;
 }
 .show-hide-list-btn .show-full-list,
-.show-hide-list-btn .hide-full-list {
+.show-hide-list-btn .hide-full-list,
+.but.catalog__series-item .show-full-list,
+.but.catalog__series-item .hide-full-list {
   display: none;
 }
 

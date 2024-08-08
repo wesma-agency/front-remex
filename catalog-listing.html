@@ -2101,7 +2101,7 @@
                       </div>
                     </div>
                     <div class="catalog-sidebar__btns">
-                      <button class="but but--primary catalog-sidebar__btns-item">Показать (552 товара)</button>
+                      <button class="but but--primary catalog-sidebar__btns-item" type="submit">Показать (552 товара)</button>
                       <button class="but but--transparent-light catalog-sidebar__btns-link">Сбросить все фильтры</button>
                     </div>
                   </div>
@@ -2177,17 +2177,88 @@
                           <img class="product-series__img" src="assets/img/catalog-listing/product-series/5.png" alt="" />
                         </div>
                       </label>
+                      <label class="product-series catalog__series-item">
+                        <input class="product-series__input" type="radio" name="series" />
+                        <div class="product-series__main">
+                          <div class="product-series__info">
+                            <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">ORACAL 6510</div>
+                            <div class="text text--light product-series__name">Флуоресцентная пленка</div>
+                            <div class="text text--sm text--gray product-series__count">60 вариантов</div>
+                          </div>
+                          <img class="product-series__img" src="assets/img/catalog-listing/product-series/5.png" alt="" />
+                        </div>
+                      </label>
+                      <label class="product-series catalog__series-item">
+                        <input class="product-series__input" type="radio" name="series" />
+                        <div class="product-series__main">
+                          <div class="product-series__info">
+                            <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">REXCOLOR</div>
+                            <div class="text text--light product-series__name">Аппликационная пленка</div>
+                            <div class="text text--sm text--gray product-series__count">60 вариантов</div>
+                          </div>
+                          <img class="product-series__img" src="assets/img/catalog-listing/product-series/1.png" alt="" />
+                        </div>
+                      </label>
+                      <label class="product-series catalog__series-item">
+                        <input class="product-series__input" type="radio" name="series" checked />
+                        <div class="product-series__main">
+                          <div class="product-series__info">
+                            <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">ORACAL® 641</div>
+                            <div class="text text--light product-series__name">Аппликационная пленка</div>
+                            <div class="text text--sm text--gray product-series__count">60 вариантов</div>
+                          </div>
+                          <img class="product-series__img" src="assets/img/catalog-listing/product-series/2.png" alt="" />
+                        </div>
+                      </label>
+                      <label class="product-series catalog__series-item">
+                        <input class="product-series__input" type="radio" name="series" />
+                        <div class="product-series__main">
+                          <div class="product-series__info">
+                            <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">
+                              ORACAL 8500, 8100
+                            </div>
+                            <div class="text text--light product-series__name">Транслюцентная пленка</div>
+                            <div class="text text--sm text--gray product-series__count">54 варианта</div>
+                          </div>
+                          <img class="product-series__img" src="assets/img/catalog-listing/product-series/3.png" alt="" />
+                        </div>
+                      </label>
+                      <label class="product-series catalog__series-item">
+                        <input class="product-series__input" type="radio" name="series" />
+                        <div class="product-series__main">
+                          <div class="product-series__info">
+                            <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">ORACAL 8300</div>
+                            <div class="text text--light product-series__name">Витражная пленка</div>
+                            <div class="text text--sm text--gray product-series__count">32 варианта</div>
+                          </div>
+                          <img class="product-series__img" src="assets/img/catalog-listing/product-series/4.png" alt="" />
+                        </div>
+                      </label>
                       <button class="but catalog__series-item">
-                        <span>Показать все</span>
-                        <svg
-                          class="but__icon but__icon--stroke"
-                          width="18"
-                          height="10"
-                          viewBox="0 0 18 10"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg">
-                          <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
-                        </svg>
+                        <div class="show-full-list active">
+                          <span>Показать все</span>
+                          <svg
+                            class="but__icon but__icon--stroke"
+                            width="24"
+                            height="14"
+                            viewBox="0 0 18 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
+                          </svg>
+                        </div>
+                        <div class="hide-full-list">
+                          <svg
+                            class="but__icon but__icon--stroke"
+                            width="24"
+                            height="14"
+                            viewBox="0 0 18 10"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
+                          </svg>
+                          <span>Скрыть все</span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -2237,94 +2308,19 @@
                       </div>
                     </div>
                     <div class="catalog__top-item">
-                      <div class="accordion">
-                        <div class="catalog__series catalog__series-items">
-                          <div class="title3 title3--lh-3 catalog__subtitle accordion__btn top-item__btn">
+                      <div class="spoiler spoiler--mobile catalog__series-spoiler">
+                        <div class="accordion spoiler__accordion">
+                          <button class="title3 accordion__btn spoiler__btn">
                             Серии товаров
-                            <span class="top-item__btn-arrow"></span>
-                          </div>
-                          <div class="accordion__content">
-                            <div class="accordion__main">
-                              <div class="catalog__series-list catalog__series-list--desctop">
-                                <label class="product-series catalog__series-item">
-                                  <input class="product-series__input" type="radio" name="series" />
-                                  <div class="product-series__main">
-                                    <div class="product-series__info">
-                                      <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">
-                                        REXCOLOR
-                                      </div>
-                                      <div class="text text--light product-series__name">Аппликационная пленка</div>
-                                      <div class="text text--sm text--gray product-series__count">60 вариантов</div>
-                                    </div>
-                                    <img class="product-series__img" src="assets/img/catalog-listing/product-series/1.png" alt="" />
-                                  </div>
-                                </label>
-                                <label class="product-series catalog__series-item">
-                                  <input class="product-series__input" type="radio" name="series" checked />
-                                  <div class="product-series__main">
-                                    <div class="product-series__info">
-                                      <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">
-                                        ORACAL® 641
-                                      </div>
-                                      <div class="text text--light product-series__name">Аппликационная пленка</div>
-                                      <div class="text text--sm text--gray product-series__count">60 вариантов</div>
-                                    </div>
-                                    <img class="product-series__img" src="assets/img/catalog-listing/product-series/2.png" alt="" />
-                                  </div>
-                                </label>
-                                <label class="product-series catalog__series-item">
-                                  <input class="product-series__input" type="radio" name="series" />
-                                  <div class="product-series__main">
-                                    <div class="product-series__info">
-                                      <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">
-                                        ORACAL 8500, 8100
-                                      </div>
-                                      <div class="text text--light product-series__name">Транслюцентная пленка</div>
-                                      <div class="text text--sm text--gray product-series__count">54 варианта</div>
-                                    </div>
-                                    <img class="product-series__img" src="assets/img/catalog-listing/product-series/3.png" alt="" />
-                                  </div>
-                                </label>
-                                <label class="product-series catalog__series-item">
-                                  <input class="product-series__input" type="radio" name="series" />
-                                  <div class="product-series__main">
-                                    <div class="product-series__info">
-                                      <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">
-                                        ORACAL 8300
-                                      </div>
-                                      <div class="text text--light product-series__name">Витражная пленка</div>
-                                      <div class="text text--sm text--gray product-series__count">32 варианта</div>
-                                    </div>
-                                    <img class="product-series__img" src="assets/img/catalog-listing/product-series/4.png" alt="" />
-                                  </div>
-                                </label>
-                                <label class="product-series catalog__series-item">
-                                  <input class="product-series__input" type="radio" name="series" />
-                                  <div class="product-series__main">
-                                    <div class="product-series__info">
-                                      <div class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title">
-                                        ORACAL 6510
-                                      </div>
-                                      <div class="text text--light product-series__name">Флуоресцентная пленка</div>
-                                      <div class="text text--sm text--gray product-series__count">60 вариантов</div>
-                                    </div>
-                                    <img class="product-series__img" src="assets/img/catalog-listing/product-series/5.png" alt="" />
-                                  </div>
-                                </label>
-                                <button class="but catalog__series-item">
-                                  <span>Показать все</span>
-                                  <svg
-                                    class="but__icon but__icon--stroke"
-                                    width="18"
-                                    height="10"
-                                    viewBox="0 0 18 10"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
-                                  </svg>
-                                </button>
+                            <span class="spoiler__btn-arrow"></span>
+                          </button>
+                          <div class="accordion__content spoiler__content">
+                            <div class="accordion__main spoiler__main">
+                              <div
+                                class="title2 title2--lh-2 title2--spacing-2 catalog__subtitle catalog__subtitle--mb-lg catalog__subtitle--desktop">
+                                Серии товаров
                               </div>
-                              <div class="catalog__series-slider-box catalog__series-slider-box--sm">
+                              <div class="catalog__series-slider-box">
                                 <div class="swiper catalog__series-slider">
                                   <div class="swiper-wrapper catalog__series-slider-wrapper">
                                     <div class="swiper-slide catalog__series-slide">
@@ -2447,35 +2443,183 @@
                                         </div>
                                       </label>
                                     </div>
+                                    <div class="swiper-slide catalog__series-slide">
+                                      <label class="product-series catalog__series-slider-item">
+                                        <input class="product-series__input" type="radio" name="series" />
+                                        <div class="product-series__main product-series__main--p-lg">
+                                          <div class="product-series__info">
+                                            <div
+                                              class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title product-series__title--mb-lg">
+                                              ORACAL 6510
+                                            </div>
+                                            <div class="text text--light product-series__name">Флуоресцентная пленка</div>
+                                            <div
+                                              class="text text--flex text--wrap text--sm text--gray product-series__count product-series__count--mt-xl">
+                                              <span>32 оттенка</span>
+                                              <img class="text__separator" src="assets/img/icons/separator-gray.svg" alt="" />
+                                              <span>Ширина: 1 и 1,26 м</span>
+                                            </div>
+                                          </div>
+                                          <img
+                                            class="product-series__img product-series__img--mt-sm product-series__img--lg"
+                                            src="assets/img/catalog-listing/product-series/5.png"
+                                            alt="" />
+                                        </div>
+                                      </label>
+                                    </div>
+                                    <div class="swiper-slide catalog__series-slide">
+                                      <label class="product-series catalog__series-slider-item">
+                                        <input class="product-series__input" type="radio" name="series" checked />
+                                        <div class="product-series__main product-series__main--p-lg">
+                                          <div class="product-series__info">
+                                            <div
+                                              class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title product-series__title--mb-lg">
+                                              ORACAL® 641
+                                            </div>
+                                            <div class="text text--light product-series__name">Аппликационная пленка</div>
+                                            <div
+                                              class="text text--flex text--wrap text--sm text--gray product-series__count product-series__count--mt-xl">
+                                              <span>60 оттенков</span>
+                                              <img class="text__separator" src="assets/img/icons/separator-gray.svg" alt="" />
+                                              <span>Ширина: 1 и 1,26 м</span>
+                                            </div>
+                                          </div>
+                                          <img
+                                            class="product-series__img product-series__img--mt-sm product-series__img--lg"
+                                            src="assets/img/catalog-listing/product-series/2.png"
+                                            alt="" />
+                                        </div>
+                                      </label>
+                                    </div>
+                                    <div class="swiper-slide catalog__series-slide">
+                                      <label class="product-series catalog__series-slider-item">
+                                        <input class="product-series__input" type="radio" name="series" />
+                                        <div class="product-series__main product-series__main--p-lg">
+                                          <div class="product-series__info">
+                                            <div
+                                              class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title product-series__title--mb-lg">
+                                              ORACAL 8500, 8100
+                                            </div>
+                                            <div class="text text--light product-series__name">Транслюцентная пленка</div>
+                                            <div
+                                              class="text text--flex text--wrap text--sm text--gray product-series__count product-series__count--mt-xl">
+                                              <span>60 оттенков</span>
+                                              <img class="text__separator" src="assets/img/icons/separator-gray.svg" alt="" />
+                                              <span>Ширина: 1 и 1,26 м</span>
+                                            </div>
+                                          </div>
+                                          <img
+                                            class="product-series__img product-series__img--mt-sm product-series__img--lg"
+                                            src="assets/img/catalog-listing/product-series/3.png"
+                                            alt="" />
+                                        </div>
+                                      </label>
+                                    </div>
+                                    <div class="swiper-slide catalog__series-slide">
+                                      <label class="product-series catalog__series-slider-item">
+                                        <input class="product-series__input" type="radio" name="series" />
+                                        <div class="product-series__main product-series__main--p-lg">
+                                          <div class="product-series__info">
+                                            <div
+                                              class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title product-series__title--mb-lg">
+                                              ORACAL 8300
+                                            </div>
+                                            <div class="text text--light product-series__name">Витражная пленка</div>
+                                            <div
+                                              class="text text--flex text--wrap text--sm text--gray product-series__count product-series__count--mt-xl">
+                                              <span>32 оттенка</span>
+                                              <img class="text__separator" src="assets/img/icons/separator-gray.svg" alt="" />
+                                              <span>Ширина: 1 и 1,26 м</span>
+                                            </div>
+                                          </div>
+                                          <img
+                                            class="product-series__img product-series__img--mt-sm product-series__img--lg"
+                                            src="assets/img/catalog-listing/product-series/4.png"
+                                            alt="" />
+                                        </div>
+                                      </label>
+                                    </div>
+                                    <div class="swiper-slide catalog__series-slide">
+                                      <label class="product-series catalog__series-slider-item">
+                                        <input class="product-series__input" type="radio" name="series" />
+                                        <div class="product-series__main product-series__main--p-lg">
+                                          <div class="product-series__info">
+                                            <div
+                                              class="title4 title4--semibold title4--gray-dark title4--lh-4 product-series__title product-series__title--mb-lg">
+                                              REXCOLOR
+                                            </div>
+                                            <div class="text text--light product-series__name">Аппликационная пленка</div>
+                                            <div
+                                              class="text text--flex text--wrap text--sm text--gray product-series__count product-series__count--mt-xl">
+                                              <span>60 оттенков</span>
+                                              <img class="text__separator" src="assets/img/icons/separator-gray.svg" alt="" />
+                                              <span>Ширина: 1 и 1,26 м</span>
+                                            </div>
+                                          </div>
+                                          <img
+                                            class="product-series__img product-series__img--mt-sm product-series__img--lg"
+                                            src="assets/img/catalog-listing/product-series/1.png"
+                                            alt="" />
+                                        </div>
+                                      </label>
+                                    </div>
                                     <div class="catalog__series-slide catalog__series-slide--static">
-                                      <button class="but but--text-xl catalog__series-slider-item">
-                                        <span>Показать все</span>
-                                        <svg
-                                          class="but__icon but__icon--stroke"
-                                          width="24"
-                                          height="14"
-                                          viewBox="0 0 18 10"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg">
-                                          <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
-                                        </svg>
+                                      <button class="but but--text-xl catalog__series-slider-item show-hide-list-btn">
+                                        <div class="show-full-list active">
+                                          <span>Показать все</span>
+                                          <svg
+                                            class="but__icon but__icon--stroke"
+                                            width="24"
+                                            height="14"
+                                            viewBox="0 0 18 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
+                                          </svg>
+                                        </div>
+                                        <div class="hide-full-list">
+                                          <svg
+                                            class="but__icon but__icon--stroke"
+                                            width="24"
+                                            height="14"
+                                            viewBox="0 0 18 10"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
+                                          </svg>
+                                          <span>Скрыть все</span>
+                                        </div>
                                       </button>
                                     </div>
                                   </div>
                                 </div>
                                 <div class="swiper-pagination catalog__series-pagination"></div>
                               </div>
-                              <button class="but but--text-xl catalog__series-mobile-btn catalog__series-mobile-btn--sm">
-                                <span>Показать все</span>
-                                <svg
-                                  class="but__icon but__icon--stroke"
-                                  width="24"
-                                  height="14"
-                                  viewBox="0 0 18 10"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
-                                </svg>
+                              <button class="but but--text-xl catalog__series-mobile-btn show-hide-list-btn">
+                                <div class="show-full-list active">
+                                  <span>Показать все</span>
+                                  <svg
+                                    class="but__icon but__icon--stroke"
+                                    width="24"
+                                    height="14"
+                                    viewBox="0 0 18 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
+                                  </svg>
+                                </div>
+                                <div class="hide-full-list">
+                                  <svg
+                                    class="but__icon but__icon--stroke"
+                                    width="24"
+                                    height="14"
+                                    viewBox="0 0 18 10"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.6 1L16.8 5.125M16.8 5.125L13.6 9.25M16.8 5.125H0" />
+                                  </svg>
+                                  <span>Скрыть все</span>
+                                </div>
                               </button>
                             </div>
                           </div>
@@ -5695,6 +5839,7 @@
     <script src="https://unpkg.com/tippy.js@6"></script>
     <script src="assets/js/index.js?v=27"></script>
     <script src="assets/js/catalog-listing.js"></script>
+    <script src="assets/js/search.js"></script>
 
     <!-- pgs js -->
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
