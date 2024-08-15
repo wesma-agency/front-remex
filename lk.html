@@ -1811,10 +1811,11 @@
               </nav>
               <!-- /.menu -->
             </div>
+          </div>
+        </div>
 
-            <!-- /.podmenu -->
-        </header>
-
+        <!-- /.podmenu -->
+      </header>
 
       <main class="main">
         <div class="profile">
@@ -1834,38 +1835,22 @@
                 <aside class="profile__sidebar lk_sidebar">
                   <div class="navigation with-adaptive__menu">
                     <div class="navigation__btns">
-                      <div class="select select--border faq__tabs-select" data-tabs-name="menu">
+                      <div class="select select--border profile__select">
                         <select class="select__field">
-                          <option class="navigation__menu" value="1"><a class="navigation__btn" href="profile.html">Профиль</a></option>
-                          <option class="navigation__menu" value="2">
-                            <span class="navigation__btn">Заказы</span>
-                          </option>
-                          <option class="navigation__menu" value="3">
-                            <a class="navigation__btn" href="#">
-                              <div>
-                                Счета
-                                <span class="navigation__btn-value">2</span>
-                              </div>
-                            </a>
-                          </option>
-                          <option class="navigation__menu" value="4">
-                            <a class="navigation__btn" href="#">
-                              Избранные товары
-                              <span class="navigation__btn-value">6</span>
-                            </a>
-                          </option>
-                          <option class="navigation__menu" value="5">
-                            <a class="navigation__btn" href="#">
-                              Уведомления
-                              <span class="navigation__btn-value">2</span>
-                            </a>
-                          </option>
-                          <option class="navigation__menu" value="6"><a class="navigation__btn" href="faq.html">FAQ</a></option>
+                          <option value="1">Мой кабинет</option>
+                          <option value="2">Профиль</option>
+                          <option value="3">Заказы</option>
+                          <option value="4">Счета</option>
+                          <option value="5">Корзина</option>
+                          <option value="6">Избранные товары</option>
+                          <option value="7">Лист ожидания</option>
+                          <option value="8">Оценка качества товара</option>
+                          <option value="9">Уведомления</option>
+                          <option value="10">FAQ</option>
                         </select>
                       </div>
                     </div>
                   </div>
-
 
                   <div class="navigation no-adaptive__menu">
                     <div class="navigation__btns">
@@ -1898,71 +1883,73 @@
                         <div class="title3 profile-card__title">Активные заказы</div>
                         <span class="faq-item__btn-arrow"></span>
                       </div>
-                      <div class="profile-card__orders" data-scrollbar>
-                        <div class="order-item profile-card__order">
-                          <div class="order-item__main--span">
-                            <div class="order-item__main">
-                              <div class="text text--gray">Заказ E-45495</div>
-                              <div class="text text--light">23.10.2023</div>
+                      <div class="profile-card__orders-list--wide">
+                        <div class="profile-card__orders" data-scrollbar>
+                          <div class="order-item profile-card__order">
+                            <div class="order-item__main--span">
+                              <div class="order-item__main">
+                                <div class="text text--gray">Заказ E-45495</div>
+                                <div class="text text--light">23.10.2023</div>
+                              </div>
+                              <span class="label label--success order-item__label">Новый</span>
                             </div>
-                            <span class="label label--success order-item__label">Новый</span>
+                            <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                           </div>
-                          <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                        </div>
 
-                        <div class="order-item profile-card__order">
-                          <div class="order-item__main--span">
-                            <div class="order-item__main">
-                              <div class="text text--gray">Заказ E-45495</div>
-                              <div class="text text--light">23.10.2023</div>
+                          <div class="order-item profile-card__order">
+                            <div class="order-item__main--span">
+                              <div class="order-item__main">
+                                <div class="text text--gray">Заказ E-45495</div>
+                                <div class="text text--light">23.10.2023</div>
+                              </div>
+                              <span class="label label--warning order-item__label">В пути</span>
                             </div>
-                            <span class="label label--warning order-item__label">В пути</span>
+                            <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                           </div>
-                          <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                        </div>
 
-                        <div class="order-item profile-card__order">
-                          <div class="order-item__main--span">
-                            <div class="order-item__main">
-                              <div class="text text--gray">Заказ E-45495</div>
-                              <div class="text text--light">23.10.2023</div>
+                          <div class="order-item profile-card__order">
+                            <div class="order-item__main--span">
+                              <div class="order-item__main">
+                                <div class="text text--gray">Заказ E-45495</div>
+                                <div class="text text--light">23.10.2023</div>
+                              </div>
+                              <span class="label label--primary order-item__label">Ожидает получения</span>
                             </div>
-                            <span class="label label--primary order-item__label">Ожидает получения</span>
+                            <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                           </div>
-                          <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                        </div>
 
-                        <div class="order-item profile-card__order">
-                          <div class="order-item__main--span">
-                            <div class="order-item__main">
-                              <div class="text text--gray">Заказ E-45495</div>
-                              <div class="text text--light">23.10.2023</div>
+                          <div class="order-item profile-card__order">
+                            <div class="order-item__main--span">
+                              <div class="order-item__main">
+                                <div class="text text--gray">Заказ E-45495</div>
+                                <div class="text text--light">23.10.2023</div>
+                              </div>
+                              <span class="label label--success order-item__label">Новый</span>
                             </div>
-                            <span class="label label--success order-item__label">Новый</span>
+                            <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                           </div>
-                          <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                        </div>
 
-                        <div class="order-item profile-card__order">
-                          <div class="order-item__main--span">
-                            <div class="order-item__main">
-                              <div class="text text--gray">Заказ E-45495</div>
-                              <div class="text text--light">23.10.2023</div>
+                          <div class="order-item profile-card__order">
+                            <div class="order-item__main--span">
+                              <div class="order-item__main">
+                                <div class="text text--gray">Заказ E-45495</div>
+                                <div class="text text--light">23.10.2023</div>
+                              </div>
+                              <span class="label label--warning order-item__label">В пути</span>
                             </div>
-                            <span class="label label--warning order-item__label">В пути</span>
+                            <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                           </div>
-                          <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                        </div>
 
-                        <div class="order-item profile-card__order">
-                          <div class="order-item__main--span">
-                            <div class="order-item__main">
-                              <div class="text text--gray">Заказ E-45495</div>
-                              <div class="text text--light">23.10.2023</div>
+                          <div class="order-item profile-card__order">
+                            <div class="order-item__main--span">
+                              <div class="order-item__main">
+                                <div class="text text--gray">Заказ E-45495</div>
+                                <div class="text text--light">23.10.2023</div>
+                              </div>
+                              <span class="label label--primary order-item__label">Ожидает получения</span>
                             </div>
-                            <span class="label label--primary order-item__label">Ожидает получения</span>
+                            <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                           </div>
-                          <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                         </div>
                       </div>
                       <button class="but but--full profile-card__btn profile-card__btn--mt-sm lk-card__btn">Все заказы</button>
@@ -2419,74 +2406,78 @@
                           <span class="faq-item__btn-arrow"></span>
                         </div>
                         <div class="accordion__content">
-                          <div class="profile-card__orders accordion__main" data-scrollbar>
-                            <div class="order-item profile-card__order">
-                              <div class="order-item__main--span">
-                                <div class="order-item__main">
-                                  <div class="text text--gray">Заказ E-45495</div>
-                                  <div class="text text--light">23.10.2023</div>
+                          <div class="accordion__main">
+                            <div class="profile-card__orders-list">
+                              <div class="profile-card__orders accordion__main" data-scrollbar>
+                                <div class="order-item profile-card__order">
+                                  <div class="order-item__main--span">
+                                    <div class="order-item__main">
+                                      <div class="text text--gray">Заказ E-45495</div>
+                                      <div class="text text--light">23.10.2023</div>
+                                    </div>
+                                    <span class="label label--success order-item__label">Новый</span>
+                                  </div>
+                                  <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                                 </div>
-                                <span class="label label--success order-item__label">Новый</span>
-                              </div>
-                              <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                            </div>
 
-                            <div class="order-item profile-card__order">
-                              <div class="order-item__main--span">
-                                <div class="order-item__main">
-                                  <div class="text text--gray">Заказ E-45495</div>
-                                  <div class="text text--light">23.10.2023</div>
+                                <div class="order-item profile-card__order">
+                                  <div class="order-item__main--span">
+                                    <div class="order-item__main">
+                                      <div class="text text--gray">Заказ E-45495</div>
+                                      <div class="text text--light">23.10.2023</div>
+                                    </div>
+                                    <span class="label label--warning order-item__label">В пути</span>
+                                  </div>
+                                  <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                                 </div>
-                                <span class="label label--warning order-item__label">В пути</span>
-                              </div>
-                              <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                            </div>
 
-                            <div class="order-item profile-card__order">
-                              <div class="order-item__main--span">
-                                <div class="order-item__main">
-                                  <div class="text text--gray">Заказ E-45495</div>
-                                  <div class="text text--light">23.10.2023</div>
+                                <div class="order-item profile-card__order">
+                                  <div class="order-item__main--span">
+                                    <div class="order-item__main">
+                                      <div class="text text--gray">Заказ E-45495</div>
+                                      <div class="text text--light">23.10.2023</div>
+                                    </div>
+                                    <span class="label label--primary order-item__label">Ожидает получения</span>
+                                  </div>
+                                  <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                                 </div>
-                                <span class="label label--primary order-item__label">Ожидает получения</span>
-                              </div>
-                              <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                            </div>
 
-                            <div class="order-item profile-card__order">
-                              <div class="order-item__main--span">
-                                <div class="order-item__main">
-                                  <div class="text text--gray">Заказ E-45495</div>
-                                  <div class="text text--light">23.10.2023</div>
+                                <div class="order-item profile-card__order">
+                                  <div class="order-item__main--span">
+                                    <div class="order-item__main">
+                                      <div class="text text--gray">Заказ E-45495</div>
+                                      <div class="text text--light">23.10.2023</div>
+                                    </div>
+                                    <span class="label label--success order-item__label">Новый</span>
+                                  </div>
+                                  <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                                 </div>
-                                <span class="label label--success order-item__label">Новый</span>
-                              </div>
-                              <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                            </div>
 
-                            <div class="order-item profile-card__order">
-                              <div class="order-item__main--span">
-                                <div class="order-item__main">
-                                  <div class="text text--gray">Заказ E-45495</div>
-                                  <div class="text text--light">23.10.2023</div>
+                                <div class="order-item profile-card__order">
+                                  <div class="order-item__main--span">
+                                    <div class="order-item__main">
+                                      <div class="text text--gray">Заказ E-45495</div>
+                                      <div class="text text--light">23.10.2023</div>
+                                    </div>
+                                    <span class="label label--warning order-item__label">В пути</span>
+                                  </div>
+                                  <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                                 </div>
-                                <span class="label label--warning order-item__label">В пути</span>
-                              </div>
-                              <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
-                            </div>
 
-                            <div class="order-item profile-card__order">
-                              <div class="order-item__main--span">
-                                <div class="order-item__main">
-                                  <div class="text text--gray">Заказ E-45495</div>
-                                  <div class="text text--light">23.10.2023</div>
+                                <div class="order-item profile-card__order">
+                                  <div class="order-item__main--span">
+                                    <div class="order-item__main">
+                                      <div class="text text--gray">Заказ E-45495</div>
+                                      <div class="text text--light">23.10.2023</div>
+                                    </div>
+                                    <span class="label label--primary order-item__label">Ожидает получения</span>
+                                  </div>
+                                  <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                                 </div>
-                                <span class="label label--primary order-item__label">Ожидает получения</span>
                               </div>
-                              <div class="text text--gray-dark text--semibold order-item__price">150 580 ₽</div>
                             </div>
+                            <button class="but but--full profile-card__btn profile-card__btn--mt-sm lk-card__btn">Все заказы</button>
                           </div>
-                          <button class="but but--full profile-card__btn profile-card__btn--mt-sm lk-card__btn">Все заказы</button>
                         </div>
                       </div>
                     </div>
@@ -2498,33 +2489,35 @@
                         </div>
                         <div class="accordion__content">
                           <div class="profile-card__carts accordion__main">
-                            <div class="profile-card__cart">
-                              <div class="address-label profile-card__cart-address">
-                                Склад на Электрозаводской
-                                <span class="address-label__value">100 шт.</span>
+                            <div class="profile-card__cart-list">
+                              <div class="profile-card__cart">
+                                <div class="address-label profile-card__cart-address">
+                                  Склад на Электрозаводской
+                                  <span class="address-label__value">100 шт.</span>
+                                </div>
+                                <div class="text text--semibold text--gray-dark profile-card__cart-price">760 000 580 ₽</div>
                               </div>
-                              <div class="text text--semibold text--gray-dark profile-card__cart-price">760 000 580 ₽</div>
-                            </div>
-                            <div class="profile-card__cart">
-                              <div class="address-label address-label--yellow profile-card__cart-address">
-                                Склад в Реутове
-                                <span class="address-label__value">100 шт.</span>
+                              <div class="profile-card__cart">
+                                <div class="address-label address-label--yellow profile-card__cart-address">
+                                  Склад в Реутове
+                                  <span class="address-label__value">100 шт.</span>
+                                </div>
+                                <div class="text text--semibold text--gray-dark profile-card__cart-price">150 000 580 ₽</div>
                               </div>
-                              <div class="text text--semibold text--gray-dark profile-card__cart-price">150 000 580 ₽</div>
-                            </div>
-                            <div class="profile-card__cart">
-                              <div class="address-label address-label--purple profile-card__cart-address">
-                                Склад в Санкт-Петербурге
-                                <span class="address-label__value">100 шт.</span>
+                              <div class="profile-card__cart">
+                                <div class="address-label address-label--purple profile-card__cart-address">
+                                  Склад в Санкт-Петербурге
+                                  <span class="address-label__value">100 шт.</span>
+                                </div>
+                                <div class="text text--semibold text--gray-dark profile-card__cart-price">700 580 ₽</div>
                               </div>
-                              <div class="text text--semibold text--gray-dark profile-card__cart-price">700 580 ₽</div>
-                            </div>
-                            <div class="profile-card__cart">
-                              <div class="address-label address-label--pink profile-card__cart-address">
-                                Склад на Некрасовской
-                                <span class="address-label__value">100 шт.</span>
+                              <div class="profile-card__cart">
+                                <div class="address-label address-label--pink profile-card__cart-address">
+                                  Склад на Некрасовской
+                                  <span class="address-label__value">100 шт.</span>
+                                </div>
+                                <div class="text text--semibold text--gray-dark profile-card__cart-price">50 580 ₽</div>
                               </div>
-                              <div class="text text--semibold text--gray-dark profile-card__cart-price">50 580 ₽</div>
                             </div>
                           </div>
                         </div>
@@ -2540,147 +2533,149 @@
                       </div>
                       <div class="accordion__content">
                         <div class="accordion__main">
-                          <div class="tabs-btns nav-btns profile-card__tabs-btns" data-tabs-name="statistics_adaptive">
-                            <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Все</button>
-                            <button class="nav-btns__btn tabs-btns__btn">Юр. лицо 1</button>
-                            <button class="nav-btns__btn tabs-btns__btn">Юр. лицо 2</button>
-                            <button class="nav-btns__btn tabs-btns__btn">Все офисы</button>
+                          <div class="stat__content">
+                            <div class="tabs-btns nav-btns profile-card__tabs-btns" data-tabs-name="statistics_adaptive">
+                              <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Все</button>
+                              <button class="nav-btns__btn tabs-btns__btn">Юр. лицо 1</button>
+                              <button class="nav-btns__btn tabs-btns__btn">Юр. лицо 2</button>
+                              <button class="nav-btns__btn tabs-btns__btn">Все офисы</button>
+                            </div>
+                            <div class="select select--border profile-card__tabs-select" data-tabs-name="statistics_adaptive">
+                              <select class="select__field">
+                                <option value="1">Все</option>
+                                <option value="2">Юр. лицо 1</option>
+                                <option value="3">Юр. лицо 2</option>
+                                <option value="4">Все офисы</option>
+                              </select>
+                            </div>
+                            <div class="tabs-list profile-card__chart-list" data-tabs-name="statistics_adaptive">
+                              <div class="tabs-list__item tabs-list__item--active">
+                                <div class="chart profile-card__chart statistics__chart" data-chart-name="all">
+                                  <div class="chart__main">
+                                    <div class="chart__canvas-box">
+                                      <canvas class="chart__canvas" width="200" height="200"></canvas>
+                                    </div>
+                                  </div>
+
+                                  <div class="chart__shopping--sum">
+                                    <div class="text text--light chart__subtitle">Сумма покупок:</div>
+                                    <div class="title2 chart__price">343 850 ₽</div>
+                                  </div>
+                                  <div class="chart__labels"></div>
+                                  <div class="chart__btns">
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-all" checked />
+                                      <span class="textbox__switch textbox__switch--border">За год</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-all" />
+                                      <span class="textbox__switch textbox__switch--border">Квартал</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-all" />
+                                      <span class="textbox__switch textbox__switch--border">Месяц</span>
+                                    </label>
+                                  </div>
+                                  <!-- <div class="chart__info">
+                                                              </div> -->
+                                </div>
+                              </div>
+                              <div class="tabs-list__item">
+                                <div class="chart profile-card__chart statistics__chart" data-chart-name="entity-1">
+                                  <div class="chart__main">
+                                    <div class="chart__canvas-box">
+                                      <canvas class="chart__canvas" width="200" height="200"></canvas>
+                                    </div>
+                                  </div>
+
+                                  <div class="chart__shopping--sum">
+                                    <div class="text text--light chart__subtitle">Сумма покупок:</div>
+                                    <div class="title2 chart__price">243 850 ₽</div>
+                                  </div>
+                                  <div class="chart__labels"></div>
+                                  <div class="chart__btns">
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-entity-1" checked />
+                                      <span class="textbox__switch textbox__switch--border">За год</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-entity-1" />
+                                      <span class="textbox__switch textbox__switch--border">Квартал</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-entity-1" />
+                                      <span class="textbox__switch textbox__switch--border">Месяц</span>
+                                    </label>
+                                  </div>
+                                  <!-- <div class="chart__info">
+                                                              </div> -->
+                                </div>
+                              </div>
+                              <div class="tabs-list__item">
+                                <div class="chart profile-card__chart statistics__chart" data-chart-name="entity-2">
+                                  <div class="chart__main">
+                                    <div class="chart__canvas-box">
+                                      <canvas class="chart__canvas" width="200" height="200"></canvas>
+                                    </div>
+                                  </div>
+
+                                  <div class="chart__shopping--sum">
+                                    <div class="text text--light chart__subtitle">Сумма покупок:</div>
+                                    <div class="title2 chart__price">43 850 ₽</div>
+                                  </div>
+                                  <div class="chart__labels"></div>
+                                  <div class="chart__btns">
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-entity-2" checked />
+                                      <span class="textbox__switch textbox__switch--border">За год</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-entity-2" />
+                                      <span class="textbox__switch textbox__switch--border">Квартал</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-entity-2" />
+                                      <span class="textbox__switch textbox__switch--border">Месяц</span>
+                                    </label>
+                                  </div>
+                                  <!-- <div class="chart__info">
+                                                              </div> -->
+                                </div>
+                              </div>
+                              <div class="tabs-list__item">
+                                <div class="chart profile-card__chart statistics__chart" data-chart-name="all-offices">
+                                  <div class="chart__main">
+                                    <div class="chart__canvas-box">
+                                      <canvas class="chart__canvas" width="200" height="200"></canvas>
+                                    </div>
+                                  </div>
+
+                                  <div class="chart__shopping--sum">
+                                    <div class="text text--light chart__subtitle">Сумма покупок:</div>
+                                    <div class="title2 chart__price">143 850 ₽</div>
+                                  </div>
+                                  <div class="chart__labels"></div>
+                                  <div class="chart__btns">
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-all-offices" checked />
+                                      <span class="textbox__switch textbox__switch--border">За год</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-all-offices" />
+                                      <span class="textbox__switch textbox__switch--border">Квартал</span>
+                                    </label>
+                                    <label class="textbox chart__btn">
+                                      <input class="textbox__input" type="radio" name="chart-all-offices" />
+                                      <span class="textbox__switch textbox__switch--border">Месяц</span>
+                                    </label>
+                                  </div>
+                                  <!-- <div class="chart__info">
+                                                              </div> -->
+                                </div>
+                              </div>
+                            </div>
+                            <button class="but but--full profile-card__btn profile-card__btn--mt-sm lk-card__btn">Подробнее</button>
                           </div>
-                          <div class="select select--border profile-card__tabs-select" data-tabs-name="statistics_adaptive">
-                            <select class="select__field">
-                              <option value="1">Все</option>
-                              <option value="2">Юр. лицо 1</option>
-                              <option value="3">Юр. лицо 2</option>
-                              <option value="4">Все офисы</option>
-                            </select>
-                          </div>
-                          <div class="tabs-list profile-card__chart-list" data-tabs-name="statistics_adaptive">
-                            <div class="tabs-list__item tabs-list__item--active">
-                              <div class="chart profile-card__chart statistics__chart" data-chart-name="all">
-                                <div class="chart__main">
-                                  <div class="chart__canvas-box">
-                                    <canvas class="chart__canvas" width="200" height="200"></canvas>
-                                  </div>
-                                </div>
-
-                                <div class="chart__shopping--sum">
-                                  <div class="text text--light chart__subtitle">Сумма покупок:</div>
-                                  <div class="title2 chart__price">343 850 ₽</div>
-                                </div>
-                                <div class="chart__labels"></div>
-                                <div class="chart__btns">
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-all" checked />
-                                    <span class="textbox__switch textbox__switch--border">За год</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-all" />
-                                    <span class="textbox__switch textbox__switch--border">Квартал</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-all" />
-                                    <span class="textbox__switch textbox__switch--border">Месяц</span>
-                                  </label>
-                                </div>
-                                <!-- <div class="chart__info">
-                                                            </div> -->
-                              </div>
-                            </div>
-                            <div class="tabs-list__item">
-                              <div class="chart profile-card__chart statistics__chart" data-chart-name="entity-1">
-                                <div class="chart__main">
-                                  <div class="chart__canvas-box">
-                                    <canvas class="chart__canvas" width="200" height="200"></canvas>
-                                  </div>
-                                </div>
-
-                                <div class="chart__shopping--sum">
-                                  <div class="text text--light chart__subtitle">Сумма покупок:</div>
-                                  <div class="title2 chart__price">243 850 ₽</div>
-                                </div>
-                                <div class="chart__labels"></div>
-                                <div class="chart__btns">
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-entity-1" checked />
-                                    <span class="textbox__switch textbox__switch--border">За год</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-entity-1" />
-                                    <span class="textbox__switch textbox__switch--border">Квартал</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-entity-1" />
-                                    <span class="textbox__switch textbox__switch--border">Месяц</span>
-                                  </label>
-                                </div>
-                                <!-- <div class="chart__info">
-                                                            </div> -->
-                              </div>
-                            </div>
-                            <div class="tabs-list__item">
-                              <div class="chart profile-card__chart statistics__chart" data-chart-name="entity-2">
-                                <div class="chart__main">
-                                  <div class="chart__canvas-box">
-                                    <canvas class="chart__canvas" width="200" height="200"></canvas>
-                                  </div>
-                                </div>
-
-                                <div class="chart__shopping--sum">
-                                  <div class="text text--light chart__subtitle">Сумма покупок:</div>
-                                  <div class="title2 chart__price">43 850 ₽</div>
-                                </div>
-                                <div class="chart__labels"></div>
-                                <div class="chart__btns">
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-entity-2" checked />
-                                    <span class="textbox__switch textbox__switch--border">За год</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-entity-2" />
-                                    <span class="textbox__switch textbox__switch--border">Квартал</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-entity-2" />
-                                    <span class="textbox__switch textbox__switch--border">Месяц</span>
-                                  </label>
-                                </div>
-                                <!-- <div class="chart__info">
-                                                            </div> -->
-                              </div>
-                            </div>
-                            <div class="tabs-list__item">
-                              <div class="chart profile-card__chart statistics__chart" data-chart-name="all-offices">
-                                <div class="chart__main">
-                                  <div class="chart__canvas-box">
-                                    <canvas class="chart__canvas" width="200" height="200"></canvas>
-                                  </div>
-                                </div>
-
-                                <div class="chart__shopping--sum">
-                                  <div class="text text--light chart__subtitle">Сумма покупок:</div>
-                                  <div class="title2 chart__price">143 850 ₽</div>
-                                </div>
-                                <div class="chart__labels"></div>
-                                <div class="chart__btns">
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-all-offices" checked />
-                                    <span class="textbox__switch textbox__switch--border">За год</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-all-offices" />
-                                    <span class="textbox__switch textbox__switch--border">Квартал</span>
-                                  </label>
-                                  <label class="textbox chart__btn">
-                                    <input class="textbox__input" type="radio" name="chart-all-offices" />
-                                    <span class="textbox__switch textbox__switch--border">Месяц</span>
-                                  </label>
-                                </div>
-                                <!-- <div class="chart__info">
-                                                            </div> -->
-                              </div>
-                            </div>
-                          </div>
-                          <button class="but but--full profile-card__btn profile-card__btn--mt-sm lk-card__btn">Подробнее</button>
                         </div>
                       </div>
                     </div>
@@ -2850,119 +2845,121 @@
                       </div>
                       <div class="accordion__content">
                         <div class="accordion__main">
-                          <div class="tabs-btns nav-btns profile-card__tabs-btns" data-tabs-name="expect-list_adaptive">
-                            <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Склад на Электрозаводской</button>
-                            <button class="nav-btns__btn tabs-btns__btn">Склад в Некрасовке</button>
-                          </div>
-                          <div class="select select--border profile-card__tabs-select" data-tabs-name="expect-list_adaptive">
-                            <select class="select__field">
-                              <option value="1">Склад на Электрозаводской</option>
-                              <option value="2">Склад в Некрасовке</option>
-                            </select>
-                          </div>
-                          <div class="tabs-list" data-tabs-name="expect-list_adaptive">
-                            <div class="tabs-list__item tabs-list__item--active">
-                              <div class="profile-card__expect-list">
-                                <div class="expect-item profile-card__expect-item">
-                                  <a href="product-card.html" class="expect-item__img">
-                                    <img src="assets/img/products/5.jpg" alt="" />
-                                  </a>
-                                  <a href="product-card.html" class="link link--gray-dark expect-item__title">
-                                    Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
-                                  </a>
-                                  <div class="expect-item__price--with_btn">
-                                    <div class="text text--semibold expect-item__price">12 250 ₽</div>
-                                    <button class="cart-delete expect-item__delete-btn">
-                                      <svg
-                                        class="cart-delete__icon"
-                                        width="22"
-                                        height="24"
-                                        viewBox="0 0 22 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                          d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                          stroke-linecap="square" />
-                                      </svg>
-                                    </button>
+                          <div class="waiting__list">
+                            <div class="tabs-btns nav-btns profile-card__tabs-btns" data-tabs-name="expect-list_adaptive">
+                              <button class="nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Склад на Электрозаводской</button>
+                              <button class="nav-btns__btn tabs-btns__btn">Склад в Некрасовке</button>
+                            </div>
+                            <div class="select select--border profile-card__tabs-select" data-tabs-name="expect-list_adaptive">
+                              <select class="select__field">
+                                <option value="1">Склад на Электрозаводской</option>
+                                <option value="2">Склад в Некрасовке</option>
+                              </select>
+                            </div>
+                            <div class="tabs-list" data-tabs-name="expect-list_adaptive">
+                              <div class="tabs-list__item tabs-list__item--active">
+                                <div class="profile-card__expect-list">
+                                  <div class="expect-item profile-card__expect-item">
+                                    <a href="product-card.html" class="expect-item__img">
+                                      <img src="assets/img/products/5.jpg" alt="" />
+                                    </a>
+                                    <a href="product-card.html" class="link link--gray-dark expect-item__title">
+                                      Баннер REXPRINT Blackback DP 450 лит 1000х1000 18х18 (1,6х50 м) anticold мат
+                                    </a>
+                                    <div class="expect-item__price--with_btn">
+                                      <div class="text text--semibold expect-item__price">12 250 ₽</div>
+                                      <button class="cart-delete expect-item__delete-btn">
+                                        <svg
+                                          class="cart-delete__icon"
+                                          width="22"
+                                          height="24"
+                                          viewBox="0 0 22 24"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                            d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                            stroke-linecap="square" />
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="expect-item profile-card__expect-item">
+                                    <a href="product-card.html" class="expect-item__img">
+                                      <img src="assets/img/products/6.jpg" alt="" />
+                                    </a>
+                                    <a href="product-card.html" class="link link--gray-dark expect-item__title">
+                                      Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                    </a>
+                                    <div class="expect-item__price--with_btn">
+                                      <div class="text text--semibold expect-item__price">12 250 ₽</div>
+                                      <button class="cart-delete expect-item__delete-btn">
+                                        <svg
+                                          class="cart-delete__icon"
+                                          width="22"
+                                          height="24"
+                                          viewBox="0 0 22 24"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                            d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                            stroke-linecap="square" />
+                                        </svg>
+                                      </button>
+                                    </div>
+                                  </div>
+                                  <div class="expect-item profile-card__expect-item">
+                                    <a href="product-card.html" class="expect-item__img">
+                                      <img src="assets/img/products/7.jpg" alt="" />
+                                    </a>
+                                    <a href="product-card.html" class="link link--gray-dark expect-item__title">
+                                      Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
+                                    </a>
+                                    <div class="expect-item__price--with_btn">
+                                      <div class="text text--semibold expect-item__price">12 250 ₽</div>
+                                      <button class="cart-delete expect-item__delete-btn">
+                                        <svg
+                                          class="cart-delete__icon"
+                                          width="22"
+                                          height="24"
+                                          viewBox="0 0 22 24"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                            d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                            stroke-linecap="square" />
+                                        </svg>
+                                      </button>
+                                    </div>
                                   </div>
                                 </div>
-                                <div class="expect-item profile-card__expect-item">
-                                  <a href="product-card.html" class="expect-item__img">
-                                    <img src="assets/img/products/6.jpg" alt="" />
-                                  </a>
-                                  <a href="product-card.html" class="link link--gray-dark expect-item__title">
-                                    Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
-                                  </a>
-                                  <div class="expect-item__price--with_btn">
-                                    <div class="text text--semibold expect-item__price">12 250 ₽</div>
-                                    <button class="cart-delete expect-item__delete-btn">
-                                      <svg
-                                        class="cart-delete__icon"
-                                        width="22"
-                                        height="24"
-                                        viewBox="0 0 22 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                          d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                          stroke-linecap="square" />
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                                <div class="expect-item profile-card__expect-item">
-                                  <a href="product-card.html" class="expect-item__img">
-                                    <img src="assets/img/products/7.jpg" alt="" />
-                                  </a>
-                                  <a href="product-card.html" class="link link--gray-dark expect-item__title">
-                                    Оргстекло PLEXIGLAS XT (3050х2050х10 мм) 05070 молочное
-                                  </a>
-                                  <div class="expect-item__price--with_btn">
-                                    <div class="text text--semibold expect-item__price">12 250 ₽</div>
-                                    <button class="cart-delete expect-item__delete-btn">
-                                      <svg
-                                        class="cart-delete__icon"
-                                        width="22"
-                                        height="24"
-                                        viewBox="0 0 22 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                          d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                          stroke-linecap="square" />
-                                      </svg>
-                                    </button>
+                              </div>
+                              <div class="tabs-list__item">
+                                <div class="profile-card__expect-list">
+                                  <div class="expect-item profile-card__expect-item">
+                                    <a href="product-card.html" class="expect-item__img">
+                                      <img src="assets/img/products/6.jpg" alt="" />
+                                    </a>
+                                    <a href="product-card.html" class="link link--gray-dark expect-item__title">
+                                      Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
+                                    </a>
+                                    <div class="expect-item__price--with_btn">
+                                      <div class="text text--semibold expect-item__price">12 250 ₽</div>
+                                      <button class="cart-delete expect-item__delete-btn">
+                                        <svg
+                                          class="cart-delete__icon"
+                                          width="22"
+                                          height="24"
+                                          viewBox="0 0 22 24"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                            d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
+                                            stroke-linecap="square" />
+                                        </svg>
+                                      </button>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
                             </div>
-                            <div class="tabs-list__item">
-                              <div class="profile-card__expect-list">
-                                <div class="expect-item profile-card__expect-item">
-                                  <a href="product-card.html" class="expect-item__img">
-                                    <img src="assets/img/products/6.jpg" alt="" />
-                                  </a>
-                                  <a href="product-card.html" class="link link--gray-dark expect-item__title">
-                                    Плёнка ORACAL 641 (1,26×50 м) 57м дорожно-синяя
-                                  </a>
-                                  <div class="expect-item__price--with_btn">
-                                    <div class="text text--semibold expect-item__price">12 250 ₽</div>
-                                    <button class="cart-delete expect-item__delete-btn">
-                                      <svg
-                                        class="cart-delete__icon"
-                                        width="22"
-                                        height="24"
-                                        viewBox="0 0 22 24"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                          d="M19.535 8.97998C19.535 8.97998 18.888 16.995 18.514 20.371C18.335 21.984 17.339 22.929 15.707 22.958C12.603 23.014 9.49399 23.018 6.39099 22.953C4.82099 22.92 3.84199 21.964 3.66699 20.38C3.28999 16.974 2.647 8.97998 2.647 8.97998M21.182 5.17999H1M17.293 5.15198C16.358 5.15198 15.554 4.49199 15.371 3.57599L15.081 2.12903C14.903 1.46203 14.298 1 13.609 1H8.57199C7.88299 1 7.27801 1.46203 7.10001 2.12903L6.811 3.57599C6.628 4.49199 5.82301 5.15198 4.88901 5.15198"
-                                          stroke-linecap="square" />
-                                      </svg>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
+                            <a class="but but--full profile-card__btn lk-card__btn" href="cart.html">В корзину</a>
                           </div>
-                          <a class="but but--full profile-card__btn lk-card__btn" href="cart.html">В корзину</a>
                         </div>
                       </div>
                     </div>

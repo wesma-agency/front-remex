@@ -30,14 +30,14 @@ function renderSeriesList() {
   hideFullList(seriesItems);
   hideFullList(seriesLabels);
 
-  function toggleItemsStyle(items, style) {
-    items.forEach((item) => {
-      item.style.display = `${style}`;
-    });
-  }
-
   function toggleFullList(btns, list) {
     const toggleItems = getDeletingItems(list);
+
+    function toggleItemsStyle(items, style) {
+      items.forEach((item) => {
+        item.style.display = `${style}`;
+      });
+    }
 
     btns.forEach((btn) => {
       const isShow = btn.querySelector(".show-full-list");

@@ -3496,7 +3496,7 @@ input[type="number"]::-webkit-inner-spin-button {
   display: none;
   width: 100%;
   max-height: 320px;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .simple-select__list--active {
@@ -9163,11 +9163,13 @@ width: calc(33.33% - 30px);
 }
 
 .profile-card__text {
-  margin-top: 18px;
+  /* margin-top: 18px; */
+  padding-top: 40px;
 }
 
 .profile-card__form {
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  padding-top: 40px;
 }
 
 .profile-card__items {
@@ -9197,7 +9199,8 @@ width: calc(33.33% - 30px);
 }
 
 .profile-card__points {
-  margin-top: 12px;
+  /* margin-top: 12px; */
+  padding-top: 40px;
 }
 
 .profile-card__links {
@@ -9515,7 +9518,7 @@ width: calc(33.33% - 30px);
 }
 
 .appeal-author__header {
-  margin-bottom: 28px;
+  /* margin-bottom: 28px; */
   display: flex;
   align-items: center;
 }
@@ -11115,14 +11118,14 @@ width: calc(33.33% - 30px);
     padding: 30px 30px 30px;
   }
   .profile__card > .accordion > .lk-accordiont {
-    padding-top: 40px;
+    /* padding-top: 40px; */
     color: #000;
   }
   .profile__card > .accordion > .accordion__content {
-    padding-top: 40px;
+    /* padding-top: 40px; */
   }
   .profile__full-card > .accordion > .accordion__content {
-    padding-top: 40px;
+    /* padding-top: 40px; */
   }
 
   .profile__full-card:not(:first-child) {
@@ -14498,6 +14501,18 @@ width: calc(33.33% - 30px);
 /* ===================================== */
 /* Alex Levchuk */
 
+/* Страница Личный кабинет */
+.profile-card__orders-list,
+.profile-card__cart-list,
+.stat__content,
+.waiting__list {
+  padding-top: 40px;
+}
+
+.profile-card__orders-list--wide {
+  margin-top: 35px;
+}
+
 /* Страница Профиль пользователя */
 .profile__card {
   padding: 30px 30px 30px 30px;
@@ -15882,7 +15897,7 @@ width: calc(33.33% - 30px);
   } */
 }
 
-@media (max-width: 1279.98px) {
+@media (max-width: 1280px) {
   /* Страница Корзина */
   .cart__sidebar {
     position: relative;
@@ -15931,7 +15946,7 @@ width: calc(33.33% - 30px);
   }
 }
 
-@media (max-width: 999.98px) {
+@media (max-width: 1000px) {
   /* Страница Профиль пользователя */
   .profile__cards-row {
     display: none;
@@ -16183,7 +16198,7 @@ width: calc(33.33% - 30px);
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   /* Страница Профиль пользователя */
   .profile__sidebar {
     width: 235px;
@@ -16534,9 +16549,14 @@ width: calc(33.33% - 30px);
     display: block;
     overflow: hidden;
   }
+
+  /* Страница Профиль пользователя */
+  .phone-confirmation input {
+    max-width: 130px;
+  }
 }
 
-@media (max-width: 359.98px) {
+@media (max-width: 360px) {
   .cart-item__info {
     min-width: 200px;
   }
@@ -16550,7 +16570,7 @@ width: calc(33.33% - 30px);
   }
 
   .phone-confirmation .edit-input__field {
-    margin-right: -20px;
+    /* margin-right: -20px; */
   }
 
   .edit-input__label,
