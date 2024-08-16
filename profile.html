@@ -2072,7 +2072,7 @@
                               <span class="checkbox__switch checkbox__switch--circle"></span>
                               <span class="checkbox__text">ООО Быстрые</span>
                             </label>
-                            <button class="profile-card__item-edit">
+                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-tk">
                               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                   opacity="0.25"
@@ -2088,7 +2088,7 @@
                               <span class="checkbox__switch checkbox__switch--circle"></span>
                               <span class="checkbox__text">АО Линии</span>
                             </label>
-                            <button class="profile-card__item-edit">
+                            <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-tk">
                               <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                   opacity="0.25"
@@ -2099,7 +2099,7 @@
                             </button>
                           </div>
                         </div>
-                        <button class="but but--full profile-card__btn">Добавить ТК</button>
+                        <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-tk">Добавить ТК</button>
                       </div>
                       <div class="profile-card profile__card">
                         <div class="title3 profile-card__title">Программа лояльности</div>
@@ -2454,7 +2454,7 @@
                                     <span class="checkbox__switch checkbox__switch--circle"></span>
                                     <span class="checkbox__text">ООО Быстрые</span>
                                   </label>
-                                  <button class="profile-card__item-edit">
+                                  <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-tk">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path
                                         opacity="0.25"
@@ -2470,7 +2470,7 @@
                                     <span class="checkbox__switch checkbox__switch--circle"></span>
                                     <span class="checkbox__text">АО Линии</span>
                                   </label>
-                                  <button class="profile-card__item-edit">
+                                  <button class="profile-card__item-edit js-open-modal" data-modal-name="edit-tk">
                                     <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                       <path
                                         opacity="0.25"
@@ -2481,7 +2481,7 @@
                                   </button>
                                 </div>
                               </div>
-                              <button class="but but--full profile-card__btn">Добавить ТК</button>
+                              <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-tk">Добавить ТК</button>
                             </div>
                           </div>
                         </div>
@@ -3361,6 +3361,102 @@
                     Удалить адрес
                   </button>
                 </div>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="new-tk">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новая ТК</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Название ТК</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">ИНН</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Адрес</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Добавить</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="edit-tk">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Редактировать ТК</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Название ТК</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">ИНН</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Адрес</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Добавить</button>
                 <p class="text text--sm text--gray-white form__ps">
                   Поля, отмеченные
                   <span class="text text--danger">*</span>
