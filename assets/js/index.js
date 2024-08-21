@@ -1204,7 +1204,8 @@ window.addEventListener("click", (e) => {
 
   $catalogBtns.forEach(($catalogBtn) => $catalogBtn.classList.remove("active"));
 
-  document.body.classList.remove("body__mobile-lock");
+  // Добавил дополнительный класс, чтобы отключить скролл при активном меню
+  document.body.classList.remove("body__mobile-lock", "body--lock");
   headerContainer?.classList.remove("header__catalog-active");
 });
 
@@ -1241,9 +1242,10 @@ var slider = new Swiper(".slider .swiper", {
   // centeredSlides: true,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
-  disableOnInteraction: false,
 
   // If we need pagination
   pagination: {
@@ -1271,7 +1273,9 @@ $sliders2.forEach(($slider2) => {
     slidesPerView: 2,
     loop: true,
     autoplay: {
-      delay: 2000,
+      delay: 4000,
+      disableOnInteraction: false,
+      pauseOnMouseEnter: true,
     },
     navigation: {
       prevEl: $prevBtn,
@@ -1327,7 +1331,9 @@ var slider2 = new Swiper(".slider3 .swiper", {
   slidesPerView: 2,
   loop: true,
   autoplay: {
-    delay: 2000,
+    delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   pagination: {
     el: ".slider3 .swiper-pagination",

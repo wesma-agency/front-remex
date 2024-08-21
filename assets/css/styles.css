@@ -4016,7 +4016,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .foot__zag {
-  height: 18px;
+  height: 23px;
 }
 
 .foot__col-wrap {
@@ -14501,6 +14501,40 @@ width: calc(33.33% - 30px);
 /* ===================================== */
 /* Alex Levchuk */
 
+/* Главная старница */
+
+.link-hover-underline:hover span::before {
+  width: 100%;
+}
+
+checkbox-btn .checkbox-btn:not(:has(.checkbox-btn__list)) .checkbox-btn__link {
+  margin-left: 27px;
+}
+
+.foot__col .header__info .popup--w295 {
+  padding: 27px 26px;
+}
+
+.popup__close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+/* .header .podmenu.active.act {
+	position: absolute;
+	top: 80px;
+} */
+
+.splashboard__warning > .modal-new__close {
+  top: 5px;
+  right: 5px;
+}
+
+.warning__container.splashboard__container.splashboard__container-ad {
+  padding: 15px 40px;
+}
+
 /* Страница Личный кабинет */
 .profile-card__orders-list,
 .profile-card__cart-list,
@@ -14627,6 +14661,31 @@ width: calc(33.33% - 30px);
 
 .catalog__products-sort:not(:first-child) {
   margin-left: 0;
+}
+
+.brand__not-found {
+  display: none;
+}
+.brand__not-found.active {
+  display: block;
+}
+/* .brand-items__addition {
+  display: flex;
+  margin-top: 0;
+  gap: 20px;
+}
+.brand-items__addition .brand__item {
+  margin-top: 0;
+}
+.brand-items__addition .brand__item:first-child {
+  margin-top: 20px;
+} */
+
+.but.section-footer__more-btn.disabled{
+  opacity: 0.6;
+  pointer-events: none;
+  cursor: default;
+  user-select: none;
 }
 
 /* Страница Оформление заказа */
@@ -15946,6 +16005,17 @@ width: calc(33.33% - 30px);
   }
 }
 
+@media (max-width: 1140px) {
+  /* Главная страница */
+  .search.header__search {
+    display: none;
+  }
+
+  .header__top .header__catalog-btn {
+    display: flex;
+  }
+}
+
 @media (max-width: 1000px) {
   /* Страница Профиль пользователя */
   .profile__cards-row {
@@ -16199,6 +16269,15 @@ width: calc(33.33% - 30px);
 }
 
 @media (max-width: 768px) {
+  /* Главная страница */
+  #headerTopContainer img:first-of-type {
+    display: none;
+  }
+
+  #headerTopContainer img:last-of-type {
+    display: block;
+  }
+
   /* Страница Профиль пользователя */
   .profile__sidebar {
     width: 235px;
@@ -16307,6 +16386,21 @@ width: calc(33.33% - 30px);
 }
 
 @media (max-width: 640px) {
+  /* Главная страница */
+  .accordion.accordion--active .accordion__content {
+    padding-top: 0;
+  }
+  .accordion.accordion--active .category__list--more {
+    padding-top: 0;
+    margin-top: 3px;
+  }
+
+  .splashboard__warning > .modal-new__close {
+    top: 10px;
+    right: 10px;
+  }
+
+  /* Страница Профиль пользователя */
   .profile__sidebar {
     display: none;
   }
@@ -16527,6 +16621,14 @@ width: calc(33.33% - 30px);
   }
   .cart-order-total__title {
     font-size: 25px;
+  }
+
+  .splashboard.splashboard__warning.splashboard__plashka-ad {
+    max-width: 430px;
+  }
+  .splashboard__warning > .modal-new__close {
+    top: 10px;
+    right: 10px;
   }
 
   /* Страница Оформление заказа */
@@ -16838,10 +16940,10 @@ span.readMore {
   color: #e8505b;
 }
 
-.splashboard__warning > .modal-new__close {
+/* .splashboard__warning > .modal-new__close {
   top: -1px;
   right: -30px;
-}
+} */
 
 .appeal-author__title {
   color: #000;
