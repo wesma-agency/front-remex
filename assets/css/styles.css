@@ -14681,11 +14681,19 @@ checkbox-btn .checkbox-btn:not(:has(.checkbox-btn__list)) .checkbox-btn__link {
   margin-top: 20px;
 } */
 
-.but.section-footer__more-btn.disabled{
+.but.section-footer__more-btn.disabled,
+.pagination__link--right.disabled,
+.pagination__link--left.disabled {
   opacity: 0.6;
   pointer-events: none;
   cursor: default;
   user-select: none;
+}
+
+.pagination__link.pagination__link--active {
+  background-color: var(--color-gray-light);
+  color: var(--color-black);
+  cursor: default;
 }
 
 /* Страница Оформление заказа */

@@ -2,8 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
   showMobileFilters();
   findBrand();
   showMoreProducts();
+  pagination(".section-footer__pagination--desktop", 5);
 });
 
+//==========================================================================================================================================================
 // Показать/скрыть мобильные фильтры
 function showMobileFilters() {
   const openFiltersBtn = document.querySelector(".filters__btn");
@@ -27,6 +29,7 @@ function showMobileFilters() {
   });
 }
 
+//==========================================================================================================================================================
 // Поиск производителя
 function findBrand() {
   const brandSearchField = document.querySelector(".brand__input");
@@ -52,10 +55,8 @@ function findBrand() {
 
       if (brandName.includes(searchText)) {
         result = 1;
-        // brandList.classList.add("filter__checkboxes--active");
         showResult(item, result, brandNotFoundMessage);
       } else {
-        // brandMoreBtn.style.display = "none";
         hideResult(item, result, brandNotFoundMessage);
       }
     });
@@ -70,7 +71,6 @@ function findBrand() {
 
     function hideResult(item, result, message) {
       item.parentElement.style.display = "none";
-      // brandList.classList.remove("filter__checkboxes--active");
 
       if (result == 0) {
         message.classList.add("active");
@@ -95,15 +95,10 @@ function findBrand() {
       brandMoreBtn.style.display = "flex";
       searchBrand();
     }
-
-    // if (!brandSearchField.value) {
-    //   brandList.classList.remove("filter__checkboxes--active");
-    //   brandMoreBtn.style.display = "flex";
-    //   searchBrand();
-    // }
   });
 }
 
+//==========================================================================================================================================================
 // Кнопка показать еще
 function showMoreProducts() {
   const productItems = document.querySelectorAll(".product-card.catalog__products-item");
@@ -128,4 +123,21 @@ function showMoreProducts() {
       showMoreBtn.classList.add("disabled");
     }
   });
+}
+
+function pagination(paginationElem, startPagesCount) {
+  // const productItems = document.querySelectorAll(".product-card.catalog__products-item");
+  const visibleItems = 15;
+  const pagination = document.querySelector(`${paginationElem}`);
+  // const pagesCount = productItems.length / visibleItems;
+  const currentPage = 1;
+
+  const prevBtn = pagination.querySelector(".pagination__link--right");
+  const nextBtn = pagination.querySelector(".pagination__link--left");
+
+  // Test
+  const productsCount = 180;
+  const pagesCount = productsCount / visibleItems;
+
+  // console.log(nextBtn);
 }
