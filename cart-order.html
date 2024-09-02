@@ -2071,6 +2071,21 @@
                                           </div>
                                         </div>
                                       </div>
+
+                                      <div class="self-delivery__info-delivery-date">
+                                        <div class="input js-form-input self-delivery__input-date">
+                                          <a class="choice-date-time__link js-open-modal" data-modal-name="choice-date-time">
+                                            <div class="input__main date-time__input">
+                                              <input class="input__field self-delivery__input" type="" data-validate="empty" />
+                                              <span class="input__placeholder input__placeholder--required">Выберите дату отгрузки</span>
+                                              <!-- <span class="input-date__calendar">
+                                                <img src="assets/img/cart-order/calendar.svg" alt="calendar icon" />
+                                              </span> -->
+                                            </div>
+                                          </a>
+                                          <div class="input__error">Поле обязательно для заполнения</div>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
@@ -2377,12 +2392,6 @@
                                         </div>
                                       </div>
 
-                                      <div class="tk__info-props">
-                                        <p>ООО Филькина грамота</p>
-                                        <p>ИНН 7722327689</p>
-                                        <p>г. Новосибирск, ул. Кривощековская, д. 15, корп. 1, этаж 1,2</p>
-                                      </div>
-
                                       <div class="tk__info-comment">
                                         <div class="tk__label-comment delivery__label">
                                           <input
@@ -2443,6 +2452,7 @@
                                 <div class="tabs-list__item tabs-list__item--active">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
+                                      <a class="cart-order-payment__bonuses" data-modal-name="choice-tk" href="#">Оплатить бонусами</a>
                                       <div class="cart-order-list__slider">
                                         <div class="swiper cart-order-slider">
                                           <div class="swiper-wrapper">
@@ -2566,6 +2576,7 @@
                                 <div class="tabs-list__item">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
+                                      <a class="cart-order-payment__bonuses" data-modal-name="choice-tk" href="#">Оплатить бонусами</a>
                                       <div class="payment-descr">
                                         <p class="text text--gray payment-descr__text">
                                           Сообщите номер заказа / счета менеджеру на ресепшене для его оплаты при получении
@@ -2578,6 +2589,7 @@
                                 <div class="tabs-list__item">
                                   <div class="cart-order-list">
                                     <div class="cart-order-list__main">
+                                      <a class="cart-order-payment__bonuses" data-modal-name="choice-tk" href="#">Оплатить бонусами</a>
                                       <div class="payment-descr">
                                         <p class="text text--gray payment-descr__text">
                                           Сообщите номер заказа / счета менеджеру на ресепшене для его оплаты при получении
@@ -3651,7 +3663,7 @@
                 <button class="but but--primary but--full form__btn choice-date-time__btn" type="button">Подтвердить</button>
               </div>
             </form>
-            <button class="modal-new__close js-close-modal choice-tk-close-modal">
+            <button class="modal-new__close js-close-modal close-date-time-modal-btn">
               <img src="assets/img/icons/exit.svg" alt="" />
             </button>
           </div>

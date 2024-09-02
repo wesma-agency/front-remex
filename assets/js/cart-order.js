@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showDateTimePicker();
   clearDeliveryDateTimeInput();
   confirmDeliveryDateTime();
+  closeDateTimeModal();
 });
 
 function toggleAccordion() {
@@ -290,6 +291,7 @@ function clearDeliveryDateTimeInput() {
   openModal(".courier-delivery__input", "courier-delivery__input", "date-time__input", "courier-modal");
   openModal(".tk-delivery__input", "tk-delivery__input", "date-time__input", "tk-modal");
   openModal(".has-address__input", "has-address__input", "date-time__input", "has-address-modal");
+  openModal(".self-delivery__input", "self-delivery__input", "date-time__input", "self-delivery-modal");
 
   function openModal(input, inputClass, inputWrapperClass, modalClass) {
     const dateTimeInput = document.querySelector(input);
@@ -305,12 +307,23 @@ function clearDeliveryDateTimeInput() {
   }
 }
 
+// function hideTimepicker() {
+//   if (dateTimeModal.classList.contains("self-delivery-modal")) {
+//     const timePicker = dateTimeModal.querySelector(".timepicker__dropdown");
+
+//     timePicker.style.cssText = "pointer-events: none; opacity: 0.5;";
+//   } else {
+//     timePicker.style.cssText = "pointer-events: all; opacity: 1;";
+//   }
+// }
+
 function confirmDeliveryDateTime() {
   const dateTimeInput = document.querySelector(".date-time-value");
 
   const courierInput = document.querySelector(".courier-delivery__input");
   const tkInput = document.querySelector(".tk-delivery__input");
   const hasAdressInput = document.querySelector(".has-address__input");
+  const selfDeliveryInput = document.querySelector(".self-delivery__input");
 
   const confirmBtn = document.querySelector(".choice-date-time__btn");
   const spanText = document.querySelectorAll(".date-time__input span");
@@ -321,15 +334,17 @@ function confirmDeliveryDateTime() {
   confirm("courier-modal", courierInput);
   confirm("tk-modal", tkInput);
   confirm("has-address-modal", hasAdressInput);
+  confirm("self-delivery-modal", selfDeliveryInput);
 
   function confirm(modalClass, input) {
     confirmBtn.addEventListener("click", () => {
       if (dateTimeModal.classList.contains(modalClass)) {
         timeItems.forEach((item) => {
-          if (!item.classList.contains("selected")) {
+          if (!item.classList.contains("selected") && !dateTimeModal.classList.contains("self-delivery-modal")) {
             input.value = `${dateTimeInput.value} ${currentTime.textContent}`;
           } else {
             // deliveryInput.value = `${dateTimeInput.value} ${item.textContent}`;
+            input.value = `${dateTimeInput.value}`;
           }
         });
 
@@ -344,6 +359,26 @@ function confirmDeliveryDateTime() {
         document.body.classList.remove("body--lock");
         // calendar.clear();
         // dateTimeInput.value = "";
+      }
+    });
+  }
+}
+
+function closeDateTimeModal() {
+  const closeBtn = document.querySelector(".close-date-time-modal-btn");
+  const dateTimeModal = document.querySelector(".choice-date-time__modal");
+
+  closeModal("courier-modal");
+  closeModal("has-address-modal");
+  closeModal("self-delivery-modal");
+  closeModal("tk-modal");
+
+  function closeModal(modalClass) {
+    closeBtn.addEventListener("click", () => {
+      if (dateTimeModal.classList.contains(modalClass)) {
+        dateTimeModal.classList.remove("modal-new--active");
+        dateTimeModal.classList.remove(modalClass);
+        document.body.classList.remove("body--lock");
       }
     });
   }

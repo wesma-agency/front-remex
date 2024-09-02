@@ -1363,7 +1363,7 @@ ol li p:not(:first-child) {
   white-space: nowrap;
 }
 
-.pagination__active {
+.pagination__link.pagination__active {
   background-color: var(--color-gray-light);
   color: var(--color-black);
   cursor: default;
@@ -14990,6 +14990,7 @@ checkbox-btn .checkbox-btn:not(:has(.checkbox-btn__list)) .checkbox-btn__link {
 .self-delivery {
   display: flex;
   column-gap: 30px;
+  margin-bottom: 30px;
 }
 .self-delivery__column {
   width: 50%;
@@ -15032,6 +15033,13 @@ checkbox-btn .checkbox-btn:not(:has(.checkbox-btn__list)) .checkbox-btn__link {
   text-wrap: nowrap;
   margin-bottom: 30px;
 }
+.self-delivery__map-img {
+  width: 100%;
+}
+.self-delivery-modal .timepicker__dropdown {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
 .courier-delivery {
   margin-bottom: 50px;
@@ -15049,9 +15057,9 @@ checkbox-btn .checkbox-btn:not(:has(.checkbox-btn__list)) .checkbox-btn__link {
 }
 
 .courier-delivery__has-address {
-  display: none;
+  /* display: none; */
   margin-bottom: 50px;
-  /* display: flex; */
+  display: flex;
 }
 .has-address__col {
   width: 50%;
@@ -15372,6 +15380,23 @@ checkbox-btn .checkbox-btn:not(:has(.checkbox-btn__list)) .checkbox-btn__link {
 }
 .cart-order__payment-item img {
   z-index: 1;
+}
+.cart-order-payment__bonuses {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition: 0.4s;
+}
+.cart-order-payment__bonuses::after {
+  content: "";
+  width: 142px;
+  border-bottom: 1px dashed rgba(34, 34, 34, 0.25);
+  transition: 0.4s;
+}
+.cart-order-payment__bonuses:hover::after {
+  border-color: var(--color-primary);
 }
 
 .cart-order-list__main:has(.cart-order-list__slider) {
