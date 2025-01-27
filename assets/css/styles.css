@@ -17072,3 +17072,129 @@ span.readMore {
   display: none;
   content: "";
 }
+
+/* Страница Новости правка верстки ==> */
+.news__content .textboxes__elems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.news__content .textbox.textboxes__elem {
+  margin-left: 0;
+}
+
+/* .news .news__columns {
+  display: block;
+  margin: 30px 0px 0;
+  columns: 3 446px;
+  column-gap: 30px;
+}
+.news .news__columns .news-item.news__column-item {
+  width: 100%;
+  break-inside: avoid;
+} */
+
+.news__content .news__columns {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-between;
+  /* column-gap: 30px; */
+  row-gap: 40px;
+  width: 100%;
+  height: 1720px;
+}
+.news__content .news-item.news__column-item {
+  display: flex;
+  width: calc(100% / 3);
+  /* max-width: 446px; */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.news__content .news-item.news__column-item:nth-child(3n + 1) {
+  order: 1;
+}
+.news__content .news-item.news__column-item:nth-child(3n + 2) {
+  order: 2;
+  /* margin-left: 30px; */
+}
+.news__content .news-item.news__column-item:nth-child(3n) {
+  order: 3;
+  /* margin-left: 30px; */
+}
+.news__content .news-item.news__column-item.break {
+  flex-basis: 100%;
+  width: 0;
+  padding: 0;
+  border: none;
+  margin-left: 30px;
+}
+.news__columns {
+  margin: 30px 0px 0;
+  display: flex;
+}
+
+@media (max-width: 1360px) {
+  .news__content .news__columns {
+    /* height: 1800px; */
+  }
+  .news__content .news-item.news__column-item {
+    width: calc(100% / 2);
+  }
+
+  .news__content .news-item.news__column-item:nth-child(3 + 1) {
+    order: 1;
+  }
+  .news__content .news-item.news__column-item:nth-child(3n + 2) {
+    order: 2;
+  }
+  .news__content .news-item.news__column-item:nth-child(3n) {
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .news__content .news__columns {
+    height: 1800px;
+  }
+}
+
+@media (max-width: 880px) {
+  .news__content .news__columns {
+    height: 2105px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news__content .news__columns {
+    height: auto;
+    flex-wrap: nowrap;
+    align-content: unset;
+  }
+  .news__content .news-item.news__column-item {
+    width: 100%;
+  }
+
+  .news__content .news-item.news__column-item:nth-child(3n + 1) {
+    /* order: 1; */
+  }
+  .news__content .news-item.news__column-item:nth-child(3n + 2) {
+    /* display: none; */
+  }
+  .news__content .news-item.news__column-item:nth-child(3n) {
+    display: flex;
+  }
+
+  /* .news__content .news-item.news__column-item:not(:nth-child(-n+4)) {
+    display: none;
+  } */
+  .news__content .news-item.news__column-item.break {
+    display: none;
+  }
+
+  .news__content .section-footer {
+    padding-top: 30px;
+  }
+}
+
+/* <== Страница Новости правка верстки */
