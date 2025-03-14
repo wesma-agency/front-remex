@@ -2122,3 +2122,29 @@ addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Новые формы для API dadata
+addEventListener("DOMContentLoaded", () => {
+  closeDadataNewLegalEntityModal();
+  gotoNextStep();
+});
+
+function closeDadataNewLegalEntityModal() {
+  const dadataForm = document.querySelector('[data-name="new-legal-entity-dadata"]');
+  const oldFormBtn = dadataForm.querySelector(".show-old-form");
+
+  oldFormBtn.addEventListener("click", () => {
+    dadataForm.classList.remove("modal-new--active");
+  });
+}
+
+function gotoNextStep() {
+  const nextBtn = document.querySelector("#step-one .form__btn-next");
+  const newLegalEntityForm = document.querySelector("#step-one");
+  const paymentDetailsForm = document.querySelector("#step-two");
+
+  nextBtn.addEventListener("click", () => {
+    newLegalEntityForm.style.display = "none";
+    paymentDetailsForm.style.display = "block";
+  });
+}

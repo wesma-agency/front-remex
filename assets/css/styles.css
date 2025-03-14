@@ -17198,3 +17198,72 @@ span.readMore {
 }
 
 /* <== Страница Новости правка верстки */
+
+/* Стили для модалок API dadata */
+#step-one .form__text-field.d-none,
+#step-one .form__btn,
+#step-two .form__text-field.d-none,
+#step-two .form__btn {
+  /* display: none; */
+}
+#step-one.form__btn--mt-sm,
+#step-two.form__btn--mt-sm {
+  margin-top: 35px;
+}
+#step-one .show-old-form,
+#step-two .show-old-form {
+  margin-top: 10px;
+}
+#step-one .form__input,
+#step-two .form__input {
+  margin-bottom: 19px;
+}
+#step-one .text-field.form__text-field {
+  margin-bottom: 19px;
+}
+#step-two .text-field.form__text-field {
+  margin-bottom: 12px;
+}
+#step-one .text-field__title,
+#step-two .text-field__title {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(68, 68, 68, 0.5);
+}
+#step-one .text-field__content,
+#step-two .text-field__content {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+
+#step-two {
+  display: none;
+}
+
+.input__placeholder-top {
+  display: none;
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(68, 68, 68, 0.5);
+}
+.input__placeholder-top .text.text--danger {
+  opacity: 0.5;
+}
+
+[data-name="new-tk-dadata"] .form__input {
+  margin-bottom: 20px;
+}
+[data-name="new-tk-dadata"] .text-field.form__text-field {
+  margin-bottom: 19px;
+}
+[data-name="new-tk-dadata"] .text-field__title {
+  font-weight: 400;
+  font-size: 12px;
+  color: rgba(68, 68, 68, 0.5);
+}
+[data-name="new-tk-dadata"] .text-field__content {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}

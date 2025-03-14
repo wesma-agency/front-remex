@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   clearDeliveryDateTimeInput();
   confirmDeliveryDateTime();
   closeDateTimeModal();
+  showDadataChoiceTkForm();
 });
 
 function toggleAccordion() {
@@ -121,6 +122,7 @@ function findTk() {
 
   function searchTk() {
     const searchText = tkSearchField.value.toLowerCase();
+    const tkFormBtn = document.querySelector('[data-name="choice-tk"] .tk-confirm-btn');
     let result = 0;
 
     tkItemsArr.forEach((item) => {
@@ -130,6 +132,7 @@ function findTk() {
       if (tkName.includes(searchText)) {
         result = 1;
         subtitle.style.display = "block";
+
         showResult(item, result);
       } else {
         hideResult(item, result, modalSubtitle);
@@ -141,6 +144,7 @@ function findTk() {
 
       if (result == 1) {
         notFoundMessage.style.display = "none";
+        tkFormBtn.style.display = "flex";
       }
     }
     function hideResult(item, result, subTitle) {
@@ -149,6 +153,7 @@ function findTk() {
       if (result == 0) {
         subTitle.forEach((item) => (item.style.display = "none"));
         notFoundMessage.style.display = "block";
+        tkFormBtn.style.display = "none";
       }
     }
   }
@@ -163,6 +168,18 @@ function findTk() {
   });
 }
 
+function showDadataChoiceTkForm() {
+  const tkCloseBtn = document.querySelector('[data-name="choice-tk"] .choice-tk-close-modal');
+  const anotherTkBtn = document.querySelector('[data-name="choice-tk"] .another-tk__btn');
+
+  if (anotherTkBtn) {
+    anotherTkBtn.addEventListener("click", () => {
+      closeSearchTkModal();
+      tkCloseBtn.click();
+    });
+  }
+}
+
 function closeSearchTkModal() {
   const tkSearchField = document.querySelector(".input__tk-search-field");
   const closeBtn = document.querySelector(".choice-tk-close-modal");
@@ -170,6 +187,7 @@ function closeSearchTkModal() {
   const fullListItems = document.querySelectorAll(".full-tk-radio");
   const notFoundMessage = document.querySelector(".modal-tk__not-found");
   const modalSubtitles = document.querySelectorAll(".modal-tk__subtitle");
+  const confirmBtn = document.querySelector(".tk-confirm-btn");
 
   closeBtn.addEventListener("click", () => {
     resetForm();
@@ -197,6 +215,8 @@ function closeSearchTkModal() {
     modalSubtitles.forEach((item) => {
       item.style.display = "block";
     });
+
+    confirmBtn.style.display = "flex";
   }
 }
 

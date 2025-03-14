@@ -1996,7 +1996,7 @@
 
                                         <button
                                           class="cart-order__add-customer js-open-modal"
-                                          data-modal-name="new-legal-entity"
+                                          data-modal-name="new-legal-entity-dadata"
                                           type="button">
                                           Добавить юр. лицо
                                         </button>
@@ -2173,7 +2173,7 @@
 
                                                 <button
                                                   class="cart-order__add-customer js-open-modal"
-                                                  data-modal-name="new-address"
+                                                  data-modal-name="new-address-dadata"
                                                   type="button">
                                                   Новый адрес
                                                 </button>
@@ -3596,10 +3596,10 @@
                     <p>Не найдено</p>
                   </div>
                   <div class="not-found__text">
-                    <p>Продолжить оформление заказа с доставкой данной ТК</p>
+                    <!-- <p>Продолжить оформление заказа с доставкой данной ТК</p> -->
                   </div>
 
-                  <div class="another-tk">
+                  <!-- <div class="another-tk">
                     <div class="another-tk__label delivery__label">
                       <input class="toggle-input" type="checkbox" name="delivery-comment" value="Комментарий к доставке" />
                       <span class="toggle-switch"></span>
@@ -3620,10 +3620,17 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
+
+                  <button
+                    class="but but--primary but--full form__btn choice-tk__btn another-tk__btn js-open-modal"
+                    type="button"
+                    data-modal-name="new-tk-dadata">
+                    Предложить другую ТК
+                  </button>
                 </div>
 
-                <button class="but but--primary but--full form__btn choice-tk__btn" type="button">Подтвердить</button>
+                <button class="but but--primary but--full form__btn choice-tk__btn tk-confirm-btn" type="button">Подтвердить</button>
               </div>
             </form>
             <button class="modal-new__close js-close-modal choice-tk-close-modal">
@@ -4023,6 +4030,275 @@
             </div>
             <button class="modal-new__close">
               <img src="assets/img/icons/exit.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Новые формы для API dadata -->
+    <div class="modal-new" data-name="new-address-dadata">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новый адрес</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <span class="input__placeholder-top">
+                      Город, улица, дом, корпус
+                      <span class="text text--danger">*</span>
+                    </span>
+                    <input class="input__field" id="dadataAddress" type="text" data-validate="empty" />
+                    <span class="input__placeholder">
+                      Город, улица, дом, корпус
+                      <span class="text text--danger">*</span>
+                    </span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="form__group">
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <span class="input__placeholder-top">Подъезд</span>
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder">Подъезд</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <div class="input form__group-input js-form-input">
+                    <div class="input__main">
+                      <span class="input__placeholder-top">Кв./Офис</span>
+                      <input class="input__field" type="text" />
+                      <span class="input__placeholder">Кв./Офис</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <span class="input__placeholder-top">Что важно знать водителю?</span>
+                    <textarea class="input__field" rows="3"></textarea>
+                    <span class="input__placeholder">Что важно знать водителю?</span>
+                  </div>
+                </div>
+                <button class="but but--primary but--full form__btn">Добавить адрес</button>
+                <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p>
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.1665 4.16666L20.8332 20.8333"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+                <path
+                  d="M4.1665 20.8333L20.8332 4.16666"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="new-legal-entity-dadata">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <section id="step-one">
+                <div class="title3 form__title">Новое юр. лицо</div>
+                <div class="form__main">
+                  <div class="input form__input js-form-input">
+                    <div class="input__main">
+                      <span class="input__placeholder-top">
+                        Название, ИНН или ОГРН компании или ИП
+                        <span class="text text--danger">*</span>
+                      </span>
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder input__placeholder--required">Название, ИНН или ОГРН компании или ИП</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">Название</p>
+                    <p class="text-field__content" data-name="name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТОРГОВАЯ КОМПАНИЯ "РЕМЭКС"</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">ИНН</p>
+                    <p class="text-field__content" data-name="INN">7778777787</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">КПП</p>
+                    <p class="text-field__content" data-name="KPP">7722701001</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">ОГРН</p>
+                    <p class="text-field__content" data-name="OGRN">7722701001</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">Генеральный директор</p>
+                    <p class="text-field__content" data-name="general_manager">Петров-Водкин</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">Юр. адрес</p>
+                    <p class="text-field__content" data-name="legal_address">Петровка, 38</p>
+                  </div>
+                  <button type="button" class="but but--primary but--full form__btn form__btn--mt-sm form__btn-next">Продолжить</button>
+                  <button class="but but--full form__btn show-old-form js-open-modal" data-modal-name="new-legal-entity" type="button">
+                    Что-то не так
+                  </button>
+                </div>
+              </section>
+
+              <section id="step-two">
+                <div class="title3 form__title">Добавьте платёжные данные</div>
+                <div class="form__main">
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__content" data-name="name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТОРГОВАЯ КОМПАНИЯ "РЕМЭКС"</p>
+                  </div>
+                  <div class="input form__input js-form-input">
+                    <div class="input__main">
+                      <span class="input__placeholder-top">
+                        Название, БИК или ИНН банка
+                        <span class="text text--danger">*</span>
+                      </span>
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder input__placeholder--required">Название, БИК или ИНН банка</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">Наименование банка:</p>
+                    <p class="text-field__content" data-name="INN">ПАО “СБЕРБАНК”</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">БИК:</p>
+                    <p class="text-field__content" data-name="KPP">7778777787</p>
+                  </div>
+                  <div class="text-field form__text-field d-none">
+                    <p class="text-field__title">Корреспондентский счет:</p>
+                    <p class="text-field__content" data-name="OGRN">7722701001</p>
+                  </div>
+                  <div class="input form__input js-form-input">
+                    <div class="input__main">
+                      <span class="input__placeholder-top">
+                        Расчётный счёт
+                        <span class="text text--danger">*</span>
+                      </span>
+                      <input class="input__field" type="text" data-validate="empty" />
+                      <span class="input__placeholder input__placeholder--required">Расчётный счёт</span>
+                    </div>
+                    <div class="input__error">Поле обязательно для заполнения</div>
+                  </div>
+                  <button class="but but--primary but--full form__btn form__btn--mt-sm">Создать юрлицо</button>
+                </div>
+              </section>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.1665 4.16666L20.8332 20.8333"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+                <path
+                  d="M4.1665 20.8333L20.8332 4.16666"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-new" data-name="new-tk-dadata">
+      <div class="modal-new__body">
+        <div class="modal-new__dialog">
+          <div class="modal-new__content">
+            <form class="form modal-new__form js-form" autocomplete="off">
+              <div class="title3 form__title">Новая ТК</div>
+              <div class="form__main">
+                <div class="input form__input js-form-input">
+                  <div class="input__main">
+                    <span class="input__placeholder-top">
+                      Название, ИНН или ОГРН компании или ИП
+                      <span class="text text--danger">*</span>
+                    </span>
+                    <input class="input__field" type="text" data-validate="empty" />
+                    <span class="input__placeholder input__placeholder--required">Название, ИНН или ОГРН компании или ИП</span>
+                  </div>
+                  <div class="input__error">Поле обязательно для заполнения</div>
+                </div>
+                <div class="text-field form__text-field d-none">
+                  <p class="text-field__title">Название</p>
+                  <p class="text-field__content" data-name="name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТОРГОВАЯ КОМПАНИЯ "РЕМЭКС"</p>
+                </div>
+                <div class="text-field form__text-field d-none">
+                  <p class="text-field__title">ИНН</p>
+                  <p class="text-field__content" data-name="INN">7778777787</p>
+                </div>
+                <div class="text-field form__text-field d-none">
+                  <p class="text-field__title">КПП</p>
+                  <p class="text-field__content" data-name="KPP">7722701001</p>
+                </div>
+                <div class="text-field form__text-field d-none">
+                  <p class="text-field__title">ОГРН</p>
+                  <p class="text-field__content" data-name="OGRN">7722701001</p>
+                </div>
+                <div class="text-field form__text-field d-none">
+                  <p class="text-field__title">Генеральный директор</p>
+                  <p class="text-field__content" data-name="general_manager">Петров-Водкин</p>
+                </div>
+                <div class="text-field form__text-field d-none">
+                  <p class="text-field__title">Юр. адрес</p>
+                  <p class="text-field__content" data-name="legal_address">Петровка, 38</p>
+                </div>
+                <button class="but but--primary but--full form__btn form__btn--mt-sm">Предложить</button>
+                <!-- <p class="text text--sm text--gray-white form__ps">
+                  Поля, отмеченные
+                  <span class="text text--danger">*</span>
+                  , обязательны для заполнения
+                  <br />
+                  Нажимая на кнопку - вы автоматически
+                  <a class="link link--black link--line link--line-light link--hover-black" href="#">соглашаетесь</a>
+                  на отправку ваших персональных данных.
+                </p> -->
+              </div>
+            </form>
+            <button class="modal-new__close js-close-modal">
+              <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.1665 4.16666L20.8332 20.8333"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+                <path
+                  d="M4.1665 20.8333L20.8332 4.16666"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
             </button>
           </div>
         </div>
