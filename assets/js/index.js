@@ -2142,9 +2142,15 @@ function gotoNextStep() {
   const nextBtn = document.querySelector("#step-one .form__btn-next");
   const newLegalEntityForm = document.querySelector("#step-one");
   const paymentDetailsForm = document.querySelector("#step-two");
+  const closeBtn = document.querySelector('[data-name="new-legal-entity-dadata"] .modal-new__close');
 
   nextBtn.addEventListener("click", () => {
     newLegalEntityForm.style.display = "none";
     paymentDetailsForm.style.display = "block";
+  });
+
+  closeBtn.addEventListener("click", () => {
+    newLegalEntityForm.style.display = "block";
+    paymentDetailsForm.style.display = "none";
   });
 }

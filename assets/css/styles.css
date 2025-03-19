@@ -17199,7 +17199,7 @@ span.readMore {
 
 /* <== Страница Новости правка верстки */
 
-/* Стили для модалок API dadata */
+/* Стили для модалок API dadata ==> */
 #step-one .form__text-field.d-none,
 #step-one .form__btn,
 #step-two .form__text-field.d-none,
@@ -17241,6 +17241,10 @@ span.readMore {
   display: none;
 }
 
+[data-name="new-legal-entity-dadata"] .modal-new__form {
+  min-height: 460px;
+}
+
 .input__placeholder-top {
   display: none;
   font-weight: 400;
@@ -17267,3 +17271,4 @@ span.readMore {
   font-size: 16px;
   color: #000;
 }
+/* <== Стили для модалок API dadata */
