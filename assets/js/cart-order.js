@@ -437,3 +437,75 @@ const cartOrderSlider = new Swiper(".cart-order-slider", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+//==========================================================================================================================================================
+// Новые формы для API dadata
+$("#dadata-address").suggestions({
+  token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
+  type: "ADDRESS",
+  /* Вызывается, когда пользователь выбирает одну из подсказок */
+  onSelect: function (suggestion) {
+    console.log(suggestion);
+  },
+});
+
+$("#dadata-courier").suggestions({
+  token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
+  type: "ADDRESS",
+  /* Вызывается, когда пользователь выбирает одну из подсказок */
+  onSelect: function (suggestion) {
+    console.log(suggestion);
+  },
+});
+
+$("#dadata-legal-entity").suggestions({
+  token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
+  type: "PARTY",
+  /* Вызывается, когда пользователь выбирает одну из подсказок */
+  onSelect: function (suggestion) {
+    console.log(suggestion);
+    document.querySelector("[data-name='new-legal-entity-dadata'] #step-one .not-found-msg-active").style.display = "none";
+    document.querySelector('[data-name="new-legal-entity-dadata"] .suggestions-wrapper').style.display = "none";
+
+    document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-one .text-field.form__text-field").forEach((el) => {
+      el.classList.remove("d-none");
+    });
+
+    document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-one .form__btn").forEach((btn) => {
+      btn.style.display = "flex";
+    });
+
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="INN"]').value = suggestion.data.inn;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').value = suggestion.data.kpp;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;
+  },
+});
+
+$("#dadata-tk").suggestions({
+  token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
+  type: "PARTY",
+  /* Вызывается, когда пользователь выбирает одну из подсказок */
+  onSelect: function (suggestion) {
+    console.log(suggestion);
+    // document.querySelector("[data-name='new-tk-dadata'] .not-found-msg-active").style.display = "none";
+    document.querySelector("[data-name='new-tk-dadata'] .suggestions-wrapper").style.display = "none";
+
+    document.querySelectorAll("[data-name='new-tk-dadata'] .text-field.form__text-field").forEach((el) => {
+      el.classList.remove("d-none");
+    });
+
+    document.querySelectorAll("[data-name='new-tk-dadata'] .form__btn").forEach((btn) => {
+      btn.style.display = "flex";
+    });
+
+    document.querySelector('[data-name="new-tk-dadata"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-tk-dadata"] [data-name="INN"]').value = suggestion.data.inn;
+    document.querySelector('[data-name="new-tk-dadata"] [data-name="KPP"]').value = suggestion.data.kpp;
+    document.querySelector('[data-name="new-tk-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
+    document.querySelector('[data-name="new-tk-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
+    document.querySelector('[data-name="new-tk-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;
+  },
+});

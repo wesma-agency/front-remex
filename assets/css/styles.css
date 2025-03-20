@@ -17203,8 +17203,10 @@ span.readMore {
 #step-one .form__text-field.d-none,
 #step-one .form__btn,
 #step-two .form__text-field.d-none,
-#step-two .form__btn {
-  /* display: none; */
+[data-name="new-tk-dadata"] .form__main .form__text-field.d-none,
+[data-name="new-tk-dadata"] .form__btn
+/* #step-two .form__btn  */ {
+  display: none;
 }
 #step-one.form__btn--mt-sm,
 #step-two.form__btn--mt-sm {
@@ -17237,11 +17239,22 @@ span.readMore {
   color: #000;
 }
 
+#step-one .text-field__content,
+[data-name="new-tk-dadata"] .form__main .text-field__content {
+  width: 100%;
+  border: none;
+}
+#step-one textarea,
+[data-name="new-tk-dadata"] .form__main .text-field__content {
+  resize: none;
+}
+
 #step-two {
   display: none;
 }
 
-[data-name="new-legal-entity-dadata"] .modal-new__form {
+[data-name="new-legal-entity-dadata"] .modal-new__form,
+[data-name="new-tk-dadata"] .modal-new__form {
   min-height: 460px;
 }
 
@@ -17270,5 +17283,43 @@ span.readMore {
   font-weight: 400;
   font-size: 16px;
   color: #000;
+}
+
+[data-name="new-legal-entity-dadata"] #step-two .form__main:not(:first-child) {
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+[data-name="new-legal-entity-dadata"] #step-two .form__btn--mt-sm {
+  margin-top: auto;
+}
+
+.suggestions-wrapper:has(.not-found-msg-active) {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 350px;
+  max-height: 450px;
+}
+.suggestions-wrapper:has(.not-found-msg-active) .suggestions-hint {
+  display: none !important;
+}
+.suggestions-suggestions {
+  /* position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%; */
+  border: none !important;
+}
+.not-found-msg-active {
+  align-self: flex-start;
+  padding-left: 4px;
+  color: #000;
+  /* margin-top: 30px; */
+  margin-top: auto;
+}
+
+.not-found-msg-active:hover {
+  color: #004ada;
 }
 /* <== Стили для модалок API dadata */

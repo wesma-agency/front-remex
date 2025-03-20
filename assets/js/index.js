@@ -2123,7 +2123,6 @@ addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Новые формы для API dadata
 addEventListener("DOMContentLoaded", () => {
   closeDadataNewLegalEntityModal();
   gotoNextStep();
@@ -2152,5 +2151,63 @@ function gotoNextStep() {
   closeBtn.addEventListener("click", () => {
     newLegalEntityForm.style.display = "block";
     paymentDetailsForm.style.display = "none";
+  });
+}
+
+//==========================================================================================================================================================
+// Новые формы для API dadata
+document.addEventListener("DOMContentLoaded", () => {
+  choisceLegalEntity();
+});
+
+function choisceLegalEntity() {
+  const dadataLegalEntityInput = document.querySelector("#dadata-legal-entity");
+  const form = document.querySelector("[data-name='new-legal-entity-dadata'] form");
+  const closeBtn = document.querySelector("[data-name='new-legal-entity-dadata'] .modal-new__close.js-close-modal");
+
+  if (dadataLegalEntityInput) {
+    dadataLegalEntityInput.addEventListener("input", () => {
+      const suggestions = document.querySelector("[data-name='new-legal-entity-dadata'] .suggestions-suggestions");
+      const parentElem = suggestions.parentElement;
+      const notFoundDiv = parentElem ? parentElem.querySelector(".not-found-msg-active") : null;
+
+      if (!dadataLegalEntityInput.value || !suggestions || suggestions.children.length === 0) {
+        if (notFoundDiv) {
+          notFoundDiv.remove();
+        }
+        return;
+      }
+
+      if (suggestions) {
+        const suggestionItems = suggestions.querySelectorAll(".suggestions-suggestion");
+
+        let notFoundDiv = parentElem.querySelector(".not-found-msg-active");
+
+        if (suggestionItems.length > 0 && !notFoundDiv) {
+          notFoundDiv = document.createElement("button");
+          notFoundDiv.innerText = "Не получилось найти";
+          notFoundDiv.classList.add("not-found-msg-active", "js-open-modal");
+          notFoundDiv.setAttribute("data-modal-name", "new-legal-entity");
+          notFoundDiv.setAttribute("type", "button");
+
+          parentElem.insertAdjacentElement("beforeend", notFoundDiv);
+        }
+
+        if (notFoundDiv) {
+          notFoundDiv.addEventListener("click", () => {
+            const dadataLegalEntityBtn = document.querySelector("[data-name='new-legal-entity-dadata'] .modal-new__close.js-close-modal");
+            const oldNewLegalEntityForm = document.querySelector('[data-name="new-legal-entity"]');
+
+            dadataLegalEntityBtn.click();
+            oldNewLegalEntityForm.classList.add("modal-new--active");
+          });
+        }
+      }
+    });
+  }
+
+  closeBtn.addEventListener("click", () => {
+    form.reset();
+    document.querySelector(".not-found-msg-active").remove();
   });
 }

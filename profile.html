@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/main.css" />
     <link rel="stylesheet" href="assets/libs/pgs-panel/css/jquery.mCustomScrollbar.css" />
     <!-- end pgs css -->
+
+    <!-- Стили API dadata -->
+    <link href="http://cdn.jsdelivr.net/npm/suggestions-jquery@22.6.0/dist/css/suggestions.min.css" rel="stylesheet" />
+    <!-- end Стили API dadata -->
   </head>
 
   <body class="pgs-body">
@@ -2160,6 +2164,7 @@
                             </button>
                           </div>
                         </div>
+                        <!-- Вызов формы Новый адрес API dadata -->
                         <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-address-dadata">
                           Новый адрес
                         </button>
@@ -2216,6 +2221,7 @@
                             </button>
                           </div>
                         </div>
+                        <!-- Вызов формы Добавить юрлицо API dadata -->
                         <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-legal-entity-dadata">
                           Добавить юрлицо
                         </button>
@@ -2434,6 +2440,7 @@
                                   </button>
                                 </div>
                               </div>
+                              <!-- Вызов формы Новый адрес API dadata -->
                               <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-address-dadata">
                                 Новый адрес
                               </button>
@@ -2547,6 +2554,7 @@
                                   </button>
                                 </div>
                               </div>
+                              <!-- Вызов формы Добавить юрлицо API dadata -->
                               <button class="but but--full profile-card__btn js-open-modal" data-modal-name="new-legal-entity-dadata">
                                 Добавить юрлицо
                               </button>
@@ -3786,7 +3794,7 @@
                       Город, улица, дом, корпус
                       <span class="text text--danger">*</span>
                     </span>
-                    <input class="input__field" id="dadataAddress" type="text" data-validate="empty" />
+                    <input class="input__field" id="dadata-address" type="text" data-validate="empty" />
                     <span class="input__placeholder">
                       Город, улица, дом, корпус
                       <span class="text text--danger">*</span>
@@ -3857,7 +3865,7 @@
           <div class="modal-new__content">
             <form class="form modal-new__form js-form" autocomplete="off">
               <section id="step-one">
-                <div class="title3 form__title">Новое юр. лицо</div>
+                <div class="title3 form__title">Новое юрлицо</div>
                 <div class="form__main">
                   <div class="input form__input js-form-input">
                     <div class="input__main">
@@ -3865,34 +3873,34 @@
                         Название, ИНН или ОГРН компании или ИП
                         <span class="text text--danger">*</span>
                       </span>
-                      <input class="input__field" type="text" data-validate="empty" />
+                      <input class="input__field" id="dadata-legal-entity" type="text" data-validate="empty" />
                       <span class="input__placeholder input__placeholder--required">Название, ИНН или ОГРН компании или ИП</span>
                     </div>
                     <div class="input__error">Поле обязательно для заполнения</div>
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Название</p>
-                    <p class="text-field__content" data-name="name">ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ "ТОРГОВАЯ КОМПАНИЯ "РЕМЭКС"</p>
+                    <textarea class="text-field__content" data-name="name" rows="2"></textarea>
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">ИНН</p>
-                    <p class="text-field__content" data-name="INN">7778777787</p>
+                    <input class="text-field__content" data-name="INN" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">КПП</p>
-                    <p class="text-field__content" data-name="KPP">7722701001</p>
+                    <input class="text-field__content" data-name="KPP" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">ОГРН</p>
-                    <p class="text-field__content" data-name="OGRN">7722701001</p>
+                    <input class="text-field__content" data-name="OGRN" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Генеральный директор</p>
-                    <p class="text-field__content" data-name="general_manager">Петров-Водкин</p>
+                    <input class="text-field__content" data-name="general_manager" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Юр. адрес</p>
-                    <p class="text-field__content" data-name="legal_address">Петровка, 38</p>
+                    <textarea class="text-field__content" data-name="legal_address" rows="2"></textarea>
                   </div>
                   <button type="button" class="but but--primary but--full form__btn form__btn--mt-sm form__btn-next">Продолжить</button>
                   <button class="but but--full form__btn show-old-form js-open-modal" data-modal-name="new-legal-entity" type="button">
@@ -3917,15 +3925,15 @@
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Наименование банка:</p>
-                    <p class="text-field__content" data-name="INN">ПАО “СБЕРБАНК”</p>
+                    <input class="text-field__content" data-name="INN" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">БИК:</p>
-                    <p class="text-field__content" data-name="KPP">7778777787</p>
+                    <input class="text-field__content" data-name="KPP" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Корреспондентский счет:</p>
-                    <p class="text-field__content" data-name="OGRN">7722701001</p>
+                    <input class="text-field__content" data-name="OGRN" type="text" />
                   </div>
                   <div class="input form__input js-form-input">
                     <div class="input__main">
@@ -4042,6 +4050,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
+    <!-- Скрипты API dadata -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/npm/suggestions-jquery@22.6.0/dist/js/jquery.suggestions.min.js"></script>
+    <!-- end Скрипты API dadata -->
+    <script src="assets/js/profile.js"></script>
     <script src="assets/js/index.js?v=27"></script>
     <!-- pgs js -->
     <script type="text/javascript" src="assets/libs/pgs-panel/js/jquery.min.js"></script>
