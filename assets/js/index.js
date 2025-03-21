@@ -2195,10 +2195,10 @@ function choisceLegalEntity() {
 
         if (notFoundDiv) {
           notFoundDiv.addEventListener("click", () => {
-            const dadataLegalEntityBtn = document.querySelector("[data-name='new-legal-entity-dadata'] .modal-new__close.js-close-modal");
+            const dadataLegalEntityForm = document.querySelector("[data-name='new-legal-entity-dadata']");
             const oldNewLegalEntityForm = document.querySelector('[data-name="new-legal-entity"]');
 
-            dadataLegalEntityBtn.click();
+            dadataLegalEntityForm.classList.remove("modal-new--active");
             oldNewLegalEntityForm.classList.add("modal-new--active");
           });
         }
@@ -2208,6 +2208,7 @@ function choisceLegalEntity() {
 
   closeBtn.addEventListener("click", () => {
     form.reset();
-    document.querySelector(".not-found-msg-active").remove();
+    window.location.reload();
+    document.querySelector(".not-found-msg-active")?.remove();
   });
 }

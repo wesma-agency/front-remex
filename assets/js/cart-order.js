@@ -443,6 +443,8 @@ const cartOrderSlider = new Swiper(".cart-order-slider", {
 $("#dadata-address").suggestions({
   token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
   type: "ADDRESS",
+  deferRequestBy: 250,
+  minChars: 3,
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
@@ -452,6 +454,8 @@ $("#dadata-address").suggestions({
 $("#dadata-courier").suggestions({
   token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
   type: "ADDRESS",
+  deferRequestBy: 250,
+  minChars: 3,
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
@@ -461,10 +465,14 @@ $("#dadata-courier").suggestions({
 $("#dadata-legal-entity").suggestions({
   token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
   type: "PARTY",
+  deferRequestBy: 250,
+  minChars: 3,
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
-    document.querySelector("[data-name='new-legal-entity-dadata'] #step-one .not-found-msg-active").style.display = "none";
+    if (document.querySelector("[data-name='new-legal-entity-dadata'] #step-one .not-found-msg-active")) {
+      document.querySelector("[data-name='new-legal-entity-dadata'] #step-one .not-found-msg-active").style.display = "none";
+    }
     document.querySelector('[data-name="new-legal-entity-dadata"] .suggestions-wrapper').style.display = "none";
 
     document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-one .text-field.form__text-field").forEach((el) => {
@@ -487,6 +495,8 @@ $("#dadata-legal-entity").suggestions({
 $("#dadata-tk").suggestions({
   token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
   type: "PARTY",
+  deferRequestBy: 250,
+  minChars: 3,
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
