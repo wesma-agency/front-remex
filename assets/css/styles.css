@@ -17199,7 +17199,7 @@ span.readMore {
 
 /* <== Страница Новости правка верстки */
 
-/* Стили для модалок API dadata ==> */
+/* Стили для модалок API dadata */
 #step-one .form__text-field.d-none,
 #step-one .form__btn,
 #step-two .form__text-field.d-none,
@@ -17220,8 +17220,14 @@ span.readMore {
 #step-two .form__input {
   margin-bottom: 19px;
 }
+#step-two .form__input:last-of-type {
+  margin-bottom: 0;
+}
 #step-one .text-field.form__text-field {
   margin-bottom: 19px;
+}
+#step-one .text-field.form__text-field:last-of-type {
+  margin-bottom: 0;
 }
 #step-two .text-field.form__text-field {
   margin-bottom: 12px;
@@ -17240,6 +17246,7 @@ span.readMore {
 }
 
 #step-one .text-field__content,
+#step-two .text-field__content,
 [data-name="new-tk-dadata"] .form__main .text-field__content {
   width: 100%;
   border: none;
@@ -17291,15 +17298,16 @@ span.readMore {
   min-height: 320px;
 }
 [data-name="new-legal-entity-dadata"] #step-two .form__btn--mt-sm {
-  margin-top: auto;
+  /* margin-top: auto; */
+  margin-top: 40px;
 }
 
 .suggestions-wrapper:has(.not-found-msg-active) {
   display: flex;
   flex-direction: column;
   height: auto;
-  min-height: 350px;
-  max-height: 450px;
+  min-height: 400px;
+  max-height: 500px;
 }
 .suggestions-wrapper:has(.not-found-msg-active) .suggestions-hint {
   display: none !important;
@@ -17322,4 +17330,4 @@ span.readMore {
 .not-found-msg-active:hover {
   color: #004ada;
 }
-/* <== Стили для модалок API dadata */
+/* end Стили для модалок API dadata */

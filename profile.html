@@ -3496,21 +3496,21 @@
               <div class="form__main">
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
+                    <input class="input__field" data-name="name" type="text" data-validate="empty" />
                     <span class="input__placeholder input__placeholder--required">Название юрлица</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
+                    <input class="input__field" data-name="INN" type="text" data-validate="empty" />
                     <span class="input__placeholder input__placeholder--required">ИНН</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
                 </div>
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" type="text" data-validate="empty" />
+                    <input class="input__field" data-name="KPP" type="text" data-validate="empty" />
                     <span class="input__placeholder input__placeholder--required">КПП</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
@@ -3549,7 +3549,20 @@
               </div>
             </form>
             <button class="modal-new__close js-close-modal">
-              <img src="assets/img/icons/exit.svg" alt="" />
+              <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.1665 4.16666L20.8332 20.8333"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+                <path
+                  d="M4.1665 20.8333L20.8332 4.16666"
+                  stroke="#444444"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
             </button>
           </div>
         </div>
@@ -3918,22 +3931,22 @@
                   <div class="input form__input js-form-input">
                     <div class="input__main">
                       <span class="input__placeholder-top">Название, БИК или ИНН банка</span>
-                      <input class="input__field" type="text" data-validate="empty" />
+                      <input class="input__field" id="dadata-payment-details" type="text" data-validate="empty" />
                       <span class="input__placeholder">Название, БИК или ИНН банка</span>
                     </div>
                     <div class="input__error">Поле обязательно для заполнения</div>
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Наименование банка:</p>
-                    <input class="text-field__content" data-name="INN" type="text" />
+                    <input class="text-field__content" data-name="bank-name" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">БИК:</p>
-                    <input class="text-field__content" data-name="KPP" type="text" />
+                    <input class="text-field__content" data-name="bank-INN" type="text" />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Корреспондентский счет:</p>
-                    <input class="text-field__content" data-name="OGRN" type="text" />
+                    <input class="text-field__content" data-name="bank-account" type="text" />
                   </div>
                   <div class="input form__input js-form-input">
                     <div class="input__main">

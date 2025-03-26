@@ -2157,10 +2157,12 @@ function gotoNextStep() {
 //==========================================================================================================================================================
 // Новые формы для API dadata
 document.addEventListener("DOMContentLoaded", () => {
-  choisceLegalEntity();
+  choiceLegalEntity();
+  choiceDeliveryAddress();
+  choiceOldLegalEntity();
 });
 
-function choisceLegalEntity() {
+function choiceLegalEntity() {
   const dadataLegalEntityInput = document.querySelector("#dadata-legal-entity");
   const form = document.querySelector("[data-name='new-legal-entity-dadata'] form");
   const closeBtn = document.querySelector("[data-name='new-legal-entity-dadata'] .modal-new__close.js-close-modal");
@@ -2207,8 +2209,30 @@ function choisceLegalEntity() {
   }
 
   closeBtn.addEventListener("click", () => {
-    form.reset();
-    window.location.reload();
+    resetForm(form);
     document.querySelector(".not-found-msg-active")?.remove();
   });
+}
+
+function choiceDeliveryAddress() {
+  const form = document.querySelector("[data-name='new-address-dadata'] form");
+  const closeBtn = document.querySelector("[data-name='new-address-dadata'] .modal-new__close.js-close-modal");
+
+  closeBtn.addEventListener("click", () => {
+    resetForm(form);
+  });
+}
+
+function choiceOldLegalEntity() {
+  const form = document.querySelector('[data-name="new-legal-entity"] form');
+  const closeBtn = document.querySelector('[data-name="new-legal-entity"] .modal-new__close.js-close-modal');
+
+  closeBtn.addEventListener("click", () => {
+    resetForm(form);
+  });
+}
+
+function resetForm(form) {
+  form.reset();
+  window.location.reload();
 }

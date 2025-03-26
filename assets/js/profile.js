@@ -5,6 +5,7 @@ $("#dadata-address").suggestions({
   type: "ADDRESS",
   deferRequestBy: 250,
   minChars: 3,
+  bounds: "city-house",
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
@@ -32,67 +33,39 @@ $("#dadata-legal-entity").suggestions({
       btn.style.display = "flex";
     });
 
-    document.querySelector('[data-name="name"]').value = suggestion.data.name.full_with_opf;
-    document.querySelector('[data-name="INN"]').value = suggestion.data.inn;
-    document.querySelector('[data-name="KPP"]').value = suggestion.data.kpp;
-    document.querySelector('[data-name="OGRN"]').value = suggestion.data.ogrn;
-    document.querySelector('[data-name="general_manager"]').value = suggestion.data.management.name;
-    document.querySelector('[data-name="legal_address"]').value = suggestion.data.address.value;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="INN"]').value = suggestion.data.inn;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').value = suggestion.data.kpp;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;
+
+    document.querySelectorAll('[data-name="new-legal-entity"] .input__placeholder:not-last-child').forEach((el) => {
+      el.style.display = "none";
+    });
+
+    document.querySelector('[data-name="new-legal-entity"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-legal-entity"] [data-name="INN"]').value = suggestion.data.inn;
+    document.querySelector('[data-name="new-legal-entity"] [data-name="KPP"]').value = suggestion.data.kpp;
   },
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   manualInputLegalEntity();
-// });
+$("#dadata-payment-details").suggestions({
+  token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
+  type: "BANK",
+  deferRequestBy: 250,
+  minChars: 3,
+  // bounds: "city-house",
+  /* Вызывается, когда пользователь выбирает одну из подсказок */
+  onSelect: function (suggestion) {
+    console.log(suggestion);
 
-// function manualInputLegalEntity() {
-//   const dadataLegalEntityInput = document.querySelector("#dadata-legal-entity");
-//   const form = document.querySelector("[data-name='new-legal-entity-dadata'] form");
-//   const closeBtn = document.querySelector("[data-name='new-legal-entity-dadata'] .modal-new__close.js-close-modal");
+    document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-two .text-field.form__text-field").forEach((el) => {
+      el.classList.remove("d-none");
+    });
 
-//   if (dadataLegalEntityInput) {
-//     dadataLegalEntityInput.addEventListener("input", () => {
-//       const suggestions = document.querySelector("[data-name='new-legal-entity-dadata'] .suggestions-suggestions");
-//       const parentElem = suggestions.parentElement;
-//       const notFoundDiv = parentElem ? parentElem.querySelector(".not-found-msg-active") : null;
-
-//       if (!dadataLegalEntityInput.value || !suggestions || suggestions.children.length === 0) {
-//         if (notFoundDiv) {
-//           notFoundDiv.remove();
-//         }
-//         return;
-//       }
-
-//       if (suggestions) {
-//         const suggestionItems = suggestions.querySelectorAll(".suggestions-suggestion");
-
-//         let notFoundDiv = parentElem.querySelector(".not-found-msg-active");
-
-//         if (suggestionItems.length > 0 && !notFoundDiv) {
-//           notFoundDiv = document.createElement("button");
-//           notFoundDiv.innerText = "Не получилось найти";
-//           notFoundDiv.classList.add("not-found-msg-active", "js-open-modal");
-//           notFoundDiv.setAttribute("data-modal-name", "new-legal-entity");
-//           notFoundDiv.setAttribute("type", "button");
-
-//           parentElem.insertAdjacentElement("beforeend", notFoundDiv);
-//         }
-
-//         if (notFoundDiv) {
-//           notFoundDiv.addEventListener("click", () => {
-//             const dadataLegalEntityBtn = document.querySelector("[data-name='new-legal-entity-dadata'] .modal-new__close.js-close-modal");
-//             const oldNewLegalEntityForm = document.querySelector('[data-name="new-legal-entity"]');
-
-//             dadataLegalEntityBtn.click();
-//             oldNewLegalEntityForm.classList.add("modal-new--active");
-//           });
-//         }
-//       }
-//     });
-//   }
-
-//   closeBtn.addEventListener("click", () => {
-//     form.reset();
-//     document.querySelector(".not-found-msg-active").remove();
-//   });
-// }
+    document.querySelector('[data-name="bank-name"]').value = suggestion.value;
+    document.querySelector('[data-name="bank-INN"]').value = suggestion.data.bic;
+    document.querySelector('[data-name="bank-account"]').value = suggestion.data.correspondent_account;
+  },
+});

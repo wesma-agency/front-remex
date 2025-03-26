@@ -445,6 +445,7 @@ $("#dadata-address").suggestions({
   type: "ADDRESS",
   deferRequestBy: 250,
   minChars: 3,
+  // bounds: "city-house",
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
@@ -456,6 +457,7 @@ $("#dadata-courier").suggestions({
   type: "ADDRESS",
   deferRequestBy: 250,
   minChars: 3,
+  // bounds: "city-house",
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
@@ -489,6 +491,34 @@ $("#dadata-legal-entity").suggestions({
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;
+
+    document.querySelectorAll('[data-name="new-legal-entity"] .input__placeholder:not-last-child').forEach((el) => {
+      el.style.display = "none";
+    });
+
+    document.querySelector('[data-name="new-legal-entity"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-legal-entity"] [data-name="INN"]').value = suggestion.data.inn;
+    document.querySelector('[data-name="new-legal-entity"] [data-name="KPP"]').value = suggestion.data.kpp;
+  },
+});
+
+$("#dadata-payment-details").suggestions({
+  token: "6bb7bbb9265b663a62be07fa4b6212df2efbeabc",
+  type: "BANK",
+  deferRequestBy: 250,
+  minChars: 3,
+  // bounds: "city-house",
+  /* Вызывается, когда пользователь выбирает одну из подсказок */
+  onSelect: function (suggestion) {
+    console.log(suggestion);
+
+    document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-two .text-field.form__text-field").forEach((el) => {
+      el.classList.remove("d-none");
+    });
+
+    document.querySelector('[data-name="bank-name"]').value = suggestion.value;
+    document.querySelector('[data-name="bank-INN"]').value = suggestion.data.bic;
+    document.querySelector('[data-name="bank-account"]').value = suggestion.data.correspondent_account;
   },
 });
 
