@@ -40,8 +40,11 @@ $("#dadata-legal-entity").suggestions({
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;
 
-    document.querySelectorAll('[data-name="new-legal-entity"] .input__placeholder:not-last-child').forEach((el) => {
-      el.style.display = "none";
+    const spanElems = document.querySelectorAll('[data-name="new-legal-entity"] form .input__placeholder');
+    spanElems.forEach((el, index) => {
+      if (index < spanElems.length - 1) {
+        el.style.display = "none";
+      }
     });
 
     document.querySelector('[data-name="new-legal-entity"] [data-name="name"]').value = suggestion.data.name.full_with_opf;

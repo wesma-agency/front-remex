@@ -17252,7 +17252,8 @@ span.readMore {
   border: none;
 }
 #step-one textarea,
-[data-name="new-tk-dadata"] .form__main .text-field__content {
+[data-name="new-tk-dadata"] .form__main .text-field__content,
+[data-name="new-legal-entity"] .form textarea[data-name="name"] {
   resize: none;
 }
 

@@ -2158,8 +2158,9 @@ function gotoNextStep() {
 // Новые формы для API dadata
 document.addEventListener("DOMContentLoaded", () => {
   choiceLegalEntity();
-  choiceDeliveryAddress();
-  choiceOldLegalEntity();
+  resetDeliveryAddressForm();
+  resetOldLegalEntityForm();
+  resetTkForm();
 });
 
 function choiceLegalEntity() {
@@ -2214,7 +2215,7 @@ function choiceLegalEntity() {
   });
 }
 
-function choiceDeliveryAddress() {
+function resetDeliveryAddressForm() {
   const form = document.querySelector("[data-name='new-address-dadata'] form");
   const closeBtn = document.querySelector("[data-name='new-address-dadata'] .modal-new__close.js-close-modal");
 
@@ -2223,9 +2224,18 @@ function choiceDeliveryAddress() {
   });
 }
 
-function choiceOldLegalEntity() {
+function resetOldLegalEntityForm() {
   const form = document.querySelector('[data-name="new-legal-entity"] form');
   const closeBtn = document.querySelector('[data-name="new-legal-entity"] .modal-new__close.js-close-modal');
+
+  closeBtn.addEventListener("click", () => {
+    resetForm(form);
+  });
+}
+
+function resetTkForm() {
+  const form = document.querySelector('[data-name="new-tk-dadata"] form');
+  const closeBtn = document.querySelector('[data-name="new-tk-dadata"] .modal-new__close.js-close-modal');
 
   closeBtn.addEventListener("click", () => {
     resetForm(form);

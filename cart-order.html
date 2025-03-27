@@ -3341,7 +3341,8 @@
               <div class="form__main">
                 <div class="input form__input js-form-input">
                   <div class="input__main">
-                    <input class="input__field" data-name="name" type="text" data-validate="empty" />
+                    <!-- <input class="input__field" data-name="name" type="text" data-validate="empty" /> -->
+                    <textarea class="input__field" data-name="name" rows="2" data-validate="empty"></textarea>
                     <span class="input__placeholder input__placeholder--required">Название юрлица</span>
                   </div>
                   <div class="input__error">Поле обязательно для заполнения</div>
@@ -4156,27 +4157,27 @@
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Название</p>
-                    <textarea class="text-field__content" data-name="name" rows="2"></textarea>
+                    <textarea class="text-field__content" data-name="name" rows="2" readonly></textarea>
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">ИНН</p>
-                    <input class="text-field__content" data-name="INN" type="text" />
+                    <input class="text-field__content" data-name="INN" type="text" readonly />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">КПП</p>
-                    <input class="text-field__content" data-name="KPP" type="text" />
+                    <input class="text-field__content" data-name="KPP" type="text" readonly />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">ОГРН</p>
-                    <input class="text-field__content" data-name="OGRN" type="text" />
+                    <input class="text-field__content" data-name="OGRN" type="text" readonly />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Генеральный директор</p>
-                    <input class="text-field__content" data-name="general_manager" type="text" />
+                    <input class="text-field__content" data-name="general_manager" type="text" readonly />
                   </div>
                   <div class="text-field form__text-field d-none">
                     <p class="text-field__title">Юр. адрес</p>
-                    <textarea class="text-field__content" data-name="legal_address" rows="2"></textarea>
+                    <textarea class="text-field__content" data-name="legal_address" rows="2" readonly></textarea>
                   </div>
                   <button type="button" class="but but--primary but--full form__btn form__btn--mt-sm form__btn-next">Продолжить</button>
                   <button class="but but--full form__btn show-old-form js-open-modal" data-modal-name="new-legal-entity" type="button">
@@ -4214,7 +4215,11 @@
                   <div class="input form__input js-form-input">
                     <div class="input__main">
                       <span class="input__placeholder-top">Расчётный счёт</span>
-                      <input class="input__field" type="text" data-validate="empty" />
+                      <input
+                        class="input__field"
+                        type="number"
+                        data-validate="empty"
+                        onKeyPress="if(this.value.length === 20) return false" />
                       <span class="input__placeholder">Расчётный счёт</span>
                     </div>
                     <div class="input__error">Поле обязательно для заполнения</div>
