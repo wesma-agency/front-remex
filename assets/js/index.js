@@ -2177,6 +2177,7 @@ function choiceLegalEntity() {
       if (!dadataLegalEntityInput.value || !suggestions || suggestions.children.length === 0) {
         if (notFoundDiv) {
           notFoundDiv.remove();
+          form.reset();
         }
         return;
       }
