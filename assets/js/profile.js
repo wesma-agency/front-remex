@@ -33,7 +33,7 @@ $("#dadata-legal-entity").suggestions({
       btn.style.display = "flex";
     });
 
-    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="name"]').value = suggestion.data.name.short_with_opf;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="INN"]').value = suggestion.data.inn;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').value = suggestion.data.kpp;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
@@ -47,7 +47,7 @@ $("#dadata-legal-entity").suggestions({
       }
     });
 
-    document.querySelector('[data-name="new-legal-entity"] [data-name="name"]').value = suggestion.data.name.full_with_opf;
+    document.querySelector('[data-name="new-legal-entity"] [data-name="name"]').value = suggestion.data.name.short_with_opf;
     document.querySelector('[data-name="new-legal-entity"] [data-name="INN"]').value = suggestion.data.inn;
     document.querySelector('[data-name="new-legal-entity"] [data-name="KPP"]').value = suggestion.data.kpp;
   },

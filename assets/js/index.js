@@ -2238,9 +2238,11 @@ function resetTkForm() {
   const form = document.querySelector('[data-name="new-tk-dadata"] form');
   const closeBtn = document.querySelector('[data-name="new-tk-dadata"] .modal-new__close.js-close-modal');
 
-  closeBtn.addEventListener("click", () => {
-    resetForm(form);
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      resetForm(form);
+    });
+  }
 }
 
 function resetForm(form) {
