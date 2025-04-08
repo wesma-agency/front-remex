@@ -449,6 +449,9 @@ $("#dadata-address").suggestions({
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
+
+    document.querySelector("[data-name='dadata-fias-id']").value = suggestion.data.fias_id;
+    document.querySelector("[data-name='dadata-kladr-id']").value = suggestion.data.kladr_id;
   },
 });
 
@@ -461,6 +464,9 @@ $("#dadata-courier").suggestions({
   /* Вызывается, когда пользователь выбирает одну из подсказок */
   onSelect: function (suggestion) {
     console.log(suggestion);
+
+    document.querySelector("[data-name='courier-dadata-fias-id']").value = suggestion.data.fias_id;
+    document.querySelector("[data-name='courier-dadata-kladr-id']").value = suggestion.data.kladr_id;
   },
 });
 
@@ -475,6 +481,7 @@ $("#dadata-legal-entity").suggestions({
     if (document.querySelector("[data-name='new-legal-entity-dadata'] #step-one .not-found-msg-active")) {
       document.querySelector("[data-name='new-legal-entity-dadata'] #step-one .not-found-msg-active").style.display = "none";
     }
+
     document.querySelector('[data-name="new-legal-entity-dadata"] .suggestions-wrapper').style.display = "none";
 
     document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-one .text-field.form__text-field").forEach((el) => {
@@ -486,8 +493,18 @@ $("#dadata-legal-entity").suggestions({
     });
 
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="name"]').value = suggestion.data.name.short_with_opf;
+    document.querySelector('[data-name="new-legal-entity-dadata"] #step-two .text-field.form__text-field').classList.remove("d-none");
+    document.querySelector('[data-name="new-legal-entity-dadata"] #step-two [data-name="name"]').textContent =
+      suggestion.data.name.short_with_opf;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="INN"]').value = suggestion.data.inn;
-    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').value = suggestion.data.kpp;
+
+    if (!suggestion.data.kpp) {
+      document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').style.display = "none";
+      document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').parentElement.style.display = "none";
+    } else {
+      document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="KPP"]').value = suggestion.data.kpp;
+    }
+
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;

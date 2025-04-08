@@ -17321,11 +17321,14 @@ span.readMore {
   border: none !important;
 }
 .not-found-msg-active {
-  align-self: flex-start;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* align-self: flex-start; */
   padding-left: 4px;
   color: #000;
   /* margin-top: 30px; */
-  margin-top: auto;
+  /* margin-top: auto; */
 }
 
 .not-found-msg-active:hover {

@@ -2177,9 +2177,25 @@ function choiceLegalEntity() {
       if (!dadataLegalEntityInput.value || !suggestions || suggestions.children.length === 0) {
         if (notFoundDiv) {
           notFoundDiv.remove();
-          form.reset();
+          // form.reset();
         }
-        return;
+        // return;
+      }
+
+      if (dadataLegalEntityInput.value.length <= 3) {
+        document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-one .text-field.form__text-field").forEach((el) => {
+          el.classList.add("d-none");
+        });
+
+        document.querySelectorAll("[data-name='new-legal-entity-dadata'] #step-one .form__btn").forEach((btn) => {
+          btn.style.display = "none";
+        });
+
+        document.querySelector('[data-name="new-legal-entity-dadata"] .suggestions-wrapper').style.display = "block";
+
+        document.querySelectorAll("[data-name='new-legal-entity'] .input__field").forEach((el) => {
+          el.value = "";
+        });
       }
 
       if (suggestions) {
