@@ -51,7 +51,7 @@ $("#dadata-legal-entity").suggestions({
     }
 
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="OGRN"]').value = suggestion.data.ogrn;
-    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.name.full;
+    document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="general_manager"]').value = suggestion.data.management.name;
     document.querySelector('[data-name="new-legal-entity-dadata"] [data-name="legal_address"]').value = suggestion.data.address.value;
 
     const spanElems = document.querySelectorAll('[data-name="new-legal-entity"] form .input__placeholder');
